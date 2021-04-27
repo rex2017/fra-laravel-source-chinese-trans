@@ -1,0 +1,4 @@
+
+resources 对外公开目录
+
+resources 目录包含了应用视图文件等未编译的原生前端资源文件 (LESS、SASS、JavaScript)，以及本地化语言文件

@@ -1,0 +1,13 @@
+
+路由目录 
+
+routes 目录包含了应用定义的所有路由。
+Laravel 默认提供了四个路由文件用于给不同的入口使用：web.php、api.php、console.php 和 channels.php
+
+web.php 文件包含的路由通过 RouteServiceProvider 引入，都被约束在 web 中间件组中，因而支持 Session、CSRF 保护以及 Cookie 加密功能，如果应用无需提供无状态的，RESTful 风格的 API，那么路由基本上都要定义在 web.php 文件中。
+
+api.php 文件包含的路由通过 RouteServiceProvider 引入，都被约束在 api 中间件组中，因而支持频率限制功能，这些路由是无状态的，所以请求通过这些路由进入应用需要通过 token 进行认证并且不能访问 Session 状态。
+
+console.php 文件用于定义所有基于闭包的控制台命令，每个闭包都被绑定到一个控制台命令并且允许与命令行 IO 方法进行交互，尽管这个文件并不定义 HTTP 路由，但是它定义了基于控制台的应用入口（路由）。
+
+channels.php 文件用于注册应用支持的所有事件广播频道。

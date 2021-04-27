@@ -20,3 +20,7 @@ Route::get('/', function () {
 //Route::resource('user'=>'UserController');
 //Route::resource('user', 'UserController');
 //Route::get($uri, $callback);
+
+Route::get('/index', 'IndexController@index');
+
+Route::get('/test', 'TestController@index');

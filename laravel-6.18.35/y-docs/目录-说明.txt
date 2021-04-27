@@ -1,8 +1,10 @@
 
+===================================================================
 app	应用程序的业务逻辑代码存放文件夹
-app/Console	存放自定义 Artisan 命令文件
-app/Http/Controllers 存放控制器文件
-app/Http/Middleware	存在[中间件]文件
+
+	app/Console	存放自定义 Artisan 命令文件
+	app/Http/Controllers 存放控制器文件
+	app/Http/Middleware	存在[中间件]文件
 
 bootstrap 框架启动与自动加载设置相关的文件
 
@@ -22,8 +24,10 @@ tests 应用测试相关文件
 
 vender Composer 依赖模块
 
+===================================================================
 .env 环境变更配置文件
 composer.json 应用依赖的扩展包
 composer.lock 扩展包列表，确保这个应用的副本使用相同版本的扩展包
 server.php 使用php内置服务时的URL重写
 webpack.mix.js Laravel的前端工作流配置文件
+===================================================================

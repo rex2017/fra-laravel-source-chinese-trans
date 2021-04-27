@@ -1,4 +1,4 @@
-# tmp-laravel-suof
+# fra-laravel-lax
 
 Laravel 完整安装版
 
