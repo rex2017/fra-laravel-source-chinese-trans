@@ -1,0 +1,5 @@
+
+核心入口文件：
+
+	pubilc/index.php
+

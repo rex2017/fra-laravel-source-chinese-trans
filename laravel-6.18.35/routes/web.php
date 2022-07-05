@@ -14,13 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-//以下为新增的 router
-
-//Route::resource('user'=>'UserController');
-//Route::resource('user', 'UserController');
-//Route::get($uri, $callback);
-
-Route::get('/index', 'IndexController@index');
-
-Route::get('/test', 'TestController@index');

@@ -17,15 +17,32 @@ use Monolog\Formatter\FormatterInterface;
 
 /**
  * Lets you easily generate log records and a dummy formatter for testing purposes
- * *
+ *
  * @author Jordi Boggiano <j.boggiano@seld.be>
+ *
+ * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Level from \Monolog\Logger
  */
 class TestCase extends \PHPUnit\Framework\TestCase
 {
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        if (isset($this->handler)) {
+            unset($this->handler);
+        }
+    }
+
     /**
+     * @param mixed[] $context
+     *
      * @return array Record
+     *
+     * @phpstan-param  Level $level
+     * @phpstan-return Record
      */
-    protected function getRecord($level = Logger::WARNING, $message = 'test', array $context = []): array
+    protected function getRecord(int $level = Logger::WARNING, string $message = 'test', array $context = []): array
     {
         return [
             'message' => (string) $message,
@@ -38,6 +55,9 @@ class TestCase extends \PHPUnit\Framework\TestCase
         ];
     }
 
+    /**
+     * @phpstan-return Record[]
+     */
     protected function getMultipleRecords(): array
     {
         return [
@@ -49,9 +69,6 @@ class TestCase extends \PHPUnit\Framework\TestCase
         ];
     }
 
-    /**
-     * @suppress PhanTypeMismatchReturn
-     */
     protected function getIdentityFormatter(): FormatterInterface
     {
         $formatter = $this->createMock(FormatterInterface::class);

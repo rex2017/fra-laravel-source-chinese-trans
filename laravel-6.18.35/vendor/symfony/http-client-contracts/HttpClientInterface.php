@@ -19,9 +19,9 @@ use Symfony\Contracts\HttpClient\Test\HttpClientTestCase;
  *
  * @see HttpClientTestCase for a reference test suite
  *
- * @author Nicolas Grekas <p@tchwork.com>
+ * @method static withOptions(array $options) Returns a new instance of the client with new default options
  *
- * @experimental in 1.1
+ * @author Nicolas Grekas <p@tchwork.com>
  */
 interface HttpClientInterface
 {
@@ -88,8 +88,8 @@ interface HttpClientInterface
     /**
      * Yields responses chunk by chunk as they complete.
      *
-     * @param ResponseInterface|ResponseInterface[]|iterable $responses One or more responses created by the current HTTP client
-     * @param float|null                                     $timeout   The idle timeout before yielding timeout chunks
+     * @param ResponseInterface|iterable<array-key, ResponseInterface> $responses One or more responses created by the current HTTP client
+     * @param float|null                                               $timeout   The idle timeout before yielding timeout chunks
      */
     public function stream($responses, float $timeout = null): ResponseStreamInterface;
 }

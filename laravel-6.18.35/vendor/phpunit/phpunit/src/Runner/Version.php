@@ -9,6 +9,11 @@
  */
 namespace PHPUnit\Runner;
 
+use function array_slice;
+use function dirname;
+use function explode;
+use function implode;
+use function strpos;
 use SebastianBergmann\Version as VersionId;
 
 final class Version
@@ -33,7 +38,7 @@ final class Version
         }
 
         if (self::$version === '') {
-            self::$version = (new VersionId('8.5.8', \dirname(__DIR__, 2)))->getVersion();
+            self::$version = (new VersionId('8.5.26', dirname(__DIR__, 2)))->getVersion();
         }
 
         return self::$version;
@@ -41,24 +46,24 @@ final class Version
 
     public static function series(): string
     {
-        if (\strpos(self::id(), '-')) {
-            $version = \explode('-', self::id())[0];
+        if (strpos(self::id(), '-')) {
+            $version = explode('-', self::id())[0];
         } else {
             $version = self::id();
         }
 
-        return \implode('.', \array_slice(\explode('.', $version), 0, 2));
+        return implode('.', array_slice(explode('.', $version), 0, 2));
     }
 
     public static function getVersionString(): string
     {
-        return 'PHPUnit ' . self::id() . ' by Sebastian Bergmann and contributors.';
+        return 'PHPUnit ' . self::id() . ' #StandWithUkraine';
     }
 
     public static function getReleaseChannel(): string
     {
-        if (\strpos(self::$pharVersion, '-') !== false) {
-            return '-nightly';
+        if (strpos(self::$pharVersion, '-') !== false) {
+            return '-snapshot';
         }
 
         return '';
