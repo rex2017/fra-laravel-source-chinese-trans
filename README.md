@@ -1,5 +1,5 @@
-# fra-laravel-lax
+# fra-laravel-source-chinese-trans
 
-Laravel 完整安装版
+Laravel source code chinses trans
 
-基于Laravel6.18.35框架，下载下来不用 composer，可以直接使用。
+基于Laravel6.18.35　框架翻译，提供给需要学习 laravel 的朋友使用。
