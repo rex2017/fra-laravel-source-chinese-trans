@@ -1,0 +1,7 @@
+
+一、目录说明
+
+	laravel-6.18.35		当前/已翻译的源码目录
+	laravel-cs-codes	框架安装后初始的源码，未进行任何的改动
+	laravel-ys-codes	把选取的框架源码包
+
