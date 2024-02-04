@@ -1,2 +1,10 @@
 
-版本：v6.18.35
+subject：版本更新，不变
+date: 2024-02-04
+version: v6.18.35
+version2: v1.0
+
+subject：初始版本
+date: 2023-12-17
+version: v6.18.35
+version2: v1.0

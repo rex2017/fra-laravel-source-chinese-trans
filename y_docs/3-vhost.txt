@@ -3,16 +3,14 @@
 server {
         listen       8025;
         server_name  ts.dev-ts.net;
+		index  index.html index.htm index.php;
+		root   E:/www/w_devr/w_fra/fra-laravel-source-chinese-trans/v1/v1.0-6.18.35/public;
+		
         location / {
-			root   E:/w_www/w_fra_dev/fra_laravel/fra-laravel-source-chinese-trans/v1.0-6.18.35/public;
-            index  index.html index.htm index.php;
-			if ( !-e $request_filename) {
-				rewrite ^/(.*)$  /index.php?s=/$1  last;
-				break;
-			} 
+			try_files $uri $uri/ /index.php?$query_string;
         }
         location ~ \.php$ {
-            root           E:/w_www/w_fra_dev/fra_laravel/fra-laravel-source-chinese-trans/v1.0-6.18.35/public;
+            root           E:/www/w_devr/w_fra/fra-laravel-source-chinese-trans/v1/v1.0-6.18.35/public;
             fastcgi_pass   127.0.0.1:9000;
             fastcgi_index  index.php;
             fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
