@@ -1,11 +1,17 @@
 # fra-laravel-source-chinese-trans
 
-
 Laravel 框架中文翻译版
 
+一、目的
 
-框架主要内容包含：
+	为了分享学习 Laravel框架的设计原理，读取源代码，提高框架底层逻辑。框架的设计原理，读取源代码，提高框架底层逻辑。
 
-1、基于Laravel6.18.35 官方框架包封装； 
+二、关于版本选择
+	
+	2024-05-08：6.18.35
+	
+三、其他
 
-2、未改变官方代码，只是针对源码里的注释进行了翻译。
+	欢迎大家一起学习交流，以提高国内学习此框架的整体水平。
+
+    github: https://github.com/rex2017/fra-laravel-source-chinese-trans
