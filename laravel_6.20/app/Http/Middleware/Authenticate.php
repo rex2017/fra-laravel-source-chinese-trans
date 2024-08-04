@@ -1,4 +1,7 @@
 <?php
+/**
+ * 授权
+ */
 
 namespace App\Http\Middleware;
 

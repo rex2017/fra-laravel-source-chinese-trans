@@ -1,4 +1,7 @@
 <?php
+/**
+ * api路由
+ */
 
 use Illuminate\Http\Request;
 

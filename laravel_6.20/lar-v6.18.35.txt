@@ -1,6 +1,0 @@
-
-date: 2023-12-17
-
-version: v6.18.35
-
-version2: v1.0

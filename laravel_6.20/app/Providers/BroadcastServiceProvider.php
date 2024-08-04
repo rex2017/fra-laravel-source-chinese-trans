@@ -1,4 +1,7 @@
 <?php
+/**
+ * 广播服务提供者
+ */
 
 namespace App\Providers;
 

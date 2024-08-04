@@ -13,12 +13,10 @@
 |
 */
 
+//把app的上2层目录做为基本目录丢进去，创建应用实例，其实也是容器实例
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
-
-//echo '<pre>';
-//var_dump($app);exit;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,19 +30,19 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
-//Http内核
+//绑定Http端web内核
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
 );
 
-//Console内核
+//绑定命令行Console内核
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
 
-//Debug管理器
+//绑定异常处理
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 加密Cookie
+ */
 
 namespace App\Http\Middleware;
 

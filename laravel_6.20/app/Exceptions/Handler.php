@@ -1,4 +1,7 @@
 <?php
+/**
+ * 异常处理
+ */
 
 namespace App\Exceptions;
 
@@ -28,6 +31,7 @@ class Handler extends ExceptionHandler
 
     /**
      * Report or log an exception.
+	 * 报告或记录一个异常
      *
      * @param  \Exception  $exception
      * @return void
@@ -41,6 +45,7 @@ class Handler extends ExceptionHandler
 
     /**
      * Render an exception into an HTTP response.
+	 * 呈现异常到HTTP响应中
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Exception  $exception

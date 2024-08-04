@@ -1,0 +1,35 @@
+
+=========================================================================
+说明：Illuminate 框架核心文件
+最后更新：2024-05-14
+=========================================================================
+
+Auth
+Broadcasting
+Bus
+Cache
+Config
+Console
+Container
+Contracts
+Cookie
+Database
+Encryption
+Events
+Filesystem
+Foundation
+Hashing
+Http				进行中
+Log					日志，进行中
+Mail
+Notifications
+Pagination
+Pipeline
+Queue
+Redis
+Routing
+Session
+Support
+Translation
+Validation
+View

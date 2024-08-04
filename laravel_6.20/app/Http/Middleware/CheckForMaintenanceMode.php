@@ -1,4 +1,7 @@
 <?php
+/**
+ * 检查维护模式
+ */
 
 namespace App\Http\Middleware;
 
