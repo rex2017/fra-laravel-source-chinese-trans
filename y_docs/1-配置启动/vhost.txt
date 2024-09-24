@@ -1,16 +1,15 @@
 
-#8025 laravel-trans
+#9021 laravel-trans
 server {
-        listen       8025;
-        server_name  ts.dev-ts.net;
+        listen       9021;
+        server_name  www.dev.net;
 		index  index.html index.htm index.php;
-		root   E:/www/w_devr/w_fra/fra-laravel-source-chinese-trans/v1/v1.0-6.18.35/public;
+		root   E:/www/w_gopen/w_open/fra-laravel-source-chinese-trans/v1/v1.0_6.20/public;
 		
         location / {
 			try_files $uri $uri/ /index.php?$query_string;
         }
         location ~ \.php$ {
-            root           E:/www/w_devr/w_fra/fra-laravel-source-chinese-trans/v1/v1.0-6.18.35/public;
             fastcgi_pass   127.0.0.1:9000;
             fastcgi_index  index.php;
             fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;

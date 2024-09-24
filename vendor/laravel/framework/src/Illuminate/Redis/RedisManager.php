@@ -1,4 +1,7 @@
 <?php
+/**
+ * Redis管理，核心类
+ */
 
 namespace Illuminate\Redis;
 
@@ -17,6 +20,7 @@ class RedisManager implements Factory
 {
     /**
      * The application instance.
+	 * 应用实例
      *
      * @var \Illuminate\Contracts\Foundation\Application
      */
@@ -24,6 +28,7 @@ class RedisManager implements Factory
 
     /**
      * The name of the default driver.
+	 * 默认驱动名称
      *
      * @var string
      */
@@ -31,6 +36,7 @@ class RedisManager implements Factory
 
     /**
      * The registered custom driver creators.
+	 * 自定义驱动创建者
      *
      * @var array
      */
@@ -38,6 +44,7 @@ class RedisManager implements Factory
 
     /**
      * The Redis server configurations.
+	 * Redis服务配置
      *
      * @var array
      */
@@ -45,6 +52,7 @@ class RedisManager implements Factory
 
     /**
      * The Redis connections.
+	 * Redis连接
      *
      * @var mixed
      */
@@ -52,6 +60,7 @@ class RedisManager implements Factory
 
     /**
      * Indicates whether event dispatcher is set on connections.
+	 * 指明是否在连接上设置事件调度程序
      *
      * @var bool
      */
@@ -59,6 +68,7 @@ class RedisManager implements Factory
 
     /**
      * Create a new Redis manager instance.
+	 * 创建新的Redis管理实例
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @param  string  $driver
@@ -74,6 +84,7 @@ class RedisManager implements Factory
 
     /**
      * Get a Redis connection by name.
+	 * 得到Redis连接通过名称
      *
      * @param  string|null  $name
      * @return \Illuminate\Redis\Connections\Connection
@@ -93,6 +104,7 @@ class RedisManager implements Factory
 
     /**
      * Resolve the given connection by name.
+	 * 解析给定的连接按名称
      *
      * @param  string|null  $name
      * @return \Illuminate\Redis\Connections\Connection
@@ -121,6 +133,7 @@ class RedisManager implements Factory
 
     /**
      * Resolve the given cluster connection by name.
+	 * 解析给定的集群连接按名称
      *
      * @param  string  $name
      * @return \Illuminate\Redis\Connections\Connection
@@ -138,6 +151,7 @@ class RedisManager implements Factory
 
     /**
      * Configure the given connection to prepare it for commands.
+	 * 配置给定的连接以便为命令做好准备
      *
      * @param  \Illuminate\Redis\Connections\Connection  $connection
      * @param  string  $name
@@ -156,6 +170,7 @@ class RedisManager implements Factory
 
     /**
      * Get the connector instance for the current driver.
+	 * 得到当前驱动程序的连接器实例
      *
      * @return \Illuminate\Contracts\Redis\Connector
      */
@@ -177,6 +192,7 @@ class RedisManager implements Factory
 
     /**
      * Parse the Redis connection configuration.
+	 * 解析Redis连接配置
      *
      * @param  mixed  $config
      * @return array
@@ -192,12 +208,13 @@ class RedisManager implements Factory
         }
 
         return array_filter($parsed, function ($key) {
-            return ! in_array($key, ['driver', 'username'], true);
+            return ! in_array($key, ['driver'], true);
         }, ARRAY_FILTER_USE_KEY);
     }
 
     /**
      * Return all of the created connections.
+	 * 返回所有已创建连接
      *
      * @return array
      */
@@ -208,6 +225,7 @@ class RedisManager implements Factory
 
     /**
      * Enable the firing of Redis command events.
+	 * 启用Redis命令事件的触发
      *
      * @return void
      */
@@ -218,6 +236,7 @@ class RedisManager implements Factory
 
     /**
      * Disable the firing of Redis command events.
+	 * 禁用Redis命令事件的触发
      *
      * @return void
      */
@@ -228,6 +247,7 @@ class RedisManager implements Factory
 
     /**
      * Set the default driver.
+	 * 设置默认驱动
      *
      * @param  string  $driver
      * @return void
@@ -239,6 +259,7 @@ class RedisManager implements Factory
 
     /**
      * Register a custom driver creator Closure.
+	 * 注册自定义驱动程序创建器Closure
      *
      * @param  string  $driver
      * @param  \Closure  $callback
@@ -253,6 +274,7 @@ class RedisManager implements Factory
 
     /**
      * Pass methods onto the default Redis connection.
+	 * 传递方法到默认的Redis连接
      *
      * @param  string  $method
      * @param  array  $parameters

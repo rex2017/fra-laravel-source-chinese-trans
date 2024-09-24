@@ -1,4 +1,7 @@
 <?php
+/**
+ * Sync队列
+ */
 
 namespace Illuminate\Queue;
 
@@ -16,6 +19,7 @@ class SyncQueue extends Queue implements QueueContract
 {
     /**
      * Get the size of the queue.
+	 * 得到队列大小
      *
      * @param  string|null  $queue
      * @return int
@@ -27,6 +31,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Push a new job onto the queue.
+	 * 推送新作业到队列中
      *
      * @param  string  $job
      * @param  mixed  $data
@@ -56,6 +61,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Resolve a Sync job instance.
+	 * 解析同步作业实例
      *
      * @param  string  $payload
      * @param  string  $queue
@@ -68,6 +74,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Raise the before queue job event.
+	 * 引发before队列作业事件
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @return void
@@ -81,6 +88,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Raise the after queue job event.
+	 * 引发队列后作业事件
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @return void
@@ -94,6 +102,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Raise the exception occurred queue job event.
+	 * 引发异常发生的队列作业事件
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @param  \Exception  $e
@@ -108,6 +117,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Handle an exception that occurred while processing a job.
+	 * 处理在处理作业时发生的异常
      *
      * @param  \Illuminate\Queue\Jobs\Job  $queueJob
      * @param  \Exception  $e
@@ -126,6 +136,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Push a raw payload onto the queue.
+	 * 推入原始有效负载至队列
      *
      * @param  string  $payload
      * @param  string|null  $queue
@@ -139,6 +150,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Push a new job onto the queue after a delay.
+	 * 推入新作业至队列在延迟后
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
      * @param  string  $job
@@ -153,6 +165,7 @@ class SyncQueue extends Queue implements QueueContract
 
     /**
      * Pop the next job off of the queue.
+	 * 弹出下一个作业从队列中
      *
      * @param  string|null  $queue
      * @return \Illuminate\Contracts\Queue\Job|null

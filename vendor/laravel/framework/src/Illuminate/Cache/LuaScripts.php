@@ -1,4 +1,7 @@
 <?php
+/**
+ * 缓存Lua脚本
+ */
 
 namespace Illuminate\Cache;
 
@@ -6,6 +9,7 @@ class LuaScripts
 {
     /**
      * Get the Lua script to atomically release a lock.
+	 * 让Lua脚本自动释放锁
      *
      * KEYS[1] - The name of the lock
      * ARGV[1] - The owner key of the lock instance trying to release it

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 可序列化的闭包
+ */
 
 namespace Illuminate\Queue;
 
@@ -10,8 +13,9 @@ class SerializableClosure extends OpisSerializableClosure
 
     /**
      * Transform the use variables before serialization.
+	 * 转换use变量在序列化之前
      *
-     * @param  array  $data The Closure's use variables
+     * @param  array  $data
      * @return array
      */
     protected function transformUseVariables($data)
@@ -25,8 +29,9 @@ class SerializableClosure extends OpisSerializableClosure
 
     /**
      * Resolve the use variables after unserialization.
+	 * 解析反序列化后的use变量
      *
-     * @param  array  $data The Closure's transformed use variables
+     * @param  array  $data
      * @return array
      */
     protected function resolveUseVariables($data)

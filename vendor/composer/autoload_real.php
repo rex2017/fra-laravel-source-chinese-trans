@@ -28,6 +28,7 @@ class ComposerAutoloaderInit22289008e386dae8fef55f26a15a16bf
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInit22289008e386dae8fef55f26a15a16bf', 'loadClassLoader'));
 
+		//这里真正加载
         require __DIR__ . '/autoload_static.php';
         call_user_func(\Composer\Autoload\ComposerStaticInit22289008e386dae8fef55f26a15a16bf::getInitializer($loader));
 

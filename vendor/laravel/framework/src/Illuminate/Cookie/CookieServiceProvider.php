@@ -1,4 +1,7 @@
 <?php
+/**
+ * COOKIE服务提供者
+ */
 
 namespace Illuminate\Cookie;
 
@@ -8,6 +11,7 @@ class CookieServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */

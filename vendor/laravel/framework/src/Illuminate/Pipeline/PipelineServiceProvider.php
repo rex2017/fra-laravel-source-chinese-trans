@@ -1,4 +1,7 @@
 <?php
+/**
+ * 管道服务提供者
+ */
 
 namespace Illuminate\Pipeline;
 
@@ -10,6 +13,7 @@ class PipelineServiceProvider extends ServiceProvider implements DeferrableProvi
 {
     /**
      * Register the service provider.
+	 * 注册管道服务提供者
      *
      * @return void
      */
@@ -22,6 +26,7 @@ class PipelineServiceProvider extends ServiceProvider implements DeferrableProvi
 
     /**
      * Get the services provided by the provider.
+	 * 得到服务提供者
      *
      * @return array
      */

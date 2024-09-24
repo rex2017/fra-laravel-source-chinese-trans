@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，环境配置
+ */
 
 namespace Illuminate\Support;
 
@@ -12,6 +15,7 @@ class Env
 {
     /**
      * Indicates if the putenv adapter is enabled.
+	 * 确定是否写环境是否启用
      *
      * @var bool
      */
@@ -19,6 +23,7 @@ class Env
 
     /**
      * The environment factory instance.
+	 * 环境工厂实例
      *
      * @var \Dotenv\Environment\FactoryInterface|null
      */
@@ -26,6 +31,7 @@ class Env
 
     /**
      * The environment variables instance.
+	 * 环境变更实例
      *
      * @var \Dotenv\Environment\VariablesInterface|null
      */
@@ -33,6 +39,7 @@ class Env
 
     /**
      * Enable the putenv adapter.
+	 * 启用putenv适配器
      *
      * @return void
      */
@@ -45,6 +52,7 @@ class Env
 
     /**
      * Disable the putenv adapter.
+	 * 禁用putenv适配器
      *
      * @return void
      */
@@ -57,6 +65,7 @@ class Env
 
     /**
      * Get the environment factory instance.
+	 * 得到环境工厂实例
      *
      * @return \Dotenv\Environment\FactoryInterface
      */
@@ -76,6 +85,7 @@ class Env
 
     /**
      * Get the environment variables instance.
+	 * 得到环境变量实例
      *
      * @return \Dotenv\Environment\VariablesInterface
      */
@@ -90,6 +100,7 @@ class Env
 
     /**
      * Gets the value of an environment variable.
+	 * 得到环境变量值
      *
      * @param  string  $key
      * @param  mixed  $default

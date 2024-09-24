@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent轴心点
+ */
 
 namespace Illuminate\Database\Eloquent\Relations;
 
@@ -11,6 +14,7 @@ class Pivot extends Model
 
     /**
      * Indicates if the IDs are auto-incrementing.
+	 * 指示ID是否自动递增
      *
      * @var bool
      */
@@ -18,6 +22,7 @@ class Pivot extends Model
 
     /**
      * The attributes that aren't mass assignable.
+	 * 不能大规模分配的属性
      *
      * @var array
      */

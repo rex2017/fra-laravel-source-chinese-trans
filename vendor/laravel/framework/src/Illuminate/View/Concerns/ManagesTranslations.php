@@ -1,4 +1,7 @@
 <?php
+/**
+ * 视图，管理翻译
+ */
 
 namespace Illuminate\View\Concerns;
 
@@ -6,6 +9,7 @@ trait ManagesTranslations
 {
     /**
      * The translation replacements for the translation being rendered.
+	 * 翻译替代正在呈现的翻译
      *
      * @var array
      */
@@ -13,6 +17,7 @@ trait ManagesTranslations
 
     /**
      * Start a translation block.
+	 * 启动一个翻译块
      *
      * @param  array  $replacements
      * @return void
@@ -26,6 +31,7 @@ trait ManagesTranslations
 
     /**
      * Render the current translation.
+	 * 渲染当前的翻译
      *
      * @return string
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 路由，存根文件
+ */
 
 namespace DummyNamespace;
 
@@ -11,6 +14,7 @@ class DummyClass extends Controller
 {
     /**
      * Display a listing of the resource.
+	 * 显示资源列表
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @return \Illuminate\Http\Response

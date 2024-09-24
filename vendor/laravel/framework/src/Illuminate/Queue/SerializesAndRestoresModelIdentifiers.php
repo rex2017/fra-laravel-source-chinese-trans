@@ -1,4 +1,7 @@
 <?php
+/**
+ * 序列化和恢复模型标识符
+ */
 
 namespace Illuminate\Queue;
 
@@ -13,6 +16,7 @@ trait SerializesAndRestoresModelIdentifiers
 {
     /**
      * Get the property value prepared for serialization.
+	 * 得到属性值为序列化准备的
      *
      * @param  mixed  $value
      * @return mixed
@@ -42,6 +46,7 @@ trait SerializesAndRestoresModelIdentifiers
 
     /**
      * Get the restored property value after deserialization.
+	 * 得到反序列化后恢复的属性值
      *
      * @param  mixed  $value
      * @return mixed
@@ -59,6 +64,7 @@ trait SerializesAndRestoresModelIdentifiers
 
     /**
      * Restore a queueable collection instance.
+	 * 还原可排队的集合实例
      *
      * @param  \Illuminate\Contracts\Database\ModelIdentifier  $value
      * @return \Illuminate\Database\Eloquent\Collection
@@ -91,6 +97,7 @@ trait SerializesAndRestoresModelIdentifiers
 
     /**
      * Restore the model from the model identifier instance.
+	 * 恢复模型从模型标识符实例
      *
      * @param  \Illuminate\Contracts\Database\ModelIdentifier  $value
      * @return \Illuminate\Database\Eloquent\Model
@@ -104,6 +111,7 @@ trait SerializesAndRestoresModelIdentifiers
 
     /**
      * Get the query for model restoration.
+	 * 得到模型恢复的查询
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  array|int  $ids

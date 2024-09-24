@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面大门
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -28,6 +31,7 @@ class Gate extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

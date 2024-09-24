@@ -1,4 +1,7 @@
 <?php
+/**
+ * 文件系统服务提供者
+ */
 
 namespace Illuminate\Filesystem;
 
@@ -8,6 +11,7 @@ class FilesystemServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */
@@ -20,6 +24,7 @@ class FilesystemServiceProvider extends ServiceProvider
 
     /**
      * Register the native filesystem implementation.
+	 * 注册本机文件系统实现
      *
      * @return void
      */
@@ -32,6 +37,7 @@ class FilesystemServiceProvider extends ServiceProvider
 
     /**
      * Register the driver based filesystem.
+	 * 注册基于文件系统的驱动
      *
      * @return void
      */
@@ -50,6 +56,7 @@ class FilesystemServiceProvider extends ServiceProvider
 
     /**
      * Register the filesystem manager.
+	 * 注册文件系统管理者
      *
      * @return void
      */
@@ -62,6 +69,7 @@ class FilesystemServiceProvider extends ServiceProvider
 
     /**
      * Get the default file driver.
+	 * 得到默认文件驱动
      *
      * @return string
      */
@@ -72,6 +80,7 @@ class FilesystemServiceProvider extends ServiceProvider
 
     /**
      * Get the default cloud based file driver.
+	 * 得到默认云驱动
      *
      * @return string
      */

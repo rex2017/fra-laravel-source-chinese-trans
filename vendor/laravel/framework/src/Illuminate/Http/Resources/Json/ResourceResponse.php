@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，资源响应
+ */
 
 namespace Illuminate\Http\Resources\Json;
 
@@ -10,6 +13,7 @@ class ResourceResponse implements Responsable
 {
     /**
      * The underlying resource.
+	 * 底层资源
      *
      * @var mixed
      */
@@ -17,6 +21,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Create a new resource response.
+	 * 创建新的资源响应
      *
      * @param  mixed  $resource
      * @return void
@@ -28,6 +33,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Create an HTTP response that represents the object.
+	 * 创建表示对象的HTTP响应
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse
@@ -50,6 +56,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Wrap the given data if necessary.
+	 * 包装给定的数据如果有必要
      *
      * @param  array  $data
      * @param  array  $with
@@ -73,6 +80,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Determine if we have a default wrapper and the given data is unwrapped.
+	 * 确定我们是否有默认包装器，是否打开了给定数据的包装。
      *
      * @param  array  $data
      * @return bool
@@ -84,6 +92,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Determine if "with" data has been added and our data is unwrapped.
+	 * 确定是否添加了"with"数据以及是否打开了数据包装
      *
      * @param  array  $data
      * @param  array  $with
@@ -99,6 +108,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Get the default data wrapper for the resource.
+	 * 得到资源的默认数据包装器
      *
      * @return string
      */
@@ -109,6 +119,7 @@ class ResourceResponse implements Responsable
 
     /**
      * Calculate the appropriate status code for the response.
+	 * 计算响应的适当状态码
      *
      * @return int
      */

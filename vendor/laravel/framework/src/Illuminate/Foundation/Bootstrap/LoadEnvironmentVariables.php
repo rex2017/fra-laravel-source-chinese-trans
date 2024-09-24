@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，加载环境变量
+ */
 
 namespace Illuminate\Foundation\Bootstrap;
 
@@ -13,6 +16,7 @@ class LoadEnvironmentVariables
 {
     /**
      * Bootstrap the given application.
+	 * 引导给定应用 
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return void
@@ -34,6 +38,7 @@ class LoadEnvironmentVariables
 
     /**
      * Detect if a custom environment file matching the APP_ENV exists.
+	 * 检测是否存在与APP_ENV匹配的自定义环境文件
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return void
@@ -61,6 +66,7 @@ class LoadEnvironmentVariables
 
     /**
      * Load a custom environment file.
+	 * 加载自下定义环境文件
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @param  string  $file
@@ -79,6 +85,7 @@ class LoadEnvironmentVariables
 
     /**
      * Create a Dotenv instance.
+	 * 创建env实例
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return \Dotenv\Dotenv
@@ -94,6 +101,7 @@ class LoadEnvironmentVariables
 
     /**
      * Write the error information to the screen and exit.
+	 * 写入错误信息至屏幕并退出
      *
      * @param  \Dotenv\Exception\InvalidFileException  $e
      * @return void

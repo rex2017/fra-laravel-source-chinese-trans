@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent支持默认模型
+ */
 
 namespace Illuminate\Database\Eloquent\Relations\Concerns;
 
@@ -8,6 +11,7 @@ trait SupportsDefaultModels
 {
     /**
      * Indicates if a default model instance should be used.
+	 * 指明是否应使用默认模型实例
      *
      * Alternatively, may be a Closure or array.
      *
@@ -17,6 +21,7 @@ trait SupportsDefaultModels
 
     /**
      * Make a new related instance for the given model.
+	 * 创建一个新的相关实例为给定模型
      *
      * @param  \Illuminate\Database\Eloquent\Model  $parent
      * @return \Illuminate\Database\Eloquent\Model
@@ -25,6 +30,7 @@ trait SupportsDefaultModels
 
     /**
      * Return a new model instance in case the relationship does not exist.
+	 * 返回一个新的模型实例，如果关系不存在。
      *
      * @param  \Closure|array|bool  $callback
      * @return $this
@@ -38,6 +44,7 @@ trait SupportsDefaultModels
 
     /**
      * Get the default value for this relation.
+	 * 得到默认值关联
      *
      * @param  \Illuminate\Database\Eloquent\Model  $parent
      * @return \Illuminate\Database\Eloquent\Model|null

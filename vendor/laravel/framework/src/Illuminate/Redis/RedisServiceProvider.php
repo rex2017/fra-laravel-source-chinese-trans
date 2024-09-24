@@ -1,4 +1,7 @@
 <?php
+/**
+ * Redis服务提供者
+ */
 
 namespace Illuminate\Redis;
 
@@ -10,6 +13,7 @@ class RedisServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */
@@ -28,6 +32,7 @@ class RedisServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Get the services provided by the provider.
+	 * 得到提供者的服务通过提供者
      *
      * @return array
      */

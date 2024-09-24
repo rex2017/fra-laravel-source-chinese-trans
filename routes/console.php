@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台路由
+ */
 
 use Illuminate\Foundation\Inspiring;
 

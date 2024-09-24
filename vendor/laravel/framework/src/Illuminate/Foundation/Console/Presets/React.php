@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，React
+ */
 
 namespace Illuminate\Foundation\Console\Presets;
 
@@ -9,6 +12,7 @@ class React extends Preset
 {
     /**
      * Install the preset.
+	 * 安装预设
      *
      * @return void
      */
@@ -24,6 +28,7 @@ class React extends Preset
 
     /**
      * Update the given package array.
+	 * 更新给定的包数组
      *
      * @param  array  $packages
      * @return array
@@ -39,6 +44,7 @@ class React extends Preset
 
     /**
      * Update the Webpack configuration.
+	 * 更新Webpack配置
      *
      * @return void
      */
@@ -49,6 +55,7 @@ class React extends Preset
 
     /**
      * Update the example component.
+	 * 更新示例组件
      *
      * @return void
      */
@@ -66,6 +73,7 @@ class React extends Preset
 
     /**
      * Update the bootstrapping files.
+	 * 更新引导文件 
      *
      * @return void
      */

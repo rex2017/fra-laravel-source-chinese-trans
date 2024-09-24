@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，供应商发布命令
+ */
 
 namespace Illuminate\Foundation\Console;
 
@@ -14,6 +17,7 @@ class VendorPublishCommand extends Command
 {
     /**
      * The filesystem instance.
+	 * 文件系统实例
      *
      * @var \Illuminate\Filesystem\Filesystem
      */
@@ -21,6 +25,7 @@ class VendorPublishCommand extends Command
 
     /**
      * The provider to publish.
+	 * 要发布提供者
      *
      * @var string
      */
@@ -28,6 +33,7 @@ class VendorPublishCommand extends Command
 
     /**
      * The tags to publish.
+	 * 要发布的标签
      *
      * @var array
      */
@@ -35,6 +41,7 @@ class VendorPublishCommand extends Command
 
     /**
      * The console command signature.
+	 * 控制台命令签名
      *
      * @var string
      */
@@ -45,6 +52,7 @@ class VendorPublishCommand extends Command
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -52,6 +60,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Create a new command instance.
+	 * 创建新的命令实例
      *
      * @param  \Illuminate\Filesystem\Filesystem  $files
      * @return void
@@ -65,6 +74,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -81,6 +91,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Determine the provider or tag(s) to publish.
+	 * 确定要发布的提供者或标记
      *
      * @return void
      */
@@ -101,6 +112,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Prompt for which provider or tag to publish.
+	 * 提示要发布哪个提供程序或标记
      *
      * @return void
      */
@@ -120,6 +132,7 @@ class VendorPublishCommand extends Command
 
     /**
      * The choices available via the prompt.
+	 * 通过提示符提供的选项
      *
      * @return array
      */
@@ -134,6 +147,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Parse the answer that was given via the prompt.
+	 * 解析通过提示给出的答案
      *
      * @param  string  $choice
      * @return void
@@ -151,6 +165,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Publishes the assets for a tag.
+	 * 发布标记的资产
      *
      * @param  string  $tag
      * @return mixed
@@ -172,6 +187,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Get all of the paths to publish.
+	 * 得到所有要发布的路径
      *
      * @param  string  $tag
      * @return array
@@ -185,6 +201,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Publish the given item from and to the given location.
+	 * 发布给定的项从给定位置到给定位置
      *
      * @param  string  $from
      * @param  string  $to
@@ -203,6 +220,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Publish the file to the given path.
+	 * 发布文件到给定的路径
      *
      * @param  string  $from
      * @param  string  $to
@@ -221,6 +239,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Publish the directory to the given directory.
+	 * 将目录发布到给定目录
      *
      * @param  string  $from
      * @param  string  $to
@@ -238,6 +257,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Move all the files in the given MountManager.
+	 * 移动指定MountManager中的所有文件
      *
      * @param  \League\Flysystem\MountManager  $manager
      * @return void
@@ -253,6 +273,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Create the directory to house the published files if needed.
+	 * 如果需要，创建目录来存放发布的文件
      *
      * @param  string  $directory
      * @return void
@@ -266,6 +287,7 @@ class VendorPublishCommand extends Command
 
     /**
      * Write a status message to the console.
+	 * 写入状态消息向控制台
      *
      * @param  string  $from
      * @param  string  $to

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 身份验证异常
+ */
 
 namespace Illuminate\Auth;
 
@@ -8,6 +11,7 @@ class AuthenticationException extends Exception
 {
     /**
      * All of the guards that were checked.
+	 * 所有被检查过的守卫
      *
      * @var array
      */
@@ -15,6 +19,7 @@ class AuthenticationException extends Exception
 
     /**
      * The path the user should be redirected to.
+	 * 用户应该重定向到的路径
      *
      * @var string
      */
@@ -22,6 +27,7 @@ class AuthenticationException extends Exception
 
     /**
      * Create a new authentication exception.
+	 * 创建新的身份验证异常
      *
      * @param  string  $message
      * @param  array  $guards
@@ -38,6 +44,7 @@ class AuthenticationException extends Exception
 
     /**
      * Get the guards that were checked.
+	 * 把检查过的守卫找来
      *
      * @return array
      */
@@ -48,6 +55,7 @@ class AuthenticationException extends Exception
 
     /**
      * Get the path the user should be redirected to.
+	 * 得到用户应该重定向到的路径
      *
      * @return string
      */

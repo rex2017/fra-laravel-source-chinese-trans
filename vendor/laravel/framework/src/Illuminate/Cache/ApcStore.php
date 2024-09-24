@@ -1,4 +1,7 @@
 <?php
+/**
+ * Apc缓存，Alternatice PHP Cache，可选PHP缓存
+ */
 
 namespace Illuminate\Cache;
 
@@ -8,6 +11,7 @@ class ApcStore extends TaggableStore
 
     /**
      * The APC wrapper instance.
+	 * apc封装实例
      *
      * @var \Illuminate\Cache\ApcWrapper
      */
@@ -15,6 +19,7 @@ class ApcStore extends TaggableStore
 
     /**
      * A string that should be prepended to keys.
+	 * 前缀，应该加在键前的字符串
      *
      * @var string
      */
@@ -22,6 +27,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Create a new APC store.
+	 * 创建新的apc存储
      *
      * @param  \Illuminate\Cache\ApcWrapper  $apc
      * @param  string  $prefix
@@ -35,6 +41,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Retrieve an item from the cache by key.
+	 * 检索一个项目从cache
      *
      * @param  string|array  $key
      * @return mixed
@@ -50,6 +57,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Store an item in the cache for a given number of seconds.
+	 * 存储一个项目入缓存中使用给定秒数
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -63,6 +71,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Increment the value of an item in the cache.
+	 * 增加缓存中的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -75,6 +84,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Decrement the value of an item in the cache.
+	 * 递减缓存中项目的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -87,6 +97,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Store an item in the cache indefinitely.
+	 * 存储一个项目无限期在缓存中
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -99,6 +110,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Remove an item from the cache.
+	 * 移除项目从缓存中
      *
      * @param  string  $key
      * @return bool
@@ -110,6 +122,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Remove all items from the cache.
+	 * 移除所有项目从缓存中
      *
      * @return bool
      */
@@ -120,6 +133,7 @@ class ApcStore extends TaggableStore
 
     /**
      * Get the cache key prefix.
+	 * 得到缓存前缀
      *
      * @return string
      */

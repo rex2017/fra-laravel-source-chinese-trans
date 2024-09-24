@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，启动
+ */
 
 namespace Illuminate\Foundation\Console\Presets;
 
@@ -6,6 +9,7 @@ class Bootstrap extends Preset
 {
     /**
      * Install the preset.
+	 * 安装预先
      *
      * @return void
      */
@@ -18,6 +22,7 @@ class Bootstrap extends Preset
 
     /**
      * Update the given package array.
+	 * 更新给定包
      *
      * @param  array  $packages
      * @return array
@@ -33,6 +38,7 @@ class Bootstrap extends Preset
 
     /**
      * Update the Sass files for the application.
+	 * 更新应用程序的Sass文件
      *
      * @return void
      */

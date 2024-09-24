@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面URL
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -24,6 +27,7 @@ class URL extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

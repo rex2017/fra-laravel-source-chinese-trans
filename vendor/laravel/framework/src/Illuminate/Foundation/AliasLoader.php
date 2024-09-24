@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，别名加载
+ */
 
 namespace Illuminate\Foundation;
 
@@ -6,6 +9,7 @@ class AliasLoader
 {
     /**
      * The array of class aliases.
+	 * 别名数组
      *
      * @var array
      */
@@ -13,6 +17,7 @@ class AliasLoader
 
     /**
      * Indicates if a loader has been registered.
+	 * 是否加载已注册
      *
      * @var bool
      */
@@ -20,6 +25,7 @@ class AliasLoader
 
     /**
      * The namespace for all real-time facades.
+	 * 门面命名空间
      *
      * @var string
      */
@@ -27,6 +33,7 @@ class AliasLoader
 
     /**
      * The singleton instance of the loader.
+	 * 单例实例
      *
      * @var \Illuminate\Foundation\AliasLoader
      */
@@ -34,6 +41,7 @@ class AliasLoader
 
     /**
      * Create a new AliasLoader instance.
+	 * 创建新的别名导入实例
      *
      * @param  array  $aliases
      * @return void
@@ -45,6 +53,7 @@ class AliasLoader
 
     /**
      * Get or create the singleton alias loader instance.
+	 * 得到单例别名导入实例
      *
      * @param  array  $aliases
      * @return \Illuminate\Foundation\AliasLoader
@@ -64,6 +73,7 @@ class AliasLoader
 
     /**
      * Load a class alias if it is registered.
+	 * 导入类别名
      *
      * @param  string  $alias
      * @return bool|null
@@ -83,6 +93,7 @@ class AliasLoader
 
     /**
      * Load a real-time facade for the given alias.
+	 * 导入门面
      *
      * @param  string  $alias
      * @return void
@@ -94,6 +105,7 @@ class AliasLoader
 
     /**
      * Ensure that the given alias has an existing real-time facade class.
+	 * 确保给定的别名具有现有的实时facade类
      *
      * @param  string  $alias
      * @return string
@@ -113,6 +125,7 @@ class AliasLoader
 
     /**
      * Format the facade stub with the proper namespace and class.
+	 * 类格式化facade存根使用适当的名称空间
      *
      * @param  string  $alias
      * @param  string  $stub
@@ -133,6 +146,7 @@ class AliasLoader
 
     /**
      * Add an alias to the loader.
+	 * 添加别名
      *
      * @param  string  $class
      * @param  string  $alias
@@ -145,6 +159,7 @@ class AliasLoader
 
     /**
      * Register the loader on the auto-loader stack.
+	 * 注册加载程序在自动加载程序堆栈上
      *
      * @return void
      */
@@ -159,6 +174,7 @@ class AliasLoader
 
     /**
      * Prepend the load method to the auto-loader stack.
+	 * 准备加载方法至自动加载堆栈上
      *
      * @return void
      */
@@ -169,6 +185,7 @@ class AliasLoader
 
     /**
      * Get the registered aliases.
+	 * 得到已注册别名
      *
      * @return array
      */
@@ -179,6 +196,7 @@ class AliasLoader
 
     /**
      * Set the registered aliases.
+	 * 设置注册别名
      *
      * @param  array  $aliases
      * @return void
@@ -190,6 +208,7 @@ class AliasLoader
 
     /**
      * Indicates if the loader has been registered.
+	 * 指出是否加载已被注册
      *
      * @return bool
      */
@@ -200,6 +219,8 @@ class AliasLoader
 
     /**
      * Set the "registered" state of the loader.
+	 * 设置加载器的注册状态
+	 * 
      *
      * @param  bool  $value
      * @return void
@@ -211,6 +232,7 @@ class AliasLoader
 
     /**
      * Set the real-time facade namespace.
+	 * 设置门面命名空间
      *
      * @param  string  $namespace
      * @return void
@@ -222,6 +244,7 @@ class AliasLoader
 
     /**
      * Set the value of the singleton alias loader.
+	 * 设置单例别名加载器的值
      *
      * @param  \Illuminate\Foundation\AliasLoader  $loader
      * @return void
@@ -233,6 +256,7 @@ class AliasLoader
 
     /**
      * Clone method.
+	 * 克隆方法
      *
      * @return void
      */

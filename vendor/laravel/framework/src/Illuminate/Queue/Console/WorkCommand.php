@@ -1,4 +1,7 @@
 <?php
+/**
+ * 队列，执行命令
+ */
 
 namespace Illuminate\Queue\Console;
 
@@ -16,6 +19,7 @@ class WorkCommand extends Command
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -34,6 +38,7 @@ class WorkCommand extends Command
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -41,6 +46,7 @@ class WorkCommand extends Command
 
     /**
      * The queue worker instance.
+	 * 队列工作实例
      *
      * @var \Illuminate\Queue\Worker
      */
@@ -48,6 +54,7 @@ class WorkCommand extends Command
 
     /**
      * The cache store implementation.
+	 * 缓存存储实现
      *
      * @var \Illuminate\Contracts\Cache\Repository
      */
@@ -55,6 +62,7 @@ class WorkCommand extends Command
 
     /**
      * Create a new queue work command.
+	 * 创建新的队列工作命令
      *
      * @param  \Illuminate\Queue\Worker  $worker
      * @param  \Illuminate\Contracts\Cache\Repository  $cache
@@ -70,6 +78,7 @@ class WorkCommand extends Command
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -82,6 +91,8 @@ class WorkCommand extends Command
         // We'll listen to the processed and failed events so we can write information
         // to the console as jobs are processed, which will let the developer watch
         // which jobs are coming through a queue and be informed on its progress.
+		// 我们将监听已处理和失败的事件，以便在处理作业时将信息写入控制台，
+		// 这将让开发人员观察哪些作业正在通过队列，并了解其进度。
         $this->listenForEvents();
 
         $connection = $this->argument('connection')
@@ -90,6 +101,8 @@ class WorkCommand extends Command
         // We need to get the right queue for the connection which is set in the queue
         // configuration file for the application. We will pull it based on the set
         // connection being run for the queue operation currently being executed.
+		// 我们需要为应用程序的队列配置文件中设置的连接获取正确的队列。
+		// 我们将根据当前正在执行的队列操作正在运行的集合连接来拉取它。
         $queue = $this->getQueue($connection);
 
         $this->runWorker(
@@ -99,6 +112,7 @@ class WorkCommand extends Command
 
     /**
      * Run the worker instance.
+	 * 运行执行者实例
      *
      * @param  string  $connection
      * @param  string  $queue
@@ -115,6 +129,7 @@ class WorkCommand extends Command
 
     /**
      * Gather all of the queue worker options as a single object.
+	 * 收集所有队列辅助器选项为单个对象
      *
      * @return \Illuminate\Queue\WorkerOptions
      */
@@ -130,6 +145,7 @@ class WorkCommand extends Command
 
     /**
      * Listen for the queue events in order to update the console output.
+	 * 监听队列事件以更新控制台输出
      *
      * @return void
      */
@@ -152,6 +168,7 @@ class WorkCommand extends Command
 
     /**
      * Write the status output for the queue worker.
+	 * 写入状态输出为队列工作器
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @param  string  $status
@@ -171,6 +188,7 @@ class WorkCommand extends Command
 
     /**
      * Format the status output for the queue worker.
+	 * 格式化队列工作器的状态输出
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @param  string  $status
@@ -189,6 +207,7 @@ class WorkCommand extends Command
 
     /**
      * Store a failed job event.
+	 * 存储失败的作业事件
      *
      * @param  \Illuminate\Queue\Events\JobFailed  $event
      * @return void
@@ -203,6 +222,7 @@ class WorkCommand extends Command
 
     /**
      * Get the queue name for the worker.
+	 * 得到工作线程的队列名称
      *
      * @param  string  $connection
      * @return string
@@ -216,6 +236,7 @@ class WorkCommand extends Command
 
     /**
      * Determine if the worker should run in maintenance mode.
+	 * 确定执行者是否应该在维护模式下运行
      *
      * @return bool
      */

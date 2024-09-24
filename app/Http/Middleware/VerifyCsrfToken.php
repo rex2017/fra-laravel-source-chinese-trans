@@ -1,4 +1,7 @@
 <?php
+/**
+ * 验证令牌
+ */
 
 namespace App\Http\Middleware;
 

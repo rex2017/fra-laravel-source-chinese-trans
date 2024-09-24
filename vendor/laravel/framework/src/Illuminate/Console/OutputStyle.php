@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台输出样式
+ */
 
 namespace Illuminate\Console;
 
@@ -10,6 +13,7 @@ class OutputStyle extends SymfonyStyle
 {
     /**
      * The output instance.
+	 * 输出实例
      *
      * @var \Symfony\Component\Console\Output\OutputInterface
      */
@@ -17,6 +21,7 @@ class OutputStyle extends SymfonyStyle
 
     /**
      * Create a new Console OutputStyle instance.
+	 * 创建新的控制台输出样式实例
      *
      * @param  \Symfony\Component\Console\Input\InputInterface  $input
      * @param  \Symfony\Component\Console\Output\OutputInterface  $output
@@ -31,6 +36,7 @@ class OutputStyle extends SymfonyStyle
 
     /**
      * Returns whether verbosity is quiet (-q).
+	 * 返回verbose是否为quiet (-q)
      *
      * @return bool
      */
@@ -41,6 +47,7 @@ class OutputStyle extends SymfonyStyle
 
     /**
      * Returns whether verbosity is verbose (-v).
+	 * 返回verbose是否为verbose (-v)
      *
      * @return bool
      */
@@ -51,6 +58,7 @@ class OutputStyle extends SymfonyStyle
 
     /**
      * Returns whether verbosity is very verbose (-vv).
+	 * 返回verbose是否非常verbose (-vv)
      *
      * @return bool
      */
@@ -61,6 +69,7 @@ class OutputStyle extends SymfonyStyle
 
     /**
      * Returns whether verbosity is debug (-vvv).
+	 * 返回verbose是否为debug
      *
      * @return bool
      */

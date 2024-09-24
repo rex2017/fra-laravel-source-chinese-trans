@@ -1,4 +1,7 @@
 <?php
+/**
+ * 身份，重置密码
+ */
 
 namespace Illuminate\Auth\Notifications;
 
@@ -10,6 +13,7 @@ class ResetPassword extends Notification
 {
     /**
      * The password reset token.
+	 * 密码重置令牌
      *
      * @var string
      */
@@ -17,6 +21,7 @@ class ResetPassword extends Notification
 
     /**
      * The callback that should be used to build the mail message.
+	 * 应该用于构建邮件消息的回调
      *
      * @var \Closure|null
      */
@@ -24,6 +29,7 @@ class ResetPassword extends Notification
 
     /**
      * Create a notification instance.
+	 * 创建通知实例
      *
      * @param  string  $token
      * @return void
@@ -35,6 +41,7 @@ class ResetPassword extends Notification
 
     /**
      * Get the notification's channels.
+	 * 得到通知通道
      *
      * @param  mixed  $notifiable
      * @return array|string
@@ -46,6 +53,7 @@ class ResetPassword extends Notification
 
     /**
      * Build the mail representation of the notification.
+	 * 构建通知的邮件表示形式
      *
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
@@ -66,6 +74,7 @@ class ResetPassword extends Notification
 
     /**
      * Set a callback that should be used when building the notification mail message.
+	 * 设置在构建通知邮件消息时应使用的回调
      *
      * @param  \Closure  $callback
      * @return void

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面语言
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -14,6 +17,7 @@ class Lang extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

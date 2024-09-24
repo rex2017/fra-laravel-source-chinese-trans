@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，文件帮助
+ */
 
 namespace Illuminate\Http;
 
@@ -8,6 +11,7 @@ trait FileHelpers
 {
     /**
      * The cache copy of the file's hash name.
+	 * 缓存文件哈希名
      *
      * @var string
      */
@@ -15,6 +19,7 @@ trait FileHelpers
 
     /**
      * Get the fully qualified path to the file.
+	 * 得到文件完全路径
      *
      * @return string
      */
@@ -25,6 +30,7 @@ trait FileHelpers
 
     /**
      * Get the file's extension.
+	 * 得到文件后缀
      *
      * @return string
      */
@@ -35,6 +41,7 @@ trait FileHelpers
 
     /**
      * Get a filename for the file.
+	 * 得到文件名
      *
      * @param  string|null  $path
      * @return string

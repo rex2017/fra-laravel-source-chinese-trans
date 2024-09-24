@@ -1,4 +1,7 @@
 <?php
+/**
+ * 视图，编译错误
+ */
 
 namespace Illuminate\View\Compilers\Concerns;
 
@@ -6,6 +9,7 @@ trait CompilesErrors
 {
     /**
      * Compile the error statements into valid PHP.
+	 * 编译错误语句成有效的PHP
      *
      * @param  string  $expression
      * @return string
@@ -23,6 +27,7 @@ $message = $__bag->first($__errorArgs[0]); ?>';
 
     /**
      * Compile the enderror statements into valid PHP.
+	 * 编译enderror语句成有效的PHP
      *
      * @param  string  $expression
      * @return string

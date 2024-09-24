@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，聚合服务提供商
+ */
 
 namespace Illuminate\Support;
 
@@ -6,6 +9,7 @@ class AggregateServiceProvider extends ServiceProvider
 {
     /**
      * The provider class names.
+	 * 提供者类名
      *
      * @var array
      */
@@ -13,6 +17,7 @@ class AggregateServiceProvider extends ServiceProvider
 
     /**
      * An array of the service provider instances.
+	 * 服务提供者实例数组
      *
      * @var array
      */
@@ -20,6 +25,7 @@ class AggregateServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */
@@ -34,6 +40,7 @@ class AggregateServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
+	 * 得到提供的服务通过服务提供者
      *
      * @return array
      */

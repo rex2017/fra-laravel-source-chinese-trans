@@ -1,4 +1,7 @@
 <?php
+/**
+ * 缓存锁抽象类
+ */
 
 namespace Illuminate\Cache;
 
@@ -13,6 +16,7 @@ abstract class Lock implements LockContract
 
     /**
      * The name of the lock.
+	 * 锁名称
      *
      * @var string
      */
@@ -20,6 +24,7 @@ abstract class Lock implements LockContract
 
     /**
      * The number of seconds the lock should be maintained.
+	 * 锁定时间秒
      *
      * @var int
      */
@@ -27,6 +32,7 @@ abstract class Lock implements LockContract
 
     /**
      * The scope identifier of this lock.
+	 * 锁的所有者
      *
      * @var string
      */
@@ -34,6 +40,7 @@ abstract class Lock implements LockContract
 
     /**
      * Create a new lock instance.
+	 * 创建新的锁实例
      *
      * @param  string  $name
      * @param  int  $seconds
@@ -53,6 +60,7 @@ abstract class Lock implements LockContract
 
     /**
      * Attempt to acquire the lock.
+	 * 尝试获取锁
      *
      * @return bool
      */
@@ -60,6 +68,7 @@ abstract class Lock implements LockContract
 
     /**
      * Release the lock.
+	 * 释放锁
      *
      * @return bool
      */
@@ -67,6 +76,7 @@ abstract class Lock implements LockContract
 
     /**
      * Returns the owner value written into the driver for this lock.
+	 * 返回所有者
      *
      * @return string
      */
@@ -74,6 +84,7 @@ abstract class Lock implements LockContract
 
     /**
      * Attempt to acquire the lock.
+	 * 尝试获取锁
      *
      * @param  callable|null  $callback
      * @return mixed
@@ -95,10 +106,11 @@ abstract class Lock implements LockContract
 
     /**
      * Attempt to acquire the lock for the given number of seconds.
+	 * 尝试在给定的秒数内获取锁
      *
      * @param  int  $seconds
      * @param  callable|null  $callback
-     * @return bool
+     * @return mixed
      *
      * @throws \Illuminate\Contracts\Cache\LockTimeoutException
      */
@@ -127,6 +139,7 @@ abstract class Lock implements LockContract
 
     /**
      * Returns the current owner of the lock.
+	 * 返回锁的当前所有者
      *
      * @return string
      */
@@ -137,6 +150,7 @@ abstract class Lock implements LockContract
 
     /**
      * Determines whether this lock is allowed to release the lock in the driver.
+	 * 确定是否允许此锁释放驱动程序中的锁
      *
      * @return bool
      */

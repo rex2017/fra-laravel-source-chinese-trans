@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，文件，待完善类
+ */
 
 namespace Illuminate\Http;
 

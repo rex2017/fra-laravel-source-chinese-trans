@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面邮件
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -30,6 +33,7 @@ class Mail extends Facade
 {
     /**
      * Replace the bound instance with a fake.
+	 * 替换绑定实例为伪实例
      *
      * @return \Illuminate\Support\Testing\Fakes\MailFake
      */
@@ -42,6 +46,7 @@ class Mail extends Facade
 
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

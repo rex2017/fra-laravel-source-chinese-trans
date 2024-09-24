@@ -1,4 +1,7 @@
 <?php
+/**
+ * 契约，锁提供者接口
+ */
 
 namespace Illuminate\Contracts\Cache;
 
@@ -6,6 +9,7 @@ interface LockProvider
 {
     /**
      * Get a lock instance.
+	 * 得到一个锁实例
      *
      * @param  string  $name
      * @param  int  $seconds
@@ -16,6 +20,7 @@ interface LockProvider
 
     /**
      * Restore a lock instance using the owner identifier.
+	 * 重置锁实例
      *
      * @param  string  $name
      * @param  string  $owner

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 通知，邮件信息
+ */
 
 namespace Illuminate\Notifications\Messages;
 
@@ -12,6 +15,7 @@ class MailMessage extends SimpleMessage implements Renderable
 {
     /**
      * The view to be rendered.
+	 * 要呈现的视图
      *
      * @var array|string
      */
@@ -19,6 +23,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The view data for the message.
+	 * 消息的视图数据
      *
      * @var array
      */
@@ -26,6 +31,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The Markdown template to render (if applicable).
+	 * 要呈现的Markdown模板(如果适用)
      *
      * @var string|null
      */
@@ -33,6 +39,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The current theme being used when generating emails.
+	 * 当前主题生成电子邮件时使用的
      *
      * @var string|null
      */
@@ -40,6 +47,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The "from" information for the message.
+	 * 消息的"from"信息
      *
      * @var array
      */
@@ -47,6 +55,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The "reply to" information for the message.
+	 * 消息的"回复"信息
      *
      * @var array
      */
@@ -54,6 +63,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The "cc" information for the message.
+	 * 消息的"抄送"信息
      *
      * @var array
      */
@@ -61,6 +71,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The "bcc" information for the message.
+	 * 消息的"密送"信息
      *
      * @var array
      */
@@ -68,6 +79,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The attachments for the message.
+	 * 消息的附件
      *
      * @var array
      */
@@ -75,6 +87,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The raw attachments for the message.
+	 * 消息的原始附件
      *
      * @var array
      */
@@ -82,6 +95,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Priority level of the message.
+	 * 消息的优先级
      *
      * @var int
      */
@@ -89,6 +103,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * The callbacks for the message.
+	 * 消息的回调
      *
      * @var array
      */
@@ -96,6 +111,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the view for the mail message.
+	 * 设置邮件消息的视图
      *
      * @param  array|string  $view
      * @param  array  $data
@@ -113,6 +129,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the Markdown template for the notification.
+	 * 设置通知的Markdown模板
      *
      * @param  string  $view
      * @param  array  $data
@@ -130,6 +147,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the default markdown template.
+	 * 设置默认降价模板
      *
      * @param  string  $template
      * @return $this
@@ -143,6 +161,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the theme to use with the Markdown template.
+	 * 设置要与Markdown模板一起使用的主题
      *
      * @param  string  $theme
      * @return $this
@@ -156,6 +175,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the from address for the mail message.
+	 * 设置邮件消息的发件人地址
      *
      * @param  string  $address
      * @param  string|null  $name
@@ -170,6 +190,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the "reply to" address of the message.
+	 * 设置邮件的"回复"地址
      *
      * @param  array|string  $address
      * @param  string|null  $name
@@ -188,6 +209,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the cc address for the mail message.
+	 * 设置邮件的抄送地址
      *
      * @param  array|string  $address
      * @param  string|null  $name
@@ -206,6 +228,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the bcc address for the mail message.
+	 * 设置邮件的密送地址
      *
      * @param  array|string  $address
      * @param  string|null  $name
@@ -224,6 +247,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Attach a file to the message.
+	 * 附加文件到消息中
      *
      * @param  string  $file
      * @param  array  $options
@@ -238,6 +262,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Attach in-memory data as an attachment.
+	 * 附加内存中的数据作为附件
      *
      * @param  string  $data
      * @param  string  $name
@@ -253,6 +278,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Set the priority of this message.
+	 * 设置此消息的优先级
      *
      * The value is an integer where 1 is the highest priority and 5 is the lowest.
      *
@@ -268,6 +294,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Get the data array for the mail message.
+	 * 得到邮件消息的数据数组
      *
      * @return array
      */
@@ -278,6 +305,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Parse the multi-address array into the necessary format.
+	 * 将多地址数组解析为必要的格式
      *
      * @param  array  $value
      * @return array
@@ -291,6 +319,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Determine if the given "address" is actually an array of addresses.
+	 * 确定给定的"address"是否实际上是一个地址数组
      *
      * @param  mixed  $address
      * @return bool
@@ -304,6 +333,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Render the mail notification message into an HTML string.
+	 * 将邮件通知消息呈现为HTML字符串
      *
      * @return string
      */
@@ -322,6 +352,7 @@ class MailMessage extends SimpleMessage implements Renderable
 
     /**
      * Register a callback to be called with the Swift message instance.
+	 * 注册一个回调函数在Swift消息实例中
      *
      * @param  callable  $callback
      * @return $this

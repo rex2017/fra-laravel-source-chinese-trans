@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，资源收集
+ */
 
 namespace Illuminate\Http\Resources\Json;
 
@@ -13,6 +16,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * The resource that this resource collects.
+	 * 收集资源的资源
      *
      * @var string
      */
@@ -20,6 +24,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * The mapped collection instance.
+	 * 映射的集合实例
      *
      * @var \Illuminate\Support\Collection
      */
@@ -27,6 +32,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Indicates if all existing request query parameters should be added to pagination links.
+	 * 指明是否应将所有现有请求查询参数添加到分页链接中
      *
      * @var bool
      */
@@ -34,6 +40,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * The query parameters that should be added to the pagination links.
+	 * 应该添加到分页链接中的查询参数
      *
      * @var array|null
      */
@@ -41,6 +48,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Create a new resource instance.
+	 * 创建新的资源实例
      *
      * @param  mixed  $resource
      * @return void
@@ -54,6 +62,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Indicate that all current query parameters should be appended to pagination links.
+	 * 指明应将所有当前查询参数附加到分页链接
      *
      * @return $this
      */
@@ -66,6 +75,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Specify the query string parameters that should be present on pagination links.
+	 * 指明应该出现在分页链接上的查询字符串参数
      *
      * @param  array  $query
      * @return $this
@@ -81,6 +91,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Return the count of items in the resource collection.
+	 * 返回资源集合中项目的计数
      *
      * @return int
      */
@@ -91,6 +102,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Transform the resource into a JSON array.
+	 * 转换资源为JSON数组
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
@@ -102,6 +114,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Create an HTTP response that represents the object.
+	 * 创建表示对象的HTTP响应
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse
@@ -117,6 +130,7 @@ class ResourceCollection extends JsonResource implements Countable, IteratorAggr
 
     /**
      * Create a paginate-aware HTTP response.
+	 * 创建分页感知的HTTP响应
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse

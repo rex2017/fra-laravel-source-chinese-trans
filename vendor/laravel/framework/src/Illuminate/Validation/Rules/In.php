@@ -1,4 +1,7 @@
 <?php
+/**
+ * 验证，在
+ */
 
 namespace Illuminate\Validation\Rules;
 
@@ -6,11 +9,13 @@ class In
 {
     /**
      * The name of the rule.
+	 * 规则名称
      */
     protected $rule = 'in';
 
     /**
      * The accepted values.
+	 * 可接受值
      *
      * @var array
      */
@@ -18,6 +23,7 @@ class In
 
     /**
      * Create a new in rule instance.
+	 * 创建新的规则实例
      *
      * @param  array  $values
      * @return void
@@ -29,6 +35,7 @@ class In
 
     /**
      * Convert the rule to a validation string.
+	 * 转换规则为可验证字符串
      *
      * @return string
      *

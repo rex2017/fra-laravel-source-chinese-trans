@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库播种抽象类
+ */
 
 namespace Illuminate\Database;
 
@@ -11,6 +14,7 @@ abstract class Seeder
 {
     /**
      * The container instance.
+	 * 容器实例
      *
      * @var \Illuminate\Container\Container
      */
@@ -18,6 +22,7 @@ abstract class Seeder
 
     /**
      * The console command instance.
+	 * 控制台命令实例
      *
      * @var \Illuminate\Console\Command
      */
@@ -25,6 +30,7 @@ abstract class Seeder
 
     /**
      * Seed the given connection from the given path.
+	 * 从给定路径为给定连接播种
      *
      * @param  array|string  $class
      * @param  bool  $silent
@@ -59,6 +65,7 @@ abstract class Seeder
 
     /**
      * Silently seed the given connection from the given path.
+	 * 从给定路径静默地播种给定连接
      *
      * @param  array|string  $class
      * @return void
@@ -70,6 +77,7 @@ abstract class Seeder
 
     /**
      * Resolve an instance of the given seeder class.
+	 * 解析给定种子类的实例
      *
      * @param  string  $class
      * @return \Illuminate\Database\Seeder
@@ -93,6 +101,7 @@ abstract class Seeder
 
     /**
      * Set the IoC container instance.
+	 * 设置IoC容器实例
      *
      * @param  \Illuminate\Container\Container  $container
      * @return $this
@@ -106,6 +115,7 @@ abstract class Seeder
 
     /**
      * Set the console command instance.
+	 * 设置控制台
      *
      * @param  \Illuminate\Console\Command  $command
      * @return $this
@@ -119,6 +129,7 @@ abstract class Seeder
 
     /**
      * Run the database seeds.
+	 * 运行数据库种子
      *
      * @return mixed
      *

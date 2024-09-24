@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，迁移命令
+ */
 
 namespace Illuminate\Database\Console\Migrations;
 
@@ -11,6 +14,7 @@ class MigrateCommand extends BaseCommand
 
     /**
      * The name and signature of the console command.
+	 * 控制台命令的名称和签名
      *
      * @var string
      */
@@ -24,6 +28,7 @@ class MigrateCommand extends BaseCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -31,6 +36,7 @@ class MigrateCommand extends BaseCommand
 
     /**
      * The migrator instance.
+	 * 迁移实例
      *
      * @var \Illuminate\Database\Migrations\Migrator
      */
@@ -38,6 +44,7 @@ class MigrateCommand extends BaseCommand
 
     /**
      * Create a new migration command instance.
+	 * 创建新的迁移命令实例
      *
      * @param  \Illuminate\Database\Migrations\Migrator  $migrator
      * @return void
@@ -51,6 +58,7 @@ class MigrateCommand extends BaseCommand
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -65,6 +73,9 @@ class MigrateCommand extends BaseCommand
         // Next, we will check to see if a path option has been defined. If it has
         // we will use the path relative to the root of this installation folder
         // so that migrations may be run for any path within the applications.
+		// 接下来，我们将检查是否定义了路径选项。
+		// 如果有我们将使用相对于此安装文件根目录的路径，
+		// 以便可以对应用程序内的任何路径运行迁移。
         $this->migrator->setOutput($this->output)
                 ->run($this->getMigrationPaths(), [
                     'pretend' => $this->option('pretend'),
@@ -74,6 +85,8 @@ class MigrateCommand extends BaseCommand
         // Finally, if the "seed" option has been given, we will re-run the database
         // seed task to re-populate the database, which is convenient when adding
         // a migration and a seed at the same time, as it is only this command.
+		// 最后，我们给出了"种子"选项，我们将重新运行数据库种子任务于重新填充数据库，
+		// 这在添加时很方便，迁移和种子同时进行，因为只有这个命令。
         if ($this->option('seed') && ! $this->option('pretend')) {
             $this->call('db:seed', ['--force' => true]);
         }
@@ -81,6 +94,7 @@ class MigrateCommand extends BaseCommand
 
     /**
      * Prepare the migration database for running.
+	 * 准备运行迁移数据库
      *
      * @return void
      */

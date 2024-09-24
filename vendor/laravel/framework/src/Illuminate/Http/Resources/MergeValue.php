@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，合并值
+ */
 
 namespace Illuminate\Http\Resources;
 
@@ -9,6 +12,7 @@ class MergeValue
 {
     /**
      * The data to be merged.
+	 * 待合并的数据
      *
      * @var array
      */
@@ -16,6 +20,7 @@ class MergeValue
 
     /**
      * Create new merge value instance.
+	 * 创建新的合并值实例
      *
      * @param  \Illuminate\Support\Collection|\JsonSerializable|array  $data
      * @return void

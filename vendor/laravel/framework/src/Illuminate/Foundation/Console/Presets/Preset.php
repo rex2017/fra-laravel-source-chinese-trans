@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，预置
+ */
 
 namespace Illuminate\Foundation\Console\Presets;
 
@@ -8,6 +11,7 @@ class Preset
 {
     /**
      * Ensure the component directories we need exist.
+	 * 确保我们需要的组件目录存在
      *
      * @return void
      */
@@ -22,6 +26,7 @@ class Preset
 
     /**
      * Update the "package.json" file.
+	 * 更新package.json文件
      *
      * @param  bool  $dev
      * @return void
@@ -50,6 +55,7 @@ class Preset
 
     /**
      * Remove the installed Node modules.
+	 * 移除已安装的Node模块
      *
      * @return void
      */

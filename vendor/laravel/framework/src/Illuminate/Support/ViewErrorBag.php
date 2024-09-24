@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，查看错误包
+ */
 
 namespace Illuminate\Support;
 
@@ -12,6 +15,7 @@ class ViewErrorBag implements Countable
 {
     /**
      * The array of the view error bags.
+	 * 视图错误包的数组
      *
      * @var array
      */
@@ -19,6 +23,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Checks if a named MessageBag exists in the bags.
+	 * 检查包中是否存在一个命名的MessageBag
      *
      * @param  string  $key
      * @return bool
@@ -30,6 +35,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Get a MessageBag instance from the bags.
+	 * 得到MessageBag实例从包中
      *
      * @param  string  $key
      * @return \Illuminate\Contracts\Support\MessageBag
@@ -41,6 +47,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Get all the bags.
+	 * 得到所有的包
      *
      * @return array
      */
@@ -51,6 +58,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Add a new MessageBag instance to the bags.
+	 * 添加一个新的MessageBag实例向包中
      *
      * @param  string  $key
      * @param  \Illuminate\Contracts\Support\MessageBag  $bag
@@ -65,6 +73,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Determine if the default message bag has any messages.
+	 * 确定默认消息包是否包含任何消息
      *
      * @return bool
      */
@@ -75,6 +84,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Get the number of messages in the default bag.
+	 * 得到默认包中的消息数
      *
      * @return int
      */
@@ -85,6 +95,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Dynamically call methods on the default bag.
+	 * 动态调用默认包上的方法
      *
      * @param  string  $method
      * @param  array  $parameters
@@ -97,6 +108,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Dynamically access a view error bag.
+	 * 动态访问视图错误包
      *
      * @param  string  $key
      * @return \Illuminate\Contracts\Support\MessageBag
@@ -108,6 +120,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Dynamically set a view error bag.
+	 * 动态设置视图错误包
      *
      * @param  string  $key
      * @param  \Illuminate\Contracts\Support\MessageBag  $value
@@ -120,6 +133,7 @@ class ViewErrorBag implements Countable
 
     /**
      * Convert the default bag to its string representation.
+	 * 转换默认包为其字符串表示形式
      *
      * @return string
      */

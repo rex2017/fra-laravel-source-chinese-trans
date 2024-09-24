@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，虚拟类根文件
+ */
 
 namespace DummyNamespace;
 
@@ -9,7 +12,7 @@ class DummyClass extends Exception
     /**
      * Report the exception.
      *
-     * @return void
+     * @return bool|null
      */
     public function report()
     {

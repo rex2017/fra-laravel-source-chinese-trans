@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，存根文件
+ */
 
 use Illuminate\Database\Seeder;
 

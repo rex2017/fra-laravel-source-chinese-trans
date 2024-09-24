@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，重命名列
+ */
 
 namespace Illuminate\Database\Schema\Grammars;
 
@@ -13,6 +16,7 @@ class RenameColumn
 {
     /**
      * Compile a rename column command.
+	 * 编译重命名列命令
      *
      * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -35,6 +39,7 @@ class RenameColumn
 
     /**
      * Get a new column instance with the new column name.
+	 * 得到具有新列名的新列实例
      *
      * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -52,6 +57,7 @@ class RenameColumn
 
     /**
      * Set the renamed columns on the table diff.
+	 * 设置重命名的列在表diff上
      *
      * @param  \Doctrine\DBAL\Schema\TableDiff  $tableDiff
      * @param  \Illuminate\Support\Fluent  $command
@@ -61,9 +67,23 @@ class RenameColumn
     protected static function setRenamedColumns(TableDiff $tableDiff, Fluent $command, Column $column)
     {
         $tableDiff->renamedColumns = [
-            $command->from => new Column($command->to, $column->getType(), $column->toArray()),
+            $command->from => new Column($command->to, $column->getType(), self::getWritableColumnOptions($column)),
         ];
 
         return $tableDiff;
+    }
+
+    /**
+     * Get the writable column options.
+	 * 得到可写列选项
+     *
+     * @param  \Doctrine\DBAL\Schema\Column  $column
+     * @return array
+     */
+    private static function getWritableColumnOptions(Column $column)
+    {
+        return array_filter($column->toArray(), function (string $name) use ($column) {
+            return method_exists($column, 'set'.$name);
+        }, ARRAY_FILTER_USE_KEY);
     }
 }

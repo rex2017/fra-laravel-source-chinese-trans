@@ -1,4 +1,7 @@
 <?php
+/**
+ * 通知，广播通道
+ */
 
 namespace Illuminate\Notifications\Channels;
 
@@ -12,6 +15,7 @@ class BroadcastChannel
 {
     /**
      * The event dispatcher.
+	 * 事件调度
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
@@ -19,6 +23,7 @@ class BroadcastChannel
 
     /**
      * Create a new database channel.
+	 * 创建新的数据库通道
      *
      * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @return void
@@ -30,6 +35,7 @@ class BroadcastChannel
 
     /**
      * Send the given notification.
+	 * 发送给定的通知
      *
      * @param  mixed  $notifiable
      * @param  \Illuminate\Notifications\Notification  $notification
@@ -53,6 +59,7 @@ class BroadcastChannel
 
     /**
      * Get the data for the notification.
+	 * 得到通知的数据
      *
      * @param  mixed  $notifiable
      * @param  \Illuminate\Notifications\Notification  $notification

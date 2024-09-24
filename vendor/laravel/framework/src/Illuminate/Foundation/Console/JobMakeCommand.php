@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，作业生成命令
+ */
 
 namespace Illuminate\Foundation\Console;
 
@@ -9,6 +12,7 @@ class JobMakeCommand extends GeneratorCommand
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -16,6 +20,7 @@ class JobMakeCommand extends GeneratorCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -23,6 +28,7 @@ class JobMakeCommand extends GeneratorCommand
 
     /**
      * The type of class being generated.
+	 * 被生成类的类型
      *
      * @var string
      */
@@ -30,6 +36,7 @@ class JobMakeCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
+	 * 得到存根文件为生成器
      *
      * @return string
      */
@@ -42,6 +49,7 @@ class JobMakeCommand extends GeneratorCommand
 
     /**
      * Get the default namespace for the class.
+	 * 得到类的默认命名空间
      *
      * @param  string  $rootNamespace
      * @return string
@@ -53,6 +61,7 @@ class JobMakeCommand extends GeneratorCommand
 
     /**
      * Get the console command options.
+	 * 得到控制台命令选项
      *
      * @return array
      */

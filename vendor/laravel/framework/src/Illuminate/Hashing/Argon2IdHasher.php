@@ -1,4 +1,7 @@
 <?php
+/**
+ * 哈希散列
+ */
 
 namespace Illuminate\Hashing;
 
@@ -8,6 +11,7 @@ class Argon2IdHasher extends ArgonHasher
 {
     /**
      * Check the given plain value against a hash.
+	 * 检查哈希散列值
      *
      * @param  string  $value
      * @param  string  $hashedValue
@@ -31,6 +35,7 @@ class Argon2IdHasher extends ArgonHasher
 
     /**
      * Get the algorithm that should be used for hashing.
+	 * 得到用于散列的算法
      *
      * @return int
      */

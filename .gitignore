@@ -2,7 +2,6 @@
 /public/hot
 /public/storage
 /storage/*.key
-/storage/logs
 .env.backup
 .phpunit.result.cache
 Homestead.json

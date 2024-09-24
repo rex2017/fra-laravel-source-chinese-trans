@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent改变很多
+ */
 
 namespace Illuminate\Database\Eloquent\Relations;
 
@@ -8,6 +11,7 @@ class MorphMany extends MorphOneOrMany
 {
     /**
      * Get the results of the relationship.
+	 * 得到关系的结果
      *
      * @return mixed
      */
@@ -20,6 +24,7 @@ class MorphMany extends MorphOneOrMany
 
     /**
      * Initialize the relation on a set of models.
+	 * 初始化一组模型上的关系
      *
      * @param  array  $models
      * @param  string  $relation
@@ -36,6 +41,7 @@ class MorphMany extends MorphOneOrMany
 
     /**
      * Match the eagerly loaded results to their parents.
+	 * 将急切加载的结果与他们的父母匹配
      *
      * @param  array  $models
      * @param  \Illuminate\Database\Eloquent\Collection  $results

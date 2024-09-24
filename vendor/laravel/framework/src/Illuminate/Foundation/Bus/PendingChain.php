@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，总线等待链
+ */
 
 namespace Illuminate\Foundation\Bus;
 
@@ -6,6 +9,7 @@ class PendingChain
 {
     /**
      * The class name of the job being dispatched.
+	 * 正被分派的任务类
      *
      * @var string
      */
@@ -13,6 +17,7 @@ class PendingChain
 
     /**
      * The jobs to be chained.
+	 * 任务链
      *
      * @var array
      */
@@ -20,6 +25,7 @@ class PendingChain
 
     /**
      * Create a new PendingChain instance.
+	 * 创建新的实例
      *
      * @param  string  $class
      * @param  array  $chain
@@ -33,6 +39,7 @@ class PendingChain
 
     /**
      * Dispatch the job with the given arguments.
+	 * 调度作业使用给定的参数
      *
      * @return \Illuminate\Foundation\Bus\PendingDispatch
      */

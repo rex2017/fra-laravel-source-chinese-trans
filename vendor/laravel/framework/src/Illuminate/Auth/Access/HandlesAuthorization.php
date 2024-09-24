@@ -1,4 +1,7 @@
 <?php
+/**
+ * 身份，处理授权
+ */
 
 namespace Illuminate\Auth\Access;
 
@@ -6,6 +9,7 @@ trait HandlesAuthorization
 {
     /**
      * Create a new access response.
+	 * 创建新的访问响应
      *
      * @param  string|null  $message
      * @param  mixed  $code
@@ -18,6 +22,7 @@ trait HandlesAuthorization
 
     /**
      * Throws an unauthorized exception.
+	 * 抛出未经授权的异常
      *
      * @param  string|null  $message
      * @param  mixed|null  $code

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 重定向验证
+ */
 
 namespace App\Http\Middleware;
 

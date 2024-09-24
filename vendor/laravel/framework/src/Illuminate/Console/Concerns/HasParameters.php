@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台，有参数
+ */
 
 namespace Illuminate\Console\Concerns;
 
@@ -9,6 +12,7 @@ trait HasParameters
 {
     /**
      * Specify the arguments and options on the command.
+	 * 指定命令上的参数和选项
      *
      * @return void
      */
@@ -17,11 +21,13 @@ trait HasParameters
         // We will loop through all of the arguments and options for the command and
         // set them all on the base command instance. This specifies what can get
         // passed into these commands as "parameters" to control the execution.
+		// 我们将遍历命令的所有参数和选项并设置他们全部在基本命令实例上。
+		// 这指定了可以获得的内容作为"参数"传递给这些命令以控制执行。
         foreach ($this->getArguments() as $arguments) {
             if ($arguments instanceof InputArgument) {
                 $this->getDefinition()->addArgument($arguments);
             } else {
-                call_user_func_array([$this, 'addArgument'], $arguments);
+                $this->addArgument(...array_values($arguments));
             }
         }
 
@@ -29,13 +35,14 @@ trait HasParameters
             if ($options instanceof InputOption) {
                 $this->getDefinition()->addOption($options);
             } else {
-                call_user_func_array([$this, 'addOption'], $options);
+                $this->addOption(...array_values($options));
             }
         }
     }
 
     /**
      * Get the console command arguments.
+	 * 得到控制台命令参数
      *
      * @return array
      */
@@ -46,6 +53,7 @@ trait HasParameters
 
     /**
      * Get the console command options.
+	 * 得到控制台命令参数
      *
      * @return array
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，与异常处理交互
+ */
 
 namespace Illuminate\Foundation\Testing\Concerns;
 
@@ -12,6 +15,7 @@ trait InteractsWithExceptionHandling
 {
     /**
      * The original exception handler.
+	 * 原始异常处理
      *
      * @var \Illuminate\Contracts\Debug\ExceptionHandler|null
      */
@@ -19,6 +23,7 @@ trait InteractsWithExceptionHandling
 
     /**
      * Restore exception handling.
+	 * 恢复异常处理
      *
      * @return $this
      */
@@ -33,6 +38,7 @@ trait InteractsWithExceptionHandling
 
     /**
      * Only handle the given exceptions via the exception handler.
+	 * 只通过异常处理程序处理给定的异常
      *
      * @param  array  $exceptions
      * @return $this
@@ -44,6 +50,7 @@ trait InteractsWithExceptionHandling
 
     /**
      * Only handle validation exceptions via the exception handler.
+	 * 只通过异常处理程序处理验证异常
      *
      * @return $this
      */
@@ -54,6 +61,7 @@ trait InteractsWithExceptionHandling
 
     /**
      * Disable exception handling for the test.
+	 * 禁用测试的异常处理
      *
      * @param  array  $except
      * @return $this
@@ -64,7 +72,8 @@ trait InteractsWithExceptionHandling
             $this->originalExceptionHandler = app(ExceptionHandler::class);
         }
 
-        $this->app->instance(ExceptionHandler::class, new class($this->originalExceptionHandler, $except) implements ExceptionHandler {
+        $this->app->instance(ExceptionHandler::class, new class($this->originalExceptionHandler, $except) implements ExceptionHandler
+        {
             protected $except;
             protected $originalHandler;
 

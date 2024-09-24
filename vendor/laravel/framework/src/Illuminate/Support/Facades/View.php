@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面视图
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -18,6 +21,7 @@ class View extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 用户类
+ */
 
 namespace App;
 

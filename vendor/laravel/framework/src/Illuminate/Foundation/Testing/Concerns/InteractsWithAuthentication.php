@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，与身份验证交互
+ */
 
 namespace Illuminate\Foundation\Testing\Concerns;
 
@@ -8,6 +11,7 @@ trait InteractsWithAuthentication
 {
     /**
      * Set the currently logged in user for the application.
+	 * 设置当前登录的用户为应用
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $driver
@@ -20,6 +24,7 @@ trait InteractsWithAuthentication
 
     /**
      * Set the currently logged in user for the application.
+	 * 设置当前登录的用户为应用
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $driver
@@ -40,6 +45,7 @@ trait InteractsWithAuthentication
 
     /**
      * Assert that the user is authenticated.
+	 * 断言用户已经过身份验证
      *
      * @param  string|null  $guard
      * @return $this
@@ -53,6 +59,7 @@ trait InteractsWithAuthentication
 
     /**
      * Assert that the user is not authenticated.
+	 * 断言用户没身份验证
      *
      * @param  string|null  $guard
      * @return $this
@@ -66,6 +73,7 @@ trait InteractsWithAuthentication
 
     /**
      * Return true if the user is authenticated, false otherwise.
+	 * 返回真如果用户已被身份验证
      *
      * @param  string|null  $guard
      * @return bool
@@ -77,6 +85,7 @@ trait InteractsWithAuthentication
 
     /**
      * Assert that the user is authenticated as the given user.
+	 * 断言用户被验证为给定的用户
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $guard
@@ -103,6 +112,7 @@ trait InteractsWithAuthentication
 
     /**
      * Assert that the given credentials are valid.
+	 * 断言给定的凭证是有效的
      *
      * @param  array  $credentials
      * @param  string|null  $guard
@@ -119,6 +129,7 @@ trait InteractsWithAuthentication
 
     /**
      * Assert that the given credentials are invalid.
+	 * 断言给定的凭证是无效的
      *
      * @param  array  $credentials
      * @param  string|null  $guard
@@ -135,6 +146,7 @@ trait InteractsWithAuthentication
 
     /**
      * Return true if the credentials are valid, false otherwise.
+	 * 返回true如果凭据有效，否则返回false
      *
      * @param  array  $credentials
      * @param  string|null  $guard

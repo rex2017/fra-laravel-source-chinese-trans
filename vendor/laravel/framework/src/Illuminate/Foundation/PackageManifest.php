@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，包清单
+ */
 
 namespace Illuminate\Foundation;
 
@@ -9,6 +12,7 @@ class PackageManifest
 {
     /**
      * The filesystem instance.
+	 * 文件系统实例
      *
      * @var \Illuminate\Filesystem\Filesystem
      */
@@ -16,6 +20,7 @@ class PackageManifest
 
     /**
      * The base path.
+	 * 基本路径
      *
      * @var string
      */
@@ -23,6 +28,7 @@ class PackageManifest
 
     /**
      * The vendor path.
+	 * 提供路径
      *
      * @var string
      */
@@ -30,6 +36,7 @@ class PackageManifest
 
     /**
      * The manifest path.
+	 * 清单路径
      *
      * @var string|null
      */
@@ -37,6 +44,7 @@ class PackageManifest
 
     /**
      * The loaded manifest array.
+	 * 导入清单
      *
      * @var array
      */
@@ -44,6 +52,7 @@ class PackageManifest
 
     /**
      * Create a new package manifest instance.
+	 * 创建新的包实例
      *
      * @param  \Illuminate\Filesystem\Filesystem  $files
      * @param  string  $basePath
@@ -60,6 +69,7 @@ class PackageManifest
 
     /**
      * Get all of the service provider class names for all packages.
+	 * 得到所有的服务提供者类名
      *
      * @return array
      */
@@ -70,6 +80,7 @@ class PackageManifest
 
     /**
      * Get all of the aliases for all packages.
+	 * 得到所有的别名
      *
      * @return array
      */
@@ -80,6 +91,7 @@ class PackageManifest
 
     /**
      * Get all of the values for all packages for the given configuration name.
+	 * 得到所有的配置值 
      *
      * @param  string  $key
      * @return array
@@ -93,6 +105,7 @@ class PackageManifest
 
     /**
      * Get the current package manifest.
+	 * 得到当前包清单
      *
      * @return array
      */
@@ -112,6 +125,7 @@ class PackageManifest
 
     /**
      * Build the manifest and write it to disk.
+	 * 建立清单并写入磁盘
      *
      * @return void
      */
@@ -138,6 +152,7 @@ class PackageManifest
 
     /**
      * Format the given package name.
+	 * 格式化给定包名
      *
      * @param  string  $package
      * @return string
@@ -149,6 +164,7 @@ class PackageManifest
 
     /**
      * Get all of the package names that should be ignored.
+	 * 得到所有应该忽略的包名
      *
      * @return array
      */
@@ -165,6 +181,7 @@ class PackageManifest
 
     /**
      * Write the given manifest array to disk.
+	 * 写入给定清单至磁盘
      *
      * @param  array  $manifest
      * @return void

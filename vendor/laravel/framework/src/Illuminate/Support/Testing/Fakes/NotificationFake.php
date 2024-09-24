@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，通知伪造
+ */
 
 namespace Illuminate\Support\Testing\Fakes;
 
@@ -17,6 +20,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * All of the notifications that have been sent.
+	 * 所有已发送的通知
      *
      * @var array
      */
@@ -24,6 +28,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Locale used when sending notifications.
+	 * 发送通知时使用的区域设置
      *
      * @var string|null
      */
@@ -31,6 +36,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Assert if a notification was sent based on a truth-test callback.
+	 * 判断通知是否基于真值测试回调发送
      *
      * @param  mixed  $notifiable
      * @param  string  $notification
@@ -65,6 +71,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Assert if a notification was sent a number of times.
+	 * 判断是否发送了多次通知
      *
      * @param  mixed  $notifiable
      * @param  string  $notification
@@ -81,6 +88,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Determine if a notification was sent based on a truth-test callback.
+	 * 确定是否根据真值测试回调发送了通知
      *
      * @param  mixed  $notifiable
      * @param  string  $notification
@@ -111,6 +119,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Assert that no notifications were sent.
+	 * 断言没有发送通知
      *
      * @return void
      */
@@ -121,6 +130,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Assert the total amount of times a notification was sent.
+	 * 断言发送通知的总次数
      *
      * @param  int  $expectedCount
      * @param  string  $notification
@@ -142,6 +152,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Get all of the notifications matching a truth-test callback.
+	 * 得到所有与true-test回调匹配的通知
      *
      * @param  mixed  $notifiable
      * @param  string  $notification
@@ -167,6 +178,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Determine if there are more notifications left to inspect.
+	 * 确定是否还有更多通知需要检查
      *
      * @param  mixed  $notifiable
      * @param  string  $notification
@@ -179,6 +191,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Get all of the notifications for a notifiable entity by type.
+	 * 按类型得到可通知实体的所有通知
      *
      * @param  mixed  $notifiable
      * @param  string  $notification
@@ -191,6 +204,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Send the given notification to the given notifiable entities.
+	 * 发送到给定的可通知实体将给定的通知
      *
      * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
@@ -203,6 +217,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Send the given notification immediately.
+	 * 立即发送给定的通知
      *
      * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
@@ -235,6 +250,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Get a channel instance by name.
+	 * 得到通道实例按名称
      *
      * @param  string|null  $name
      * @return mixed
@@ -246,6 +262,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
      * Set the locale of notifications.
+	 * 设置通知的区域设置
      *
      * @param  string  $locale
      * @return $this

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，与时间互动
+ */
 
 namespace Illuminate\Support;
 
@@ -9,6 +12,7 @@ trait InteractsWithTime
 {
     /**
      * Get the number of seconds until the given DateTime.
+	 * 得到距离给定DateTime的秒数
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
      * @return int
@@ -24,6 +28,7 @@ trait InteractsWithTime
 
     /**
      * Get the "available at" UNIX timestamp.
+	 * 得到"available at"的UNIX时间戳
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
      * @return int
@@ -39,6 +44,7 @@ trait InteractsWithTime
 
     /**
      * If the given value is an interval, convert it to a DateTime instance.
+	 * 如果给定的值是一个间隔，将其转换为DateTime实例。
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
      * @return \DateTimeInterface|int
@@ -54,6 +60,7 @@ trait InteractsWithTime
 
     /**
      * Get the current system time as a UNIX timestamp.
+	 * 得到当前系统时间作为UNIX时间戳
      *
      * @return int
      */

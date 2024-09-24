@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，SqlServer创建者
+ */
 
 namespace Illuminate\Database\Schema;
 
@@ -6,6 +9,7 @@ class SqlServerBuilder extends Builder
 {
     /**
      * Drop all tables from the database.
+	 * 删除所有表从数据库
      *
      * @return void
      */
@@ -18,6 +22,7 @@ class SqlServerBuilder extends Builder
 
     /**
      * Drop all views from the database.
+	 * 删除所有视图从数据库
      *
      * @return void
      */

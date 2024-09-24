@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，数组子集
+ */
 
 namespace Illuminate\Foundation\Testing\Constraints;
 
@@ -26,9 +29,10 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Create a new array subset constraint instance.
+		 * 创建新的数组子集约束实例
          *
-         * @param iterable  $subset
-         * @param bool  $strict
+         * @param  iterable  $subset
+         * @param  bool  $strict
          * @return void
          */
         public function __construct(iterable $subset, bool $strict = false)
@@ -39,6 +43,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Evaluates the constraint for parameter $other.
+		 * 计算参数$other的约束
          *
          * If $returnResult is set to false (the default), an exception is thrown
          * in case of a failure. null is returned otherwise.
@@ -90,10 +95,11 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Returns a string representation of the constraint.
-         *
-         * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+		 * 返回约束的字符串表示形式
          *
          * @return string
+         *
+         * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
          */
         public function toString(): string
         {
@@ -102,6 +108,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Returns the description of the failure.
+		 * 返回失败的描述
          *
          * The beginning of failure messages is "Failed asserting that" in most
          * cases. This method should return the second part of that sentence.
@@ -118,6 +125,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Returns the description of the failure.
+		 * 返回失败的描述
          *
          * The beginning of failure messages is "Failed asserting that" in most
          * cases. This method should return the second part of that sentence.
@@ -161,9 +169,10 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Create a new array subset constraint instance.
+		 * 创建新的数组子集约束实例
          *
-         * @param iterable  $subset
-         * @param bool  $strict
+         * @param  iterable  $subset
+         * @param  bool  $strict
          * @return void
          */
         public function __construct(iterable $subset, bool $strict = false)
@@ -174,6 +183,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Evaluates the constraint for parameter $other.
+		 * 计算参数$other的约束
          *
          * If $returnResult is set to false (the default), an exception is thrown
          * in case of a failure. null is returned otherwise.
@@ -223,10 +233,11 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Returns a string representation of the constraint.
-         *
-         * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+		 * 返回约束的字符串表示形式
          *
          * @return string
+         *
+         * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
          */
         public function toString(): string
         {
@@ -235,6 +246,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Returns the description of the failure.
+		 * 返回失败的描述
          *
          * The beginning of failure messages is "Failed asserting that" in most
          * cases. This method should return the second part of that sentence.
@@ -251,6 +263,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
 
         /**
          * Returns the description of the failure.
+		 * 返回失败的描述
          *
          * The beginning of failure messages is "Failed asserting that" in most
          * cases. This method should return the second part of that sentence.

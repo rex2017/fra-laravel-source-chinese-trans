@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面路由
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -42,6 +45,7 @@ class Route extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

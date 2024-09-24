@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台，命令开始
+ */
 
 namespace Illuminate\Console\Events;
 
@@ -9,6 +12,7 @@ class CommandStarting
 {
     /**
      * The command name.
+	 * 命令名
      *
      * @var string
      */
@@ -16,6 +20,7 @@ class CommandStarting
 
     /**
      * The console input implementation.
+	 * 控制台输入实现
      *
      * @var \Symfony\Component\Console\Input\InputInterface|null
      */
@@ -23,6 +28,7 @@ class CommandStarting
 
     /**
      * The command output implementation.
+	 * 输出命令实现
      *
      * @var \Symfony\Component\Console\Output\OutputInterface|null
      */
@@ -30,6 +36,7 @@ class CommandStarting
 
     /**
      * Create a new event instance.
+	 * 创建新的事件实例
      *
      * @param  string  $command
      * @param  \Symfony\Component\Console\Input\InputInterface  $input

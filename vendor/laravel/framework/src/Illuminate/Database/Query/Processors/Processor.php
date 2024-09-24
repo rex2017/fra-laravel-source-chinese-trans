@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，查询进程
+ */
 
 namespace Illuminate\Database\Query\Processors;
 
@@ -8,6 +11,7 @@ class Processor
 {
     /**
      * Process the results of a "select" query.
+	 * 处理"选择"查询的结果
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $results
@@ -20,6 +24,7 @@ class Processor
 
     /**
      * Process an  "insert get ID" query.
+	 * 处理"insert get ID"查询
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  string  $sql
@@ -38,6 +43,7 @@ class Processor
 
     /**
      * Process the results of a column listing query.
+	 * 处理列清单查询的结果
      *
      * @param  array  $results
      * @return array

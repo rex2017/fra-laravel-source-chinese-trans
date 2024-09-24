@@ -1,4 +1,7 @@
 <?php
+/**
+ * Redis，Predis连接
+ */
 
 namespace Illuminate\Redis\Connectors;
 
@@ -12,6 +15,7 @@ class PredisConnector implements Connector
 {
     /**
      * Create a new clustered Predis connection.
+	 * 创建新的集群Predis连接
      *
      * @param  array  $config
      * @param  array  $options
@@ -28,6 +32,7 @@ class PredisConnector implements Connector
 
     /**
      * Create a new clustered Predis connection.
+	 * 创建新的集群Predis连接
      *
      * @param  array  $config
      * @param  array  $clusterOptions

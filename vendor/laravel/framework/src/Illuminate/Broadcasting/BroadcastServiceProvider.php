@@ -1,4 +1,7 @@
 <?php
+/**
+ * 广播服务提供者
+ */
 
 namespace Illuminate\Broadcasting;
 
@@ -11,6 +14,7 @@ class BroadcastServiceProvider extends ServiceProvider implements DeferrableProv
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */
@@ -31,6 +35,7 @@ class BroadcastServiceProvider extends ServiceProvider implements DeferrableProv
 
     /**
      * Get the services provided by the provider.
+	 * 得到服务提供者
      *
      * @return array
      */

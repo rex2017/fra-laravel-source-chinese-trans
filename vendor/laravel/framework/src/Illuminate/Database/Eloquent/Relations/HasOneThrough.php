@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent有一个通过
+ */
 
 namespace Illuminate\Database\Eloquent\Relations;
 
@@ -12,6 +15,7 @@ class HasOneThrough extends HasManyThrough
 
     /**
      * Get the results of the relationship.
+	 * 得到关系的结果
      *
      * @return mixed
      */
@@ -22,6 +26,7 @@ class HasOneThrough extends HasManyThrough
 
     /**
      * Initialize the relation on a set of models.
+	 * 初始化一组模型上的关系
      *
      * @param  array  $models
      * @param  string  $relation
@@ -38,6 +43,7 @@ class HasOneThrough extends HasManyThrough
 
     /**
      * Match the eagerly loaded results to their parents.
+	 * 将急切加载的结果与他们的父母匹配
      *
      * @param  array  $models
      * @param  \Illuminate\Database\Eloquent\Collection  $results
@@ -51,6 +57,8 @@ class HasOneThrough extends HasManyThrough
         // Once we have the dictionary we can simply spin through the parent models to
         // link them up with their children using the keyed dictionary to make the
         // matching very convenient and easy work. Then we'll just return them.
+		// 一旦我们有了字典，我们就可以简单地旋转父模型，使用键控字典将它们与它们的孩子联系起来，
+		// 使匹配变得非常方便和容易。然后我们只需返回它们。
         foreach ($models as $model) {
             if (isset($dictionary[$key = $model->getAttribute($this->localKey)])) {
                 $value = $dictionary[$key];
@@ -65,6 +73,7 @@ class HasOneThrough extends HasManyThrough
 
     /**
      * Make a new related instance for the given model.
+	 * 为给定模型创建一个新的相关实例
      *
      * @param  \Illuminate\Database\Eloquent\Model  $parent
      * @return \Illuminate\Database\Eloquent\Model

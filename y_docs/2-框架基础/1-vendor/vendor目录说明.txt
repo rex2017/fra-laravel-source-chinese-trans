@@ -1,0 +1,30 @@
+
+=========================================================================
+说明：vendor目录说明
+最后更新：2024-05-14
+=========================================================================
+
+vendor 是 laravel 的引入文件包
+
+bin					
+composer
+doctrine
+dragonmantank
+egulias
+facade
+fideloper
+filp
+fzaninotto
+hamcrest
+laravel				框架核心包
+league	
+mockery
+monolog				日志
+myclabs
+nesbot
+nikic
+nunomaduro
+opis
+paragonie
+phar-io
+php-parallel

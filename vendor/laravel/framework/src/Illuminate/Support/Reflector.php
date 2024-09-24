@@ -1,14 +1,67 @@
 <?php
+/**
+ * 支持，反射
+ */
 
 namespace Illuminate\Support;
 
 use ReflectionClass;
+use ReflectionMethod;
 use ReflectionNamedType;
 
 class Reflector
 {
     /**
+     * This is a PHP 7.4 compatible implementation of is_callable.
+	 * 这是一个与PHP 7.4兼容的is_callable实现
+     *
+     * @param  mixed  $var
+     * @param  bool  $syntaxOnly
+     * @return bool
+     */
+    public static function isCallable($var, $syntaxOnly = false)
+    {
+        if (! is_array($var)) {
+            return is_callable($var, $syntaxOnly);
+        }
+
+        if ((! isset($var[0]) || ! isset($var[1])) ||
+            ! is_string($var[1] ?? null)) {
+            return false;
+        }
+
+        if ($syntaxOnly &&
+            (is_string($var[0]) || is_object($var[0])) &&
+            is_string($var[1])) {
+            return true;
+        }
+
+        $class = is_object($var[0]) ? get_class($var[0]) : $var[0];
+
+        $method = $var[1];
+
+        if (! class_exists($class)) {
+            return false;
+        }
+
+        if (method_exists($class, $method)) {
+            return (new ReflectionMethod($class, $method))->isPublic();
+        }
+
+        if (is_object($var[0]) && method_exists($class, '__call')) {
+            return (new ReflectionMethod($class, '__call'))->isPublic();
+        }
+
+        if (! is_object($var[0]) && method_exists($class, '__callStatic')) {
+            return (new ReflectionMethod($class, '__callStatic'))->isPublic();
+        }
+
+        return false;
+    }
+
+    /**
      * Get the class name of the given parameter's type, if possible.
+	 * 如果可能，获取给定参数类型的类名
      *
      * @param  \ReflectionParameter  $parameter
      * @return string|null
@@ -38,6 +91,7 @@ class Reflector
 
     /**
      * Determine if the parameter's type is a subclass of the given type.
+	 * 确定参数的类型是否是给定类型的子类
      *
      * @param  \ReflectionParameter  $parameter
      * @param  string  $className

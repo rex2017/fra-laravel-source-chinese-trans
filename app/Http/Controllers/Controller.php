@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制器
+ */
 
 namespace App\Http\Controllers;
 

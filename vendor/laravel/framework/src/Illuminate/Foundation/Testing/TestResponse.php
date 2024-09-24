@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，测试响应
+ */
 
 namespace Illuminate\Foundation\Testing;
 
@@ -28,6 +31,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * The response to delegate to.
+	 * 委托的响应
      *
      * @var \Illuminate\Http\Response
      */
@@ -35,6 +39,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * The streamed content of the response.
+	 * 响应的流内容
      *
      * @var string
      */
@@ -42,6 +47,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Create a new test response instance.
+	 * 创建新的测试响应实例
      *
      * @param  \Illuminate\Http\Response  $response
      * @return void
@@ -53,6 +59,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Create a new TestResponse from another response.
+	 * 创建一个新的TestResponse从另一个响应
      *
      * @param  \Illuminate\Http\Response  $response
      * @return static
@@ -64,6 +71,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has a successful status code.
+	 * 断言响应具有成功状态码
      *
      * @return $this
      */
@@ -79,6 +87,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has a 200 status code.
+	 * 断言响应的状态码为200
      *
      * @return $this
      */
@@ -94,6 +103,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has a 201 status code.
+	 * 断言响应具有201状态码
      *
      * @return $this
      */
@@ -111,6 +121,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has the given status code and no content.
+	 * 断言响应具有给定的状态码而没有内容
      *
      * @param  int  $status
      * @return $this
@@ -126,6 +137,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has a not found status code.
+	 * 断言响应具有未找到的状态码
      *
      * @return $this
      */
@@ -141,6 +153,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has a forbidden status code.
+	 * 断言响应具有被禁止的状态码
      *
      * @return $this
      */
@@ -156,6 +169,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has an unauthorized status code.
+	 * 断言响应具有未经授权的状态码
      *
      * @return $this
      */
@@ -173,6 +187,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has the given status code.
+	 * 断言响应具有给定的状态码
      *
      * @param  int  $status
      * @return $this
@@ -191,6 +206,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert whether the response is redirecting to a given URI.
+	 * 断言响应是否重定向到给定的URI
      *
      * @param  string|null  $uri
      * @return $this
@@ -210,6 +226,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response contains the given header and equals the optional value.
+	 * 断言响应包含给定的标头并等于可选值
      *
      * @param  string  $headerName
      * @param  mixed  $value
@@ -235,6 +252,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response does not contains the given header.
+	 * 断言响应不包含给定的标头
      *
      * @param  string  $headerName
      * @return $this
@@ -250,6 +268,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the current location header matches the given URI.
+	 * 断言当前位置标头与给定的URI匹配
      *
      * @param  string  $uri
      * @return $this
@@ -265,6 +284,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response contains the given cookie and equals the optional value.
+	 * 断言响应包含给定的cookie并等于可选值
      *
      * @param  string  $cookieName
      * @param  mixed  $value
@@ -279,6 +299,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response contains the given cookie and equals the optional value.
+	 * 断言响应包含给定的cookie并等于可选值
      *
      * @param  string  $cookieName
      * @param  mixed  $value
@@ -313,6 +334,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response contains the given cookie and is expired.
+	 * 断言响应包含给定的cookie并且已经过期
      *
      * @param  string  $cookieName
      * @return $this
@@ -336,6 +358,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response contains the given cookie and is not expired.
+	 * 断言响应包含给定的cookie并且没有过期
      *
      * @param  string  $cookieName
      * @return $this
@@ -359,6 +382,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Asserts that the response does not contains the given cookie.
+	 * 断言响应不包含给定的cookie
      *
      * @param  string  $cookieName
      * @return $this
@@ -375,6 +399,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get the given cookie from the response.
+	 * 得到给定的cookie从响应中
      *
      * @param  string  $cookieName
      * @return \Symfony\Component\HttpFoundation\Cookie|null
@@ -390,6 +415,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the given string is contained within the response.
+	 * 断言给定的字符串包含在响应中
      *
      * @param  string  $value
      * @return $this
@@ -403,6 +429,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the given strings are contained in order within the response.
+	 * 断言给定的字符串按顺序包含在响应中
      *
      * @param  array  $values
      * @return $this
@@ -416,6 +443,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the given string is contained within the response text.
+	 * 断言给定的字符串包含在响应文本中
      *
      * @param  string  $value
      * @return $this
@@ -429,6 +457,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the given strings are contained in order within the response text.
+	 * 断言给定的字符串按顺序包含在响应文本中
      *
      * @param  array  $values
      * @return $this
@@ -442,6 +471,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the given string is not contained within the response.
+	 * 断言给定的字符串不包含在响应中
      *
      * @param  string  $value
      * @return $this
@@ -455,6 +485,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the given string is not contained within the response text.
+	 * 断言给定的字符串不包含在响应文本中
      *
      * @param  string  $value
      * @return $this
@@ -468,6 +499,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response is a superset of the given JSON.
+	 * 断言响应是给定JSON的超集
      *
      * @param  array  $data
      * @param  bool  $strict
@@ -484,6 +516,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get the assertion message for assertJson.
+	 * 得到assertJson的断言消息
      *
      * @param  array  $data
      * @return string
@@ -502,6 +535,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the expected value exists at the given path in the response.
+	 * 断言期望的值存在于响应的给定路径中
      *
      * @param  string  $path
      * @param  mixed  $expect
@@ -521,6 +555,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has the exact given JSON.
+	 * 断言响应具有确切给定的JSON
      *
      * @param  array  $data
      * @return $this
@@ -538,6 +573,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response contains the given JSON fragment.
+	 * 断言响应包含给定的JSON片段
      *
      * @param  array  $data
      * @return $this
@@ -565,6 +601,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response does not contain the given JSON fragment.
+	 * 断言响应不包含给定的JSON片段
      *
      * @param  array  $data
      * @param  bool  $exact
@@ -597,6 +634,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response does not contain the exact JSON fragment.
+	 * 断言响应不包含确切的JSON片段
      *
      * @param  array  $data
      * @return $this
@@ -625,6 +663,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get the strings we need to search for when examining the JSON.
+	 * 得到我们在检查JSON时需要搜索的字符串
      *
      * @param  string  $key
      * @param  string  $value
@@ -643,6 +682,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has a given JSON structure.
+	 * 断言响应具有给定的JSON结构
      *
      * @param  array|null  $structure
      * @param  array|null  $responseData
@@ -679,6 +719,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response JSON has the expected count of items at the given key.
+	 * 断言响应JSON具有给定键处的预期项计数
      *
      * @param  int  $count
      * @param  string|null  $key
@@ -705,6 +746,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has the given JSON validation errors.
+	 * 断言响应具有给定的JSON验证错误
      *
      * @param  string|array  $errors
      * @param  string  $responseKey
@@ -754,6 +796,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response has no JSON validation errors for the given keys.
+	 * 断言响应对于给定的键没有JSON验证错误
      *
      * @param  string|array|null  $keys
      * @param  string  $responseKey
@@ -796,6 +839,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Validate and return the decoded response JSON.
+	 * 验证并返回解码后的响应JSON
      *
      * @param  string|null  $key
      * @return mixed
@@ -817,6 +861,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Validate and return the decoded response JSON.
+	 * 验证并返回解码后的响应JSON
      *
      * @param  string|null  $key
      * @return mixed
@@ -828,6 +873,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response view equals the given value.
+	 * 断言响应视图等于给定的值
      *
      * @param  string  $value
      * @return $this
@@ -843,6 +889,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response view has a given piece of bound data.
+	 * 断言响应视图具有给定的绑定数据片段
      *
      * @param  string|array  $key
      * @param  mixed  $value
@@ -871,6 +918,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response view has a given list of bound data.
+	 * 断言响应视图具有给定的绑定数据列表
      *
      * @param  array  $bindings
      * @return $this
@@ -890,6 +938,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get a piece of data from the original view.
+	 * 得到一段数据从原始视图
      *
      * @param  string  $key
      * @return mixed
@@ -903,6 +952,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the response view is missing a piece of bound data.
+	 * 断言响应视图缺少一段绑定数据
      *
      * @param  string  $key
      * @return $this
@@ -918,6 +968,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Ensure that the response has a view as its original content.
+	 * 确保响应有一个视图作为其原始内容
      *
      * @return $this
      */
@@ -932,6 +983,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session has a given value.
+	 * 断言会话具有给定值
      *
      * @param  string|array  $key
      * @param  mixed  $value
@@ -959,6 +1011,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session has a given list of values.
+	 * 断言会话具有给定的值列表
      *
      * @param  array  $bindings
      * @return $this
@@ -978,6 +1031,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session has a given value in the flashed input array.
+	 * 断言会话在闪现的输入数组中有一个给定的值
      *
      * @param  string|array  $key
      * @param  mixed  $value
@@ -1013,6 +1067,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session has the given errors.
+	 * 断言会话有给定的错误
      *
      * @param  string|array  $keys
      * @param  mixed  $format
@@ -1040,6 +1095,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session is missing the given errors.
+	 * 断言会话缺少给定的错误
      *
      * @param  string|array  $keys
      * @param  string|null  $format
@@ -1075,6 +1131,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session has no errors.
+	 * 断言会话没有错误
      *
      * @return $this
      */
@@ -1095,6 +1152,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session has the given errors.
+	 * 断言会话有给定的错误
      *
      * @param  string  $errorBag
      * @param  string|array  $keys
@@ -1108,6 +1166,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Assert that the session does not have a given key.
+	 * 断言会话没有给定的键
      *
      * @param  string|array  $key
      * @return $this
@@ -1130,6 +1189,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get the current session store.
+	 * 得到当前会话存储
      *
      * @return \Illuminate\Session\Store
      */
@@ -1140,6 +1200,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Dump the content from the response.
+	 * 转储内容从响应中
      *
      * @return $this
      */
@@ -1160,6 +1221,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Dump the headers from the response.
+	 * 转储报头从响应中
      *
      * @return $this
      */
@@ -1172,6 +1234,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Dump the session from the response.
+	 * 转储会话从响应中
      *
      * @param  string|array  $keys
      * @return $this
@@ -1191,6 +1254,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get the streamed content from the response.
+	 * 得到流内容从响应中
      *
      * @return string
      */
@@ -1213,6 +1277,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Dynamically access base response parameters.
+	 * 动态访问基本响应参数
      *
      * @param  string  $key
      * @return mixed
@@ -1224,6 +1289,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Proxy isset() checks to the underlying base response.
+	 * 代理isset()检查底层基本响应
      *
      * @param  string  $key
      * @return mixed
@@ -1235,6 +1301,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Determine if the given offset exists.
+	 * 确定给定的偏移量是否存在
      *
      * @param  string  $offset
      * @return bool
@@ -1246,6 +1313,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Get the value for a given offset.
+	 * 得到给定偏移量的值
      *
      * @param  string  $offset
      * @return mixed
@@ -1257,6 +1325,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Set the value at the given offset.
+	 * 设置值在给定的偏移量
      *
      * @param  string  $offset
      * @param  mixed  $value
@@ -1271,6 +1340,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Unset the value at the given offset.
+	 * 取消值的设置在给定偏移量处
      *
      * @param  string  $offset
      * @return void
@@ -1284,6 +1354,7 @@ class TestResponse implements ArrayAccess
 
     /**
      * Handle dynamic calls into macros or pass missing methods to the base response.
+	 * 处理动态调用
      *
      * @param  string  $method
      * @param  array  $args

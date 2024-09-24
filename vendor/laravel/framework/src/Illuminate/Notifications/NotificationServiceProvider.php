@@ -1,4 +1,7 @@
 <?php
+/**
+ * 通知服务提供者
+ */
 
 namespace Illuminate\Notifications;
 
@@ -10,6 +13,7 @@ class NotificationServiceProvider extends ServiceProvider
 {
     /**
      * Boot the application services.
+	 * 引导应用服务
      *
      * @return void
      */
@@ -26,6 +30,7 @@ class NotificationServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */

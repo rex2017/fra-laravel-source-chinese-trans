@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，控制台服务提供者
+ */
 
 namespace Illuminate\Foundation\Providers;
 
@@ -10,6 +13,7 @@ class ConsoleSupportServiceProvider extends AggregateServiceProvider implements 
 {
     /**
      * The provider class names.
+	 * 提供者类
      *
      * @var array
      */

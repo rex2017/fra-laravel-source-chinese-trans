@@ -1,4 +1,7 @@
 <?php
+/**
+ * 序列化模型
+ */
 
 namespace Illuminate\Queue;
 
@@ -11,6 +14,7 @@ trait SerializesModels
 
     /**
      * Prepare the instance for serialization.
+	 * 准备实例为序列化
      *
      * @return array
      */
@@ -31,6 +35,7 @@ trait SerializesModels
 
     /**
      * Restore the model after serialization.
+	 * 恢复模型序列化后
      *
      * @return void
      */
@@ -49,6 +54,7 @@ trait SerializesModels
 
     /**
      * Prepare the instance values for serialization.
+	 * 准备实例值为序列化
      *
      * @return array
      */
@@ -89,6 +95,7 @@ trait SerializesModels
 
     /**
      * Restore the model after serialization.
+	 * 恢复模型在序列化后
      *
      * @param  array  $values
      * @return array
@@ -128,6 +135,7 @@ trait SerializesModels
 
     /**
      * Get the property value for the given property.
+	 * 得到给定属性的属性值
      *
      * @param  \ReflectionProperty  $property
      * @return mixed

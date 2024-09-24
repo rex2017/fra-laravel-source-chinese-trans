@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，激励
+ */
 
 namespace Illuminate\Foundation;
 
@@ -8,6 +11,7 @@ class Inspiring
 {
     /**
      * Get an inspiring quote.
+	 * 得到一段激励的话
      *
      * Taylor & Dayle made this commit from Jungfraujoch. (11,333 ft.)
      *

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 授权服务提供者
+ */
 
 namespace App\Providers;
 

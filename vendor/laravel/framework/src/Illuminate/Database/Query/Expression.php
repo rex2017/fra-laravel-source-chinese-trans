@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，查询表达式
+ */
 
 namespace Illuminate\Database\Query;
 
@@ -6,6 +9,7 @@ class Expression
 {
     /**
      * The value of the expression.
+	 * 表达式值
      *
      * @var mixed
      */
@@ -13,6 +17,7 @@ class Expression
 
     /**
      * Create a new raw query expression.
+	 * 创建新的原始查询表达式
      *
      * @param  mixed  $value
      * @return void
@@ -24,6 +29,7 @@ class Expression
 
     /**
      * Get the value of the expression.
+	 * 得到表达式值
      *
      * @return mixed
      */
@@ -34,6 +40,7 @@ class Expression
 
     /**
      * Get the value of the expression.
+	 * 得到表达式值
      *
      * @return string
      */

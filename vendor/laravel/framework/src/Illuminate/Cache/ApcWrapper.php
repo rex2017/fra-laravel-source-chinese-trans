@@ -1,4 +1,7 @@
 <?php
+/**
+ * 缓存，APC封装器
+ */
 
 namespace Illuminate\Cache;
 
@@ -6,6 +9,7 @@ class ApcWrapper
 {
     /**
      * Indicates if APCu is supported.
+	 * 指明是否APCu是否提供
      *
      * @var bool
      */
@@ -13,6 +17,7 @@ class ApcWrapper
 
     /**
      * Create a new APC wrapper instance.
+	 * 创建新的APC封装实例
      *
      * @return void
      */
@@ -23,6 +28,7 @@ class ApcWrapper
 
     /**
      * Get an item from the cache.
+	 * 得到一个项目从缓存中
      *
      * @param  string  $key
      * @return mixed
@@ -34,6 +40,7 @@ class ApcWrapper
 
     /**
      * Store an item in the cache.
+	 * 缓存一个项目至缓存中
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -47,6 +54,7 @@ class ApcWrapper
 
     /**
      * Increment the value of an item in the cache.
+	 * 增加缓存中项的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -59,6 +67,7 @@ class ApcWrapper
 
     /**
      * Decrement the value of an item in the cache.
+	 * 递减缓存中项目的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -71,6 +80,7 @@ class ApcWrapper
 
     /**
      * Remove an item from the cache.
+	 * 从缓存中移除项
      *
      * @param  string  $key
      * @return bool
@@ -82,6 +92,7 @@ class ApcWrapper
 
     /**
      * Remove all items from the cache.
+	 * 清空缓存
      *
      * @return bool
      */

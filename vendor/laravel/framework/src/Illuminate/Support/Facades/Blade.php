@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面片
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -26,6 +29,7 @@ class Blade extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

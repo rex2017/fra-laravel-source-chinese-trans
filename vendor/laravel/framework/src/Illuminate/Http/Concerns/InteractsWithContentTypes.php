@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，与内容类型交互
+ */
 
 namespace Illuminate\Http\Concerns;
 
@@ -8,6 +11,7 @@ trait InteractsWithContentTypes
 {
     /**
      * Determine if the given content types match.
+	 * 确定是否给定的内容类型匹配
      *
      * @param  string  $actual
      * @param  string  $type
@@ -26,16 +30,18 @@ trait InteractsWithContentTypes
 
     /**
      * Determine if the request is sending JSON.
+	 * 确定是否请求发送JSON
      *
      * @return bool
      */
     public function isJson()
     {
-        return Str::contains($this->header('CONTENT_TYPE'), ['/json', '+json']);
+        return Str::contains($this->header('CONTENT_TYPE') ?? '', ['/json', '+json']);
     }
 
     /**
      * Determine if the current request probably expects a JSON response.
+	 * 确定当前请求是否可能期望Json响应
      *
      * @return bool
      */
@@ -46,6 +52,7 @@ trait InteractsWithContentTypes
 
     /**
      * Determine if the current request is asking for JSON.
+	 * 确定当前请求是否请求json
      *
      * @return bool
      */
@@ -58,6 +65,7 @@ trait InteractsWithContentTypes
 
     /**
      * Determines whether the current requests accepts a given content type.
+	 * 确定当前请求是否接受给定的内容类型
      *
      * @param  string|array  $contentTypes
      * @return bool
@@ -89,6 +97,7 @@ trait InteractsWithContentTypes
 
     /**
      * Return the most suitable content type from the given array based on content negotiation.
+	 * 返回最合适的内容类型根据内容协商从给定数组
      *
      * @param  string|array  $contentTypes
      * @return string|null
@@ -120,6 +129,7 @@ trait InteractsWithContentTypes
 
     /**
      * Determine if the current request accepts any content type.
+	 * 确定当前请求是否接受任何内容类型
      *
      * @return bool
      */
@@ -134,6 +144,7 @@ trait InteractsWithContentTypes
 
     /**
      * Determines whether a request accepts JSON.
+	 * 确定请求是否接受Json
      *
      * @return bool
      */
@@ -144,6 +155,7 @@ trait InteractsWithContentTypes
 
     /**
      * Determines whether a request accepts HTML.
+	 * 确定请求是否接受Html
      *
      * @return bool
      */
@@ -154,6 +166,7 @@ trait InteractsWithContentTypes
 
     /**
      * Get the data format expected in the response.
+	 * 得到数据格式
      *
      * @param  string  $default
      * @return string

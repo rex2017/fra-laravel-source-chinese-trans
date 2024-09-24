@@ -1,4 +1,7 @@
 <?php
+/**
+ * 缓存数据锁定
+ */
 
 namespace Illuminate\Cache;
 
@@ -8,6 +11,7 @@ class ArrayLock extends Lock
 {
     /**
      * The parent array cache store.
+	 * 缓存存储
      *
      * @var \Illuminate\Cache\ArrayStore
      */
@@ -15,6 +19,7 @@ class ArrayLock extends Lock
 
     /**
      * Create a new lock instance.
+	 * 创建新的锁定实例
      *
      * @param  \Illuminate\Cache\ArrayStore  $store
      * @param  string  $name
@@ -31,6 +36,7 @@ class ArrayLock extends Lock
 
     /**
      * Attempt to acquire the lock.
+	 * 尝试获取锁
      *
      * @return bool
      */
@@ -52,6 +58,7 @@ class ArrayLock extends Lock
 
     /**
      * Determine if the current lock exists.
+	 * 当前锁是否存在
      *
      * @return bool
      */
@@ -62,6 +69,7 @@ class ArrayLock extends Lock
 
     /**
      * Release the lock.
+	 * 释放锁
      *
      * @return bool
      */
@@ -82,6 +90,7 @@ class ArrayLock extends Lock
 
     /**
      * Returns the owner value written into the driver for this lock.
+	 * 返回写入此锁的驱动程序的所有者值
      *
      * @return string
      */
@@ -92,6 +101,7 @@ class ArrayLock extends Lock
 
     /**
      * Releases this lock in disregard of ownership.
+	 * 释放锁，而不考虑所有权
      *
      * @return void
      */

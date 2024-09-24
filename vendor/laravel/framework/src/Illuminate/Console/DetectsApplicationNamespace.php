@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台检测命名空间
+ */
 
 namespace Illuminate\Console;
 
@@ -11,6 +14,7 @@ trait DetectsApplicationNamespace
 {
     /**
      * Get the application namespace.
+	 * 得到应用程序命名空间
      *
      * @return string
      */

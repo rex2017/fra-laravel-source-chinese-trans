@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面session
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -34,6 +37,7 @@ class Session extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

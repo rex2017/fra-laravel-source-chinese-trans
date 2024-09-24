@@ -1,4 +1,7 @@
 <?php
+/**
+ * 邮件服务提供者
+ */
 
 namespace Illuminate\Mail;
 
@@ -13,6 +16,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */
@@ -25,6 +29,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Register the Illuminate mailer instance.
+	 * 注册点亮邮件实例
      *
      * @return void
      */
@@ -36,6 +41,8 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
             // Once we have create the mailer instance, we will set a container instance
             // on the mailer. This allows us to resolve mailer classes via containers
             // for maximum testability on said classes instead of passing Closures.
+			// 创建邮件程序实例后，我们将在邮件程序上设置一个容器实例。
+			// 这允许我们通过容器解析邮件程序类，以在所述类上实现最大的可测试性，而不是传递闭包。
             $mailer = new Mailer(
                 $app['view'], $app['swift.mailer'], $app['events']
             );
@@ -47,6 +54,8 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
             // Next we will set all of the global addresses on this mailer, which allows
             // for easy unification of all "from" addresses as well as easy debugging
             // of sent messages since they get be sent into a single email address.
+			// 接下来，我们将在此邮件程序上设置所有全局地址，这允许轻松统一所有"发件人"地址，
+			// 以及轻松调试发送的消息，因为它们被发送到一个电子邮件地址。
             foreach (['from', 'reply_to', 'to'] as $type) {
                 $this->setGlobalAddress($mailer, $config, $type);
             }
@@ -57,6 +66,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Set a global address on the mailer by type.
+	 * 设置全局地址在邮件上按类型
      *
      * @param  \Illuminate\Mail\Mailer  $mailer
      * @param  array  $config
@@ -74,6 +84,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Register the Swift Mailer instance.
+	 * 注册Swift Mailer实例
      *
      * @return void
      */
@@ -84,6 +95,8 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
         // Once we have the transporter registered, we will register the actual Swift
         // mailer instance, passing in the transport instances, which allows us to
         // override this transporter instances during app start-up if necessary.
+		// 一旦我们注册了运输器，我们将注册实际的Swift邮件程序实例，传入运输实例，
+		// 这允许我们在必要时在应用程序启动期间覆盖此运输器实例。
         $this->app->singleton('swift.mailer', function ($app) {
             if ($domain = $app->make('config')->get('mail.domain')) {
                 Swift_DependencyContainer::getInstance()
@@ -97,6 +110,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Register the Swift Transport instance.
+	 * 注册Swift Transport实例
      *
      * @return void
      */
@@ -109,6 +123,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Register the Markdown renderer instance.
+	 * 注册Markdown渲染器实例
      *
      * @return void
      */
@@ -132,6 +147,7 @@ class MailServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Get the services provided by the provider.
+	 * 得到提供者提供的服务
      *
      * @return array
      */

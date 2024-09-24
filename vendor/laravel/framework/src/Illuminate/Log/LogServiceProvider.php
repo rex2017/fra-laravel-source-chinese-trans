@@ -1,4 +1,7 @@
 <?php
+/**
+ * 日志服务提供者
+ */
 
 namespace Illuminate\Log;
 
@@ -8,6 +11,7 @@ class LogServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者，返回LogManager
      *
      * @return void
      */

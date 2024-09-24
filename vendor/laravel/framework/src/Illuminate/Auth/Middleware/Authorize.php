@@ -1,4 +1,7 @@
 <?php
+/**
+ * 身份，授权
+ */
 
 namespace Illuminate\Auth\Middleware;
 
@@ -10,6 +13,7 @@ class Authorize
 {
     /**
      * The gate instance.
+	 * 大门实例
      *
      * @var \Illuminate\Contracts\Auth\Access\Gate
      */
@@ -17,6 +21,7 @@ class Authorize
 
     /**
      * Create a new middleware instance.
+	 * 创建新的中间件实例
      *
      * @param  \Illuminate\Contracts\Auth\Access\Gate  $gate
      * @return void
@@ -28,6 +33,7 @@ class Authorize
 
     /**
      * Handle an incoming request.
+	 * 处理传入请求
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
@@ -47,6 +53,7 @@ class Authorize
 
     /**
      * Get the arguments parameter for the gate.
+	 * 得到大门的参数
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  array|null  $models
@@ -65,6 +72,7 @@ class Authorize
 
     /**
      * Get the model to authorize.
+	 * 让模型授权
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  string  $model
@@ -82,6 +90,7 @@ class Authorize
 
     /**
      * Checks if the given string looks like a fully qualified class name.
+	 * 检查给定的字符串是否看起来像完全限定的类名
      *
      * @param  string  $value
      * @return bool

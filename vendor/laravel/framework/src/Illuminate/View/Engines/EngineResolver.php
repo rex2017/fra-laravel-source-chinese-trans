@@ -1,4 +1,7 @@
 <?php
+/**
+ * 视图，引擎解析器
+ */
 
 namespace Illuminate\View\Engines;
 
@@ -9,6 +12,7 @@ class EngineResolver
 {
     /**
      * The array of engine resolvers.
+	 * 引擎解析器数组
      *
      * @var array
      */
@@ -16,6 +20,7 @@ class EngineResolver
 
     /**
      * The resolved engine instances.
+	 * 已解析的引擎实例
      *
      * @var array
      */
@@ -23,6 +28,7 @@ class EngineResolver
 
     /**
      * Register a new engine resolver.
+	 * 注册新的引擎解析器
      *
      * The engine string typically corresponds to a file extension.
      *
@@ -39,6 +45,7 @@ class EngineResolver
 
     /**
      * Resolve an engine instance by name.
+	 * 解析引擎实例按名称
      *
      * @param  string  $engine
      * @return \Illuminate\Contracts\View\Engine

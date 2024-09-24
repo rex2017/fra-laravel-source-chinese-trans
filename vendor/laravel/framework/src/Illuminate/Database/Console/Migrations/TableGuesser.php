@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，迁移表猜测者
+ */
 
 namespace Illuminate\Database\Console\Migrations;
 
@@ -16,6 +19,7 @@ class TableGuesser
 
     /**
      * Attempt to guess the table name and "creation" status of the given migration.
+	 * 尝试猜测给定迁移的表名和创建状态
      *
      * @param  string  $migration
      * @return array

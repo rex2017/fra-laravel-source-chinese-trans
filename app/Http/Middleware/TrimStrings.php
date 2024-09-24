@@ -1,4 +1,7 @@
 <?php
+/**
+ * 修整字符串
+ */
 
 namespace App\Http\Middleware;
 

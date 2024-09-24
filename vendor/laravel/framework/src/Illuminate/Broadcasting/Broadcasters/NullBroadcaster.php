@@ -1,4 +1,7 @@
 <?php
+/**
+ * 广播，空广播
+ */
 
 namespace Illuminate\Broadcasting\Broadcasters;
 

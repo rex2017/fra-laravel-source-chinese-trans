@@ -1,4 +1,7 @@
 <?php
+/**
+ * 广播套接字交互特征
+ */
 
 namespace Illuminate\Broadcasting;
 
@@ -8,6 +11,7 @@ trait InteractsWithSockets
 {
     /**
      * The socket ID for the user that raised the event.
+	 * 套接字ID
      *
      * @var string|null
      */
@@ -15,6 +19,7 @@ trait InteractsWithSockets
 
     /**
      * Exclude the current user from receiving the broadcast.
+	 * 执行当前用户的广播
      *
      * @return $this
      */
@@ -27,6 +32,7 @@ trait InteractsWithSockets
 
     /**
      * Broadcast the event to everyone.
+	 * 广播事件给每个人
      *
      * @return $this
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 日志记录器
+ */
 
 namespace Illuminate\Log;
 
@@ -14,6 +17,7 @@ class Logger implements LoggerInterface
 {
     /**
      * The underlying logger implementation.
+	 * 底层记录接口
      *
      * @var \Psr\Log\LoggerInterface
      */
@@ -21,6 +25,7 @@ class Logger implements LoggerInterface
 
     /**
      * The event dispatcher instance.
+	 * 事件调度实例
      *
      * @var \Illuminate\Contracts\Events\Dispatcher|null
      */
@@ -28,6 +33,7 @@ class Logger implements LoggerInterface
 
     /**
      * Create a new log writer instance.
+	 * 创建新的日志写实例
      *
      * @param  \Psr\Log\LoggerInterface  $logger
      * @param  \Illuminate\Contracts\Events\Dispatcher|null  $dispatcher
@@ -41,6 +47,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log an emergency message to the logs.
+	 * 记录紧急消息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -53,6 +60,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log an alert message to the logs.
+	 * 记录警告信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -65,6 +73,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log a critical message to the logs.
+	 * 记录关键信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -77,6 +86,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log an error message to the logs.
+	 * 记录错误信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -89,6 +99,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log a warning message to the logs.
+	 * 记录警告信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -101,6 +112,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log a notice to the logs.
+	 * 记录提醒信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -113,6 +125,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log an informational message to the logs.
+	 * 记录信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -125,6 +138,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log a debug message to the logs.
+	 * 记录调试信息至日志
      *
      * @param  string  $message
      * @param  array  $context
@@ -137,6 +151,7 @@ class Logger implements LoggerInterface
 
     /**
      * Log a message to the logs.
+	 * 记录信息至日志
      *
      * @param  string  $level
      * @param  string  $message
@@ -150,6 +165,7 @@ class Logger implements LoggerInterface
 
     /**
      * Dynamically pass log calls into the writer.
+	 * 动态地将日志调用传递给写入器
      *
      * @param  string  $level
      * @param  string  $message
@@ -163,6 +179,7 @@ class Logger implements LoggerInterface
 
     /**
      * Write a message to the log.
+	 * 写日志
      *
      * @param  string  $level
      * @param  string  $message
@@ -178,6 +195,7 @@ class Logger implements LoggerInterface
 
     /**
      * Register a new callback handler for when a log event is triggered.
+	 * 注册新的回调处理程序当日志事件触发时
      *
      * @param  \Closure  $callback
      * @return void
@@ -195,6 +213,7 @@ class Logger implements LoggerInterface
 
     /**
      * Fires a log event.
+	 * 触发一个日志事件
      *
      * @param  string  $level
      * @param  string  $message
@@ -206,6 +225,8 @@ class Logger implements LoggerInterface
         // If the event dispatcher is set, we will pass along the parameters to the
         // log listeners. These are useful for building profilers or other tools
         // that aggregate all of the log messages for a given "request" cycle.
+		// 如果设置了事件调度器，我们将把参数传递给日志监听器。
+		// 这些对于构建分析器或其他工具很有用
         if (isset($this->dispatcher)) {
             $this->dispatcher->dispatch(new MessageLogged($level, $message, $context));
         }
@@ -213,6 +234,7 @@ class Logger implements LoggerInterface
 
     /**
      * Format the parameters for the logger.
+	 * 格式化日志
      *
      * @param  mixed  $message
      * @return mixed
@@ -232,6 +254,7 @@ class Logger implements LoggerInterface
 
     /**
      * Get the underlying logger implementation.
+	 * 得到底层日志记录器实现
      *
      * @return \Psr\Log\LoggerInterface
      */
@@ -242,6 +265,7 @@ class Logger implements LoggerInterface
 
     /**
      * Get the event dispatcher instance.
+	 * 得到事件调度实例
      *
      * @return \Illuminate\Contracts\Events\Dispatcher
      */
@@ -252,6 +276,7 @@ class Logger implements LoggerInterface
 
     /**
      * Set the event dispatcher instance.
+	 * 设置事件调度实例
      *
      * @param  \Illuminate\Contracts\Events\Dispatcher  $dispatcher
      * @return void
@@ -263,6 +288,7 @@ class Logger implements LoggerInterface
 
     /**
      * Dynamically proxy method calls to the underlying logger.
+	 * 动态代理方法调用至底层日志
      *
      * @param  string  $method
      * @param  array  $parameters

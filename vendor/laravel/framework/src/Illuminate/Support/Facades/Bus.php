@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面总线
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -22,6 +25,7 @@ class Bus extends Facade
 {
     /**
      * Replace the bound instance with a fake.
+	 * 将绑定实例替换为假实例
      *
      * @param  array|string  $jobsToFake
      * @return \Illuminate\Support\Testing\Fakes\BusFake
@@ -35,6 +39,7 @@ class Bus extends Facade
 
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

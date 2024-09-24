@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，门面日志
+ */
 
 namespace Illuminate\Support\Facades;
 
@@ -21,6 +24,7 @@ class Log extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

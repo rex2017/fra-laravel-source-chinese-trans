@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，pg构建者
+ */
 
 namespace Illuminate\Database\Schema;
 
@@ -6,6 +9,7 @@ class PostgresBuilder extends Builder
 {
     /**
      * Determine if the given table exists.
+	 * 确定给定表是否存在
      *
      * @param  string  $table
      * @return bool
@@ -23,6 +27,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Drop all tables from the database.
+	 * 删除所有表从数据库
      *
      * @return void
      */
@@ -53,6 +58,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Drop all views from the database.
+	 * 删除所有视图从数据库
      *
      * @return void
      */
@@ -77,6 +83,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Drop all types from the database.
+	 * 删除所有类型从数据库
      *
      * @return void
      */
@@ -101,6 +108,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Get all of the table names for the database.
+	 * 得到所有表名为数据库
      *
      * @return array
      */
@@ -113,6 +121,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Get all of the view names for the database.
+	 * 得到所有视图名为数据库
      *
      * @return array
      */
@@ -125,6 +134,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Get all of the type names for the database.
+	 * 得到所有类型名为数据库
      *
      * @return array
      */
@@ -137,6 +147,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Get the column listing for a given table.
+	 * 得到列清单为给定表
      *
      * @param  string  $table
      * @return array
@@ -156,6 +167,7 @@ class PostgresBuilder extends Builder
 
     /**
      * Parse the table name and extract the schema and table.
+	 * 解析表名并提取模式和表
      *
      * @param  string  $table
      * @return array

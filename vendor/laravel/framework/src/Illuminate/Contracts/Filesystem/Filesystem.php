@@ -1,4 +1,7 @@
 <?php
+/**
+ * 契约，文件系统接口
+ */
 
 namespace Illuminate\Contracts\Filesystem;
 
@@ -6,6 +9,7 @@ interface Filesystem
 {
     /**
      * The public visibility setting.
+	 * 公共可见设置
      *
      * @var string
      */
@@ -13,6 +17,7 @@ interface Filesystem
 
     /**
      * The private visibility setting.
+	 * 私有可见设置
      *
      * @var string
      */
@@ -20,6 +25,7 @@ interface Filesystem
 
     /**
      * Determine if a file exists.
+	 * 确定文件是否存在
      *
      * @param  string  $path
      * @return bool
@@ -28,6 +34,7 @@ interface Filesystem
 
     /**
      * Get the contents of a file.
+	 * 得到文件内容
      *
      * @param  string  $path
      * @return string
@@ -38,6 +45,7 @@ interface Filesystem
 
     /**
      * Get a resource to read the file.
+	 * 得到读取文件的资源
      *
      * @param  string  $path
      * @return resource|null The path resource or null on failure.
@@ -48,6 +56,7 @@ interface Filesystem
 
     /**
      * Write the contents of a file.
+	 * 写入文件的内容
      *
      * @param  string  $path
      * @param  string|resource  $contents
@@ -58,6 +67,7 @@ interface Filesystem
 
     /**
      * Write a new file using a stream.
+	 * 写一个新文件使用流
      *
      * @param  string  $path
      * @param  resource  $resource
@@ -71,6 +81,7 @@ interface Filesystem
 
     /**
      * Get the visibility for the given path.
+	 * 得到给定路径是否可用
      *
      * @param  string  $path
      * @return string
@@ -79,6 +90,7 @@ interface Filesystem
 
     /**
      * Set the visibility for the given path.
+	 * 设置给定路径是否可用
      *
      * @param  string  $path
      * @param  string  $visibility
@@ -88,6 +100,7 @@ interface Filesystem
 
     /**
      * Prepend to a file.
+	 * 添加至文件
      *
      * @param  string  $path
      * @param  string  $data
@@ -97,6 +110,7 @@ interface Filesystem
 
     /**
      * Append to a file.
+	 * 追加一个文件
      *
      * @param  string  $path
      * @param  string  $data
@@ -106,6 +120,7 @@ interface Filesystem
 
     /**
      * Delete the file at a given path.
+	 * 删除文档路径
      *
      * @param  string|array  $paths
      * @return bool
@@ -114,6 +129,7 @@ interface Filesystem
 
     /**
      * Copy a file to a new location.
+	 * 复制文件到新地方
      *
      * @param  string  $from
      * @param  string  $to
@@ -123,6 +139,7 @@ interface Filesystem
 
     /**
      * Move a file to a new location.
+	 * 移动一个文件到新地方
      *
      * @param  string  $from
      * @param  string  $to
@@ -132,6 +149,7 @@ interface Filesystem
 
     /**
      * Get the file size of a given file.
+	 * 得到文件大小
      *
      * @param  string  $path
      * @return int
@@ -140,6 +158,7 @@ interface Filesystem
 
     /**
      * Get the file's last modification time.
+	 * 得到文件最后修改时间
      *
      * @param  string  $path
      * @return int
@@ -148,6 +167,7 @@ interface Filesystem
 
     /**
      * Get an array of all files in a directory.
+	 * 得到目录下所有文件清单
      *
      * @param  string|null  $directory
      * @param  bool  $recursive
@@ -157,6 +177,7 @@ interface Filesystem
 
     /**
      * Get all of the files from the given directory (recursive).
+	 * 得到所有的文件从指定目录(资源)
      *
      * @param  string|null  $directory
      * @return array
@@ -165,6 +186,7 @@ interface Filesystem
 
     /**
      * Get all of the directories within a given directory.
+	 * 得到所有的目录从指定目录
      *
      * @param  string|null  $directory
      * @param  bool  $recursive
@@ -174,6 +196,7 @@ interface Filesystem
 
     /**
      * Get all (recursive) of the directories within a given directory.
+	 * 得到给定目录中的所有(递归)目录
      *
      * @param  string|null  $directory
      * @return array
@@ -182,6 +205,7 @@ interface Filesystem
 
     /**
      * Create a directory.
+	 * 创建目录
      *
      * @param  string  $path
      * @return bool
@@ -190,6 +214,7 @@ interface Filesystem
 
     /**
      * Recursively delete a directory.
+	 * 递归删除目录
      *
      * @param  string  $directory
      * @return bool

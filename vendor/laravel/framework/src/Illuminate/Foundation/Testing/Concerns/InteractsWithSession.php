@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，与Session交互
+ */
 
 namespace Illuminate\Foundation\Testing\Concerns;
 
@@ -6,6 +9,7 @@ trait InteractsWithSession
 {
     /**
      * Set the session to the given array.
+	 * 设置会话为给定的数组
      *
      * @param  array  $data
      * @return $this
@@ -19,6 +23,7 @@ trait InteractsWithSession
 
     /**
      * Set the session to the given array.
+	 * 设置会话为给定的数组
      *
      * @param  array  $data
      * @return $this
@@ -36,6 +41,7 @@ trait InteractsWithSession
 
     /**
      * Start the session for the application.
+	 * 开始会话为应用 
      *
      * @return $this
      */
@@ -50,6 +56,7 @@ trait InteractsWithSession
 
     /**
      * Flush all of the current session data.
+	 * 刷新所有当前会话数据
      *
      * @return $this
      */

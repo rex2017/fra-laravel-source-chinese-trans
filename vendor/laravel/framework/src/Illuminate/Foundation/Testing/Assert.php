@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，断言抽象类
+ */
 
 namespace Illuminate\Foundation\Testing;
 
@@ -21,6 +24,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
     {
         /**
          * Asserts that an array has a specified subset.
+		 * 断言数组是否具有指定的子集
          *
          * @param  \ArrayAccess|array  $subset
          * @param  \ArrayAccess|array  $array
@@ -53,6 +57,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
 
         /**
          * Asserts that a file does not exist.
+		 * 断言文件不存在
          *
          * @param  string  $filename
          * @param  string  $message
@@ -65,6 +70,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
 
         /**
          * Asserts that a directory does not exist.
+		 * 断言目录不存在
          *
          * @param  string  $directory
          * @param  string  $message
@@ -77,6 +83,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
 
         /**
          * Asserts that a string matches a given regular expression.
+		 * 断言字符串是否与给定正则表达式匹配
          *
          * @param  string  $pattern
          * @param  string  $string
@@ -96,6 +103,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
     {
         /**
          * Asserts that an array has a specified subset.
+		 * 断言数组是否具有指定的子集
          *
          * @param  \ArrayAccess|array  $subset
          * @param  \ArrayAccess|array  $array
@@ -110,6 +118,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
 
         /**
          * Asserts that a file does not exist.
+		 * 断言文件不存在
          *
          * @param  string  $filename
          * @param  string  $message
@@ -122,6 +131,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
 
         /**
          * Asserts that a directory does not exist.
+		 * 断言目录不存在
          *
          * @param  string  $directory
          * @param  string  $message
@@ -134,6 +144,7 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 8) {
 
         /**
          * Asserts that a string matches a given regular expression.
+		 * 断言字符串是否与给定正则表达式匹配
          *
          * @param  string  $pattern
          * @param  string  $string

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Http，响应特征
+ */
 
 namespace Illuminate\Http;
 
@@ -10,6 +13,7 @@ trait ResponseTrait
 {
     /**
      * The original content of the response.
+	 * 响应原始内容
      *
      * @var mixed
      */
@@ -17,6 +21,7 @@ trait ResponseTrait
 
     /**
      * The exception that triggered the error response (if applicable).
+	 * 触发错误响应的异常(如果适用)
      *
      * @var \Exception|null
      */
@@ -24,6 +29,7 @@ trait ResponseTrait
 
     /**
      * Get the status code for the response.
+	 * 得到响应状态代码
      *
      * @return int
      */
@@ -34,6 +40,7 @@ trait ResponseTrait
 
     /**
      * Get the content of the response.
+	 * 得到响应内容
      *
      * @return string
      */
@@ -44,6 +51,7 @@ trait ResponseTrait
 
     /**
      * Get the original response content.
+	 * 得到原始响应内容
      *
      * @return mixed
      */
@@ -56,6 +64,7 @@ trait ResponseTrait
 
     /**
      * Set a header on the Response.
+	 * 设置响应头
      *
      * @param  string  $key
      * @param  array|string  $values
@@ -71,6 +80,7 @@ trait ResponseTrait
 
     /**
      * Add an array of headers to the response.
+	 * 添加一个标题数组至响应
      *
      * @param  \Symfony\Component\HttpFoundation\HeaderBag|array  $headers
      * @return $this
@@ -90,17 +100,19 @@ trait ResponseTrait
 
     /**
      * Add a cookie to the response.
+	 * 添加cookie至响应
      *
      * @param  \Symfony\Component\HttpFoundation\Cookie|mixed  $cookie
      * @return $this
      */
     public function cookie($cookie)
     {
-        return call_user_func_array([$this, 'withCookie'], func_get_args());
+        return $this->withCookie(...func_get_args());
     }
 
     /**
      * Add a cookie to the response.
+	 * 添加cookie至响应
      *
      * @param  \Symfony\Component\HttpFoundation\Cookie|mixed  $cookie
      * @return $this
@@ -108,7 +120,7 @@ trait ResponseTrait
     public function withCookie($cookie)
     {
         if (is_string($cookie) && function_exists('cookie')) {
-            $cookie = call_user_func_array('cookie', func_get_args());
+            $cookie = cookie(...func_get_args());
         }
 
         $this->headers->setCookie($cookie);
@@ -118,6 +130,7 @@ trait ResponseTrait
 
     /**
      * Get the callback of the response.
+	 * 得到响应回调
      *
      * @return string|null
      */
@@ -128,6 +141,7 @@ trait ResponseTrait
 
     /**
      * Set the exception to attach to the response.
+	 * 设置响应异常
      *
      * @param  \Exception  $e
      * @return $this
@@ -141,6 +155,7 @@ trait ResponseTrait
 
     /**
      * Throws the response in a HttpResponseException instance.
+	 * 抛出响应
      *
      * @return void
      *

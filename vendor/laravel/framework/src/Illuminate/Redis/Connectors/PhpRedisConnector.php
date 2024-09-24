@@ -1,4 +1,7 @@
 <?php
+/**
+ * Redis，Redis连接
+ */
 
 namespace Illuminate\Redis\Connectors;
 
@@ -16,6 +19,7 @@ class PhpRedisConnector implements Connector
 {
     /**
      * Create a new clustered PhpRedis connection.
+	 * 创建新的集群PhpRedis连接
      *
      * @param  array  $config
      * @param  array  $options
@@ -34,6 +38,7 @@ class PhpRedisConnector implements Connector
 
     /**
      * Create a new clustered PhpRedis connection.
+	 * 创建新的集群PhpRedis连接
      *
      * @param  array  $config
      * @param  array  $clusterOptions
@@ -51,6 +56,7 @@ class PhpRedisConnector implements Connector
 
     /**
      * Build a single cluster seed string from array.
+	 * 构建单个集群种子字符串从数组
      *
      * @param  array  $server
      * @return string
@@ -64,6 +70,7 @@ class PhpRedisConnector implements Connector
 
     /**
      * Create the Redis client instance.
+	 * 创建Redis客户端实例
      *
      * @param  array  $config
      * @return \Redis
@@ -107,6 +114,7 @@ class PhpRedisConnector implements Connector
 
     /**
      * Establish a connection with the Redis host.
+	 * 建立连接与Redis主机
      *
      * @param  \Redis  $client
      * @param  array  $config
@@ -128,11 +136,18 @@ class PhpRedisConnector implements Connector
             $parameters[] = Arr::get($config, 'read_timeout', 0.0);
         }
 
+        if (version_compare(phpversion('redis'), '5.3.0', '>=')) {
+            if (! is_null($context = Arr::get($config, 'context'))) {
+                $parameters[] = $context;
+            }
+        }
+
         $client->{($persistent ? 'pconnect' : 'connect')}(...$parameters);
     }
 
     /**
      * Create a new redis cluster instance.
+	 * 创建新的redis集群实例
      *
      * @param  array  $servers
      * @param  array  $options
@@ -152,6 +167,12 @@ class PhpRedisConnector implements Connector
             $parameters[] = $options['password'] ?? null;
         }
 
+        if (version_compare(phpversion('redis'), '5.3.2', '>=')) {
+            if (! is_null($context = Arr::get($options, 'context'))) {
+                $parameters[] = $context;
+            }
+        }
+
         return tap(new RedisCluster(...$parameters), function ($client) use ($options) {
             if (! empty($options['prefix'])) {
                 $client->setOption(RedisCluster::OPT_PREFIX, $options['prefix']);
@@ -169,6 +190,7 @@ class PhpRedisConnector implements Connector
 
     /**
      * Format the host using the scheme if available.
+	 * 格式化主机使用该方案如果可用
      *
      * @param  array  $options
      * @return string

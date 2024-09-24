@@ -1,4 +1,7 @@
 <?php
+/**
+ * Session加密存储
+ */
 
 namespace Illuminate\Session;
 
@@ -10,6 +13,7 @@ class EncryptedStore extends Store
 {
     /**
      * The encrypter instance.
+	 * 加密实例
      *
      * @var \Illuminate\Contracts\Encryption\Encrypter
      */
@@ -17,6 +21,7 @@ class EncryptedStore extends Store
 
     /**
      * Create a new session instance.
+	 * 创建会话实例
      *
      * @param  string  $name
      * @param  \SessionHandlerInterface  $handler
@@ -33,6 +38,7 @@ class EncryptedStore extends Store
 
     /**
      * Prepare the raw string data from the session for unserialization.
+	 * 准备来自会话的原始字符串数据以进行反序列化
      *
      * @param  string  $data
      * @return string
@@ -48,6 +54,7 @@ class EncryptedStore extends Store
 
     /**
      * Prepare the serialized session data for storage.
+	 * 准备序列化的会话数据进行存储
      *
      * @param  string  $data
      * @return string
@@ -59,6 +66,7 @@ class EncryptedStore extends Store
 
     /**
      * Get the encrypter instance.
+	 * 得到加密实例
      *
      * @return \Illuminate\Contracts\Encryption\Encrypter
      */
