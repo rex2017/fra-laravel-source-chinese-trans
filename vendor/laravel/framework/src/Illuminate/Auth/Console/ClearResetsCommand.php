@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * 身份，控制台清除命令
  */
 
 namespace Illuminate\Auth\Console;
@@ -11,6 +11,7 @@ class ClearResetsCommand extends Command
 {
     /**
      * The name and signature of the console command.
+	 * 控制台命令的名称和签名
      *
      * @var string
      */
@@ -18,6 +19,7 @@ class ClearResetsCommand extends Command
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -25,6 +27,7 @@ class ClearResetsCommand extends Command
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础引导，设置请求闭包
+ * 基础，设置请求闭包
  */
 
 namespace Illuminate\Foundation\Bootstrap;

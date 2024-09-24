@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，节流登录
+ */
 
 namespace Illuminate\Foundation\Auth;
 
@@ -14,6 +17,7 @@ trait ThrottlesLogins
 {
     /**
      * Determine if the user has too many failed login attempts.
+	 * 确定用户是否有太多失败的登录尝试
      *
      * @param  \Illuminate\Http\Request  $request
      * @return bool
@@ -27,6 +31,7 @@ trait ThrottlesLogins
 
     /**
      * Increment the login attempts for the user.
+	 * 增加用户的登录尝试次数
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -40,6 +45,7 @@ trait ThrottlesLogins
 
     /**
      * Redirect the user after determining they are locked out.
+	 * 重定向用户在确定用户被锁定后
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -62,6 +68,7 @@ trait ThrottlesLogins
 
     /**
      * Clear the login locks for the given user credentials.
+	 * 清除给定用户凭据的登录锁
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -73,6 +80,7 @@ trait ThrottlesLogins
 
     /**
      * Fire an event when a lockout occurs.
+	 * 触发事件发生锁定时
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -84,6 +92,7 @@ trait ThrottlesLogins
 
     /**
      * Get the throttle key for the given request.
+	 * 得到给定请求的油门键
      *
      * @param  \Illuminate\Http\Request  $request
      * @return string
@@ -95,6 +104,7 @@ trait ThrottlesLogins
 
     /**
      * Get the rate limiter instance.
+	 * 得到速率限制器实例
      *
      * @return \Illuminate\Cache\RateLimiter
      */
@@ -105,6 +115,7 @@ trait ThrottlesLogins
 
     /**
      * Get the maximum number of attempts to allow.
+	 * 得到允许的最大尝试次数
      *
      * @return int
      */
@@ -115,6 +126,7 @@ trait ThrottlesLogins
 
     /**
      * Get the number of minutes to throttle for.
+	 * 得到分钟数为节流
      *
      * @return int
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 视图，管理布局
+ */
 
 namespace Illuminate\View\Concerns;
 
@@ -10,6 +13,7 @@ trait ManagesLayouts
 {
     /**
      * All of the finished, captured sections.
+	 * 所有完成的、捕获的部分。
      *
      * @var array
      */
@@ -17,6 +21,7 @@ trait ManagesLayouts
 
     /**
      * The stack of in-progress sections.
+	 * 正在进行的部分的堆栈
      *
      * @var array
      */
@@ -24,6 +29,7 @@ trait ManagesLayouts
 
     /**
      * The parent placeholder for the request.
+	 * 请求的父占位符
      *
      * @var mixed
      */
@@ -31,6 +37,7 @@ trait ManagesLayouts
 
     /**
      * The parent placeholder salt for the request.
+	 * 请求的父占位符
      *
      * @var string
      */
@@ -38,6 +45,7 @@ trait ManagesLayouts
 
     /**
      * Start injecting content into a section.
+	 * 开始向部分注入内容
      *
      * @param  string  $section
      * @param  string|null  $content
@@ -56,6 +64,7 @@ trait ManagesLayouts
 
     /**
      * Inject inline content into a section.
+	 * 将内联内容注入节中
      *
      * @param  string  $section
      * @param  string  $content
@@ -68,6 +77,7 @@ trait ManagesLayouts
 
     /**
      * Stop injecting content into a section and return its contents.
+	 * 停止向节中注入内容并返回其内容
      *
      * @return string
      */
@@ -82,6 +92,7 @@ trait ManagesLayouts
 
     /**
      * Stop injecting content into a section.
+	 * 停止向节中注入内容
      *
      * @param  bool  $overwrite
      * @return string
@@ -107,6 +118,7 @@ trait ManagesLayouts
 
     /**
      * Stop injecting content into a section and append it.
+	 * 停止向节中注入内容并将其追加
      *
      * @return string
      *
@@ -131,6 +143,7 @@ trait ManagesLayouts
 
     /**
      * Append content to a given section.
+	 * 追加内容向给定的部分
      *
      * @param  string  $section
      * @param  string  $content
@@ -147,6 +160,7 @@ trait ManagesLayouts
 
     /**
      * Get the string contents of a section.
+	 * 得到节的字符串内容
      *
      * @param  string  $section
      * @param  string  $default
@@ -169,6 +183,7 @@ trait ManagesLayouts
 
     /**
      * Get the parent placeholder for the current request.
+	 * 得到当前请求的父占位符
      *
      * @param  string  $section
      * @return string
@@ -186,6 +201,7 @@ trait ManagesLayouts
 
     /**
      * Get the parent placeholder salt.
+	 * 得到父占位符salt
      *
      * @return string
      */
@@ -200,6 +216,7 @@ trait ManagesLayouts
 
     /**
      * Check if section exists.
+	 * 检查section是否存在
      *
      * @param  string  $name
      * @return bool
@@ -211,6 +228,7 @@ trait ManagesLayouts
 
     /**
      * Get the contents of a section.
+	 * 得到一个节的内容
      *
      * @param  string  $name
      * @param  string|null  $default
@@ -223,6 +241,7 @@ trait ManagesLayouts
 
     /**
      * Get the entire array of sections.
+	 * 得到整个section数组
      *
      * @return array
      */
@@ -233,6 +252,7 @@ trait ManagesLayouts
 
     /**
      * Flush all of the sections.
+	 * 刷新所有的部分
      *
      * @return void
      */

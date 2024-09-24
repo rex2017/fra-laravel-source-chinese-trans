@@ -1,6 +1,6 @@
 <?php
 /**
- * 发送邮件队列类
+ * 发送邮件队列
  */
 
 namespace Illuminate\Mail;
@@ -20,6 +20,7 @@ class SendQueuedMailable
 
     /**
      * The number of times the job may be attempted.
+	 * 可能尝试该作业的次数
      *
      * @var int
      */
@@ -27,6 +28,7 @@ class SendQueuedMailable
 
     /**
      * The number of seconds the job can run before timing out.
+	 * 作业在超时之前可以运行的秒数
      *
      * @var int
      */
@@ -34,6 +36,7 @@ class SendQueuedMailable
 
     /**
      * Create a new job instance.
+	 * 创建新的作业实例
      *
      * @param  \Illuminate\Contracts\Mail\Mailable  $mailable
      * @return void
@@ -47,6 +50,7 @@ class SendQueuedMailable
 
     /**
      * Handle the queued job.
+	 * 处理排队作业
      *
      * @param  \Illuminate\Contracts\Mail\Mailer  $mailer
      * @return void
@@ -58,6 +62,7 @@ class SendQueuedMailable
 
     /**
      * Get the display name for the queued job.
+	 * 得到排队作业的显示名称
      *
      * @return string
      */
@@ -68,6 +73,7 @@ class SendQueuedMailable
 
     /**
      * Call the failed method on the mailable instance.
+	 * 调用失败的方法在可邮件实例上
      *
      * @param  \Exception  $e
      * @return void
@@ -81,6 +87,7 @@ class SendQueuedMailable
 
     /**
      * Get the retry delay for the mailable object.
+	 * 得到可邮寄对象的重试延迟
      *
      * @return mixed
      */
@@ -95,6 +102,7 @@ class SendQueuedMailable
 
     /**
      * Prepare the instance for cloning.
+	 * 为克隆准备实例
      *
      * @return void
      */

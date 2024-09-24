@@ -19,7 +19,7 @@ class ArrayLock extends Lock
 
     /**
      * Create a new lock instance.
-	 * 创建一个新的锁定实例
+	 * 创建新的锁定实例
      *
      * @param  \Illuminate\Cache\ArrayStore  $store
      * @param  string  $name
@@ -101,7 +101,7 @@ class ArrayLock extends Lock
 
     /**
      * Releases this lock in disregard of ownership.
-	 * 释放锁
+	 * 释放锁，而不考虑所有权
      *
      * @return void
      */

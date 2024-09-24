@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础应用类
+ * 基础应用类，核心类
  */
 
 namespace Illuminate\Foundation;
@@ -526,6 +526,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Set the environment file to be loaded during bootstrapping.
+	 * 设置引导过程中要加载的环境文件
      *
      * @param  string  $file
      * @return $this
@@ -539,7 +540,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Get the environment file the application is using.
-	 * 得到环境文件
+	 * 得到环境文件应用正在使用的
      *
      * @return string
      */
@@ -550,7 +551,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Get the fully qualified path to the environment file.
-	 * 得到完全限定路径
+	 * 得到环境文件的完全限定路径
      *
      * @return string
      */
@@ -768,6 +769,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Load and boot all of the remaining deferred providers.
+	 * 加载并引导所有剩余的延迟提供程序
      *
      * @return void
      */
@@ -776,6 +778,8 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         // We will simply spin through each of the deferred providers and register each
         // one and boot them if the application has booted. This should make each of
         // the remaining services available to this application for immediate use.
+		// 我们只需浏览每个延迟的提供者，注册每个提供者，并在应用程序启动后启动它们。
+		// 这应该使此应用程序可以立即使用其余的每个服务。
         foreach ($this->deferredServices as $service => $provider) {
             $this->loadDeferredProvider($service);
         }
@@ -801,6 +805,8 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         // If the service provider has not already been loaded and registered we can
         // register it with the application and remove the service from this list
         // of deferred services, since it will already be loaded on subsequent.
+		// 如果服务提供商尚未加载和注册，我们可以向应用程序注册它，
+		// 并从延迟服务列表中删除该服务，因为它将在后续加载。
         if (! isset($this->loadedProviders[$provider])) {
             $this->registerDeferredProvider($provider, $service);
         }
@@ -819,6 +825,8 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         // Once the provider that provides the deferred service has been registered we
         // will remove it from our local list of the deferred services with related
         // providers so that this container does not try to resolve it out again.
+		// 一旦注册了提供延迟服务的提供者，我们将从本地相关提供者的延迟服务列表中删除它，
+		// 这样这个容器就不会再次尝试解决它。
         if ($service) {
             unset($this->deferredServices[$service]);
         }
@@ -866,6 +874,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Load the deferred provider if the given type is a deferred service and the instance has not been loaded.
+	 * 加载延迟提供程序，如果给定的类型是延迟服务并且实例尚未加载。
      *
      * @param  string  $abstract
      * @return void
@@ -879,7 +888,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Determine if the given abstract type has been bound.
-	 * 确定是否被绑定
+	 * 确定给定的抽象类型是否已被绑定
      *
      * @param  string  $abstract
      * @return bool
@@ -915,6 +924,8 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         // Once the application has booted we will also fire some "booted" callbacks
         // for any listeners that need to do work after this initial booting gets
         // finished. This is useful when ordering the boot-up processes we run.
+		// 一旦应用程序启动，我们还将为在初始启动完成后需要工作的任何监听器发出一些"启动"回调。
+		// 在排序我们运行的启动过程时，这很有用。
         $this->fireAppCallbacks($this->bootingCallbacks);
 
         array_walk($this->serviceProviders, function ($p) {
@@ -970,6 +981,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Call the booting callbacks for the application.
+	 * 调用应用程序的引导回调
      *
      * @param  callable[]  $callbacks
      * @return void
@@ -991,6 +1003,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Determine if middleware has been disabled for the application.
+	 * 确定是否为应用程序禁用了中间件
      *
      * @return bool
      */
@@ -1002,6 +1015,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Get the path to the cached services.php file.
+	 * 得到缓存的services.php文件的路径
      *
      * @return string
      */
@@ -1023,6 +1037,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Determine if the application configuration is cached.
+	 * 确定是否缓存了应用程序配置
      *
      * @return bool
      */
@@ -1088,6 +1103,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Normalize a relative or absolute path to a cache file.
+	 * 规范化缓存文件的相对或绝对路径
      *
      * @param  string  $key
      * @param  string  $default
@@ -1106,6 +1122,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Determine if the application is currently down for maintenance.
+	 * 确定应用程序当前是否关闭以进行维护
      *
      * @return bool
      */
@@ -1116,6 +1133,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Throw an HttpException with the given data.
+	 * 抛出一个HttpException用给定的数据
      *
      * @param  int  $code
      * @param  string  $message
@@ -1174,6 +1192,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Get the application's deferred services.
+	 * 得到应用程序的延迟服务
      *
      * @return array
      */
@@ -1184,6 +1203,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Set the application's deferred services.
+	 * 设置应用程序的延迟服务
      *
      * @param  array  $services
      * @return void
@@ -1195,6 +1215,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Add an array of services to the application's deferred services.
+	 * 向应用程序的延迟服务添加一个服务数组
      *
      * @param  array  $services
      * @return void
@@ -1206,6 +1227,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Determine if the given service is a deferred service.
+	 * 确定给定的服务是否是延迟服务
      *
      * @param  string  $service
      * @return bool
@@ -1217,6 +1239,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Configure the real-time facade namespace.
+	 * 配置实时外观名称空间
      *
      * @param  string  $namespace
      * @return void
@@ -1228,7 +1251,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Get the current application locale.
-	 * 得么当前应用本地
+	 * 得到当前应用本地
      *
      * @return string
      */
@@ -1239,6 +1262,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Set the current application locale.
+	 * 设置当前应用程序区域设置
      *
      * @param  string  $locale
      * @return void
@@ -1254,6 +1278,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
 
     /**
      * Determine if application locale is the given locale.
+	 * 确定应用程序语言环境是否是给定的语言环境
      *
      * @param  string  $locale
      * @return bool

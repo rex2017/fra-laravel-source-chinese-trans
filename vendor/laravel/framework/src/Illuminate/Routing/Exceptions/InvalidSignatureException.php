@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由异常，无效签名异常类
+ * 路由，无效签名异常
  */
 
 namespace Illuminate\Routing\Exceptions;

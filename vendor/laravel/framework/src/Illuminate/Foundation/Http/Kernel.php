@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础，Http内核类
+ * 基础，Http内核
  */
 
 namespace Illuminate\Foundation\Http;
@@ -119,6 +119,7 @@ class Kernel implements KernelContract
         try {
             $request->enableHttpMethodParameterOverride();
 			
+			//核心，处理http请求
             $response = $this->sendRequestThroughRouter($request);
         } catch (Exception $e) {
             $this->reportException($e);
@@ -146,10 +147,13 @@ class Kernel implements KernelContract
      */
     protected function sendRequestThroughRouter($request)
     {
+		//将请求request绑定到共享实例
         $this->app->instance('request', $request);
 
+		//将请求request从已解析的门面实例中注销
         Facade::clearResolvedInstance('request');
 
+		//引导应用程序http请求
         $this->bootstrap();
 
         return (new Pipeline($this->app))
@@ -188,7 +192,7 @@ class Kernel implements KernelContract
 
     /**
      * Call the terminate method on any terminable middleware.
-	 * 终止
+	 * 调用中止方法在任务可能中止的中间件
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Http\Response  $response
@@ -203,6 +207,7 @@ class Kernel implements KernelContract
 
     /**
      * Call the terminate method on any terminable middleware.
+	 * 调用中止方法在任务可能中止的中间件
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Http\Response  $response
@@ -232,6 +237,7 @@ class Kernel implements KernelContract
 
     /**
      * Gather the route middleware for the given request.
+	 * 收集给定请求的路由中间件
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
@@ -247,6 +253,7 @@ class Kernel implements KernelContract
 
     /**
      * Parse a middleware string to get the name and parameters.
+	 * 解析中间件字符串以获取名称和参数
      *
      * @param  string  $middleware
      * @return array
@@ -276,6 +283,7 @@ class Kernel implements KernelContract
 
     /**
      * Add a new middleware to beginning of the stack if it does not already exist.
+	 * 添加中间件在堆栈的开头，如果新的中间件不存在。
      *
      * @param  string  $middleware
      * @return $this
@@ -291,6 +299,7 @@ class Kernel implements KernelContract
 
     /**
      * Add a new middleware to end of the stack if it does not already exist.
+	 * 添加新的中间件在堆栈的末尾，如果它还不存在。
      *
      * @param  string  $middleware
      * @return $this
@@ -306,6 +315,7 @@ class Kernel implements KernelContract
 
     /**
      * Prepend the given middleware to the given middleware group.
+	 * 将给定的中间件添加到给定的中间件组
      *
      * @param  string  $group
      * @param  string  $middleware
@@ -330,6 +340,7 @@ class Kernel implements KernelContract
 
     /**
      * Append the given middleware to the given middleware group.
+	 * 附加给定的中间件到给定的中间件组
      *
      * @param  string  $group
      * @param  string  $middleware
@@ -354,6 +365,7 @@ class Kernel implements KernelContract
 
     /**
      * Prepend the given middleware to the middleware priority list.
+	 * 添加给定的中间件到中间件优先级列表中
      *
      * @param  string  $middleware
      * @return $this
@@ -371,6 +383,7 @@ class Kernel implements KernelContract
 
     /**
      * Append the given middleware to the middleware priority list.
+	 * 追加给定的中间件到中间件优先级列表中
      *
      * @param  string  $middleware
      * @return $this
@@ -388,6 +401,7 @@ class Kernel implements KernelContract
 
     /**
      * Sync the current state of the middleware to the router.
+	 * 同步中间件的当前状态到路由器
      *
      * @return void
      */
@@ -417,6 +431,7 @@ class Kernel implements KernelContract
 
     /**
      * Report the exception to the exception handler.
+	 * 报告异常至异常处理程序
      *
      * @param  \Exception  $e
      * @return void
@@ -428,6 +443,7 @@ class Kernel implements KernelContract
 
     /**
      * Render the exception to a response.
+	 * 呈现异常给响应
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Exception  $e
@@ -440,6 +456,7 @@ class Kernel implements KernelContract
 
     /**
      * Get the application's route middleware groups.
+	 * 得到应用程序的路由中间件组
      *
      * @return array
      */
@@ -450,6 +467,7 @@ class Kernel implements KernelContract
 
     /**
      * Get the application's route middleware.
+	 * 得到应用程序的路由中间件
      *
      * @return array
      */

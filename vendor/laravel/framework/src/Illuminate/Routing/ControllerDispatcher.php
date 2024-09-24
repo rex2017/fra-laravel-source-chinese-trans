@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，控制器调度类
+ * 路由控制器调度
  */
 
 namespace Illuminate\Routing;
@@ -47,6 +47,7 @@ class ControllerDispatcher implements ControllerDispatcherContract
             $route->parametersWithoutNulls(), $controller, $method
         );
 
+		//如果控制器方法存在
         if (method_exists($controller, 'callAction')) {
             return $controller->callAction($method, $parameters);
         }

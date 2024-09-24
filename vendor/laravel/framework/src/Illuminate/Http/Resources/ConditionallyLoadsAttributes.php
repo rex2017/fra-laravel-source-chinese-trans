@@ -1,6 +1,6 @@
 <?php
 /**
- * Http资源，有条件加载属性
+ * Http，有条件加载属性
  */
 
 namespace Illuminate\Http\Resources;
@@ -99,6 +99,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Retrieve a value based on a given condition.
+	 * 检索值根据给定条件
      *
      * @param  bool  $condition
      * @param  mixed  $value
@@ -116,6 +117,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Merge a value into the array.
+	 * 合并一个值至数组
      *
      * @param  mixed  $value
      * @return \Illuminate\Http\Resources\MergeValue|mixed
@@ -127,6 +129,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Merge a value based on a given condition.
+	 * 合并一个值根据给定条件
      *
      * @param  bool  $condition
      * @param  mixed  $value
@@ -139,6 +142,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Merge the given attributes.
+	 * 合并给定的属性
      *
      * @param  array  $attributes
      * @return \Illuminate\Http\Resources\MergeValue
@@ -152,6 +156,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Retrieve a relationship if it has been loaded.
+	 * 检索已加载的关系
      *
      * @param  string  $relationship
      * @param  mixed  $value
@@ -181,6 +186,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Execute a callback if the given pivot table has been loaded.
+	 * 执行回调，如果已加载给定的数据透视表。
      *
      * @param  string  $table
      * @param  mixed  $value
@@ -194,6 +200,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Execute a callback if the given pivot table with a custom accessor has been loaded.
+	 * 执行回调，如果加载了带有自定义访问器的数据透视表。
      *
      * @param  string  $accessor
      * @param  string  $table
@@ -217,6 +224,7 @@ trait ConditionallyLoadsAttributes
 
     /**
      * Transform the given value if it is present.
+	 * 如果给定值存在，则对其进行转换
      *
      * @param  mixed  $value
      * @param  callable  $callback

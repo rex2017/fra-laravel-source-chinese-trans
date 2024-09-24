@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，模型生成命令
+ */
 
 namespace Illuminate\Foundation\Console;
 
@@ -10,6 +13,7 @@ class ModelMakeCommand extends GeneratorCommand
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -17,6 +21,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -24,6 +29,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * The type of class being generated.
+	 * 生成类的类型
      *
      * @var string
      */
@@ -31,6 +37,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -67,6 +74,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Create a model factory for the model.
+	 * 创建一个工厂模型
      *
      * @return void
      */
@@ -82,6 +90,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Create a migration file for the model.
+	 * 创建一个迁移文件为模型
      *
      * @return void
      */
@@ -101,6 +110,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Create a seeder file for the model.
+	 * 创建一个种子文件为模型
      *
      * @return void
      */
@@ -115,6 +125,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Create a controller for the model.
+	 * 创建一个控制器为模型
      *
      * @return void
      */
@@ -133,6 +144,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
+	 * 得到生成器的存根文件
      *
      * @return string
      */
@@ -147,6 +159,7 @@ class ModelMakeCommand extends GeneratorCommand
 
     /**
      * Get the console command options.
+	 * 得到控制台命令选项
      *
      * @return array
      */

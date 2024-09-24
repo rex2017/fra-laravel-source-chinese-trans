@@ -1,6 +1,6 @@
 <?php
 /**
- * COOKIEJAR压缩类
+ * COOKIEJAR压缩
  */
 
 namespace Illuminate\Cookie;
@@ -41,6 +41,7 @@ class CookieJar implements JarContract
 
     /**
      * The default SameSite option (if specified).
+	 * 默认的SameSite选项(如果指定)
      *
      * @var string
      */
@@ -56,7 +57,7 @@ class CookieJar implements JarContract
 
     /**
      * Create a new cookie instance.
-	 * 创建一个新的cookie实例
+	 * 创建新的cookie实例
      *
      * @param  string  $name
      * @param  string  $value
@@ -146,6 +147,7 @@ class CookieJar implements JarContract
 
     /**
      * Queue a cookie to send with the next response.
+	 * 将cookie与下一个响应一起排队发送
      *
      * @param  array  $parameters
      * @return void
@@ -190,6 +192,7 @@ class CookieJar implements JarContract
 
     /**
      * Get the path and domain, or the default values.
+	 * 得到路径和域，或默认值
      *
      * @param  string  $path
      * @param  string  $domain
@@ -204,6 +207,7 @@ class CookieJar implements JarContract
 
     /**
      * Set the default path and domain for the jar.
+	 * 设置默认路径和域为jar
      *
      * @param  string  $path
      * @param  string  $domain
@@ -220,6 +224,7 @@ class CookieJar implements JarContract
 
     /**
      * Get the cookies which have been queued for the next request.
+	 * 得到已为下一个请求排队的cookie
      *
      * @return \Symfony\Component\HttpFoundation\Cookie[]
      */

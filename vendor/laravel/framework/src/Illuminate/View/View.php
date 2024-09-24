@@ -1,6 +1,6 @@
 <?php
 /**
- * 视图类
+ * 视图，核心类
  */
 
 namespace Illuminate\View;
@@ -105,6 +105,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
             // Once we have the contents of the view, we will flush the sections if we are
             // done rendering all views so that there is nothing left hanging over when
             // another view gets rendered in the future by the application developer.
+			// 一旦我们有了视图的内容，如果我们完成了所有视图的渲染，我们将刷新这些部分，
+			// 这样当应用程序开发人员将来渲染另一个视图时，就不会有任何东西悬而未决。
             $this->factory->flushStateIfDoneRendering();
 
             return ! is_null($response) ? $response : $contents;
@@ -130,6 +132,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
         // We will keep track of the amount of views being rendered so we can flush
         // the section after the complete rendering operation is done. This will
         // clear out the sections for any separate views that may be rendered.
+		// 我们将跟踪渲染的视图数量，以便在完成完整的渲染操作后刷新该部分。
+		// 这将清除可能呈现的任何单独视图的部分。
         $this->factory->incrementRender();
 
         $this->factory->callComposer($this);
@@ -139,6 +143,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
         // Once we've finished rendering the view, we'll decrement the render count
         // so that each sections get flushed out next time a view is created and
         // no old sections are staying around in the memory of an environment.
+		// 一旦我们完成了视图的渲染，我们将减少渲染计数，这样下次创建视图时，
+		// 每个部分都会被清空，并且没有旧的部分留在环境的内存中。
         $this->factory->decrementRender();
 
         return $contents;
@@ -157,6 +163,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Get the data bound to the view instance.
+	 * 得到绑定到视图实例的数据
      *
      * @return array
      */
@@ -175,6 +182,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Get the sections of the rendered view.
+	 * 得到渲染视图的部分
      *
      * @return array
      *
@@ -189,6 +197,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Add a piece of data to the view.
+	 * 向视图添加一段数据
      *
      * @param  string|array  $key
      * @param  mixed  $value
@@ -207,6 +216,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Add a view instance to the view data.
+	 * 添加一段实例至视图
      *
      * @param  string  $key
      * @param  string  $view
@@ -220,6 +230,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Add validation errors to the view.
+	 * 添加验证错误到视图中
      *
      * @param  \Illuminate\Contracts\Support\MessageProvider|array  $provider
      * @return $this
@@ -233,6 +244,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Format the given message provider into a MessageBag.
+	 * 格式化给定的消息提供程序为MessageBag
      *
      * @param  \Illuminate\Contracts\Support\MessageProvider|array  $provider
      * @return \Illuminate\Support\MessageBag
@@ -323,6 +335,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Determine if a piece of data is bound.
+	 * 确定是否绑定了一段数据
      *
      * @param  string  $key
      * @return bool
@@ -334,6 +347,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Get a piece of bound data to the view.
+	 * 得到一段绑定到视图的数据
      *
      * @param  string  $key
      * @return mixed
@@ -345,6 +359,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Set a piece of data on the view.
+	 * 设置一段数据在视图上
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -357,6 +372,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Unset a piece of data from the view.
+	 * 取消设置一段数据从视图中
      *
      * @param  string  $key
      * @return void
@@ -368,6 +384,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Get a piece of data from the view.
+	 * 得到一段数据从视图
      *
      * @param  string  $key
      * @return mixed
@@ -379,6 +396,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Set a piece of data on the view.
+	 * 设置一段数据在视图上
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -391,6 +409,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Check if a piece of data is bound to the view.
+	 * 检查是否有数据块绑定到视图
      *
      * @param  string  $key
      * @return bool
@@ -402,6 +421,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Remove a piece of bound data from the view.
+	 * 删除一段绑定数据从视图中
      *
      * @param  string  $key
      * @return void
@@ -413,6 +433,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Dynamically bind parameters to the view.
+	 * 动态地将参数绑定到视图
      *
      * @param  string  $method
      * @param  array  $parameters
@@ -448,6 +469,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
      * Get the string contents of the view.
+	 * 得到视图的字符串内容
      *
      * @return string
      *

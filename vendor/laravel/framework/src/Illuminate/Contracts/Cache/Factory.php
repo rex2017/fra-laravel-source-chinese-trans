@@ -9,7 +9,7 @@ interface Factory
 {
     /**
      * Get a cache store instance by name.
-	 * 按名称获得缓存存储实例
+	 * 得到缓存存储实例按名称
      *
      * @param  string|null  $name
      * @return \Illuminate\Contracts\Cache\Repository

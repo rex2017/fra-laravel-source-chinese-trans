@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础，激励类
+ * 基础，激励
  */
 
 namespace Illuminate\Foundation;

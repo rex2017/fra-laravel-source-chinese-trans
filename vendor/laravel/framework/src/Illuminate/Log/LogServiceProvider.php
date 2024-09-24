@@ -1,6 +1,6 @@
 <?php
 /**
- * 日志服务提供者类
+ * 日志服务提供者
  */
 
 namespace Illuminate\Log;

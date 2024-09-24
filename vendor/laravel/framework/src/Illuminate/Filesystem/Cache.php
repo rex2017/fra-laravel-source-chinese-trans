@@ -1,6 +1,6 @@
 <?php
 /**
- * 文件系统Cache类
+ * 文件系统Cache
  */
 
 namespace Illuminate\Filesystem;
@@ -36,7 +36,7 @@ class Cache extends AbstractCache
 
     /**
      * Create a new cache instance.
-	 * 创建一个新的缓存实例
+	 * 创建新的缓存实例
      *
      * @param  \Illuminate\Contracts\Cache\Repository  $repository
      * @param  string  $key
@@ -67,7 +67,7 @@ class Cache extends AbstractCache
 
     /**
      * Persist the cache.
-	 * 保存缓存
+	 * 持久化缓存
      *
      * @return void
      */

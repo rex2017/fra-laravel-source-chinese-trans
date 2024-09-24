@@ -1,4 +1,7 @@
 <?php
+/**
+ * 队列，数据库失败任务提供者
+ */
 
 namespace Illuminate\Queue\Failed;
 
@@ -9,6 +12,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 {
     /**
      * The connection resolver implementation.
+	 * 连接解析实现
      *
      * @var \Illuminate\Database\ConnectionResolverInterface
      */
@@ -16,6 +20,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * The database connection name.
+	 * 数据库连接名
      *
      * @var string
      */
@@ -23,6 +28,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * The database table.
+	 * 数据库表
      *
      * @var string
      */
@@ -30,6 +36,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Create a new database failed job provider.
+	 * 创建新的数据库失败作业提供程序
      *
      * @param  \Illuminate\Database\ConnectionResolverInterface  $resolver
      * @param  string  $database
@@ -45,6 +52,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Log a failed job into storage.
+	 * 将失败的作业记录到存储中
      *
      * @param  string  $connection
      * @param  string  $queue
@@ -65,6 +73,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Get a list of all of the failed jobs.
+	 * 得到所有失败任务的列表
      *
      * @return array
      */
@@ -75,6 +84,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Get a single failed job.
+	 * 得到单个失败的作业
      *
      * @param  mixed  $id
      * @return object|null
@@ -86,6 +96,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Delete a single failed job from storage.
+	 * 从存储中删除单个失败的作业
      *
      * @param  mixed  $id
      * @return bool
@@ -97,6 +108,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Flush all of the failed jobs from storage.
+	 * 从存储中清除所有失败的作业
      *
      * @return void
      */
@@ -107,6 +119,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface
 
     /**
      * Get a new query builder instance for the table.
+	 * 得到表的新查询生成器实例
      *
      * @return \Illuminate\Database\Query\Builder
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 管道
+ * 管道，核心类
  */
 
 namespace Illuminate\Pipeline;
@@ -89,6 +89,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Set the method to call on the pipes.
+	 * 设置要在管道上调用的方法
      *
      * @param  string  $method
      * @return $this
@@ -131,6 +132,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Get the final piece of the Closure onion.
+	 * 得到最终闭包
      *
      * @param  \Closure  $destination
      * @return \Closure
@@ -163,6 +165,8 @@ class Pipeline implements PipelineContract
                         // If the pipe is a callable, then we will call it directly, but otherwise we
                         // will resolve the pipes out of the dependency container and call it with
                         // the appropriate method and arguments, returning the results back out.
+						// 如果管道是可调用的，那么我们将直接调用它，否则我们将从依赖容器中解析管道，
+						// 并使用适当的方法和参数调用它，返回结果。
                         return $pipe($passable, $stack);
                     } elseif (! is_object($pipe)) {
                         [$name, $parameters] = $this->parsePipeString($pipe);
@@ -170,6 +174,8 @@ class Pipeline implements PipelineContract
                         // If the pipe is a string we will parse the string and resolve the class out
                         // of the dependency injection container. We can then build a callable and
                         // execute the pipe function giving in the parameters that are required.
+						// 如果管道是字符串，我们将解析字符串并将类从依赖注入容器中解析出来。
+						// 然后，我们可以构建一个可调用函数，并执行管道函数，给出所需的参数。
                         $pipe = $this->getContainer()->make($name);
 
                         $parameters = array_merge([$passable, $stack], $parameters);
@@ -177,6 +183,8 @@ class Pipeline implements PipelineContract
                         // If the pipe is already an object we'll just make a callable and pass it to
                         // the pipe as-is. There is no need to do any extra parsing and formatting
                         // since the object we're given was already a fully instantiated object.
+						// 如果管道已经是一个对象，我们只需创建一个可调用对象并按原样将其传递给管道。
+						// 不需要进行任何额外的解析和格式化，因为我们给出的对象已经是一种完全实例化的对象。
                         $parameters = [$passable, $stack];
                     }
 
@@ -196,6 +204,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Parse full pipe string to get name and parameters.
+	 * 解析完整的管道字符串以获取名称和参数
      *
      * @param  string  $pipe
      * @return array
@@ -213,6 +222,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Get the array of configured pipes.
+	 * 得到已配置管道的数组
      *
      * @return array
      */
@@ -223,6 +233,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Get the container instance.
+	 * 得到容器实例
      *
      * @return \Illuminate\Contracts\Container\Container
      *
@@ -239,6 +250,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Handle the value returned from each pipe before passing it to the next.
+	 * 在将每个管道返回的值传递给下一个管道之前处理它
      *
      * @param  mixed  $carry
      * @return mixed
@@ -250,6 +262,7 @@ class Pipeline implements PipelineContract
 
     /**
      * Handle the given exception.
+	 * 处理给定异常
      *
      * @param  mixed  $passable
      * @param  \Exception  $e

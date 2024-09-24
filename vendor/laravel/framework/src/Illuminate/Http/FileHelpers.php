@@ -1,6 +1,6 @@
 <?php
 /**
- * Http，文件帮助类
+ * Http，文件帮助
  */
 
 namespace Illuminate\Http;

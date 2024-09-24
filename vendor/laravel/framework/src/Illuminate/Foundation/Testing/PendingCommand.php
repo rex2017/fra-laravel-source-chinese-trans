@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础测试，
+ * 基础，等待中命令
  */
 
 namespace Illuminate\Foundation\Testing;
@@ -18,6 +18,7 @@ class PendingCommand
 {
     /**
      * The test being run.
+	 * 正进行测试
      *
      * @var \Illuminate\Foundation\Testing\TestCase
      */
@@ -25,6 +26,7 @@ class PendingCommand
 
     /**
      * The application instance.
+	 * 应用实例
      *
      * @var \Illuminate\Contracts\Foundation\Application
      */
@@ -32,6 +34,7 @@ class PendingCommand
 
     /**
      * The command to run.
+	 * 运行命令
      *
      * @var string
      */
@@ -39,6 +42,7 @@ class PendingCommand
 
     /**
      * The parameters to pass to the command.
+	 * 要传递给命令的参数
      *
      * @var array
      */
@@ -46,6 +50,7 @@ class PendingCommand
 
     /**
      * The expected exit code.
+	 * 预期的退出代码
      *
      * @var int
      */
@@ -53,6 +58,7 @@ class PendingCommand
 
     /**
      * Determine if command has executed.
+	 * 定义是否命令已执行
      *
      * @var bool
      */
@@ -60,6 +66,7 @@ class PendingCommand
 
     /**
      * Create a new pending console command run.
+	 * 创建新的的暂挂控制台命令运行
      *
      * @param  \PHPUnit\Framework\TestCase  $test
      * @param  \Illuminate\Contracts\Foundation\Application  $app
@@ -77,6 +84,7 @@ class PendingCommand
 
     /**
      * Specify a question that should be asked when the command runs.
+	 * 指定命令运行时应该询问的问题
      *
      * @param  string  $question
      * @param  string  $answer
@@ -91,6 +99,7 @@ class PendingCommand
 
     /**
      * Specify output that should be printed when the command runs.
+	 * 指定命令运行时应该打印的输出
      *
      * @param  string  $output
      * @return $this
@@ -104,6 +113,7 @@ class PendingCommand
 
     /**
      * Assert that the command has the given exit code.
+	 * 断言该命令具有给定的退出代码
      *
      * @param  int  $exitCode
      * @return $this
@@ -117,6 +127,7 @@ class PendingCommand
 
     /**
      * Execute the command.
+	 * 执行命令
      *
      * @return int
      */
@@ -127,6 +138,7 @@ class PendingCommand
 
     /**
      * Execute the command.
+	 * 执行命令
      *
      * @return int
      */
@@ -158,6 +170,7 @@ class PendingCommand
 
     /**
      * Mock the application's console output.
+	 * 模拟应用程序的控制台输出
      *
      * @return \Mockery\MockInterface
      */
@@ -190,6 +203,7 @@ class PendingCommand
 
     /**
      * Create a mock for the buffered output.
+	 * 创建一个模拟为缓冲的输出
      *
      * @return \Mockery\MockInterface
      */
@@ -214,6 +228,7 @@ class PendingCommand
 
     /**
      * Handle the object's destruction.
+	 * 处理对象的销毁
      *
      * @return void
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Http，Json显示类
+ * Http，Json响应
  */
 
 namespace Illuminate\Http;
@@ -117,6 +117,7 @@ class JsonResponse extends BaseJsonResponse
 
     /**
      * Determine if a JSON encoding option is set.
+	 * 确定是否设置了JSON编码选项
      *
      * @param  int  $option
      * @return bool

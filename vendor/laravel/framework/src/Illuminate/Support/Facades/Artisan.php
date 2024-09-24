@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，Artisan
+ * 支持，门面Artisan工匠
  */
 
 namespace Illuminate\Support\Facades;
@@ -22,6 +22,7 @@ class Artisan extends Facade
 {
     /**
      * Get the registered name of the component.
+	 * 得到组件注册名
      *
      * @return string
      */

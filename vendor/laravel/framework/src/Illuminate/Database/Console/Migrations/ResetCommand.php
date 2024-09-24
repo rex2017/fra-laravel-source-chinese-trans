@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库控，迁移重置命令
+ */
 
 namespace Illuminate\Database\Console\Migrations;
 
@@ -12,6 +15,7 @@ class ResetCommand extends BaseCommand
 
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -19,6 +23,7 @@ class ResetCommand extends BaseCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -26,6 +31,7 @@ class ResetCommand extends BaseCommand
 
     /**
      * The migrator instance.
+	 * 迁移实例
      *
      * @var \Illuminate\Database\Migrations\Migrator
      */
@@ -33,6 +39,7 @@ class ResetCommand extends BaseCommand
 
     /**
      * Create a new migration rollback command instance.
+	 * 创建新的迁移回滚命令实例
      *
      * @param  \Illuminate\Database\Migrations\Migrator  $migrator
      * @return void
@@ -46,6 +53,7 @@ class ResetCommand extends BaseCommand
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -60,6 +68,8 @@ class ResetCommand extends BaseCommand
         // First, we'll make sure that the migration table actually exists before we
         // start trying to rollback and re-run all of the migrations. If it's not
         // present we'll just bail out with an info message for the developers.
+		// 首先，我们将确保迁移表确定存在，然后再开始尝试回滚并重新运行所有迁移。
+		// 如果不是现在，我们只需向开发人员发送一条信息即可。
         if (! $this->migrator->repositoryExists()) {
             return $this->comment('Migration table not found.');
         }
@@ -71,6 +81,7 @@ class ResetCommand extends BaseCommand
 
     /**
      * Get the console command options.
+	 * 得到控制台命令选项
      *
      * @return array
      */

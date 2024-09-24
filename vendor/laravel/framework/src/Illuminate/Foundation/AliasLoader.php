@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础，别名加载类
+ * 基础，别名加载
  */
 
 namespace Illuminate\Foundation;

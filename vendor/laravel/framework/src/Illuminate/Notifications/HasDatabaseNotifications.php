@@ -9,6 +9,7 @@ trait HasDatabaseNotifications
 {
     /**
      * Get the entity's notifications.
+	 * 得到实体的通知
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
@@ -19,6 +20,7 @@ trait HasDatabaseNotifications
 
     /**
      * Get the entity's read notifications.
+	 * 得到实体的已读通知
      *
      * @return \Illuminate\Database\Query\Builder
      */
@@ -29,6 +31,7 @@ trait HasDatabaseNotifications
 
     /**
      * Get the entity's unread notifications.
+	 * 得到实体的未读通知
      *
      * @return \Illuminate\Database\Query\Builder
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，文件注册器类，即文件加载实现
+ * 路由文件注册器，即文件加载实现
  */
 
 namespace Illuminate\Routing;

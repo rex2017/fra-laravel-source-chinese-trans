@@ -34,7 +34,7 @@ interface Session
 
     /**
      * Start the session, reading the data from a handler.
-	 * 开始一个SESSION
+	 * 开始一个SESSION，从处理程序读取数据。
      *
      * @return bool
      */
@@ -42,7 +42,7 @@ interface Session
 
     /**
      * Save the session data to storage.
-	 * 保存SESSION
+	 * 保存SESSION至存储
      *
      * @return void
      */
@@ -67,7 +67,7 @@ interface Session
 
     /**
      * Checks if a key is present and not null.
-	 * 检查一个KEY是否存在且不空
+	 * 检查一个KEY是否存在且不为空
      *
      * @param  string|array  $key
      * @return bool
@@ -76,7 +76,7 @@ interface Session
 
     /**
      * Get an item from the session.
-	 * 得到一个项目
+	 * 得到一个项目从SESSION
      *
      * @param  string  $key
      * @param  mixed  $default
@@ -86,7 +86,7 @@ interface Session
 
     /**
      * Put a key / value pair or array of key / value pairs in the session.
-	 * 推入键值入Session
+	 * 推入键值入SESSION按键值对
      *
      * @param  string|array  $key
      * @param  mixed  $value
@@ -96,7 +96,7 @@ interface Session
 
     /**
      * Get the CSRF token value.
-	 * 得到token值
+	 * 得到CSRF token值
      *
      * @return string
      */
@@ -104,7 +104,7 @@ interface Session
 
     /**
      * Remove an item from the session, returning its value.
-	 * 移除项
+	 * 移除项从SESSION中
      *
      * @param  string  $key
      * @return mixed
@@ -113,7 +113,7 @@ interface Session
 
     /**
      * Remove one or many items from the session.
-	 * 移除多个项
+	 * 移除多个项从SESSION中
      *
      * @param  string|array  $keys
      * @return void
@@ -122,7 +122,7 @@ interface Session
 
     /**
      * Remove all of the items from the session.
-	 * 清空session
+	 * 清空SESSION，移除所有项从SESSION中
      *
      * @return void
      */
@@ -130,7 +130,7 @@ interface Session
 
     /**
      * Generate a new session ID for the session.
-	 * 生成一个新的sessionID
+	 * 生成一个新的SESSIONID
      *
      * @param  bool  $destroy
      * @return bool
@@ -139,7 +139,7 @@ interface Session
 
     /**
      * Determine if the session has been started.
-	 * 确定是否session已经开始
+	 * 确定是否SESSION已经开始
      *
      * @return bool
      */
@@ -155,7 +155,7 @@ interface Session
 
     /**
      * Set the "previous" URL in the session.
-	 * 设置前一个URl在session中
+	 * 设置前一个URl在SESSION中
      *
      * @param  string  $url
      * @return void
@@ -164,7 +164,7 @@ interface Session
 
     /**
      * Get the session handler instance.
-	 * 得到session处理实例
+	 * 得到SESSION处理实例
      *
      * @return \SessionHandlerInterface
      */
@@ -172,7 +172,7 @@ interface Session
 
     /**
      * Determine if the session handler needs a request.
-	 * 确定是否session处理需要请求
+	 * 确定是否SESSION处理需要请求
      *
      * @return bool
      */

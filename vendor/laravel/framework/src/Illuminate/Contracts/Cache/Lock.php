@@ -18,6 +18,7 @@ interface Lock
 
     /**
      * Attempt to acquire the lock for the given number of seconds.
+	 * 尝试在给定的秒数内获取锁
      *
      * @param  int  $seconds
      * @param  callable|null  $callback
@@ -43,6 +44,7 @@ interface Lock
 
     /**
      * Releases this lock in disregard of ownership.
+	 * 释放锁而不考虑所有权
      *
      * @return void
      */

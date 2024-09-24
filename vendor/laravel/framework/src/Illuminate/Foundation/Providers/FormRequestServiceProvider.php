@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础提供者，表单请求服务提供者
+ * 基础，表单请求服务提供者
  */
 
 namespace Illuminate\Foundation\Providers;
@@ -14,6 +14,7 @@ class FormRequestServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
+	 * 注册服务提供者
      *
      * @return void
      */
@@ -24,6 +25,7 @@ class FormRequestServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application services.
+	 * 引导应用服务
      *
      * @return void
      */

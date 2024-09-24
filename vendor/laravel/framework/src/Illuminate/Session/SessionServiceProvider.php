@@ -27,6 +27,7 @@ class SessionServiceProvider extends ServiceProvider
 
     /**
      * Register the session manager instance.
+	 * 注册会话管理器实例
      *
      * @return void
      */
@@ -39,6 +40,7 @@ class SessionServiceProvider extends ServiceProvider
 
     /**
      * Register the session driver instance.
+	 * 注册会话驱动程序实例
      *
      * @return void
      */
@@ -48,6 +50,8 @@ class SessionServiceProvider extends ServiceProvider
             // First, we will create the session manager which is responsible for the
             // creation of the various session drivers when they are needed by the
             // application instance, and will resolve them on a lazy load basis.
+			// 首先，我们将创建会话管理器，该管理器负责在应用程序实例需要时创建各种会话驱动程序，
+			// 并在延迟加载的基础上解析它们。
             return $app->make('session')->driver();
         });
     }

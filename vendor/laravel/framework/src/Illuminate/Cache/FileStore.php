@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存文件存储类
+ * 缓存文件存储
  */
 
 namespace Illuminate\Cache;
@@ -40,7 +40,7 @@ class FileStore implements Store
 
     /**
      * Create a new file cache store instance.
-	 * 创建一个新的文件缓存存储接口
+	 * 创建新的文件缓存存储实例
      *
      * @param  \Illuminate\Filesystem\Filesystem  $files
      * @param  string  $directory
@@ -56,7 +56,7 @@ class FileStore implements Store
 
     /**
      * Retrieve an item from the cache by key.
-	 * 检索项从缓存中
+	 * 检索项目从缓存中
      *
      * @param  string|array  $key
      * @return mixed
@@ -68,7 +68,7 @@ class FileStore implements Store
 
     /**
      * Store an item in the cache for a given number of seconds.
-	 * 将项存入缓存中
+	 * 将项目存入缓存中使用给定秒数
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -125,7 +125,7 @@ class FileStore implements Store
 
     /**
      * Increment the value of an item in the cache.
-	 * 增加缓存值
+	 * 增加缓存中项的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -142,6 +142,7 @@ class FileStore implements Store
 
     /**
      * Decrement the value of an item in the cache.
+	 * 递减缓存中项的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -154,6 +155,7 @@ class FileStore implements Store
 
     /**
      * Store an item in the cache indefinitely.
+	 * 存储项无限期地在缓存中
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -166,7 +168,7 @@ class FileStore implements Store
 
     /**
      * Remove an item from the cache.
-	 * 移除单个缓存
+	 * 移除单个缓存项目
      *
      * @param  string  $key
      * @return bool
@@ -182,7 +184,7 @@ class FileStore implements Store
 
     /**
      * Remove all items from the cache.
-	 * 移除所有缓存
+	 * 移除所有缓存项目
      *
      * @return bool
      */
@@ -205,6 +207,7 @@ class FileStore implements Store
 
     /**
      * Retrieve an item and expiry time from the cache by key.
+	 * 检索项目和过期时间按键从缓存中
      *
      * @param  string  $key
      * @return array
@@ -216,6 +219,8 @@ class FileStore implements Store
         // If the file doesn't exist, we obviously cannot return the cache so we will
         // just return null. Otherwise, we'll get the contents of the file and get
         // the expiration UNIX timestamps from the start of the file's contents.
+		// 如果文件不存在，我们显示不能返回缓存，因此我们只返回NULl。
+		// 否则，我们将获取文件的内容并获取从文件内容开始的到期UNIX时间戳。
         try {
             $expire = substr(
                 $contents = $this->files->get($path, true), 0, 10
@@ -227,6 +232,8 @@ class FileStore implements Store
         // If the current time is greater than expiration timestamps we will delete
         // the file and return null. This helps clean up the old files and keeps
         // this directory much cleaner for us as old files aren't hanging out.
+		// 如果当前时间大于过期时间戳，我们将删除文件并返回NULL。
+		// 这有助于清理旧文件并保持这个目录对我们来说要干净得多，因为旧文件不会挂在外面。
         if ($this->currentTime() >= $expire) {
             $this->forget($key);
 
@@ -244,6 +251,9 @@ class FileStore implements Store
         // Next, we'll extract the number of seconds that are remaining for a cache
         // so that we can properly retain the time for things like the increment
         // operation that may be performed on this cache on a later operation.
+		// 接下来，我们将提取缓存剩余秒数，
+		// 这样我们就可以正确地保留时间来处理增量等事情。
+		// 以致可以在以后的操作中对此缓存执行操作。
         $time = $expire - $this->currentTime();
 
         return compact('data', 'time');
@@ -251,6 +261,7 @@ class FileStore implements Store
 
     /**
      * Get a default empty payload for the cache.
+	 * 得到缓存的默认空有效负载
      *
      * @return array
      */
@@ -261,6 +272,7 @@ class FileStore implements Store
 
     /**
      * Get the full path for the given cache key.
+	 * 得到给定缓存键的完整路径
      *
      * @param  string  $key
      * @return string
@@ -274,6 +286,7 @@ class FileStore implements Store
 
     /**
      * Get the expiration time based on the given seconds.
+	 * 根据给定的秒获取过期时间
      *
      * @param  int  $seconds
      * @return int
@@ -287,6 +300,7 @@ class FileStore implements Store
 
     /**
      * Get the Filesystem instance.
+	 * 得到文件系统实例
      *
      * @return \Illuminate\Filesystem\Filesystem
      */
@@ -297,6 +311,7 @@ class FileStore implements Store
 
     /**
      * Get the working directory of the cache.
+	 * 得到缓存的工作目录
      *
      * @return string
      */

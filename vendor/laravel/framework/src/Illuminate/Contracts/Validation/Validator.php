@@ -43,6 +43,7 @@ interface Validator extends MessageProvider
 
     /**
      * Add conditions to a given field based on a Closure.
+	 * 根据Closure向给定字段添加条件
      *
      * @param  string|array  $attribute
      * @param  string|array  $rules

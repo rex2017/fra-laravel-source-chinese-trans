@@ -52,6 +52,7 @@ interface ConnectionInterface
 
     /**
      * Run a select statement against the database and returns a generator.
+	 * 运行select语句并返回生成器对数据库
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -112,6 +113,7 @@ interface ConnectionInterface
 
     /**
      * Run a raw, unprepared query against the PDO connection.
+	 * 运行一个未准备的原始查询对PDO连接
      *
      * @param  string  $query
      * @return bool
@@ -157,6 +159,7 @@ interface ConnectionInterface
 
     /**
      * Rollback the active database transaction.
+	 * 回滚活动数据库事务
      *
      * @return void
      */
@@ -172,6 +175,7 @@ interface ConnectionInterface
 
     /**
      * Execute the given callback in "dry run" mode.
+	 * 以"预演"模式执行给定的回调函数
      *
      * @param  \Closure  $callback
      * @return array

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 支持，宏观的
+ */
 
 namespace Illuminate\Support\Traits;
 
@@ -11,6 +14,7 @@ trait Macroable
 {
     /**
      * The registered string macros.
+	 * 注册的字符串宏
      *
      * @var array
      */
@@ -18,6 +22,7 @@ trait Macroable
 
     /**
      * Register a custom macro.
+	 * 注册自定义宏
      *
      * @param  string  $name
      * @param  object|callable  $macro
@@ -30,6 +35,7 @@ trait Macroable
 
     /**
      * Mix another object into the class.
+	 * 混合另一个对象到类中
      *
      * @param  object  $mixin
      * @param  bool  $replace
@@ -53,6 +59,7 @@ trait Macroable
 
     /**
      * Checks if macro is registered.
+	 * 检查是否注册了宏
      *
      * @param  string  $name
      * @return bool
@@ -64,6 +71,7 @@ trait Macroable
 
     /**
      * Dynamically handle calls to the class.
+	 * 动态处理对类的调用
      *
      * @param  string  $method
      * @param  array  $parameters
@@ -90,6 +98,7 @@ trait Macroable
 
     /**
      * Dynamically handle calls to the class.
+	 * 动态处理对类的调用
      *
      * @param  string  $method
      * @param  array  $parameters

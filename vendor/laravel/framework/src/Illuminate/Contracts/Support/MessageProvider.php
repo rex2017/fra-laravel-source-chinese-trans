@@ -1,6 +1,6 @@
 <?php
 /**
- * 契约，信息包提供者接口
+ * 契约，消息包提供者接口
  */
 
 namespace Illuminate\Contracts\Support;

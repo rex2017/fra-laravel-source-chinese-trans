@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，Redis类
+ * 支持，门面Redis
  */
 
 namespace Illuminate\Support\Facades;

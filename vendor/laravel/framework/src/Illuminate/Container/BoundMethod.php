@@ -1,6 +1,6 @@
 <?php
 /**
- * 容器绑定方法类
+ * 容器绑定方法
  */
 
 namespace Illuminate\Container;
@@ -60,6 +60,9 @@ class BoundMethod
         // We will assume an @ sign is used to delimit the class name from the method
         // name. We will split on this @ sign and then build a callable array that
         // we can pass right back into the "call" method for dependency binding.
+		// 我们将假设使用@符号来分隔类名与方法名字。
+		// 我们将拆分这个@符号，然后构建一个可调用数组，
+		// 我们可以直接传递回依赖绑定的call方法。
         $method = count($segments) === 2
                         ? $segments[1] : $defaultMethod;
 
@@ -90,6 +93,8 @@ class BoundMethod
         // Here we need to turn the array callable into a Class@method string we can use to
         // examine the container and see if there are any method bindings for this given
         // method. If there are, we can call this method binding callback immediately.
+		// 在这里我们需要将数组callable转换为类@名，我们可以使用的字符串检查容器。
+		// 如果有，我们可以立即调用此方法绑定回调
         $method = static::normalizeMethod($callback);
 
         if ($container->hasMethodBinding($method)) {

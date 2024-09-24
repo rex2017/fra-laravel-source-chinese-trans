@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库连接类
+ * 数据库连接，负责执行SQL查询，与db门面对应
  */
 
 namespace Illuminate\Database;
@@ -49,7 +49,7 @@ class Connection implements ConnectionInterface
 
     /**
      * The name of the connected database.
-	 * 数据库
+	 * 数据库已连接
      *
      * @var string
      */
@@ -89,6 +89,7 @@ class Connection implements ConnectionInterface
 
     /**
      * The schema grammar implementation.
+	 * 模式语法实现
      *
      * @var \Illuminate\Database\Schema\Grammars\Grammar
      */
@@ -96,6 +97,7 @@ class Connection implements ConnectionInterface
 
     /**
      * The query post processor implementation.
+	 * 查询处理器实现
      *
      * @var \Illuminate\Database\Query\Processors\Processor
      */
@@ -103,7 +105,7 @@ class Connection implements ConnectionInterface
 
     /**
      * The event dispatcher instance.
-	 * 事件实例
+	 * 事件调度实例
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
@@ -127,6 +129,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Indicates if changes have been made to the database.
+	 * 指明是否对数据库进行了更改
      *
      * @var int
      */
@@ -142,6 +145,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Indicates whether queries are being logged.
+	 * 指明查询是否被记录
      *
      * @var bool
      */
@@ -149,6 +153,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Indicates if the connection is in a "dry run".
+	 * 指明连接是否处于"试运行"状态
      *
      * @var bool
      */
@@ -156,6 +161,7 @@ class Connection implements ConnectionInterface
 
     /**
      * The instance of Doctrine connection.
+	 * 正式连接实例
      *
      * @var \Doctrine\DBAL\Connection
      */
@@ -171,7 +177,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Create a new database connection instance.
-	 * 创建一个新的数据库连接实例
+	 * 创建新的数据库连接实例
      *
      * @param  \PDO|\Closure  $pdo
      * @param  string  $database
@@ -186,6 +192,8 @@ class Connection implements ConnectionInterface
         // First we will setup the default properties. We keep track of the DB
         // name we are connected to since it is needed when some reflective
         // type commands are run such as checking whether a table exists.
+		// 首先我们行设置默认属性。
+		// 我们将跟踪DB是因为一些反思运行类型命令的需要，例如检查表是否存。
         $this->database = $database;
 
         $this->tablePrefix = $tablePrefix;
@@ -195,6 +203,8 @@ class Connection implements ConnectionInterface
         // We need to initialize a query grammar and the query post processors
         // which are both very important parts of the database abstractions
         // so we initialize these to their default values while starting.
+		// 我们需要初始化查询语法和查询后处理，它们都是数据库抽象的重要组成部分。
+		// 因此，我们在启动时将其初始化为默认值。
         $this->useDefaultQueryGrammar();
 
         $this->useDefaultPostProcessor();
@@ -224,6 +234,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the schema grammar to the default implementation.
+	 * 将模式语法设置为默认实现
      *
      * @return void
      */
@@ -234,6 +245,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the default schema grammar instance.
+	 * 得到默认模式语法实例
      *
      * @return \Illuminate\Database\Schema\Grammars\Grammar
      */
@@ -244,6 +256,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the query post processor to the default implementation.
+	 * 设置查询请求程序为默认实现
      *
      * @return void
      */
@@ -254,6 +267,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the default post processor instance.
+	 * 得到默认请求进程实例
      *
      * @return \Illuminate\Database\Query\Processors\Processor
      */
@@ -264,6 +278,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get a schema builder instance for the connection.
+	 * 得到连接的架构生成器实例
      *
      * @return \Illuminate\Database\Schema\Builder
      */
@@ -320,6 +335,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a select statement against the database.
+	 * 运行一条查询语句
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -332,7 +348,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a select statement against the database.
-	 * 运行一个查询语句
+	 * 运行一条select查询语句
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -349,6 +365,8 @@ class Connection implements ConnectionInterface
             // For select statements, we'll simply execute the query and return an array
             // of the database result set. Each element in the array will be a single
             // row from the database table, and will either be an array or objects.
+			// 对于select语句，我们只需执行查询并返回数组。
+			// 数组中每个元素是数据库表的一行，可以是数据或对象。
             $statement = $this->prepared($this->getPdoForSelect($useReadPdo)
                               ->prepare($query));
 
@@ -362,6 +380,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a select statement against the database and returns a generator.
+	 * 运行select语句并返回生成器
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -378,6 +397,8 @@ class Connection implements ConnectionInterface
             // First we will create a statement for the query. Then, we will set the fetch
             // mode and prepare the bindings for the query. Once that's done we will be
             // ready to execute the query against the database and return the cursor.
+			// 首先我们将为查询创建一个语句。然后我们将设置取数模式并为查询准备绑定。
+			// 一旦完成，我们将对数据库执行查询并返回光标。
             $statement = $this->prepared($this->getPdoForSelect($useReadPdo)
                               ->prepare($query));
 
@@ -388,6 +409,8 @@ class Connection implements ConnectionInterface
             // Next, we'll execute the query against the database and return the statement
             // so we can return the cursor. The cursor will use a PHP generator to give
             // back one row at a time without using a bunch of memory to render them.
+			// 接下来，我们将对数据库执行查询并返回以下语句，所以我们可以返回光标。
+			// 游标将使用PHP生成器给出一次返回一行，而不使用大量内存来渲染它们。
             $statement->execute();
 
             return $statement;
@@ -418,6 +441,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the PDO connection to use for a select query.
+	 * 得到用于选择查询的PDO slelect查询连接
      *
      * @param  bool  $useReadPdo
      * @return \PDO
@@ -429,6 +453,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run an insert statement against the database.
+	 * 运行一条insert插入语句
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -441,7 +466,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run an update statement against the database.
-	 * 运行一个更新语句
+	 * 运行一条更新语句
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -454,7 +479,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a delete statement against the database.
-	 * 运行一个删除语句
+	 * 运行一条delete删除语句
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -467,6 +492,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Execute an SQL statement and return the boolean result.
+	 * 执行一条SQL语句并返回布尔值
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -491,6 +517,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run an SQL statement and get the number of rows affected.
+	 * 执行SQL语句并得到影响行
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -506,6 +533,8 @@ class Connection implements ConnectionInterface
             // For update or delete statements, we want to get the number of rows affected
             // by the statement and return that back to the developer. We'll first need
             // to execute the statement and then we'll use PDO to fetch the affected.
+			// 对于update或delete语句，我们希望获得受影响的行数并将其返回给开发人员。
+			// 我们首先需要执行该语句，然后我们将使用PDO获取受影响的对象。
             $statement = $this->getPdo()->prepare($query);
 
             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -522,6 +551,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a raw, unprepared query against the PDO connection.
+	 * 运行一个原始的未准备好的查询对PDO
      *
      * @param  string  $query
      * @return bool
@@ -543,6 +573,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Execute the given callback in "dry run" mode.
+	 * 执行"模拟运行"模式并给定回调
      *
      * @param  \Closure  $callback
      * @return array
@@ -555,6 +586,8 @@ class Connection implements ConnectionInterface
             // Basically to make the database connection "pretend", we will just return
             // the default values for all the query methods, then we will return an
             // array of queries that were "executed" within the Closure callback.
+			// 基本上为了使数据库连接假装，我们只需返回所有查询方法的默认值，
+			// 然后我们将返回在Colsure回调中执行的查询数组。
             $callback($this);
 
             $this->pretending = false;
@@ -565,6 +598,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Execute the given callback in "dry run" mode.
+	 * 执行给定的回调在"模拟运行"模式下
      *
      * @param  \Closure  $callback
      * @return array
@@ -576,6 +610,8 @@ class Connection implements ConnectionInterface
         // First we will back up the value of the logging queries property and then
         // we'll be ready to run callbacks. This query log will also get cleared
         // so we will have a new log of all the queries that are executed now.
+		// 首先我们将备份日志查询属性的值，然后我们将准备好运行回调。
+		// 此查询日志也将被清除，因此，我们将有一个现在执行的所有查询的新日志。
         $this->enableQueryLog();
 
         $this->queryLog = [];
@@ -583,6 +619,8 @@ class Connection implements ConnectionInterface
         // Now we'll execute this callback and capture the result. Once it has been
         // executed we will restore the value of query logging and give back the
         // value of the callback so the original callers can have the results.
+		// 现在我们将执行些回调并捕获结果。
+		// 一旦它已经执行后，我们将恢复查询日志记录的值并返回回调的值，以便原始调用者可以获得结果。
         $result = $callback();
 
         $this->loggingQueries = $loggingQueries;
@@ -592,6 +630,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Bind values to their parameters in the given statement.
+	 * 绑定值到给定语句中的参数
      *
      * @param  \PDOStatement  $statement
      * @param  array  $bindings
@@ -609,6 +648,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Prepare the query bindings for execution.
+	 * 准备执行查询绑定
      *
      * @param  array  $bindings
      * @return array
@@ -633,6 +673,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a SQL statement and log its execution context.
+	 * 运行SQL语句并记录其执行上下文
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -650,6 +691,8 @@ class Connection implements ConnectionInterface
         // Here we will run this query. If an exception occurs we'll determine if it was
         // caused by a connection that has been lost. If that is the cause, we'll try
         // to re-establish connection and re-run the query with a fresh connection.
+		// 在这里我们将运行此查询。如果发生异常我们将确定是否这是由于连接丢失造成的。
+		// 如果这就是原因，我们会试试以重新建立连接，并使用新的连接重新运行查询。
         try {
             $result = $this->runQueryCallback($query, $bindings, $callback);
         } catch (QueryException $e) {
@@ -661,6 +704,8 @@ class Connection implements ConnectionInterface
         // Once we have run the query we will calculate the time that it took to run and
         // then log the query, bindings, and execution time so we will report them on
         // the event that the developer needs them. We'll log time in milliseconds.
+		// 一旦运行查询后我们将计算运行所需的时间。
+		// 然后记录查询、绑定和执行时间，以便我们报告它们开发人员需要它们的事件。
         $this->logQuery(
             $query, $bindings, $this->getElapsedTime($start)
         );
@@ -670,6 +715,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Run a SQL statement.
+	 * 运行SQL语句
      *
      * @param  string  $query
      * @param  array  $bindings
@@ -719,6 +765,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the elapsed time since a given starting point.
+	 * 得到自给定起始点以来经过的时间
      *
      * @param  int  $start
      * @return float
@@ -730,6 +777,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Handle a query exception.
+	 * 处理查询异常
      *
      * @param  \Illuminate\Database\QueryException  $e
      * @param  string  $query
@@ -752,6 +800,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Handle a query exception that occurred during query execution.
+	 * 处理查询执行期间发生的查询异常
      *
      * @param  \Illuminate\Database\QueryException  $e
      * @param  string  $query
@@ -774,7 +823,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Reconnect to the database.
-	 * 重连接
+	 * 重新连接数据库
      *
      * @return void
      *
@@ -793,6 +842,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Reconnect to the database if a PDO connection is missing.
+	 * 请重新连接数据库如果缺少PDO连接，
      *
      * @return void
      */
@@ -830,6 +880,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Fire an event for this connection.
+	 * 为此连接触发一个事件
      *
      * @param  string  $event
      * @return array|null
@@ -852,6 +903,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Fire the given event if possible.
+	 * 触发事件
      *
      * @param  mixed  $event
      * @return void
@@ -865,6 +917,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get a new raw query expression.
+	 * 得到新的原始查询表达式
      *
      * @param  mixed  $value
      * @return \Illuminate\Database\Query\Expression
@@ -876,6 +929,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Indicate if any records have been modified.
+	 * 说明是否有任何记录被修改
      *
      * @param  bool  $value
      * @return void
@@ -889,6 +943,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Is Doctrine available?
+	 * 学说可用？
      *
      * @return bool
      */
@@ -899,6 +954,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get a Doctrine Schema Column instance.
+	 * 得到原则列实例
      *
      * @param  string  $table
      * @param  string  $column
@@ -913,6 +969,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the Doctrine DBAL schema manager for the connection.
+	 * 得到连接的Doctrine DBAL模式管理器
      *
      * @return \Doctrine\DBAL\Schema\AbstractSchemaManager
      */
@@ -959,6 +1016,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the current PDO connection parameter without executing any reconnect logic.
+	 * 得到当前的PDO连接参数在不执行任何重新连接逻辑的情况下
      *
      * @return \PDO|\Closure|null
      */
@@ -969,6 +1027,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the current PDO connection used for reading.
+	 * 得到用于读取的当前PDO连接
      *
      * @return \PDO
      */
@@ -991,6 +1050,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the current read PDO connection parameter without executing any reconnect logic.
+	 * 得到当前读PDO连接参数在不执行任何重连逻辑的情况下
      *
      * @return \PDO|\Closure|null
      */
@@ -1017,6 +1077,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the PDO connection used for reading.
+	 * 设置用于读取的PDO连接
      *
      * @param  \PDO|\Closure|null  $pdo
      * @return $this
@@ -1030,6 +1091,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the reconnect instance on the connection.
+	 * 设置重新连接实例
      *
      * @param  callable  $reconnector
      * @return $this
@@ -1088,6 +1150,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the query grammar used by the connection.
+	 * 设置连接使用的查询语法
      *
      * @param  \Illuminate\Database\Query\Grammars\Grammar  $grammar
      * @return $this
@@ -1101,6 +1164,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the schema grammar used by the connection.
+	 * 得到连接使用的模式语法
      *
      * @return \Illuminate\Database\Schema\Grammars\Grammar
      */
@@ -1111,6 +1175,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the schema grammar used by the connection.
+	 * 设置连接使用的模式语法
      *
      * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
      * @return $this
@@ -1124,6 +1189,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the query post processor used by the connection.
+	 * 得到连接使用的查询处理程序
      *
      * @return \Illuminate\Database\Query\Processors\Processor
      */
@@ -1134,6 +1200,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the query post processor used by the connection.
+	 * 设置连接使用的查询处理器
      *
      * @param  \Illuminate\Database\Query\Processors\Processor  $processor
      * @return $this
@@ -1158,6 +1225,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the event dispatcher instance on the connection.
+	 * 设置事件调度实例
      *
      * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @return $this
@@ -1171,6 +1239,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Unset the event dispatcher for this connection.
+	 * 注销事件调度
      *
      * @return void
      */
@@ -1181,6 +1250,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Determine if the connection is in a "dry run".
+	 * 确定连接是否处于“预演”状态
      *
      * @return bool
      */
@@ -1246,6 +1316,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the name of the connected database.
+	 * 得到数据库连接名称
      *
      * @return string
      */
@@ -1256,6 +1327,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the name of the connected database.
+	 * 设置所连接数据库名称
      *
      * @param  string  $database
      * @return $this
@@ -1269,6 +1341,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Get the table prefix for the connection.
+	 * 得到表前缀
      *
      * @return string
      */
@@ -1279,6 +1352,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the table prefix in use by the connection.
+	 * 设置连接使用的表前缀
      *
      * @param  string  $prefix
      * @return $this
@@ -1294,6 +1368,7 @@ class Connection implements ConnectionInterface
 
     /**
      * Set the table prefix and return the grammar.
+	 * 设置表前缀并返回语法
      *
      * @param  \Illuminate\Database\Grammar  $grammar
      * @return \Illuminate\Database\Grammar

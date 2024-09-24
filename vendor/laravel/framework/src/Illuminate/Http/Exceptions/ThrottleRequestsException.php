@@ -1,6 +1,6 @@
 <?php
 /**
- * Http，
+ * Http，节流请求异常
  */
 
 namespace Illuminate\Http\Exceptions;
@@ -12,6 +12,7 @@ class ThrottleRequestsException extends TooManyRequestsHttpException
 {
     /**
      * Create a new throttle requests exception instance.
+	 * 创建新的节流请求异常实例
      *
      * @param  string|null  $message
      * @param  \Exception|null  $previous

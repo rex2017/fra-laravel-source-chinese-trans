@@ -1,6 +1,6 @@
 <?php
 /**
- * Http，响应特征类
+ * Http，响应特征
  */
 
 namespace Illuminate\Http;
@@ -21,6 +21,7 @@ trait ResponseTrait
 
     /**
      * The exception that triggered the error response (if applicable).
+	 * 触发错误响应的异常(如果适用)
      *
      * @var \Exception|null
      */
@@ -39,7 +40,7 @@ trait ResponseTrait
 
     /**
      * Get the content of the response.
-	 * 得么响应内容
+	 * 得到响应内容
      *
      * @return string
      */
@@ -79,6 +80,7 @@ trait ResponseTrait
 
     /**
      * Add an array of headers to the response.
+	 * 添加一个标题数组至响应
      *
      * @param  \Symfony\Component\HttpFoundation\HeaderBag|array  $headers
      * @return $this

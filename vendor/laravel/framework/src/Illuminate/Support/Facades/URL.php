@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，URL类
+ * 支持，门面URL
  */
 
 namespace Illuminate\Support\Facades;

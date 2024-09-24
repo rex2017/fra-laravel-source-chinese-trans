@@ -28,7 +28,7 @@ class RewindableGenerator implements Countable, IteratorAggregate
 
     /**
      * Create a new generator instance.
-	 * 创建一个新的生成实例
+	 * 创建新的生成器实例
      *
      * @param  callable  $generator
      * @param  callable|int  $count

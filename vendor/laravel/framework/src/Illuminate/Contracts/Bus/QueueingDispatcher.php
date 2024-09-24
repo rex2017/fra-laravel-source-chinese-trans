@@ -9,7 +9,7 @@ interface QueueingDispatcher extends Dispatcher
 {
     /**
      * Dispatch a command to its appropriate handler behind a queue.
-	 * 将命令分派到队列后面的相应处理程序。
+	 * 分派命令到队列后面的相应处理程序
      *
      * @param  mixed  $command
      * @return mixed

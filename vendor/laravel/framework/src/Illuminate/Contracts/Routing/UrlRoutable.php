@@ -9,7 +9,7 @@ interface UrlRoutable
 {
     /**
      * Get the value of the model's route key.
-	 * 得到模型KEY
+	 * 得到模型路由KEY
      *
      * @return mixed
      */
@@ -17,7 +17,7 @@ interface UrlRoutable
 
     /**
      * Get the route key for the model.
-	 * 得到路由Key名
+	 * 得到模型路由Key名
      *
      * @return string
      */

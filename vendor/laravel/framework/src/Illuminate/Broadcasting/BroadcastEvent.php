@@ -1,6 +1,6 @@
 <?php
 /**
- * 广播事件类
+ * 广播事件
  */
 
 namespace Illuminate\Broadcasting;
@@ -43,7 +43,7 @@ class BroadcastEvent implements ShouldQueue
 
     /**
      * Create a new job handler instance.
-	 * 创建一个新的实例
+	 * 创建新的实例
      *
      * @param  mixed  $event
      * @return void

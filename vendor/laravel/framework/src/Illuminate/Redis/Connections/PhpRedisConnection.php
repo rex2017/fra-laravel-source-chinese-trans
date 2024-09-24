@@ -1,6 +1,6 @@
 <?php
 /**
- * Redis，连接类
+ * Redis，Redis连接
  */
 
 namespace Illuminate\Redis\Connections;
@@ -19,6 +19,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 {
     /**
      * The connection creation callback.
+	 * 连接创建回调
      *
      * @var callable
      */
@@ -26,6 +27,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * The connection configuration array.
+	 * 连接配置数组
      *
      * @var array
      */
@@ -33,6 +35,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Create a new PhpRedis connection.
+	 * 创建新的PhpRedis连接
      *
      * @param  \Redis  $client
      * @param  callable|null  $connector
@@ -48,6 +51,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Returns the value of the given key.
+	 * 返回给定键的值
      *
      * @param  string  $key
      * @return string|null
@@ -61,6 +65,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Get the values of all the given keys.
+	 * 得到所有给定键的值
      *
      * @param  array  $keys
      * @return array
@@ -74,6 +79,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Set the string value in argument as value of the key.
+	 * 设置参数中的字符串值为键的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -93,6 +99,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Set the given key if it doesn't exist.
+	 * 设置给定的键如果它不存在
      *
      * @param  string  $key
      * @param  string  $value
@@ -105,6 +112,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Get the value of the given hash fields.
+	 * 得到给定哈希字段的值
      *
      * @param  string  $key
      * @param  mixed  $dictionary
@@ -121,6 +129,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Set the given hash fields to their respective values.
+	 * 设置给定的散列字段为各自的值
      *
      * @param  string  $key
      * @param  mixed  $dictionary
@@ -141,6 +150,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Set the given hash field if it doesn't exist.
+	 * 设置给定的散列字段如果它不存在
      *
      * @param  string  $hash
      * @param  string  $key
@@ -154,6 +164,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Removes the first count occurrences of the value element from the list.
+	 * 移除value元素的第一个计数出现次数从列表中
      *
      * @param  string  $key
      * @param  int  $count
@@ -167,6 +178,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Removes and returns the first element of the list stored at key.
+	 * 移除并返回存储在key中的列表的第一个元素
      *
      * @param  mixed  $arguments
      * @return array|null
@@ -180,6 +192,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Removes and returns the last element of the list stored at key.
+	 * 删除并返回存储在key处的列表的最后一个元素
      *
      * @param  mixed  $arguments
      * @return array|null
@@ -193,6 +206,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Removes and returns a random element from the set value at key.
+	 * 移除并返回一个随机元素从键处的设置值中
      *
      * @param  string  $key
      * @param  int|null  $count
@@ -205,6 +219,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Add one or more members to a sorted set or update its score if it already exists.
+	 * 添加一个或多个成员至排序设置或更新其分数，如果它已经存在。
      *
      * @param  string  $key
      * @param  mixed  $dictionary
@@ -234,6 +249,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Return elements with score between $min and $max.
+	 * 返回得分在$min和$max之间的元素
      *
      * @param  string  $key
      * @param  mixed  $min
@@ -255,6 +271,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Return elements with score between $min and $max.
+	 * 返回得分在$min和$max之间的元素
      *
      * @param  string  $key
      * @param  mixed  $min
@@ -276,6 +293,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Find the intersection between sets and store in a new set.
+	 * 找到集合之间的交集并存储在一个新集合中
      *
      * @param  string  $output
      * @param  array  $keys
@@ -292,6 +310,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Find the union between sets and store in a new set.
+	 * 找到集合之间的并集并存储在一个新集合中
      *
      * @param  string  $output
      * @param  array  $keys
@@ -308,6 +327,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Scans the all keys based on options.
+	 * 扫描所有密钥根据选项
      *
      * @param  mixed  $cursor
      * @param  array  $options
@@ -325,6 +345,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Scans the given set for all values based on options.
+	 * 扫描给定集合的所有值基于选项
      *
      * @param  string  $key
      * @param  mixed  $cursor
@@ -343,6 +364,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Scans the given set for all values based on options.
+	 * 扫描给定集合的所有值基于选项
      *
      * @param  string  $key
      * @param  mixed  $cursor
@@ -361,6 +383,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Scans the given set for all values based on options.
+	 * 扫描给定集合的所有值基于选项
      *
      * @param  string  $key
      * @param  mixed  $cursor
@@ -379,6 +402,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Execute commands in a pipeline.
+	 * 执行命令在管道中
      *
      * @param  callable|null  $callback
      * @return \Redis|array
@@ -394,6 +418,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Execute commands in a transaction.
+	 * 执行命令在事务中
      *
      * @param  callable|null  $callback
      * @return \Redis|array
@@ -409,6 +434,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Evaluate a LUA script serverside, from the SHA1 hash of the script instead of the script itself.
+	 * 从脚本的SHA1哈希值(而不是脚本本身)计算LUA脚本服务器端
      *
      * @param  string  $script
      * @param  int  $numkeys
@@ -424,6 +450,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Evaluate a script and return its result.
+	 * 对脚本求值并返回结果
      *
      * @param  string  $script
      * @param  int  $numberOfKeys
@@ -437,6 +464,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Subscribe to a set of given channels for messages.
+	 * 订阅一组给定的通道为消息
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -451,6 +479,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Subscribe to a set of given channels with wildcards.
+	 * 订阅一组给定的通道使用通配符
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -465,6 +494,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Subscribe to a set of given channels for messages.
+	 * 订阅一组给定的通道为消息
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -478,6 +508,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Flush the selected Redis database.
+	 * 刷新所选Redis数据库
      *
      * @return void
      */
@@ -494,6 +525,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Execute a raw command.
+	 * 执行原始命令
      *
      * @param  array  $parameters
      * @return mixed
@@ -505,6 +537,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Run a command against the Redis database.
+	 * 运行命令对Redis数据库
      *
      * @param  string  $method
      * @param  array  $parameters
@@ -525,6 +558,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Disconnects from the Redis instance.
+	 * 断开与Redis实例的连接
      *
      * @return void
      */
@@ -535,6 +569,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Apply prefix to the given key if necessary.
+	 * 应用prefix对给定的键必要时
      *
      * @param  string  $key
      * @return string
@@ -548,6 +583,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
 
     /**
      * Pass other method calls down to the underlying client.
+	 * 调用其他方法传递给底层客户端
      *
      * @param  string  $method
      * @param  array  $parameters

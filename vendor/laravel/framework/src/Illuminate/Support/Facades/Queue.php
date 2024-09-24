@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，队列类
+ * 支持，门面队列
  */
 
 namespace Illuminate\Support\Facades;
@@ -31,6 +31,7 @@ class Queue extends Facade
 {
     /**
      * Replace the bound instance with a fake.
+	 * 替换绑定实例为伪实例
      *
      * @return \Illuminate\Support\Testing\Fakes\QueueFake
      */

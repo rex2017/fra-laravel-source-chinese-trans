@@ -20,7 +20,7 @@ class CacheBasedSessionHandler implements SessionHandlerInterface
 
     /**
      * The number of minutes to store the data in the cache.
-	 * 分钟
+	 * 将数据存储在缓存中的分钟数
      *
      * @var int
      */
@@ -28,6 +28,7 @@ class CacheBasedSessionHandler implements SessionHandlerInterface
 
     /**
      * Create a new cache driven handler instance.
+	 * 创建新的缓存驱动处理实例
      *
      * @param  \Illuminate\Contracts\Cache\Repository  $cache
      * @param  int  $minutes
@@ -89,6 +90,7 @@ class CacheBasedSessionHandler implements SessionHandlerInterface
 
     /**
      * Get the underlying cache repository.
+	 * 得到底层缓存存储库
      *
      * @return \Illuminate\Contracts\Cache\Repository
      */

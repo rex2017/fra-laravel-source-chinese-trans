@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，验证邮箱
+ */
 
 namespace Illuminate\Foundation\Auth;
 
@@ -12,6 +15,7 @@ trait VerifiesEmails
 
     /**
      * Show the email verification notice.
+	 * 显示电子邮件验证通知
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -25,6 +29,7 @@ trait VerifiesEmails
 
     /**
      * Mark the authenticated user's email address as verified.
+	 * 标记已验证用户的电子邮件地址为已验证
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -54,6 +59,7 @@ trait VerifiesEmails
 
     /**
      * Resend the email verification notification.
+	 * 重新发送邮件验证通知
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

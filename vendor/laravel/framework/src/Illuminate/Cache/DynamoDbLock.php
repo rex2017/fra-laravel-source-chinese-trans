@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存DynamoDB锁类
+ * 缓存DynamoDB锁
  */
 
 namespace Illuminate\Cache;
@@ -9,6 +9,7 @@ class DynamoDbLock extends Lock
 {
     /**
      * The DynamoDB client instance.
+	 * DynamoDB客户端实例
      *
      * @var \Illuminate\Cache\DynamoDbStore
      */
@@ -16,7 +17,7 @@ class DynamoDbLock extends Lock
 
     /**
      * Create a new lock instance.
-	 * 创建一个新的锁实例
+	 * 创建新的锁实例
      *
      * @param  \Illuminate\Cache\DynamoDbStore  $dynamo
      * @param  string  $name
@@ -46,7 +47,7 @@ class DynamoDbLock extends Lock
 
     /**
      * Release the lock.
-	 * 锁释放
+	 * 释放锁
      *
      * @return bool
      */
@@ -61,7 +62,7 @@ class DynamoDbLock extends Lock
 
     /**
      * Release this lock in disregard of ownership.
-	 * 释放锁
+	 * 释放锁，不顾所有权
      *
      * @return void
      */
@@ -72,6 +73,7 @@ class DynamoDbLock extends Lock
 
     /**
      * Returns the owner value written into the driver for this lock.
+	 * 返回写入此锁的驱动程序的所有者值
      *
      * @return mixed
      */

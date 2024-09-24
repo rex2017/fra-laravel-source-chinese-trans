@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，
+ * 路由，控制台控制器设置命令
  */
 
 namespace Illuminate\Routing\Console;
@@ -14,6 +14,7 @@ class ControllerMakeCommand extends GeneratorCommand
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -21,6 +22,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -28,6 +30,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * The type of class being generated.
+	 * 生成类的类型，默认为控制器
      *
      * @var string
      */
@@ -35,6 +38,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
+	 * 得到生成器的存根文件
      *
      * @return string
      */
@@ -65,6 +69,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * Get the default namespace for the class.
+	 * 得到类的默认命名空间
      *
      * @param  string  $rootNamespace
      * @return string
@@ -106,6 +111,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * Build the replacements for a parent controller.
+	 * 构建父控制器的替代品
      *
      * @return array
      */
@@ -128,6 +134,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * Build the model replacement values.
+	 * 构建模型替换值
      *
      * @param  array  $replace
      * @return array
@@ -151,6 +158,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * Get the fully-qualified model class name.
+	 * 得到完全限定的模型类名
      *
      * @param  string  $model
      * @return string
@@ -174,6 +182,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
     /**
      * Get the console command options.
+	 * 得到控制台命令操作
      *
      * @return array
      */

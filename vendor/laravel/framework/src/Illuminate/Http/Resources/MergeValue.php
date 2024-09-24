@@ -1,6 +1,6 @@
 <?php
 /**
- * Http资源，合并值
+ * Http，合并值
  */
 
 namespace Illuminate\Http\Resources;
@@ -12,6 +12,7 @@ class MergeValue
 {
     /**
      * The data to be merged.
+	 * 待合并的数据
      *
      * @var array
      */

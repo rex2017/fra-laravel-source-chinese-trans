@@ -43,7 +43,7 @@ class ModelIdentifier
 
     /**
      * Create a new model identifier.
-	 * 创建一个新的模型标识符
+	 * 创建新的模型标识符
      *
      * @param  string  $class
      * @param  mixed  $id

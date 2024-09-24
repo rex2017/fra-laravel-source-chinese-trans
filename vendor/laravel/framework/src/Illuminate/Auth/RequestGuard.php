@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * 请求保护
  */
 
 namespace Illuminate\Auth;
@@ -16,6 +16,7 @@ class RequestGuard implements Guard
 
     /**
      * The guard callback.
+	 * 保护回调
      *
      * @var callable
      */
@@ -23,6 +24,7 @@ class RequestGuard implements Guard
 
     /**
      * The request instance.
+	 * 请求实例
      *
      * @var \Illuminate\Http\Request
      */
@@ -30,6 +32,7 @@ class RequestGuard implements Guard
 
     /**
      * Create a new authentication guard.
+	 * 创建新的身份验证保护
      *
      * @param  callable  $callback
      * @param  \Illuminate\Http\Request  $request
@@ -45,6 +48,7 @@ class RequestGuard implements Guard
 
     /**
      * Get the currently authenticated user.
+	 * 得到当前经过身份验证的用户
      *
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
@@ -53,6 +57,8 @@ class RequestGuard implements Guard
         // If we've already retrieved the user for the current request we can just
         // return it back immediately. We do not want to fetch the user data on
         // every call to this method because that would be tremendously slow.
+		// 如果我们已经检索到当前请求的用户，我们可以立即将其返回。
+		// 我们不想在每次调用此方法时都获取用户数据，因为这会非常慢。
         if (! is_null($this->user)) {
             return $this->user;
         }
@@ -64,6 +70,7 @@ class RequestGuard implements Guard
 
     /**
      * Validate a user's credentials.
+	 * 验证用户的凭据
      *
      * @param  array  $credentials
      * @return bool
@@ -77,6 +84,7 @@ class RequestGuard implements Guard
 
     /**
      * Set the current request instance.
+	 * 设置当前请求实例
      *
      * @param  \Illuminate\Http\Request  $request
      * @return $this

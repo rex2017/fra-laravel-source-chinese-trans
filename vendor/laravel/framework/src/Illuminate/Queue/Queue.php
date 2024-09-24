@@ -15,6 +15,7 @@ abstract class Queue
 
     /**
      * The IoC container instance.
+	 * 容器实例
      *
      * @var \Illuminate\Container\Container
      */
@@ -22,6 +23,7 @@ abstract class Queue
 
     /**
      * The connection name for the queue.
+	 * 队列连接名
      *
      * @var string
      */
@@ -29,6 +31,7 @@ abstract class Queue
 
     /**
      * The create payload callbacks.
+	 * 创建有效负载回调
      *
      * @var callable[]
      */
@@ -36,6 +39,7 @@ abstract class Queue
 
     /**
      * Push a new job onto the queue.
+	 * 推动新作业至队列中
      *
      * @param  string  $queue
      * @param  string  $job
@@ -49,6 +53,7 @@ abstract class Queue
 
     /**
      * Push a new job onto the queue after a delay.
+	 * 推入新作业至队列在延迟后
      *
      * @param  string  $queue
      * @param  \DateTimeInterface|\DateInterval|int  $delay
@@ -63,6 +68,7 @@ abstract class Queue
 
     /**
      * Push an array of jobs onto the queue.
+	 * 推入一组作业至队列
      *
      * @param  array  $jobs
      * @param  mixed  $data
@@ -78,6 +84,7 @@ abstract class Queue
 
     /**
      * Create a payload string from the given job and data.
+	 * 创建有效负载字符串根据给定的作业和数据
      *
      * @param  string|object  $job
      * @param  string  $queue
@@ -101,6 +108,7 @@ abstract class Queue
 
     /**
      * Create a payload array from the given job and data.
+	 * 创建有效负载数组根据给定的作业和数据
      *
      * @param  string|object  $job
      * @param  string  $queue
@@ -116,6 +124,7 @@ abstract class Queue
 
     /**
      * Create a payload for an object-based queue handler.
+	 * 创建有效负载为基于对象的队列处理程序
      *
      * @param  object  $job
      * @param  string  $queue
@@ -146,6 +155,7 @@ abstract class Queue
 
     /**
      * Get the display name for the given job.
+	 * 得到给定作业的显示名称
      *
      * @param  object  $job
      * @return string
@@ -158,6 +168,7 @@ abstract class Queue
 
     /**
      * Get the retry delay for an object-based queue handler.
+	 * 得到基于对象的队列处理程序的重试延迟
      *
      * @param  mixed  $job
      * @return mixed
@@ -176,6 +187,7 @@ abstract class Queue
 
     /**
      * Get the expiration timestamp for an object-based queue handler.
+	 * 得到基于对象的队列处理程序的过期时间戳
      *
      * @param  mixed  $job
      * @return mixed
@@ -194,6 +206,7 @@ abstract class Queue
 
     /**
      * Create a typical, string based queue payload array.
+	 * 创建一个典型的、基于字符串的队列有效负载数组
      *
      * @param  string  $job
      * @param  string  $queue
@@ -214,6 +227,7 @@ abstract class Queue
 
     /**
      * Register a callback to be executed when creating job payloads.
+	 * 注册一个回调，以便在创建作业有效负载时执行。
      *
      * @param  callable  $callback
      * @return void
@@ -229,6 +243,7 @@ abstract class Queue
 
     /**
      * Create the given payload using any registered payload hooks.
+	 * 创建给定的有效负载使用任何已注册的有效负载钩子
      *
      * @param  string  $queue
      * @param  array  $payload
@@ -249,6 +264,7 @@ abstract class Queue
 
     /**
      * Get the connection name for the queue.
+	 * 得到队列的连接名称
      *
      * @return string
      */
@@ -259,6 +275,7 @@ abstract class Queue
 
     /**
      * Set the connection name for the queue.
+	 * 设置队列的连接名称
      *
      * @param  string  $name
      * @return $this
@@ -272,6 +289,7 @@ abstract class Queue
 
     /**
      * Set the IoC container instance.
+	 * 设置IoC容器实例
      *
      * @param  \Illuminate\Container\Container  $container
      * @return void

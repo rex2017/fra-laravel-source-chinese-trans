@@ -1,6 +1,6 @@
 <?php
 /**
- * 闭包验证规则类
+ * 闭包验证规则
  */
 
 namespace Illuminate\Validation;
@@ -35,7 +35,7 @@ class ClosureValidationRule implements RuleContract
 
     /**
      * Create a new Closure based validation rule.
-	 * 创建一个新的闭包基于验证规则
+	 * 创建新的闭包基于验证规则
      *
      * @param  \Closure  $callback
      * @return void

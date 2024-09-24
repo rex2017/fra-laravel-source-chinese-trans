@@ -21,7 +21,7 @@ interface Container extends ContainerInterface
 
     /**
      * Alias a type to a different name.
-	 * 别名
+	 * 别名类型为不同的名称
      *
      * @param  string  $abstract
      * @param  string  $alias
@@ -33,6 +33,7 @@ interface Container extends ContainerInterface
 
     /**
      * Assign a set of tags to a given binding.
+	 * 分配一组标记为给定的绑定
      *
      * @param  array|string  $abstracts
      * @param  array|mixed  ...$tags
@@ -42,6 +43,7 @@ interface Container extends ContainerInterface
 
     /**
      * Resolve all of the bindings for a given tag.
+	 * 解析给定标记的所有绑定
      *
      * @param  string  $tag
      * @return iterable
@@ -72,6 +74,7 @@ interface Container extends ContainerInterface
 
     /**
      * Register a shared binding in the container.
+	 * 注册一个共享绑定在容器中
      *
      * @param  string  $abstract
      * @param  \Closure|string|null  $concrete
@@ -81,6 +84,7 @@ interface Container extends ContainerInterface
 
     /**
      * Register a shared binding if it hasn't already been registered.
+	 * 注册一个共享绑定如果尚未注册共享绑定
      *
      * @param  string  $abstract
      * @param  \Closure|string|null  $concrete
@@ -90,7 +94,7 @@ interface Container extends ContainerInterface
 
     /**
      * "Extend" an abstract type in the container.
-	 * 容器扩展
+	 * 扩展容器中的抽象类型
      *
      * @param  string  $abstract
      * @param  \Closure  $closure
@@ -102,7 +106,7 @@ interface Container extends ContainerInterface
 
     /**
      * Register an existing instance as shared in the container.
-	 * 共享容器实例
+	 * 注册一个已存在的实例为共享在容器中
      *
      * @param  string  $abstract
      * @param  mixed  $instance
@@ -141,7 +145,7 @@ interface Container extends ContainerInterface
 
     /**
      * Flush the container of all bindings and resolved instances.
-	 * 清空容器
+	 * 清空容器的所有绑定和已解析实例
      *
      * @return void
      */
@@ -149,7 +153,7 @@ interface Container extends ContainerInterface
 
     /**
      * Resolve the given type from the container.
-	 * 解析给定的抽象类
+	 * 解析给定的抽象类从容器中
      *
      * @param  string  $abstract
      * @param  array  $parameters
@@ -181,6 +185,7 @@ interface Container extends ContainerInterface
 
     /**
      * Register a new resolving callback.
+	 * 注册一个新的解析回调
      *
      * @param  \Closure|string  $abstract
      * @param  \Closure|null  $callback

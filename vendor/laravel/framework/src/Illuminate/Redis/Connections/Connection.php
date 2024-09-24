@@ -1,6 +1,6 @@
 <?php
 /**
- * Redis，连接类
+ * Redis，连接抽象类
  */
 
 namespace Illuminate\Redis\Connections;
@@ -20,6 +20,7 @@ abstract class Connection
 
     /**
      * The Redis client.
+	 * Redis客户端
      *
      * @var \Redis
      */
@@ -27,6 +28,7 @@ abstract class Connection
 
     /**
      * The Redis connection name.
+	 * Redis连接名
      *
      * @var string|null
      */
@@ -34,6 +36,7 @@ abstract class Connection
 
     /**
      * The event dispatcher instance.
+	 * 事件调度实例
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
@@ -41,6 +44,7 @@ abstract class Connection
 
     /**
      * Subscribe to a set of given channels for messages.
+	 * 订阅一组给定的通道为消息
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -51,6 +55,7 @@ abstract class Connection
 
     /**
      * Funnel a callback for a maximum number of simultaneous executions.
+	 * 设置一个漏斗回调为同时执行的最大数量
      *
      * @param  string  $name
      * @return \Illuminate\Redis\Limiters\ConcurrencyLimiterBuilder
@@ -62,6 +67,7 @@ abstract class Connection
 
     /**
      * Throttle a callback for a maximum number of executions over a given duration.
+	 * 限制回调的最大执行次数在给定的持续时间内
      *
      * @param  string  $name
      * @return \Illuminate\Redis\Limiters\DurationLimiterBuilder
@@ -73,6 +79,7 @@ abstract class Connection
 
     /**
      * Get the underlying Redis client.
+	 * 得到底层Redis客户端
      *
      * @return mixed
      */
@@ -83,6 +90,7 @@ abstract class Connection
 
     /**
      * Subscribe to a set of given channels for messages.
+	 * 订阅一组给定的通道为消息
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -95,6 +103,7 @@ abstract class Connection
 
     /**
      * Subscribe to a set of given channels with wildcards.
+	 * 订阅一组给定的通道使用通配符
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -107,6 +116,7 @@ abstract class Connection
 
     /**
      * Run a command against the Redis database.
+	 * 运行命令对Redis数据库
      *
      * @param  string  $method
      * @param  array  $parameters
@@ -129,6 +139,7 @@ abstract class Connection
 
     /**
      * Fire the given event if possible.
+	 * 触发给定的事件如果可能
      *
      * @param  mixed  $event
      * @return void
@@ -142,6 +153,7 @@ abstract class Connection
 
     /**
      * Register a Redis command listener with the connection.
+	 * 注册一个Redis命令监听器在连接中
      *
      * @param  \Closure  $callback
      * @return void
@@ -155,6 +167,7 @@ abstract class Connection
 
     /**
      * Get the connection name.
+	 * 得到连接名
      *
      * @return string|null
      */
@@ -165,6 +178,7 @@ abstract class Connection
 
     /**
      * Set the connections name.
+	 * 设置连接名
      *
      * @param  string  $name
      * @return $this
@@ -178,6 +192,7 @@ abstract class Connection
 
     /**
      * Get the event dispatcher used by the connection.
+	 * 得到连接使用的事件调度程序
      *
      * @return \Illuminate\Contracts\Events\Dispatcher
      */
@@ -188,6 +203,7 @@ abstract class Connection
 
     /**
      * Set the event dispatcher instance on the connection.
+	 * 设置事件调度程序实例在连接上
      *
      * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @return void
@@ -199,6 +215,7 @@ abstract class Connection
 
     /**
      * Unset the event dispatcher instance on the connection.
+	 * 取消连接上的事件调度程序实例的设置
      *
      * @return void
      */
@@ -209,6 +226,7 @@ abstract class Connection
 
     /**
      * Pass other method calls down to the underlying client.
+	 * 传递其他方法调用给底层客户端
      *
      * @param  string  $method
      * @param  array  $parameters

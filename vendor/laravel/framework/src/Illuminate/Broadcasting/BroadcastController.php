@@ -1,6 +1,6 @@
 <?php
 /**
- * 广播控制器类
+ * 广播控制器
  */
 
 namespace Illuminate\Broadcasting;
@@ -13,7 +13,7 @@ class BroadcastController extends Controller
 {
     /**
      * Authenticate the request for channel access.
-	 * 验证身份对渠道请求
+	 * 验证通道访问请求
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

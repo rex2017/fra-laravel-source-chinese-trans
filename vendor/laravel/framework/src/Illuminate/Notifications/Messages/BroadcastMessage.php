@@ -13,6 +13,7 @@ class BroadcastMessage
 
     /**
      * The data for the notification.
+	 * 通知数据
      *
      * @var array
      */
@@ -20,6 +21,7 @@ class BroadcastMessage
 
     /**
      * Create a new message instance.
+	 * 创建新的消息实例
      *
      * @param  array  $data
      * @return void
@@ -31,6 +33,7 @@ class BroadcastMessage
 
     /**
      * Set the message data.
+	 * 发送消息数据
      *
      * @param  array  $data
      * @return $this

@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，待处理资源注册类
+ * 路由待处理资源注册
  */
 
 namespace Illuminate\Routing;
@@ -71,6 +71,7 @@ class PendingResourceRegistration
 
     /**
      * Set the methods the controller should apply to.
+	 * 设置控制器应该接受的方法
      *
      * @param  array|string|dynamic  $methods
      * @return \Illuminate\Routing\PendingResourceRegistration
@@ -84,6 +85,7 @@ class PendingResourceRegistration
 
     /**
      * Set the methods the controller should exclude.
+	 * 设置控制器应该排除的方法
      *
      * @param  array|string|dynamic  $methods
      * @return \Illuminate\Routing\PendingResourceRegistration
@@ -97,6 +99,7 @@ class PendingResourceRegistration
 
     /**
      * Set the route names for controller actions.
+	 * 设置控制器动作的路由名
      *
      * @param  array|string  $names
      * @return \Illuminate\Routing\PendingResourceRegistration
@@ -110,6 +113,7 @@ class PendingResourceRegistration
 
     /**
      * Set the route name for a controller action.
+	 * 设置控制器动作的路由名
      *
      * @param  string  $method
      * @param  string  $name
@@ -124,6 +128,7 @@ class PendingResourceRegistration
 
     /**
      * Override the route parameter names.
+	 * 覆盖路由参数名
      *
      * @param  array|string  $parameters
      * @return \Illuminate\Routing\PendingResourceRegistration
@@ -137,6 +142,7 @@ class PendingResourceRegistration
 
     /**
      * Override a route parameter's name.
+	 * 覆盖路由参数名称
      *
      * @param  string  $previous
      * @param  string  $new
@@ -165,6 +171,7 @@ class PendingResourceRegistration
 
     /**
      * Indicate that the resource routes should have "shallow" nesting.
+	 * 指明资源路由应该有"浅"嵌套
      *
      * @param  bool  $shallow
      * @return \Illuminate\Routing\PendingResourceRegistration
@@ -193,7 +200,7 @@ class PendingResourceRegistration
 
     /**
      * Handle the object's destruction.
-	 * 注销
+	 * 处理对象的销毁
      *
      * @return void
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由中间件，节流请求与Redis类
+ * 路由，中间件节流请求与Redis
  */
 
 namespace Illuminate\Routing\Middleware;
@@ -21,6 +21,7 @@ class ThrottleRequestsWithRedis extends ThrottleRequests
 
     /**
      * The timestamp of the end of the current duration.
+	 * 当前持续时间结束的时间戳
      *
      * @var int
      */
@@ -28,6 +29,7 @@ class ThrottleRequestsWithRedis extends ThrottleRequests
 
     /**
      * The number of remaining slots.
+	 * 剩余槽位的数量
      *
      * @var int
      */
@@ -118,6 +120,7 @@ class ThrottleRequestsWithRedis extends ThrottleRequests
 
     /**
      * Get the number of seconds until the lock is released.
+	 * 得到锁被释放前的秒数
      *
      * @param  string  $key
      * @return int

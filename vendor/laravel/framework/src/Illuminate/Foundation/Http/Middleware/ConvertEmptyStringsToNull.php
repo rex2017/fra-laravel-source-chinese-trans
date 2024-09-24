@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础Http，中间件，转换空字符串
+ * 基础，Http中间件，转换空字符串
  */
 
 namespace Illuminate\Foundation\Http\Middleware;

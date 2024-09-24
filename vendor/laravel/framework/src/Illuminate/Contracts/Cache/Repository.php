@@ -12,7 +12,7 @@ interface Repository extends CacheInterface
 {
     /**
      * Retrieve an item from the cache and delete it.
-	 * 删除资源
+	 * 检索项从缓存中并删除它
      *
      * @param  string  $key
      * @param  mixed  $default
@@ -54,6 +54,7 @@ interface Repository extends CacheInterface
 
     /**
      * Decrement the value of an item in the cache.
+	 * 递减缓存中项的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -73,6 +74,7 @@ interface Repository extends CacheInterface
 
     /**
      * Get an item from the cache, or execute the given Closure and store the result.
+	 * 从缓存中获取一个项
      *
      * @param  string  $key
      * @param  \DateTimeInterface|\DateInterval|int|null  $ttl
@@ -83,6 +85,7 @@ interface Repository extends CacheInterface
 
     /**
      * Get an item from the cache, or execute the given Closure and store the result forever.
+	 * 从缓存中获取一个项，或者执行给定的Closure并永久存储结果。
      *
      * @param  string  $key
      * @param  \Closure  $callback
@@ -92,6 +95,7 @@ interface Repository extends CacheInterface
 
     /**
      * Get an item from the cache, or execute the given Closure and store the result forever.
+	 * 从缓存中获取一个项，或者执行给定的Closure并永久存储结果。
      *
      * @param  string  $key
      * @param  \Closure  $callback
@@ -110,6 +114,7 @@ interface Repository extends CacheInterface
 
     /**
      * Get the cache store implementation.
+	 * 得到缓存存储实现
      *
      * @return \Illuminate\Contracts\Cache\Store
      */

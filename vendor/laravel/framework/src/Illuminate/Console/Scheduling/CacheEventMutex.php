@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台，缓存事件互斥锁
+ */
 
 namespace Illuminate\Console\Scheduling;
 
@@ -8,6 +11,7 @@ class CacheEventMutex implements EventMutex
 {
     /**
      * The cache repository implementation.
+	 * 缓存资源库实现
      *
      * @var \Illuminate\Contracts\Cache\Factory
      */
@@ -15,6 +19,7 @@ class CacheEventMutex implements EventMutex
 
     /**
      * The cache store that should be used.
+	 * 应该使用的缓存存储
      *
      * @var string|null
      */
@@ -22,6 +27,7 @@ class CacheEventMutex implements EventMutex
 
     /**
      * Create a new overlapping strategy.
+	 * 创建新的重叠策略
      *
      * @param  \Illuminate\Contracts\Cache\Factory  $cache
      * @return void
@@ -33,6 +39,7 @@ class CacheEventMutex implements EventMutex
 
     /**
      * Attempt to obtain an event mutex for the given event.
+	 * 尝试获取给定事件的事件互斥锁
      *
      * @param  \Illuminate\Console\Scheduling\Event  $event
      * @return bool
@@ -46,6 +53,7 @@ class CacheEventMutex implements EventMutex
 
     /**
      * Determine if an event mutex exists for the given event.
+	 * 确定给定事件是否存在事件互斥锁
      *
      * @param  \Illuminate\Console\Scheduling\Event  $event
      * @return bool
@@ -57,6 +65,7 @@ class CacheEventMutex implements EventMutex
 
     /**
      * Clear the event mutex for the given event.
+	 * 清除给定事件的事件互斥锁
      *
      * @param  \Illuminate\Console\Scheduling\Event  $event
      * @return void
@@ -68,6 +77,7 @@ class CacheEventMutex implements EventMutex
 
     /**
      * Specify the cache store that should be used.
+	 * 指定应该使用的缓存存储
      *
      * @param  string  $store
      * @return $this

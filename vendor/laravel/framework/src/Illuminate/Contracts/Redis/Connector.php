@@ -9,7 +9,7 @@ interface Connector
 {
     /**
      * Create a connection to a Redis cluster.
-	 * 创建一个新的Redis连接
+	 * 创建新的Redis群连接
      *
      * @param  array  $config
      * @param  array  $options
@@ -19,7 +19,7 @@ interface Connector
 
     /**
      * Create a connection to a Redis instance.
-	 * 创建一个新的连接实例
+	 * 创建新的Redis连接实例
      *
      * @param  array  $config
      * @param  array  $clusterOptions

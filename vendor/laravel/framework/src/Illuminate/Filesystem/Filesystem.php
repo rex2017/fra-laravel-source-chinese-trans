@@ -1,6 +1,6 @@
 <?php
 /**
- * 文件系统类
+ * 文件系统
  */
 
 namespace Illuminate\Filesystem;
@@ -146,7 +146,7 @@ class Filesystem
 
     /**
      * Write the contents of a file, replacing it atomically if it already exists.
-	 * 写入文件
+	 * 写入文件的内容，如果它已经存在，则自动替换它
      *
      * @param  string  $path
      * @param  string  $content
@@ -155,6 +155,7 @@ class Filesystem
     public function replace($path, $content)
     {
         // If the path already exists and is a symlink, get the real path...
+		// 如果路径已经存在并且是一个符号链接，则获取真实路径…
         clearstatcache(true, $path);
 
         $path = realpath($path) ?: $path;
@@ -162,6 +163,7 @@ class Filesystem
         $tempPath = tempnam(dirname($path), basename($path));
 
         // Fix permissions of tempPath because `tempnam()` creates it with permissions set to 0600...
+		// 修复临时路径，因为'tempnam()'创建它时权限设置为0600…
         chmod($tempPath, 0777 - umask());
 
         file_put_contents($tempPath, $content);
@@ -171,7 +173,7 @@ class Filesystem
 
     /**
      * Prepend to a file.
-	 * 追加文件
+	 * 添加至文件
      *
      * @param  string  $path
      * @param  string  $data
@@ -201,6 +203,7 @@ class Filesystem
 
     /**
      * Get or set UNIX mode of a file or directory.
+	 * 得到或设置文件或目录的UNIX模式
      *
      * @param  string  $path
      * @param  int|null  $mode
@@ -269,7 +272,7 @@ class Filesystem
 
     /**
      * Create a symlink to the target file or directory. On Windows, a hard link is created if the target is a file.
-	 * 创建链接
+	 * 创建指向目标文件或目录的符号链接。在Windows操作系统中，如果目标是文件，则创建硬链接。
      *
      * @param  string  $target
      * @param  string  $link
@@ -288,7 +291,7 @@ class Filesystem
 
     /**
      * Extract the file name from a file path.
-	 * 提取文件名
+	 * 提取文件名从文件路径中
      *
      * @param  string  $path
      * @return string
@@ -432,6 +435,7 @@ class Filesystem
 
     /**
      * Find path names matching a given pattern.
+	 * 查找与给定模式匹配的路径名
      *
      * @param  string  $pattern
      * @param  int  $flags
@@ -565,6 +569,8 @@ class Filesystem
         // If the destination directory does not actually exist, we will go ahead and
         // create it recursively, which just gets the destination prepared to copy
         // the files over. Once we make the directory we'll proceed the copying.
+		// 如果目标目录实际上不存在，我们将继续递归创建它，这会将目标做好复制的准备。
+		// 一旦我们创建了目录，我们将继续复制。
         if (! $this->isDirectory($destination)) {
             $this->makeDirectory($destination, 0777, true);
         }
@@ -575,6 +581,8 @@ class Filesystem
             // As we spin through items, we will check to see if the current file is actually
             // a directory or a file. When it is actually a directory we will need to call
             // back into this function recursively to keep copying these nested folders.
+			// 当我们浏览项目时，我们将检查当前文件是否真的是目录或文件。
+			// 当它是一个目录时，我们需要调用递归返回此函数以继续复制这些嵌套文件夹。
             $target = $destination.'/'.$item->getBasename();
 
             if ($item->isDir()) {
@@ -588,6 +596,8 @@ class Filesystem
             // If the current items is just a regular file, we will just copy this to the new
             // location and keep looping. If for some reason the copy fails we'll bail out
             // and return false, so the developer is aware that the copy process failed.
+			// 如果当前项目人是一个常规文件，我们将只需将其复制到新的定位并保持循环。
+			// 如果出于某种原因，副本失败了，我们将退出并返回false，这样开发人员就知道了。
             else {
                 if (! $this->copy($item->getPathname(), $target)) {
                     return false;
@@ -600,6 +610,7 @@ class Filesystem
 
     /**
      * Recursively delete a directory.
+	 * 递归删除目录
      *
      * The directory itself may be optionally preserved.
      *
@@ -619,6 +630,8 @@ class Filesystem
             // If the item is a directory, we can just recurse into the function and
             // delete that sub-directory otherwise we'll just delete the file and
             // keep iterating through each file until the directory is cleaned.
+			// 如果项目是一个目录，我们可以递归到函数中删除该子目录，
+			// 否则我们只能删除文件并不断迭代每个文件，直到目录被清理干净。
             if ($item->isDir() && ! $item->isLink()) {
                 $this->deleteDirectory($item->getPathname());
             }
@@ -626,6 +639,8 @@ class Filesystem
             // If the item is just a file, we can go ahead and delete it since we're
             // just looping through and waxing all of the files in this directory
             // and calling directories recursively, so we delete the real path.
+			// 如果该项目只是一个文件，我们可以继续删除它。
+			// 因为我们只需循环并对该目录中的所有文件递归调用，以至删除真实路径。
             else {
                 $this->delete($item->getPathname());
             }
@@ -662,7 +677,7 @@ class Filesystem
 
     /**
      * Empty the specified directory of all files and folders.
-	 * 清空目录
+	 * 清空指定目录下的所有文件和文件夹
      *
      * @param  string  $directory
      * @return bool

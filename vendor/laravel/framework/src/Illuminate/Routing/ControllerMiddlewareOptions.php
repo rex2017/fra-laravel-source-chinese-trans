@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，控制器中间件操作类
+ * 路由控制器中间件选项
  */
 
 namespace Illuminate\Routing;
@@ -9,7 +9,7 @@ class ControllerMiddlewareOptions
 {
     /**
      * The middleware options.
-	 * 中间件操作
+	 * 中间件选项
      *
      * @var array
      */
@@ -17,7 +17,7 @@ class ControllerMiddlewareOptions
 
     /**
      * Create a new middleware option instance.
-	 * 创建新的中间件操作实例
+	 * 创建新的中间件选项实例
      *
      * @param  array  $options
      * @return void

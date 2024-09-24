@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础总线，等待链
+ * 基础，总线等待链
  */
 
 namespace Illuminate\Foundation\Bus;
@@ -39,6 +39,7 @@ class PendingChain
 
     /**
      * Dispatch the job with the given arguments.
+	 * 调度作业使用给定的参数
      *
      * @return \Illuminate\Foundation\Bus\PendingDispatch
      */

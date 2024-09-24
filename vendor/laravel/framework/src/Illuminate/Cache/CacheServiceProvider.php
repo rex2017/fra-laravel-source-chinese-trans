@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存服务提供者类
+ * 缓存服务提供者
  */
 
 namespace Illuminate\Cache;
@@ -38,7 +38,7 @@ class CacheServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Get the services provided by the provider.
-	 * 得到服务提供者
+	 * 得到已提供服务通过提供者
      *
      * @return array
      */

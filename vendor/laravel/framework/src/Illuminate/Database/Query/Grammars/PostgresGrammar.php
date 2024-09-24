@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，pg语法
+ */
 
 namespace Illuminate\Database\Query\Grammars;
 
@@ -10,6 +13,7 @@ class PostgresGrammar extends Grammar
 {
     /**
      * All of the available clause operators.
+	 * 所有可用子句操作符
      *
      * @var array
      */
@@ -44,6 +48,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a "where date" clause.
+	 * 编译"where date"子句
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $where
@@ -58,6 +63,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a "where time" clause.
+	 * 编译"where time"子句
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $where
@@ -72,6 +78,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a date based where clause.
+	 * 编译基于日期的where子句
      *
      * @param  string  $type
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -87,6 +94,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile the "select *" portion of the query.
+	 * 编译查询的"select *"部分
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $columns
@@ -97,6 +105,8 @@ class PostgresGrammar extends Grammar
         // If the query is actually performing an aggregating select, we will let that
         // compiler handle the building of the select clauses, as it will need some
         // more syntax that is best handled by that function to keep things neat.
+		// 如果查询实际上正在执行聚合选择，我们将让编译器处理选择子句的构建，
+		// 因为它需要更多语法，最好由该函数处理，以保持整洁。
         if (! is_null($query->aggregate)) {
             return;
         }
@@ -114,6 +124,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a "JSON contains" statement into SQL.
+	 * 编译"JSON contains"子句至SQL
      *
      * @param  string  $column
      * @param  string  $value
@@ -128,6 +139,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a "JSON length" statement into SQL.
+	 * 编译"JSON length"子句至SQL
      *
      * @param  string  $column
      * @param  string  $operator
@@ -143,6 +155,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile the lock into SQL.
+	 * 编译锁至SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  bool|string  $value
@@ -159,6 +172,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile an insert ignore statement into SQL.
+	 * 编译插入忽略语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
@@ -171,6 +185,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile an insert and get ID statement into SQL.
+	 * 编译插入和获取ID语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
@@ -184,6 +199,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile an update statement into SQL.
+	 * 编译update语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
@@ -200,6 +216,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile the columns for an update statement.
+	 * 编译更新语句的列
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
@@ -220,6 +237,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Prepares a JSON column being updated using the JSONB_SET function.
+	 * 使用JSONB_SET函数准备要更新的JSON列
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -238,6 +256,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile an update statement with joins or limit into SQL.
+	 * 编译带有连接或限制的更新语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
@@ -258,6 +277,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Prepare the bindings for an update statement.
+	 * 准备绑定为更新语句
      *
      * @param  array  $bindings
      * @param  array  $values
@@ -280,6 +300,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a delete statement into SQL.
+	 * 编译delete语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @return string
@@ -295,6 +316,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a delete statement with joins or limit into SQL.
+	 * 编译带有连接或限制的删除语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @return string
@@ -312,6 +334,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Compile a truncate table statement into SQL.
+	 * 编译截断表语句成SQL
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @return array
@@ -323,6 +346,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Wrap the given JSON selector.
+	 * 包装给定的JSON选择器
      *
      * @param  string  $value
      * @return string
@@ -345,7 +369,8 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-     *Wrap the given JSON selector for boolean values.
+     * Wrap the given JSON selector for boolean values.
+	 * 包装给定的JSON选择器为布尔值
      *
      * @param  string  $value
      * @return string
@@ -362,6 +387,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Wrap the given JSON boolean value.
+	 * 包装给定的JSON布尔值
      *
      * @param  string  $value
      * @return string
@@ -373,6 +399,7 @@ class PostgresGrammar extends Grammar
 
     /**
      * Wrap the attributes of the give JSON path.
+	 * 包装给定JSON路径的属性
      *
      * @param  array  $path
      * @return array

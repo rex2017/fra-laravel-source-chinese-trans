@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，重定向用户
+ */
 
 namespace Illuminate\Foundation\Auth;
 
@@ -6,6 +9,7 @@ trait RedirectsUsers
 {
     /**
      * Get the post register / login redirect path.
+	 * 提到post请求的注册/登录重定向路径
      *
      * @return string
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，邮件类
+ * 支持，门面邮件
  */
 
 namespace Illuminate\Support\Facades;
@@ -33,6 +33,7 @@ class Mail extends Facade
 {
     /**
      * Replace the bound instance with a fake.
+	 * 替换绑定实例为伪实例
      *
      * @return \Illuminate\Support\Testing\Fakes\MailFake
      */

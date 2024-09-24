@@ -90,6 +90,7 @@ class RedirectResponse extends BaseRedirectResponse
 
     /**
      * Remove all uploaded files form the given input array.
+	 * 删除所有上传的文件从给定的输入数组中
      *
      * @param  array  $input
      * @return array
@@ -111,7 +112,7 @@ class RedirectResponse extends BaseRedirectResponse
 
     /**
      * Flash an array of input to the session.
-	 * 写入一个数组
+	 * 写入一个数组至会话
      *
      * @return $this
      */
@@ -133,6 +134,7 @@ class RedirectResponse extends BaseRedirectResponse
 
     /**
      * Flash a container of errors to the session.
+	 * 闪现错误容器到会话中
      *
      * @param  \Illuminate\Contracts\Support\MessageProvider|array|string  $provider
      * @param  string  $key
@@ -157,6 +159,7 @@ class RedirectResponse extends BaseRedirectResponse
 
     /**
      * Parse the given errors into an appropriate value.
+	 * 解析给定的错误为适当的值
      *
      * @param  \Illuminate\Contracts\Support\MessageProvider|array|string  $provider
      * @return \Illuminate\Support\MessageBag
@@ -172,6 +175,7 @@ class RedirectResponse extends BaseRedirectResponse
 
     /**
      * Get the original response content.
+	 * 得到原始响应内容
      *
      * @return null
      */

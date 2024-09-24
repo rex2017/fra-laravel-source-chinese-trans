@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台，计划运行命令
+ */
 
 namespace Illuminate\Console\Scheduling;
 
@@ -13,6 +16,7 @@ class ScheduleRunCommand extends Command
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -20,6 +24,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -27,6 +32,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * The schedule instance.
+	 * 计划实例
      *
      * @var \Illuminate\Console\Scheduling\Schedule
      */
@@ -34,6 +40,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * The 24 hour timestamp this scheduler command started running.
+	 * 这个调度器命令开始运行的时间戳是24小时
      *
      * @var \Illuminate\Support\Carbon
      */
@@ -41,6 +48,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * Check if any events ran.
+	 * 检查是否运行了任何事件
      *
      * @var bool
      */
@@ -48,6 +56,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * The event dispatcher.
+	 * 事件调度程序
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
@@ -55,6 +64,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * Create a new command instance.
+	 * 创建新的命令实例
      *
      * @return void
      */
@@ -67,6 +77,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @param  \Illuminate\Contracts\Events\Dispatcher  $dispatcher
@@ -100,6 +111,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * Run the given single server event.
+	 * 运行给定的单个服务器事件
      *
      * @param  \Illuminate\Console\Scheduling\Event  $event
      * @return void
@@ -115,6 +127,7 @@ class ScheduleRunCommand extends Command
 
     /**
      * Run the given event.
+	 * 运行给定事件
      *
      * @param  \Illuminate\Console\Scheduling\Event  $event
      * @return void

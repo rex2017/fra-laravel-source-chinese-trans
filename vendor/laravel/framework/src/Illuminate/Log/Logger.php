@@ -1,6 +1,6 @@
 <?php
 /**
- * 日志记录器类
+ * 日志记录器
  */
 
 namespace Illuminate\Log;
@@ -195,7 +195,7 @@ class Logger implements LoggerInterface
 
     /**
      * Register a new callback handler for when a log event is triggered.
-	 * 注册一个新的回调处理程序当日志事件触发时
+	 * 注册新的回调处理程序当日志事件触发时
      *
      * @param  \Closure  $callback
      * @return void
@@ -225,6 +225,8 @@ class Logger implements LoggerInterface
         // If the event dispatcher is set, we will pass along the parameters to the
         // log listeners. These are useful for building profilers or other tools
         // that aggregate all of the log messages for a given "request" cycle.
+		// 如果设置了事件调度器，我们将把参数传递给日志监听器。
+		// 这些对于构建分析器或其他工具很有用
         if (isset($this->dispatcher)) {
             $this->dispatcher->dispatch(new MessageLogged($level, $message, $context));
         }

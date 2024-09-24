@@ -1,6 +1,6 @@
 <?php
 /**
- * 视图工厂类
+ * 视图工厂
  */
 
 namespace Illuminate\View;
@@ -59,6 +59,7 @@ class Factory implements FactoryContract
 
     /**
      * Data that should be available to all templates.
+	 * 应该对所有模板可用的数据
      *
      * @var array
      */
@@ -79,6 +80,7 @@ class Factory implements FactoryContract
 
     /**
      * The view composer events.
+	 * 视图编写器事件
      *
      * @var array
      */
@@ -86,6 +88,7 @@ class Factory implements FactoryContract
 
     /**
      * The number of active rendering operations.
+	 * 活动呈现操作的数量
      *
      * @var int
      */
@@ -111,6 +114,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the evaluated view contents for the given view.
+	 * 得到给定视图的求值视图内容
      *
      * @param  string  $path
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
@@ -128,6 +132,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the evaluated view contents for the given view.
+	 * 得到给定视图的求值视图内容
      *
      * @param  string  $view
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
@@ -143,6 +148,8 @@ class Factory implements FactoryContract
         // Next, we will create the view instance and call the view creator for the view
         // which can set any data, etc. Then we will return the view instance back to
         // the caller for rendering or performing other view manipulations on this.
+		// 接下来，我们将创建视图实例并调用视图的视图创建者，该视图可以设置任何数据等。
+		// 然后，我们将把视图实例返回给调用者，以便对其进行渲染或执行其他视图操作。
         $data = array_merge($mergeData, $this->parseData($data));
 
         return tap($this->viewInstance($view, $path, $data), function ($view) {
@@ -152,6 +159,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the first view that actually exists from the given list.
+	 * 得到实际存在的第一个视图从给定列表中
      *
      * @param  array  $views
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
@@ -175,6 +183,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the rendered content of the view based on a given condition.
+	 * 得到视图的呈现内容根据给定条件
      *
      * @param  bool  $condition
      * @param  string  $view
@@ -193,6 +202,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the rendered contents of a partial from a loop.
+	 * 从循环中获取部分的渲染内容
      *
      * @param  string  $view
      * @param  array  $data
@@ -207,6 +217,8 @@ class Factory implements FactoryContract
         // If is actually data in the array, we will loop through the data and append
         // an instance of the partial view to the final result HTML passing in the
         // iterated value of this data array, allowing the views to access them.
+		// 如果数组中实际上是数据，我们将循环遍历数据，并将部分视图的实例附加到最终结果HTML中，
+		// 传递此数据数组的迭代值，允许视图访问它们。
         if (count($data) > 0) {
             foreach ($data as $key => $value) {
                 $result .= $this->make(
@@ -218,6 +230,8 @@ class Factory implements FactoryContract
         // If there is no data in the array, we will render the contents of the empty
         // view. Alternatively, the "empty view" could be a raw string that begins
         // with "raw|" for convenience and to let this know that it is a string.
+		// 如果数组中没有数据，我们将呈现空视图的内容。
+		// 或者，为了方便起见，"空视图"可以是一个以"raw|"开头的原始字符串，并让它知道它是一个字符串。
         else {
             $result = Str::startsWith($empty, 'raw|')
                         ? substr($empty, 4)
@@ -229,6 +243,7 @@ class Factory implements FactoryContract
 
     /**
      * Normalize a view name.
+	 * 规范化视图名称
      *
      * @param  string  $name
      * @return string
@@ -240,6 +255,7 @@ class Factory implements FactoryContract
 
     /**
      * Parse the given data into a raw array.
+	 * 解析给定的数据为原始数组
      *
      * @param  mixed  $data
      * @return array
@@ -251,6 +267,7 @@ class Factory implements FactoryContract
 
     /**
      * Create a new view instance from the given arguments.
+	 * 创建新的视图实例根据给定的参数
      *
      * @param  string  $view
      * @param  string  $path
@@ -264,6 +281,7 @@ class Factory implements FactoryContract
 
     /**
      * Determine if a given view exists.
+	 * 确定给定视图是否存在
      *
      * @param  string  $view
      * @return bool
@@ -281,6 +299,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the appropriate view engine for the given path.
+	 * 得到给定路径的适当视图引擎
      *
      * @param  string  $path
      * @return \Illuminate\Contracts\View\Engine
@@ -300,6 +319,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the extension used by the view file.
+	 * 得到视图文件使用的扩展名
      *
      * @param  string  $path
      * @return string
@@ -315,6 +335,7 @@ class Factory implements FactoryContract
 
     /**
      * Add a piece of shared data to the environment.
+	 * 添加一段共享数据至环境中
      *
      * @param  array|string  $key
      * @param  mixed|null  $value
@@ -333,6 +354,7 @@ class Factory implements FactoryContract
 
     /**
      * Increment the rendering counter.
+	 * 增加呈现计数器
      *
      * @return void
      */
@@ -343,6 +365,7 @@ class Factory implements FactoryContract
 
     /**
      * Decrement the rendering counter.
+	 * 增加呈现计数器
      *
      * @return void
      */
@@ -353,6 +376,7 @@ class Factory implements FactoryContract
 
     /**
      * Check if there are no active render operations.
+	 * 检查是否没有活动的渲染操作
      *
      * @return bool
      */
@@ -363,6 +387,7 @@ class Factory implements FactoryContract
 
     /**
      * Add a location to the array of view locations.
+	 * 添加一个位置向视图位置数组
      *
      * @param  string  $location
      * @return void
@@ -374,6 +399,7 @@ class Factory implements FactoryContract
 
     /**
      * Add a new namespace to the loader.
+	 * 添加一个新的命名空间至加载器
      *
      * @param  string  $namespace
      * @param  string|array  $hints
@@ -388,6 +414,7 @@ class Factory implements FactoryContract
 
     /**
      * Prepend a new namespace to the loader.
+	 * 添加一个新的命名空间至加载器
      *
      * @param  string  $namespace
      * @param  string|array  $hints
@@ -402,6 +429,7 @@ class Factory implements FactoryContract
 
     /**
      * Replace the namespace hints for the given namespace.
+	 * 替换给定名称空间的名称空间提示
      *
      * @param  string  $namespace
      * @param  string|array  $hints
@@ -416,6 +444,7 @@ class Factory implements FactoryContract
 
     /**
      * Register a valid view extension and its engine.
+	 * 注册一个有效的视图扩展及其引擎
      *
      * @param  string  $extension
      * @param  string  $engine
@@ -437,7 +466,7 @@ class Factory implements FactoryContract
 
     /**
      * Flush all of the factory state like sections and stacks.
-	 * 清空状态
+	 * 刷新所有工厂状态，如节和堆栈。
      *
      * @return void
      */
@@ -451,6 +480,7 @@ class Factory implements FactoryContract
 
     /**
      * Flush all of the section contents if done rendering.
+	 * 如果完成呈现，则刷新所有节内容。
      *
      * @return void
      */
@@ -463,6 +493,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the extension to engine bindings.
+	 * 得到引擎绑定的扩展
      *
      * @return array
      */
@@ -473,6 +504,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the engine resolver instance.
+	 * 得到引擎解析器实例
      *
      * @return \Illuminate\View\Engines\EngineResolver
      */
@@ -506,6 +538,7 @@ class Factory implements FactoryContract
 
     /**
      * Flush the cache of views located by the finder.
+	 * 刷新查找器定位的视图的缓存
      *
      * @return void
      */
@@ -516,6 +549,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the event dispatcher instance.
+	 * 得到事件调度程序实例
      *
      * @return \Illuminate\Contracts\Events\Dispatcher
      */
@@ -526,6 +560,7 @@ class Factory implements FactoryContract
 
     /**
      * Set the event dispatcher instance.
+	 * 设置事件调度程序实例
      *
      * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @return void
@@ -537,6 +572,7 @@ class Factory implements FactoryContract
 
     /**
      * Get the IoC container instance.
+	 * 得到IoC容器实例
      *
      * @return \Illuminate\Contracts\Container\Container
      */

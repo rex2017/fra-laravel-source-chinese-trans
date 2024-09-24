@@ -1,6 +1,6 @@
 <?php
 /**
- * 总线调度类
+ * 总线调度
  */
 
 namespace Illuminate\Bus;
@@ -17,7 +17,7 @@ class Dispatcher implements QueueingDispatcher
 {
     /**
      * The container implementation.
-	 * 容器接口
+	 * 容器实现
      *
      * @var \Illuminate\Contracts\Container\Container
      */
@@ -25,7 +25,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * The pipeline instance for the bus.
-	 * 总线管道实例
+	 * 总线的管道实例
      *
      * @var \Illuminate\Pipeline\Pipeline
      */
@@ -41,7 +41,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * The command to handler mapping for non-self-handling events.
-	 * 处理命令
+	 * 处理命令非自处理事件
      *
      * @var array
      */
@@ -49,7 +49,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * The queue resolver callback.
-	 * 队列解析器
+	 * 队列解析器回调
      *
      * @var \Closure|null
      */
@@ -57,7 +57,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * Create a new command dispatcher instance.
-	 * 创建一个新的命令调度实例
+	 * 创建新的命令调度实例
      *
      * @param  \Illuminate\Contracts\Container\Container  $container
      * @param  \Closure|null  $queueResolver
@@ -139,7 +139,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * Determine if the given command should be queued.
-	 * 判断是否给命令排队
+	 * 确定是否应该对给定的命令进行排队
      *
      * @param  mixed  $command
      * @return bool
@@ -215,6 +215,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * Set the pipes through which commands should be piped before dispatching.
+	 * 设置命令应该通过的管道在调度之前
      *
      * @param  array  $pipes
      * @return $this
@@ -228,7 +229,7 @@ class Dispatcher implements QueueingDispatcher
 
     /**
      * Map a command to a handler.
-	 * 映射命令和程序
+	 * 映射命令到处理程序
      *
      * @param  array  $map
      * @return $this

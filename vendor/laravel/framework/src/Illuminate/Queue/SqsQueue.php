@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Amazon SQS 队列
  */
 
 namespace Illuminate\Queue;
@@ -13,6 +13,7 @@ class SqsQueue extends Queue implements QueueContract
 {
     /**
      * The Amazon SQS instance.
+	 * Amazon SQS实例
      *
      * @var \Aws\Sqs\SqsClient
      */
@@ -20,6 +21,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * The name of the default queue.
+	 * 默认队列名
      *
      * @var string
      */
@@ -27,6 +29,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * The queue URL prefix.
+	 * 队列URL前缀
      *
      * @var string
      */
@@ -34,6 +37,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Create a new Amazon SQS queue instance.
+	 * 创建新的Amazon SQS队列实例
      *
      * @param  \Aws\Sqs\SqsClient  $sqs
      * @param  string  $default
@@ -49,6 +53,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Get the size of the queue.
+	 * 得到队列大小
      *
      * @param  string|null  $queue
      * @return int
@@ -80,6 +85,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Push a raw payload onto the queue.
+	 * 推入原始有效负载队列
      *
      * @param  string  $payload
      * @param  string|null  $queue
@@ -95,6 +101,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Push a new job onto the queue after a delay.
+	 * 推入新作业至队列在延迟后
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
      * @param  string  $job
@@ -113,6 +120,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Pop the next job off of the queue.
+	 * 弹出下一个作业从队列中
      *
      * @param  string|null  $queue
      * @return \Illuminate\Contracts\Queue\Job|null
@@ -134,6 +142,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Get the queue or return the default.
+	 * 得到队列并返回默认
      *
      * @param  string|null  $queue
      * @return string
@@ -148,6 +157,7 @@ class SqsQueue extends Queue implements QueueContract
 
     /**
      * Get the underlying SQS instance.
+	 * 得到底层SQS实例
      *
      * @return \Aws\Sqs\SqsClient
      */

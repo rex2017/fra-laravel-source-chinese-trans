@@ -1,4 +1,7 @@
 <?php
+/**
+ * 队列，数据库作业记录
+ */
 
 namespace Illuminate\Queue\Jobs;
 
@@ -10,6 +13,7 @@ class DatabaseJobRecord
 
     /**
      * The underlying job record.
+	 * 底层作业记录
      *
      * @var \stdClass
      */
@@ -17,6 +21,7 @@ class DatabaseJobRecord
 
     /**
      * Create a new job record instance.
+	 * 创建新的作业记录实例
      *
      * @param  \stdClass  $record
      * @return void
@@ -28,6 +33,7 @@ class DatabaseJobRecord
 
     /**
      * Increment the number of times the job has been attempted.
+	 * 增加尝试该作业的次数
      *
      * @return int
      */
@@ -40,6 +46,7 @@ class DatabaseJobRecord
 
     /**
      * Update the "reserved at" timestamp of the job.
+	 * 更新作业的"reserved at"时间戳
      *
      * @return int
      */
@@ -52,6 +59,7 @@ class DatabaseJobRecord
 
     /**
      * Dynamically access the underlying job information.
+	 * 动态访问底层作业信息
      *
      * @param  string  $key
      * @return mixed

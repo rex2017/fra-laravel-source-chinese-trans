@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库mysql连接类
+ * 数据库MySql连接
  */
 
 namespace Illuminate\Database;
@@ -27,6 +27,7 @@ class MySqlConnection extends Connection
 
     /**
      * Get a schema builder instance for the connection.
+	 * 得到连接的架构构建器实例
      *
      * @return \Illuminate\Database\Schema\MySqlBuilder
      */
@@ -63,6 +64,7 @@ class MySqlConnection extends Connection
 
     /**
      * Get the Doctrine DBAL driver.
+	 * 得到Doctrine DBAL驱动程序
      *
      * @return \Doctrine\DBAL\Driver\PDOMySql\Driver
      */
@@ -72,6 +74,7 @@ class MySqlConnection extends Connection
             throw new LogicException(
                 'Laravel v6 is only compatible with doctrine/dbal 2, in order to use this feature you must require the package "doctrine/dbal:^2.6".'
             );
+			//Laravel v6仅与doctrin/dbal 2兼容，要使用此功能，您必须需要包"doctrin/dbal:^2.6".
         }
 
         return new DoctrineDriver;

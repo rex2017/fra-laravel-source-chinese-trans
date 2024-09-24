@@ -19,7 +19,7 @@ interface BindingRegistrar
 
     /**
      * Get the binding callback for a given binding.
-	 * 得到绑定的回调
+	 * 得到给定绑定的绑定回调
      *
      * @param  string  $key
      * @return \Closure

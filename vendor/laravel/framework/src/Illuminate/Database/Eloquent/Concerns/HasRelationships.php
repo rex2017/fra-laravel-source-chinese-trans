@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent有关系
+ */
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
@@ -23,6 +26,7 @@ trait HasRelationships
 {
     /**
      * The loaded relationships for the model.
+	 * 为模型加载的关系
      *
      * @var array
      */
@@ -30,6 +34,7 @@ trait HasRelationships
 
     /**
      * The relationships that should be touched on save.
+	 * 应该触及的关系保存
      *
      * @var array
      */
@@ -37,6 +42,7 @@ trait HasRelationships
 
     /**
      * The many to many relationship methods.
+	 * 多对多关系方法
      *
      * @var array
      */
@@ -46,6 +52,7 @@ trait HasRelationships
 
     /**
      * Define a one-to-one relationship.
+	 * 定义一对一关系
      *
      * @param  string  $related
      * @param  string|null  $foreignKey
@@ -65,6 +72,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new HasOne relationship.
+	 * 实例化一个新的HasOne关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -79,6 +87,7 @@ trait HasRelationships
 
     /**
      * Define a has-one-through relationship.
+	 * 定义一个OneThrough关系
      *
      * @param  string  $related
      * @param  string  $through
@@ -105,6 +114,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new HasOneThrough relationship.
+	 * 实例化一个新的HasOneThrough关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $farParent
@@ -122,6 +132,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic one-to-one relationship.
+	 * 定义一个多态的一对一关系
      *
      * @param  string  $related
      * @param  string  $name
@@ -145,6 +156,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new MorphOne relationship.
+	 * 实例化一个新的MorphOne关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -160,6 +172,7 @@ trait HasRelationships
 
     /**
      * Define an inverse one-to-one or many relationship.
+	 * 定义一个逆的一对一或多关系
      *
      * @param  string  $related
      * @param  string|null  $foreignKey
@@ -172,6 +185,9 @@ trait HasRelationships
         // If no relation name was given, we will use this debug backtrace to extract
         // the calling method's name and use that as the relationship name as most
         // of the time this will be what we desire to use for the relationships.
+		// 如果没有给出关系名称，我们将使用这个调试回溯来提取
+		// 调用方法的名称，并将其用作关系名称，
+		// 因为通常，这将是我们希望用于关系的东西。
         if (is_null($relation)) {
             $relation = $this->guessBelongsToRelation();
         }
@@ -181,6 +197,8 @@ trait HasRelationships
         // If no foreign key was supplied, we can use a backtrace to guess the proper
         // foreign key name by using the name of the relationship function, which
         // when combined with an "_id" should conventionally match the columns.
+		// 如果没有提供外键，我们可以使用回溯来猜测正确的外键使用关系函数的名称来命名，
+		// 当与"_id"组合时，通常应该匹配列。
         if (is_null($foreignKey)) {
             $foreignKey = Str::snake($relation).'_'.$instance->getKeyName();
         }
@@ -188,6 +206,8 @@ trait HasRelationships
         // Once we have the foreign key names, we'll just create a new Eloquent query
         // for the related models and returns the relationship instance which will
         // actually be responsible for retrieving and hydrating every relations.
+		// 一旦有了外键名之后，我们将创建一个新的Eloquent查询获取相关模型，并返回关系实例，
+		// 实际上负责恢复和滋润每一个关系。
         $ownerKey = $ownerKey ?: $instance->getKeyName();
 
         return $this->newBelongsTo(
@@ -197,6 +217,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new BelongsTo relationship.
+	 * 实例化一个新的BelongsTo关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $child
@@ -212,6 +233,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic, inverse one-to-one or many relationship.
+	 * 定义一个多态的、反向的一对一或多关系。
      *
      * @param  string|null  $name
      * @param  string|null  $type
@@ -224,6 +246,8 @@ trait HasRelationships
         // If no name is provided, we will use the backtrace to get the function name
         // since that is most likely the name of the polymorphic interface. We can
         // use that to get both the class and foreign key that will be utilized.
+		// 如果没有提供名称，我们将使用回溯来获取函数名称，因为这很可能是多态接口的名称。
+		// 我们能使用它来获取将要使用的类和外键。
         $name = $name ?: $this->guessBelongsToRelation();
 
         [$type, $id] = $this->getMorphs(
@@ -233,6 +257,8 @@ trait HasRelationships
         // If the type value is null it is probably safe to assume we're eager loading
         // the relationship. In this case we'll just pass in a dummy query where we
         // need to remove any eager loads that may already be defined on a model.
+		// 如果类型值为null，则可以安全地假设我们正在进行急于加载关系。
+		// 在本例中，我们将传入一个虚拟查询需要删除任何可能已经在模型上定义的动态负载。
         return is_null($class = $this->{$type}) || $class === ''
                     ? $this->morphEagerTo($name, $type, $id, $ownerKey)
                     : $this->morphInstanceTo($class, $name, $type, $id, $ownerKey);
@@ -240,6 +266,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic, inverse one-to-one or many relationship.
+	 * 定义一个多态的、反向的一对一或多关系
      *
      * @param  string  $name
      * @param  string  $type
@@ -256,6 +283,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic, inverse one-to-one or many relationship.
+	 * 定义一个多态的、反向的一对一或多关系
      *
      * @param  string  $target
      * @param  string  $name
@@ -277,6 +305,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new MorphTo relationship.
+	 * 实例化一个新的MorphTo关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -293,6 +322,7 @@ trait HasRelationships
 
     /**
      * Retrieve the actual class name for a given morph class.
+	 * 检索给定变形类的实际类名
      *
      * @param  string  $class
      * @return string
@@ -304,6 +334,7 @@ trait HasRelationships
 
     /**
      * Guess the "belongs to" relationship name.
+	 * 猜"属于"的关系名称
      *
      * @return string
      */
@@ -316,6 +347,7 @@ trait HasRelationships
 
     /**
      * Define a one-to-many relationship.
+	 * 定义一对多关系
      *
      * @param  string  $related
      * @param  string|null  $foreignKey
@@ -337,6 +369,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new HasMany relationship.
+	 * 实例化一个新的HasMany关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -351,6 +384,7 @@ trait HasRelationships
 
     /**
      * Define a has-many-through relationship.
+	 * 定义一个has-many-through的关系
      *
      * @param  string  $related
      * @param  string  $through
@@ -377,6 +411,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new HasManyThrough relationship.
+	 * 实例化一个新的HasManyThrough关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $farParent
@@ -394,6 +429,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic one-to-many relationship.
+	 * 定义一个多态的一对多关系
      *
      * @param  string  $related
      * @param  string  $name
@@ -409,6 +445,8 @@ trait HasRelationships
         // Here we will gather up the morph type and ID for the relationship so that we
         // can properly query the intermediate table of a relation. Finally, we will
         // get the table and create the relationship instances for the developers.
+		// 这里我们将收集关系的变形类型和ID，以致于能正确查询关系的中间表。
+		// 我们将获取表并为开发人员创建关系实例。
         [$type, $id] = $this->getMorphs($name, $type, $id);
 
         $table = $instance->getTable();
@@ -420,6 +458,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new MorphMany relationship.
+	 * 实例化一个新的MorphMany关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -435,6 +474,7 @@ trait HasRelationships
 
     /**
      * Define a many-to-many relationship.
+	 * 定义多对多关系
      *
      * @param  string  $related
      * @param  string|null  $table
@@ -451,6 +491,8 @@ trait HasRelationships
         // If no relationship name was passed, we will pull backtraces to get the
         // name of the calling function. We will use that function name as the
         // title of this relation since that is a great convention to apply.
+		// 如果没有传递关系名称，我们将拉回追溯以获取调用函数的名称。
+		// 我们将使用该函数名作为这个关系的标题，因为这是一个伟大的惯例应用。
         if (is_null($relation)) {
             $relation = $this->guessBelongsToManyRelation();
         }
@@ -458,6 +500,8 @@ trait HasRelationships
         // First, we'll need to determine the foreign key and "other key" for the
         // relationship. Once we have determined the keys we'll make the query
         // instances as well as the relationship instances we need for this.
+		// 首先，我们需要定义外键和"其他键"的关系。
+		// 否则，我们已经确定了要进行查询的键实例，以及我们需要的关系实例。
         $instance = $this->newRelatedInstance($related);
 
         $foreignPivotKey = $foreignPivotKey ?: $this->getForeignKey();
@@ -467,6 +511,8 @@ trait HasRelationships
         // If no table name was provided, we can guess it by concatenating the two
         // models using underscores in alphabetical order. The two model names
         // are transformed to snake case from their default CamelCase also.
+		// 如果没有提供表名，我们可以通过连接这两个表名来猜测使用下划线的模型。
+		// 两个模型名也从默认的CamelCase转换为snake case。
         if (is_null($table)) {
             $table = $this->joiningTable($related, $instance);
         }
@@ -480,6 +526,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new BelongsToMany relationship.
+	 * 实例化一个新的BelongsToMany关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -499,6 +546,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic many-to-many relationship.
+	 * 定义多态多对多关系
      *
      * @param  string  $related
      * @param  string  $name
@@ -519,6 +567,8 @@ trait HasRelationships
         // First, we will need to determine the foreign key and "other key" for the
         // relationship. Once we have determined the keys we will make the query
         // instances, as well as the relationship instances we need for these.
+		// 首先，我们需要定义外键和"其他键"的关系。
+		// 一旦我们确定了密钥，我们进行查询实例，以及我们需要的关系实例。
         $instance = $this->newRelatedInstance($related);
 
         $foreignPivotKey = $foreignPivotKey ?: $name.'_id';
@@ -528,6 +578,8 @@ trait HasRelationships
         // Now we're ready to create a new query builder for this related model and
         // the relationship instances for this relation. This relations will set
         // appropriate query constraints then entirely manages the hydrations.
+		// 现在，我们准备为这个相关模型和此关系的关系实例创建一个新的查询构建器。
+		// 这个关系将设置适当的查询约束完全管理水合物。
         if (! $table) {
             $words = preg_split('/(_)/u', $name, -1, PREG_SPLIT_DELIM_CAPTURE);
 
@@ -545,6 +597,7 @@ trait HasRelationships
 
     /**
      * Instantiate a new MorphToMany relationship.
+	 * 实例化一个新的morphmany关系
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
@@ -568,6 +621,7 @@ trait HasRelationships
 
     /**
      * Define a polymorphic, inverse many-to-many relationship.
+	 * 定义一个多态的、反向的多对多关系。
      *
      * @param  string  $related
      * @param  string  $name
@@ -586,6 +640,8 @@ trait HasRelationships
         // For the inverse of the polymorphic many-to-many relations, we will change
         // the way we determine the foreign and other keys, as it is the opposite
         // of the morph-to-many method since we're figuring out these inverses.
+		// 对于多态多对多关系的反数，我们将改变我们确定外键和其他键的方式，
+		// 正如它是相反的因为我们在求这些逆矩阵。
         $relatedPivotKey = $relatedPivotKey ?: $name.'_id';
 
         return $this->morphToMany(
@@ -596,6 +652,7 @@ trait HasRelationships
 
     /**
      * Get the relationship name of the belongsToMany relationship.
+	 * 得到belongsToMany关系的关系名称
      *
      * @return string|null
      */
@@ -613,6 +670,7 @@ trait HasRelationships
 
     /**
      * Get the joining table name for a many-to-many relation.
+	 * 得到多对多关系的连接表名称
      *
      * @param  string  $related
      * @param  \Illuminate\Database\Eloquent\Model|null  $instance
@@ -623,6 +681,8 @@ trait HasRelationships
         // The joining table name, by convention, is simply the snake cased models
         // sorted alphabetically and concatenated with an underscore, so we can
         // just sort the models and join them together to get the table name.
+		// 按照惯例，连接表的名称就是蛇形外壳模型并使用下划线连接，
+		// 因此我们只需对模型进行排序并将它们连接在一起以获得表名。
         $segments = [
             $instance ? $instance->joiningTableSegment()
                       : Str::snake(class_basename($related)),
@@ -632,6 +692,8 @@ trait HasRelationships
         // Now that we have the model names in an array we can just sort them and
         // use the implode function to join them together with an underscores,
         // which is typically used by convention within the database system.
+		// 现在我们在数组中有了模型名称，我们可以对它们进行排序，
+		// 用内爆函数用下划线把它们连在一起。
         sort($segments);
 
         return strtolower(implode('_', $segments));
@@ -639,6 +701,7 @@ trait HasRelationships
 
     /**
      * Get this model's half of the intermediate table name for belongsToMany relationships.
+	 * 得到该模型的belongsToMany关系的中间表名的一半
      *
      * @return string
      */
@@ -649,6 +712,7 @@ trait HasRelationships
 
     /**
      * Determine if the model touches a given relation.
+	 * 确定模型是否触及给定关系
      *
      * @param  string  $relation
      * @return bool
@@ -660,6 +724,7 @@ trait HasRelationships
 
     /**
      * Touch the owning relations of the model.
+	 * 触摸模型的归属关系
      *
      * @return void
      */
@@ -680,6 +745,7 @@ trait HasRelationships
 
     /**
      * Get the polymorphic relationship columns.
+	 * 得到多态关系列
      *
      * @param  string  $name
      * @param  string  $type
@@ -693,6 +759,7 @@ trait HasRelationships
 
     /**
      * Get the class name for polymorphic relations.
+	 * 得到多态关系列
      *
      * @return string
      */
@@ -709,6 +776,7 @@ trait HasRelationships
 
     /**
      * Create a new model instance for a related model.
+	 * 创建一个新的模型实例为相关模型
      *
      * @param  string  $class
      * @return mixed
@@ -724,6 +792,7 @@ trait HasRelationships
 
     /**
      * Get all the loaded relations for the instance.
+	 * 得到实例的所有加载关系
      *
      * @return array
      */
@@ -734,6 +803,7 @@ trait HasRelationships
 
     /**
      * Get a specified relationship.
+	 * 得到指定的关系
      *
      * @param  string  $relation
      * @return mixed
@@ -745,6 +815,7 @@ trait HasRelationships
 
     /**
      * Determine if the given relation is loaded.
+	 * 确定是否加载了给定的关系
      *
      * @param  string  $key
      * @return bool
@@ -756,6 +827,7 @@ trait HasRelationships
 
     /**
      * Set the given relationship on the model.
+	 * 设置给定的关系在模型上
      *
      * @param  string  $relation
      * @param  mixed  $value
@@ -770,6 +842,7 @@ trait HasRelationships
 
     /**
      * Unset a loaded relationship.
+	 * 取消已加载关系
      *
      * @param  string  $relation
      * @return $this
@@ -783,6 +856,7 @@ trait HasRelationships
 
     /**
      * Set the entire relations array on the model.
+	 * 设置整个关系数组在模型上
      *
      * @param  array  $relations
      * @return $this
@@ -796,6 +870,7 @@ trait HasRelationships
 
     /**
      * Duplicate the instance and unset all the loaded relations.
+	 * 复制实例并取消所有加载关系的设置
      *
      * @return $this
      */
@@ -808,6 +883,7 @@ trait HasRelationships
 
     /**
      * Unset all the loaded relations for the instance.
+	 * 取消为实例加载的所有关系的设置
      *
      * @return $this
      */
@@ -820,6 +896,7 @@ trait HasRelationships
 
     /**
      * Get the relationships that are touched on save.
+	 * 得到保存时触及的关系
      *
      * @return array
      */
@@ -830,6 +907,7 @@ trait HasRelationships
 
     /**
      * Set the relationships that are touched on save.
+	 * 设置保存时触及的关系
      *
      * @param  array  $touches
      * @return $this

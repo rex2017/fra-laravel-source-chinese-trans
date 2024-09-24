@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent关联未找到异常
+ */
 
 namespace Illuminate\Database\Eloquent;
 
@@ -8,6 +11,7 @@ class RelationNotFoundException extends RuntimeException
 {
     /**
      * The name of the affected Eloquent model.
+	 * 受影响的Eloquent模型名称
      *
      * @var string
      */
@@ -15,6 +19,7 @@ class RelationNotFoundException extends RuntimeException
 
     /**
      * The name of the relation.
+	 * 关联名称
      *
      * @var string
      */
@@ -22,6 +27,7 @@ class RelationNotFoundException extends RuntimeException
 
     /**
      * Create a new exception instance.
+	 * 创建新的异常实例
      *
      * @param  object  $model
      * @param  string  $relation

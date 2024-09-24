@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由匹配，URI验证类
+ * 路由，URI验证
  */
 
 namespace Illuminate\Routing\Matching;
@@ -12,7 +12,7 @@ class UriValidator implements ValidatorInterface
 {
     /**
      * Validate a given rule against a route and request.
-	 * 验证给定规则
+	 * 验证给定的规则
      *
      * @param  \Illuminate\Routing\Route  $route
      * @param  \Illuminate\Http\Request  $request

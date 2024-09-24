@@ -177,7 +177,7 @@ interface Application extends Container
 
     /**
      * Run the given array of bootstrap classes.
-	 * 运行启动类
+	 * 运行给定的引导类
      *
      * @param  array  $bootstrappers
      * @return void
@@ -203,7 +203,7 @@ interface Application extends Container
 
     /**
      * Get the environment file the application is using.
-	 * 得到环境文件
+	 * 得到应用程序正在使用的环境文件
      *
      * @return string
      */
@@ -211,6 +211,7 @@ interface Application extends Container
 
     /**
      * Get the fully qualified path to the environment file.
+	 * 得到环境文件的完全限定路径
      *
      * @return string
      */
@@ -218,7 +219,7 @@ interface Application extends Container
 
     /**
      * Get the path to the configuration cache file.
-	 * 得到配置缓存文件路径
+	 * 得到配置缓存文件的路径
      *
      * @return string
      */

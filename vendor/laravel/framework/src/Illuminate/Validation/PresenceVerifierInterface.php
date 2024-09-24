@@ -9,7 +9,7 @@ interface PresenceVerifierInterface
 {
     /**
      * Count the number of objects in a collection having the given value.
-	 * 计算对象数
+	 * 计算集合中具有给定值的对象的数量
      *
      * @param  string  $collection
      * @param  string  $column
@@ -23,6 +23,7 @@ interface PresenceVerifierInterface
 
     /**
      * Count the number of objects in a collection with the given values.
+	 * 对集合中具有给定值的对象数量进行计数
      *
      * @param  string  $collection
      * @param  string  $column

@@ -1,6 +1,6 @@
 <?php
 /**
- * 哈希，抽象哈希类
+ * 哈希抽象类
  */
 
 namespace Illuminate\Hashing;

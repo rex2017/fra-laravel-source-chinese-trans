@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * 调取队列闭包
  */
 
 namespace Illuminate\Queue;
@@ -18,6 +18,7 @@ class CallQueuedClosure implements ShouldQueue
 
     /**
      * The serializable Closure instance.
+	 * 可序列化的闭包实例
      *
      * @var \Illuminate\Queue\SerializableClosure
      */
@@ -25,6 +26,7 @@ class CallQueuedClosure implements ShouldQueue
 
     /**
      * Indicate if the job should be deleted when models are missing.
+	 * 指明当模型丢失时是否应该删除作业
      *
      * @var bool
      */
@@ -32,6 +34,7 @@ class CallQueuedClosure implements ShouldQueue
 
     /**
      * Create a new job instance.
+	 * 创建新的作业实例
      *
      * @param  \Illuminate\Queue\SerializableClosure  $closure
      * @return void
@@ -43,6 +46,7 @@ class CallQueuedClosure implements ShouldQueue
 
     /**
      * Create a new job instance.
+	 * 创建新的作业实例
      *
      * @param  \Closure  $job
      * @return self
@@ -54,6 +58,7 @@ class CallQueuedClosure implements ShouldQueue
 
     /**
      * Execute the job.
+	 * 执行作业
      *
      * @param  \Illuminate\Contracts\Container\Container  $container
      * @return void
@@ -65,6 +70,7 @@ class CallQueuedClosure implements ShouldQueue
 
     /**
      * Get the display name for the queued job.
+	 * 得到队列名称的显示名
      *
      * @return string
      */

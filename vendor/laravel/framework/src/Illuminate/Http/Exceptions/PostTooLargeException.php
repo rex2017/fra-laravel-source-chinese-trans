@@ -12,6 +12,7 @@ class PostTooLargeException extends HttpException
 {
     /**
      * Create a new "post too large" exception instance.
+	 * 创建新的"post too large"异常实例
      *
      * @param  string|null  $message
      * @param  \Exception|null  $previous

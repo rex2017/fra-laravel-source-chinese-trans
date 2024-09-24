@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由注册器类
+ * 路由注册器
  */
 
 namespace Illuminate\Routing;
@@ -77,6 +77,7 @@ class RouteRegistrar
 
     /**
      * Create a new route registrar instance.
+	 * 创建新的路由注册实例
      *
      * @param  \Illuminate\Routing\Router  $router
      * @return void
@@ -88,6 +89,7 @@ class RouteRegistrar
 
     /**
      * Set the value for a given attribute.
+	 * 设置给定属性值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -108,6 +110,7 @@ class RouteRegistrar
 
     /**
      * Route a resource to a controller.
+	 * 将资源路由到控制器
      *
      * @param  string  $name
      * @param  string  $controller
@@ -121,6 +124,7 @@ class RouteRegistrar
 
     /**
      * Create a route group with shared attributes.
+	 * 创建具有共享属性的路由组
      *
      * @param  \Closure|string  $callback
      * @return void
@@ -132,6 +136,7 @@ class RouteRegistrar
 
     /**
      * Register a new route with the given verbs.
+	 * 注册一条新路线用给定的动词
      *
      * @param  array|string  $methods
      * @param  string  $uri
@@ -145,6 +150,7 @@ class RouteRegistrar
 
     /**
      * Register a new route with the router.
+	 * 注册一条新路线使用路由
      *
      * @param  string  $method
      * @param  string  $uri
@@ -162,6 +168,7 @@ class RouteRegistrar
 
     /**
      * Compile the action into an array including the attributes.
+	 * 编译动作成包含属性的数组
      *
      * @param  \Closure|array|string|null  $action
      * @return array

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，在订单中见
+ */
 
 namespace Illuminate\Foundation\Testing\Constraints;
 
@@ -9,6 +12,7 @@ class SeeInOrder extends Constraint
 {
     /**
      * The string under validation.
+	 * 正在验证的字符串
      *
      * @var string
      */
@@ -16,6 +20,7 @@ class SeeInOrder extends Constraint
 
     /**
      * The last value that failed to pass validation.
+	 * 最后一个未能通过验证的值
      *
      * @var string
      */
@@ -23,6 +28,7 @@ class SeeInOrder extends Constraint
 
     /**
      * Create a new constraint instance.
+	 * 创建新的约束实例
      *
      * @param  string  $content
      * @return void
@@ -34,6 +40,7 @@ class SeeInOrder extends Constraint
 
     /**
      * Determine if the rule passes validation.
+	 * 确定是否规则通过验证
      *
      * @param  array  $values
      * @return bool
@@ -63,6 +70,7 @@ class SeeInOrder extends Constraint
 
     /**
      * Get the description of the failure.
+	 * 得到失败描述
      *
      * @param  array  $values
      * @return string
@@ -78,6 +86,7 @@ class SeeInOrder extends Constraint
 
     /**
      * Get a string representation of the object.
+	 * 得到对象的字符串表示形式
      *
      * @return string
      */

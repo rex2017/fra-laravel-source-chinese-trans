@@ -43,6 +43,7 @@ class UploadedFile extends SymfonyUploadedFile
 
     /**
      * Store the uploaded file on a filesystem disk with public visibility.
+	 * 存储上传的文件在具有公共可见性的文件系统磁盘上
      *
      * @param  string  $path
      * @param  array|string  $options
@@ -59,6 +60,7 @@ class UploadedFile extends SymfonyUploadedFile
 
     /**
      * Store the uploaded file on a filesystem disk with public visibility.
+	 * 存储上传的文件在具有公共可见性的文件系统磁盘上
      *
      * @param  string  $path
      * @param  string  $name
@@ -143,6 +145,7 @@ class UploadedFile extends SymfonyUploadedFile
 
     /**
      * Parse and format the given options.
+	 * 解析并格式化给定的选项
      *
      * @param  array|string  $options
      * @return array

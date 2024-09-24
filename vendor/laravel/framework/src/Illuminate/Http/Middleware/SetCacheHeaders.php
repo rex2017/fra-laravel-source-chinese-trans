@@ -1,6 +1,6 @@
 <?php
 /**
- * Http中间件，设置缓存头
+ * Http，设置缓存头
  */
 
 namespace Illuminate\Http\Middleware;
@@ -12,6 +12,7 @@ class SetCacheHeaders
 {
     /**
      * Add cache related HTTP headers.
+	 * 添加缓存HTTP头
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
@@ -52,6 +53,7 @@ class SetCacheHeaders
 
     /**
      * Parse the given header options.
+	 * 解析给定的头选项
      *
      * @param  string  $options
      * @return array

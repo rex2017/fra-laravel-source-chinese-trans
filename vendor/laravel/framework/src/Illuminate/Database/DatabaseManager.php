@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库管理类
+ * 数据库管理器，与db门面对应
  */
 
 namespace Illuminate\Database;
@@ -51,6 +51,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * The callback to be executed to reconnect to a database.
+	 * 为重新连接数据库而执行的回调
      *
      * @var callable
      */
@@ -90,6 +91,8 @@ class DatabaseManager implements ConnectionResolverInterface
         // If we haven't created this connection, we'll create it based on the config
         // provided in the application. Once we've created the connections we will
         // set the "fetch mode" for PDO which determines the query return types.
+		// 如果我们还没有创建些连接，我们将根据配置创建它，
+		// 一旦我们创建了连接，我们将为PDO设置获取模式，该模式决定了查询返回类型。
         if (! isset($this->connections[$name])) {
             $this->connections[$name] = $this->configure(
                 $this->makeConnection($database), $type
@@ -101,6 +104,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Parse the connection into an array of the name and read / write type.
+	 * 将连接解析为名称和读/写类型的数组
      *
      * @param  string  $name
      * @return array
@@ -127,6 +131,8 @@ class DatabaseManager implements ConnectionResolverInterface
         // First we will check by the connection name to see if an extension has been
         // registered specifically for that connection. If it has we will call the
         // Closure and pass it the config allowing it to resolve the connection.
+		// 首先我们先检查连接名看看专门为连接的扩展是否注册
+		// 如果已经存在我们将调取配置并允许去解析连接
         if (isset($this->extensions[$name])) {
             return call_user_func($this->extensions[$name], $config, $name);
         }
@@ -134,6 +140,8 @@ class DatabaseManager implements ConnectionResolverInterface
         // Next we will check to see if an extension has been registered for a driver
         // and will call the Closure if so, which allows us to have a more generic
         // resolver for the drivers themselves which applies to all connections.
+		// 接下来我们将检查是否已经为驱动注册了扩展名
+		// 我们将调用闭包，这样我们就可以有一个更通用的闭包适用于所有连接的驱动程序解析器
         if (isset($this->extensions[$driver = $config['driver']])) {
             return call_user_func($this->extensions[$driver], $config, $name);
         }
@@ -157,6 +165,8 @@ class DatabaseManager implements ConnectionResolverInterface
         // To get the database connection configuration, we will just pull each of the
         // connection configurations and get the configurations for the given name.
         // If the configuration doesn't exist, we'll throw an exception and bail.
+		// 要得到数据库连接配置，我们只需拉取每个连接配置，并得到配置项
+		// 如果配置不存在，我们将抛出异常
         $connections = $this->app['config']['database.connections'];
 
         if (is_null($config = Arr::get($connections, $name))) {
@@ -169,6 +179,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Prepare the database connection instance.
+	 * 准备数据库连接实例
      *
      * @param  \Illuminate\Database\Connection  $connection
      * @param  string  $type
@@ -181,6 +192,9 @@ class DatabaseManager implements ConnectionResolverInterface
         // First we'll set the fetch mode and a few other dependencies of the database
         // connection. This method basically just configures and prepares it to get
         // used by the application. Once we're finished we'll return it back out.
+		// 首先，我们将设置获取模式和数据库的其他一些连接依赖关系。
+		// 此方法基本上只是配置和准备它以获得由应用使用。
+		// 一旦完成将会释放。
         if ($this->app->bound('events')) {
             $connection->setEventDispatcher($this->app['events']);
         }
@@ -188,6 +202,8 @@ class DatabaseManager implements ConnectionResolverInterface
         // Here we'll set a reconnector callback. This reconnector can be any callable
         // so we will set a Closure to reconnect from this manager with the name of
         // the connection, which will allow us to reconnect from the connections.
+		// 在这里，我们将设置一个重新连接回调。此重新连接器可以是任何可调用的，因此我们将设置一个闭包，
+		// 以使用连接的名称从此管理器重新连接，这将允许我们从连接重新连接。
         $connection->setReconnector($this->reconnector);
 
         return $connection;
@@ -195,6 +211,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Prepare the read / write mode for database connection instance.
+	 * 准备读写模式为数据库连接实例
      *
      * @param  \Illuminate\Database\Connection  $connection
      * @param  string|null  $type
@@ -213,6 +230,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Disconnect from the given database and remove from local cache.
+	 * 断开与给定数据库的连接
      *
      * @param  string|null  $name
      * @return void
@@ -228,7 +246,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Disconnect from the given database.
-	 * 断开连接
+	 * 断开连接从数据库
      *
      * @param  string|null  $name
      * @return void
@@ -242,7 +260,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Reconnect to the given database.
-	 * 重连接
+	 * 重新连接数据库
      *
      * @param  string|null  $name
      * @return \Illuminate\Database\Connection
@@ -260,6 +278,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Refresh the PDO connections on a given connection.
+	 * 刷新给定连接上的PDO连接
      *
      * @param  string  $name
      * @return \Illuminate\Database\Connection
@@ -275,6 +294,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Get the default connection name.
+	 * 得到默认连接
      *
      * @return string
      */
@@ -308,6 +328,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Get all of the drivers that are actually available.
+	 * 得到所有可用的驱动程序
      *
      * @return array
      */
@@ -321,6 +342,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Register an extension connection resolver.
+	 * 注册扩展连接解析器
      *
      * @param  string  $name
      * @param  callable  $resolver
@@ -344,6 +366,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Set the database reconnector callback.
+	 * 设置数据库重接器回调
      *
      * @param  callable  $reconnector
      * @return void
@@ -355,7 +378,7 @@ class DatabaseManager implements ConnectionResolverInterface
 
     /**
      * Dynamically pass methods to the default connection.
-	 * 调取连接
+	 * 动态调取方法
      *
      * @param  string  $method
      * @param  array  $parameters

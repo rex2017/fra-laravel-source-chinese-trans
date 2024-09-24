@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础，Composer脚本类
+ * 基础，Composer脚本
  */
 
 namespace Illuminate\Foundation;
@@ -39,6 +39,7 @@ class ComposerScripts
 
     /**
      * Handle the post-autoload-dump Composer event.
+	 * 处理自动加载转储后的Composer事件
      *
      * @param  \Composer\Script\Event  $event
      * @return void

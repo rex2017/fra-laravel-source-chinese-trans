@@ -19,7 +19,7 @@ interface Dispatcher
 
     /**
      * Determine if a given event has listeners.
-	 * 确定是否事件有监听器
+	 * 确定给定事件是否有监听器
      *
      * @param  string  $eventName
      * @return bool
@@ -28,7 +28,7 @@ interface Dispatcher
 
     /**
      * Register an event subscriber with the dispatcher.
-	 * 注册事件订阅者
+	 * 注册事件订阅者使用调度程序
      *
      * @param  object|string  $subscriber
      * @return void
@@ -47,7 +47,7 @@ interface Dispatcher
 
     /**
      * Dispatch an event and call the listeners.
-	 * 分派事件
+	 * 分派事件并调用监听器
      *
      * @param  string|object  $event
      * @param  mixed  $payload
@@ -58,7 +58,7 @@ interface Dispatcher
 
     /**
      * Register an event and payload to be fired later.
-	 * 注册事件
+	 * 注册事件并延迟启动
      *
      * @param  string  $event
      * @param  array  $payload
@@ -68,7 +68,7 @@ interface Dispatcher
 
     /**
      * Flush a set of pushed events.
-	 * 刷新事件
+	 * 刷新一组推送的事件
      *
      * @param  string  $event
      * @return void
@@ -77,7 +77,7 @@ interface Dispatcher
 
     /**
      * Remove a set of listeners from the dispatcher.
-	 * 注册事件
+	 * 删除一组监听器从调度中
      *
      * @param  string  $event
      * @return void
@@ -86,7 +86,7 @@ interface Dispatcher
 
     /**
      * Forget all of the queued listeners.
-	 * 注册所有事件
+	 * 注销所有排队的监听器
      *
      * @return void
      */

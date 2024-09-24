@@ -17,3 +17,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//自定义添加
+Route::get('/test', 'TestController@test');

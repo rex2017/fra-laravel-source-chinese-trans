@@ -40,7 +40,7 @@ class AggregateServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
-	 * 得到服务提供者
+	 * 得到提供的服务通过服务提供者
      *
      * @return array
      */

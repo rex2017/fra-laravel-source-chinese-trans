@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存Memcached存储类
+ * 缓存Memcached存储
  */
 
 namespace Illuminate\Cache;
@@ -24,6 +24,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * A string that should be prepended to keys.
+	 * 前缀，应该加在键前的字符串
      *
      * @var string
      */
@@ -31,6 +32,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Indicates whether we are using Memcached version >= 3.0.0.
+	 * 指明我们是否使用Memcached版本>= 3.0.0
      *
      * @var bool
      */
@@ -55,7 +57,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Retrieve an item from the cache by key.
-	 * 检索一个项从缓存
+	 * 检索项目从缓存
      *
      * @param  string  $key
      * @return mixed
@@ -71,6 +73,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Retrieve multiple items from the cache by key.
+	 * 检索多个项目从缓存
      *
      * Items not found in the cache will have a null value.
      *
@@ -100,6 +103,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Store an item in the cache for a given number of seconds.
+	 * 存储项目在缓存中给定的秒数
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -115,6 +119,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Store multiple items in the cache for a given number of seconds.
+	 * 存储多个项目在缓存中使用给定的秒数
      *
      * @param  array  $values
      * @param  int  $seconds
@@ -135,6 +140,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Store an item in the cache if the key doesn't exist.
+	 * 存储项目在缓存中，如果键不存在。
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -150,6 +156,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Increment the value of an item in the cache.
+	 * 增加缓存中项的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -162,6 +169,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Decrement the value of an item in the cache.
+	 * 递减缓存中项的值
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -174,7 +182,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Store an item in the cache indefinitely.
-	 * 忘记一个项
+	 * 忘记一个项目，存储项目无限期在缓存中
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -187,6 +195,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Get a lock instance.
+	 * 得到锁实例
      *
      * @param  string  $name
      * @param  int  $seconds
@@ -200,6 +209,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Restore a lock instance using the owner identifier.
+	 * 恢复锁实例使用所有者标识符
      *
      * @param  string  $name
      * @param  string  $owner
@@ -212,6 +222,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Remove an item from the cache.
+	 * 移除一个项从缓存中
      *
      * @param  string  $key
      * @return bool
@@ -223,6 +234,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Remove all items from the cache.
+	 * 移除所有项从缓存中
      *
      * @return bool
      */
@@ -233,6 +245,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Get the expiration time of the key.
+	 * 得到密钥的过期时间
      *
      * @param  int  $seconds
      * @return int
@@ -244,6 +257,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Get the UNIX timestamp for the given number of seconds.
+	 * 得到给定秒数的UNIX时间戳
      *
      * @param  int  $seconds
      * @return int
@@ -255,6 +269,7 @@ class MemcachedStore extends TaggableStore implements LockProvider
 
     /**
      * Get the underlying Memcached connection.
+	 * 得到底层Memcached连接
      *
      * @return \Memcached
      */

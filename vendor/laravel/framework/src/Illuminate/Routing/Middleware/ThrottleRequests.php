@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由中间件，节流阀请求类
+ * 路由，中间件节流阀请求
  */
 
 namespace Illuminate\Routing\Middleware;
@@ -19,6 +19,7 @@ class ThrottleRequests
 
     /**
      * The rate limiter instance.
+	 * 速率极限实例
      *
      * @var \Illuminate\Cache\RateLimiter
      */
@@ -26,6 +27,7 @@ class ThrottleRequests
 
     /**
      * Create a new request throttler.
+	 * 创建新的请求节流阀
      *
      * @param  \Illuminate\Cache\RateLimiter  $limiter
      * @return void
@@ -70,6 +72,7 @@ class ThrottleRequests
 
     /**
      * Resolve the number of attempts if the user is authenticated or not.
+	 * 解析用户是否通过身份验证的尝试次数
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int|string  $maxAttempts
@@ -90,6 +93,7 @@ class ThrottleRequests
 
     /**
      * Resolve request signature.
+	 * 解析请求签名
      *
      * @param  \Illuminate\Http\Request  $request
      * @return string
@@ -134,6 +138,7 @@ class ThrottleRequests
 
     /**
      * Get the number of seconds until the next retry.
+	 * 得到到下一次重试的秒数
      *
      * @param  string  $key
      * @return int
@@ -145,6 +150,7 @@ class ThrottleRequests
 
     /**
      * Add the limit header information to the given response.
+	 * 添加限制头信息到给定的响应中
      *
      * @param  \Symfony\Component\HttpFoundation\Response  $response
      * @param  int  $maxAttempts
@@ -163,7 +169,7 @@ class ThrottleRequests
 
     /**
      * Get the limit headers information.
-	 * 得到头信息
+	 * 得到限制头信息
      *
      * @param  int  $maxAttempts
      * @param  int  $remainingAttempts

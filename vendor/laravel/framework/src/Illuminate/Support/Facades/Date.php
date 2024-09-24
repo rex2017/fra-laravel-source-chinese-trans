@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，日期
+ * 支持，门面日期
  */
 
 namespace Illuminate\Support\Facades;
@@ -107,6 +107,7 @@ class Date extends Facade
 
     /**
      * Resolve the facade root instance from the container.
+	 * 从容器中解析facade根实例
      *
      * @param  string  $name
      * @return mixed

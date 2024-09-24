@@ -13,6 +13,7 @@ class Reflector
 {
     /**
      * This is a PHP 7.4 compatible implementation of is_callable.
+	 * 这是一个与PHP 7.4兼容的is_callable实现
      *
      * @param  mixed  $var
      * @param  bool  $syntaxOnly
@@ -60,6 +61,7 @@ class Reflector
 
     /**
      * Get the class name of the given parameter's type, if possible.
+	 * 如果可能，获取给定参数类型的类名
      *
      * @param  \ReflectionParameter  $parameter
      * @return string|null
@@ -89,6 +91,7 @@ class Reflector
 
     /**
      * Determine if the parameter's type is a subclass of the given type.
+	 * 确定参数的类型是否是给定类型的子类
      *
      * @param  \ReflectionParameter  $parameter
      * @param  string  $className

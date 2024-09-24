@@ -11,6 +11,7 @@ class FileFactory
 {
     /**
      * Create a new fake file.
+	 * 创建新的伪装文件
      *
      * @param  string  $name
      * @param  string|int  $kilobytes
@@ -31,6 +32,7 @@ class FileFactory
 
     /**
      * Create a new fake file with content.
+	 * 创建新的伪装文件使用内容
      *
      * @param  string  $name
      * @param  string  $content
@@ -49,6 +51,7 @@ class FileFactory
 
     /**
      * Create a new fake image.
+	 * 创建新的伪装图片
      *
      * @param  string  $name
      * @param  int  $width
@@ -64,6 +67,7 @@ class FileFactory
 
     /**
      * Generate a dummy image of the given width and height.
+	 * 生成给定宽度和高度的虚拟图像
      *
      * @param  int  $width
      * @param  int  $height

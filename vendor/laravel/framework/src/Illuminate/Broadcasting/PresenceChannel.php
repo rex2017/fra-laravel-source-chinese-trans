@@ -1,6 +1,6 @@
 <?php
 /**
- * 在线渠道广播
+ * 在线通道
  */
 
 namespace Illuminate\Broadcasting;
@@ -9,7 +9,7 @@ class PresenceChannel extends Channel
 {
     /**
      * Create a new channel instance.
-	 * 创建一个新的频道
+	 * 创建新的通道实例
      *
      * @param  string  $name
      * @return void

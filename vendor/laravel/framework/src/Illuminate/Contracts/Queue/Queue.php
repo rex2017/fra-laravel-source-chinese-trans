@@ -18,7 +18,7 @@ interface Queue
 
     /**
      * Push a new job onto the queue.
-	 * 推入新任务入队列
+	 * 推入新作业入队列
      *
      * @param  string|object  $job
      * @param  mixed  $data
@@ -29,7 +29,7 @@ interface Queue
 
     /**
      * Push a new job onto the queue.
-	 * 推入新任务入队列2
+	 * 推入新作业入队列
      *
      * @param  string  $queue
      * @param  string|object  $job
@@ -40,7 +40,7 @@ interface Queue
 
     /**
      * Push a raw payload onto the queue.
-	 * 推入一个草稿至队列
+	 * 推入原始有效负载至队列
      *
      * @param  string  $payload
      * @param  string|null  $queue
@@ -51,7 +51,7 @@ interface Queue
 
     /**
      * Push a new job onto the queue after a delay.
-	 * 推入一个新任务至队列在延迟后
+	 * 推入新作业至队列使用延迟
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
      * @param  string|object  $job
@@ -63,7 +63,7 @@ interface Queue
 
     /**
      * Push a new job onto the queue after a delay.
-	 * 推入一个新任务至队列在延迟后
+	 * 推入新任务至队列使用延迟
      *
      * @param  string  $queue
      * @param  \DateTimeInterface|\DateInterval|int  $delay
@@ -86,7 +86,7 @@ interface Queue
 
     /**
      * Pop the next job off of the queue.
-	 * 取出下一个任务从队列里
+	 * 取出下一个任务从队列中
      *
      * @param  string  $queue
      * @return \Illuminate\Contracts\Queue\Job|null

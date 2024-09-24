@@ -9,7 +9,7 @@ interface QueueableEntity
 {
     /**
      * Get the queueable identity for the entity.
-	 * 得到队列ID
+	 * 得到实体的可排队标识
      *
      * @return mixed
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Redis，连接类
+ * Redis，Predis连接
  */
 
 namespace Illuminate\Redis\Connections;
@@ -17,6 +17,7 @@ class PredisConnection extends Connection implements ConnectionContract
 {
     /**
      * The Predis client.
+	 * Predis客户端
      *
      * @var \Predis\Client
      */
@@ -24,6 +25,7 @@ class PredisConnection extends Connection implements ConnectionContract
 
     /**
      * Create a new Predis connection.
+	 * 创建新的Predis连接
      *
      * @param  \Predis\Client  $client
      * @return void
@@ -35,6 +37,7 @@ class PredisConnection extends Connection implements ConnectionContract
 
     /**
      * Subscribe to a set of given channels for messages.
+	 * 订阅一组给定的通道为消息
      *
      * @param  array|string  $channels
      * @param  \Closure  $callback
@@ -58,6 +61,7 @@ class PredisConnection extends Connection implements ConnectionContract
 
     /**
      * Flush the selected Redis database.
+	 * 清除已选择的Predis数据库
      *
      * @return void
      */

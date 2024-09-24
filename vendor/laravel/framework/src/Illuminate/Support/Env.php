@@ -39,6 +39,7 @@ class Env
 
     /**
      * Enable the putenv adapter.
+	 * 启用putenv适配器
      *
      * @return void
      */
@@ -51,6 +52,7 @@ class Env
 
     /**
      * Disable the putenv adapter.
+	 * 禁用putenv适配器
      *
      * @return void
      */
@@ -63,6 +65,7 @@ class Env
 
     /**
      * Get the environment factory instance.
+	 * 得到环境工厂实例
      *
      * @return \Dotenv\Environment\FactoryInterface
      */

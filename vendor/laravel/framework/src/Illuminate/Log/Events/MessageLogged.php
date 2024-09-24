@@ -1,6 +1,6 @@
 <?php
 /**
- * 日志，消息记录类
+ * 日志，消息记录
  */
 
 namespace Illuminate\Log\Events;

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，路由缓存命令
+ */
 
 namespace Illuminate\Foundation\Console;
 
@@ -11,6 +14,7 @@ class RouteCacheCommand extends Command
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -18,6 +22,7 @@ class RouteCacheCommand extends Command
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -25,6 +30,7 @@ class RouteCacheCommand extends Command
 
     /**
      * The filesystem instance.
+	 * 文件系统实例
      *
      * @var \Illuminate\Filesystem\Filesystem
      */
@@ -32,6 +38,7 @@ class RouteCacheCommand extends Command
 
     /**
      * Create a new route command instance.
+	 * 创建新的路由命令实例
      *
      * @param  \Illuminate\Filesystem\Filesystem  $files
      * @return void
@@ -45,6 +52,7 @@ class RouteCacheCommand extends Command
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -71,6 +79,7 @@ class RouteCacheCommand extends Command
 
     /**
      * Boot a fresh copy of the application and get the routes.
+	 * 启动应用程序的新副本并得到路由
      *
      * @return \Illuminate\Routing\RouteCollection
      */
@@ -84,6 +93,7 @@ class RouteCacheCommand extends Command
 
     /**
      * Get a fresh application instance.
+	 * 得到新的应用程序实例
      *
      * @return \Illuminate\Contracts\Foundation\Application
      */
@@ -96,6 +106,7 @@ class RouteCacheCommand extends Command
 
     /**
      * Build the route cache file.
+	 * 构建路由缓存文件
      *
      * @param  \Illuminate\Routing\RouteCollection  $routes
      * @return string

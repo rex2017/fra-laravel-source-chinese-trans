@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * 身份，响应
  */
 
 namespace Illuminate\Auth\Access;
@@ -11,6 +11,7 @@ class Response implements Arrayable
 {
     /**
      * Indicates whether the response was allowed.
+	 * 指明是否允许响应
      *
      * @var bool
      */
@@ -18,6 +19,7 @@ class Response implements Arrayable
 
     /**
      * The response message.
+	 * 响应信息
      *
      * @var string|null
      */
@@ -25,6 +27,7 @@ class Response implements Arrayable
 
     /**
      * The response code.
+	 * 响应代码
      *
      * @var mixed
      */
@@ -32,6 +35,7 @@ class Response implements Arrayable
 
     /**
      * Create a new response.
+	 * 创建新的响应
      *
      * @param  bool  $allowed
      * @param  string  $message
@@ -47,6 +51,7 @@ class Response implements Arrayable
 
     /**
      * Create a new "allow" Response.
+	 * 创建一个新的"allow"响应
      *
      * @param  string|null  $message
      * @param  mixed  $code
@@ -59,6 +64,7 @@ class Response implements Arrayable
 
     /**
      * Create a new "deny" Response.
+	 * 创建一个新的"deny"响应
      *
      * @param  string|null  $message
      * @param  mixed  $code
@@ -71,6 +77,7 @@ class Response implements Arrayable
 
     /**
      * Determine if the response was allowed.
+	 * 确定是否响应是允许的
      *
      * @return bool
      */
@@ -81,6 +88,7 @@ class Response implements Arrayable
 
     /**
      * Determine if the response was denied.
+	 * 确定是否响应是禁止的
      *
      * @return bool
      */
@@ -91,6 +99,7 @@ class Response implements Arrayable
 
     /**
      * Get the response message.
+	 * 得到响应消息
      *
      * @return string|null
      */
@@ -101,6 +110,7 @@ class Response implements Arrayable
 
     /**
      * Get the response code / reason.
+	 * 得到响应代码/原因
      *
      * @return mixed
      */
@@ -111,6 +121,7 @@ class Response implements Arrayable
 
     /**
      * Throw authorization exception if response was denied.
+	 * 抛出授权异常，如果拒绝响应。
      *
      * @return \Illuminate\Auth\Access\Response
      *
@@ -128,6 +139,7 @@ class Response implements Arrayable
 
     /**
      * Convert the response to an array.
+	 * 转换响应为数组
      *
      * @return array
      */
@@ -142,6 +154,7 @@ class Response implements Arrayable
 
     /**
      * Get the string representation of the message.
+	 * 得到消息的字符串表示形式
      *
      * @return string
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，日志类
+ * 支持，门面日志
  */
 
 namespace Illuminate\Support\Facades;

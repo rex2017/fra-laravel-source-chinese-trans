@@ -1,4 +1,7 @@
 <?php
+/**
+ * 通知，创建通知表存根文件
+ */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;

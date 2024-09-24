@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库存在验证类
+ * 数据库状态验证
  */
 
 namespace Illuminate\Validation;
@@ -29,7 +29,7 @@ class DatabasePresenceVerifier implements PresenceVerifierInterface
 
     /**
      * Create a new database presence verifier.
-	 * 创建一个新的数据库状态验证
+	 * 创建新的数据库状态验证
      *
      * @param  \Illuminate\Database\ConnectionResolverInterface  $db
      * @return void
@@ -41,7 +41,7 @@ class DatabasePresenceVerifier implements PresenceVerifierInterface
 
     /**
      * Count the number of objects in a collection having the given value.
-	 * 计算对象数
+	 * 计算集合中具有给定值的对象的数量
      *
      * @param  string  $collection
      * @param  string  $column
@@ -64,6 +64,7 @@ class DatabasePresenceVerifier implements PresenceVerifierInterface
 
     /**
      * Count the number of objects in a collection with the given values.
+	 * 对集合中具有给定值的对象数量进行计数
      *
      * @param  string  $collection
      * @param  string  $column
@@ -125,7 +126,7 @@ class DatabasePresenceVerifier implements PresenceVerifierInterface
 
     /**
      * Get a query builder for the given table.
-	 * 得到表
+	 * 得到给定表的查询生成器
      *
      * @param  string  $table
      * @return \Illuminate\Database\Query\Builder

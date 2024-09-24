@@ -1,4 +1,7 @@
 <?php
+/**
+ * 广播，Pusher广播
+ */
 
 namespace Illuminate\Broadcasting\Broadcasters;
 
@@ -14,6 +17,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * The Pusher SDK instance.
+	 * Pusher SDK 实例
      *
      * @var \Pusher\Pusher
      */
@@ -21,6 +25,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * Create a new broadcaster instance.
+	 * 创建新的广播实例
      *
      * @param  \Pusher\Pusher  $pusher
      * @return void
@@ -32,6 +37,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * Authenticate the incoming request for a given channel.
+	 * 验证给定通道的传入请求
      *
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
@@ -54,6 +60,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * Return the valid authentication response.
+	 * 返回有效的身份验证响应
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  mixed  $result
@@ -80,6 +87,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * Decode the given Pusher response.
+	 * 解码给定的Pusher响应
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  mixed  $response
@@ -97,6 +105,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * Broadcast the given event.
+	 * 广播给定事件
      *
      * @param  array  $channels
      * @param  string  $event
@@ -127,6 +136,7 @@ class PusherBroadcaster extends Broadcaster
 
     /**
      * Get the Pusher SDK instance.
+	 * 得到Pusher SDK实例
      *
      * @return \Pusher\Pusher
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent改变主
+ */
 
 namespace Illuminate\Database\Eloquent\Relations;
 
@@ -9,6 +12,7 @@ class MorphPivot extends Pivot
 {
     /**
      * The type of the polymorphic relation.
+	 * 多态关系的类型
      *
      * Explicitly define this so it's not included in saved attributes.
      *
@@ -18,6 +22,7 @@ class MorphPivot extends Pivot
 
     /**
      * The value of the polymorphic relation.
+	 * 多态关系值 
      *
      * Explicitly define this so it's not included in saved attributes.
      *
@@ -27,6 +32,7 @@ class MorphPivot extends Pivot
 
     /**
      * Set the keys for a save update query.
+	 * 为查询更新保存键
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
@@ -40,6 +46,7 @@ class MorphPivot extends Pivot
 
     /**
      * Delete the pivot model record from the database.
+	 * 删除数据透视模型记录
      *
      * @return int
      */
@@ -64,6 +71,7 @@ class MorphPivot extends Pivot
 
     /**
      * Set the morph type for the pivot.
+	 * 设置主的变形类型
      *
      * @param  string  $morphType
      * @return $this
@@ -77,6 +85,7 @@ class MorphPivot extends Pivot
 
     /**
      * Set the morph class for the pivot.
+	 * 设置变形类为轴
      *
      * @param  string  $morphClass
      * @return \Illuminate\Database\Eloquent\Relations\MorphPivot
@@ -90,6 +99,7 @@ class MorphPivot extends Pivot
 
     /**
      * Get the queueable identity for the entity.
+	 * 得到实体的可排队标识
      *
      * @return mixed
      */
@@ -109,6 +119,7 @@ class MorphPivot extends Pivot
 
     /**
      * Get a new query to restore one or more models by their queueable IDs.
+	 * 得到一个新查询，根据可排队id还原一个或多个模型。
      *
      * @param  array|int  $ids
      * @return \Illuminate\Database\Eloquent\Builder
@@ -133,6 +144,7 @@ class MorphPivot extends Pivot
 
     /**
      * Get a new query to restore multiple models by their queueable IDs.
+	 * 得到一个新查询，根据可排队id恢复多个模型
      *
      * @param  array  $ids
      * @return \Illuminate\Database\Eloquent\Builder

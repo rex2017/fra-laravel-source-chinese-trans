@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存标签集类
+ * 缓存标签集
  */
 
 namespace Illuminate\Cache;
@@ -11,7 +11,7 @@ class TagSet
 {
     /**
      * The cache store implementation.
-	 * 缓存存储接口
+	 * 缓存存储实现
      *
      * @var \Illuminate\Contracts\Cache\Store
      */
@@ -27,7 +27,7 @@ class TagSet
 
     /**
      * Create a new TagSet instance.
-	 * 创建一个新标签集实例
+	 * 创建新标签集实例
      *
      * @param  \Illuminate\Contracts\Cache\Store  $store
      * @param  array  $names
@@ -52,6 +52,7 @@ class TagSet
 
     /**
      * Reset the tag and return the new tag identifier.
+	 * 重置标记并返回新的标记标识符
      *
      * @param  string  $name
      * @return string
@@ -76,6 +77,7 @@ class TagSet
 
     /**
      * Get an array of tag identifiers for all of the tags in the set.
+	 * 得到集合中所有的标记标识符数组
      *
      * @return array
      */
@@ -86,6 +88,7 @@ class TagSet
 
     /**
      * Get the unique tag identifier for a given tag.
+	 * 得到给定标记的唯一标识符
      *
      * @param  string  $name
      * @return string
@@ -97,6 +100,7 @@ class TagSet
 
     /**
      * Get the tag identifier key for a given tag.
+	 * 得到给定标记的标识符键
      *
      * @param  string  $name
      * @return string

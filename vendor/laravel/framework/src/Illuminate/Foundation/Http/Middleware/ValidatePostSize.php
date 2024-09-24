@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础Http类，中间件，验证提交大小
+ * 基础，Http中间件，验证提交大小
  */
 
 namespace Illuminate\Foundation\Http\Middleware;

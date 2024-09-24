@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由视图控制器类
+ * 路由视图控制器
  */
 
 namespace Illuminate\Routing;
@@ -11,7 +11,7 @@ class ViewController extends Controller
 {
     /**
      * The view factory implementation.
-	 * 视图实现
+	 * 视图工厂实现
      *
      * @var \Illuminate\Contracts\View\Factory
      */
@@ -31,6 +31,7 @@ class ViewController extends Controller
 
     /**
      * Invoke the controller method.
+	 * 调用控制器方法
      *
      * @param  array  $args
      * @return \Illuminate\Contracts\View\View

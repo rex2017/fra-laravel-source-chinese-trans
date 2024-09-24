@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，重定向类
+ * 路由重定向
  */
 
 namespace Illuminate\Routing;
@@ -43,7 +43,7 @@ class Redirector
 
     /**
      * Create a new redirect response to the "home" route.
-	 * 创建home路由
+	 * 创建一个指向home路由的新重定向响应
      *
      * @param  int  $status
      * @return \Illuminate\Http\RedirectResponse
@@ -55,6 +55,7 @@ class Redirector
 
     /**
      * Create a new redirect response to the previous location.
+	 * 创建新的跳转响应至前一个位置
      *
      * @param  int  $status
      * @param  array  $headers
@@ -68,6 +69,7 @@ class Redirector
 
     /**
      * Create a new redirect response to the current URI.
+	 * 创建新的跳转响应至当前URI
      *
      * @param  int  $status
      * @param  array  $headers
@@ -80,6 +82,7 @@ class Redirector
 
     /**
      * Create a new redirect response, while putting the current URL in the session.
+	 * 创建新的重定向响应，同时将当前URL放在会话中
      *
      * @param  string  $path
      * @param  int  $status
@@ -104,6 +107,7 @@ class Redirector
 
     /**
      * Create a new redirect response to the previously intended location.
+	 * 创建到先前预期位置的新重定向响应
      *
      * @param  string  $default
      * @param  int  $status
@@ -120,6 +124,7 @@ class Redirector
 
     /**
      * Set the intended url.
+	 * 设置预期的url
      *
      * @param  string  $url
      * @return void
@@ -131,6 +136,7 @@ class Redirector
 
     /**
      * Create a new redirect response to the given path.
+	 * 创建对给定路径的新重定向响应
      *
      * @param  string  $path
      * @param  int  $status
@@ -145,6 +151,7 @@ class Redirector
 
     /**
      * Create a new redirect response to an external URL (no validation).
+	 * 创建一个指向外部URL的新重定向响应(不需要验证)
      *
      * @param  string  $path
      * @param  int  $status
@@ -158,6 +165,7 @@ class Redirector
 
     /**
      * Create a new redirect response to the given HTTPS path.
+	 * 创建新的重定向响应为给定的HTTPS路径
      *
      * @param  string  $path
      * @param  int  $status
@@ -171,6 +179,7 @@ class Redirector
 
     /**
      * Create a new redirect response to a named route.
+	 * 创建新的重定向响应为路由
      *
      * @param  string  $route
      * @param  mixed  $parameters
@@ -185,6 +194,7 @@ class Redirector
 
     /**
      * Create a new redirect response to a controller action.
+	 * 创建新的重定向响应为控制器动作
      *
      * @param  string|array  $action
      * @param  mixed  $parameters
@@ -199,6 +209,7 @@ class Redirector
 
     /**
      * Create a new redirect response.
+	 * 创建新的跳转响应
      *
      * @param  string  $path
      * @param  int  $status
@@ -218,6 +229,7 @@ class Redirector
 
     /**
      * Get the URL generator instance.
+	 * 得到URL生成器实例
      *
      * @return \Illuminate\Routing\UrlGenerator
      */

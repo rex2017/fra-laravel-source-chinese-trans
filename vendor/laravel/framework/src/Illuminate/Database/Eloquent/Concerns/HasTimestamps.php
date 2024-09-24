@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent有时间戳
+ */
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
@@ -8,6 +11,7 @@ trait HasTimestamps
 {
     /**
      * Indicates if the model should be timestamped.
+	 * 指明是否应该对模型进行时间戳
      *
      * @var bool
      */
@@ -15,6 +19,7 @@ trait HasTimestamps
 
     /**
      * Update the model's update timestamp.
+	 * 更新模型更新时间戳
      *
      * @return bool
      */
@@ -31,6 +36,7 @@ trait HasTimestamps
 
     /**
      * Update the creation and update timestamps.
+	 * 更新创建和更新时间戳
      *
      * @return void
      */
@@ -53,6 +59,7 @@ trait HasTimestamps
 
     /**
      * Set the value of the "created at" attribute.
+	 * 设置"created at"属性值
      *
      * @param  mixed  $value
      * @return $this
@@ -66,6 +73,7 @@ trait HasTimestamps
 
     /**
      * Set the value of the "updated at" attribute.
+	 * 设置"updated at"属性值
      *
      * @param  mixed  $value
      * @return $this
@@ -79,6 +87,7 @@ trait HasTimestamps
 
     /**
      * Get a fresh timestamp for the model.
+	 * 得到一个新的时间戳为模型
      *
      * @return \Illuminate\Support\Carbon
      */
@@ -89,6 +98,7 @@ trait HasTimestamps
 
     /**
      * Get a fresh timestamp for the model.
+	 * 得到一个新的时间戳为模型
      *
      * @return string
      */
@@ -99,6 +109,7 @@ trait HasTimestamps
 
     /**
      * Determine if the model uses timestamps.
+	 * 确定模型是否使用时间戳
      *
      * @return bool
      */
@@ -109,6 +120,7 @@ trait HasTimestamps
 
     /**
      * Get the name of the "created at" column.
+	 * 得到"updated at"列的名称
      *
      * @return string|null
      */
@@ -119,6 +131,7 @@ trait HasTimestamps
 
     /**
      * Get the name of the "updated at" column.
+	 * 得到"updated at"列的名称
      *
      * @return string|null
      */
@@ -129,6 +142,7 @@ trait HasTimestamps
 
     /**
      * Get the fully qualified "created at" column.
+	 * 得到完全限定的"created at"列
      *
      * @return string
      */
@@ -139,6 +153,7 @@ trait HasTimestamps
 
     /**
      * Get the fully qualified "updated at" column.
+	 * 得到完全限定的"updated at"列
      *
      * @return string
      */

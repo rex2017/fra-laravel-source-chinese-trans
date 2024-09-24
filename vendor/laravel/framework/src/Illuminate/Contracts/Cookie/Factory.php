@@ -1,6 +1,6 @@
 <?php
 /**
- * 契约，Cookie工厂模式
+ * 契约，Cookie工厂接口
  */
 
 namespace Illuminate\Contracts\Cookie;

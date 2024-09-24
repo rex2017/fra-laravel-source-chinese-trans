@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，种子命令
+ */
 
 namespace Illuminate\Database\Console\Seeds;
 
@@ -14,6 +17,7 @@ class SeedCommand extends Command
 
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -21,6 +25,7 @@ class SeedCommand extends Command
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -28,6 +33,7 @@ class SeedCommand extends Command
 
     /**
      * The connection resolver instance.
+	 * 连接解析实例
      *
      * @var \Illuminate\Database\ConnectionResolverInterface
      */
@@ -35,6 +41,7 @@ class SeedCommand extends Command
 
     /**
      * Create a new database seed command instance.
+	 * 创建新的数据库播种命令实例
      *
      * @param  \Illuminate\Database\ConnectionResolverInterface  $resolver
      * @return void
@@ -48,6 +55,7 @@ class SeedCommand extends Command
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -68,6 +76,7 @@ class SeedCommand extends Command
 
     /**
      * Get a seeder instance from the container.
+	 * 得到播种实例
      *
      * @return \Illuminate\Database\Seeder
      */
@@ -80,6 +89,7 @@ class SeedCommand extends Command
 
     /**
      * Get the name of the database connection to use.
+	 * 得到数据库连接名称
      *
      * @return string
      */
@@ -92,6 +102,7 @@ class SeedCommand extends Command
 
     /**
      * Get the console command options.
+	 * 得到控制台选项
      *
      * @return array
      */

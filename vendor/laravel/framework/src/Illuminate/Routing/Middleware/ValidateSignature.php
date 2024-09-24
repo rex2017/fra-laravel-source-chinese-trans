@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由中间件，验证签名类
+ * 路由，中间件验证签名
  */
 
 namespace Illuminate\Routing\Middleware;

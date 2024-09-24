@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，确认密码
+ */
 
 namespace Illuminate\Foundation\Auth;
 
@@ -10,6 +13,7 @@ trait ConfirmsPasswords
 
     /**
      * Display the password confirmation view.
+	 * 显示密码确认视图
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,6 +24,7 @@ trait ConfirmsPasswords
 
     /**
      * Confirm the given user's password.
+	 * 确认给定用户的密码
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
@@ -35,6 +40,7 @@ trait ConfirmsPasswords
 
     /**
      * Reset the password confirmation timeout.
+	 * 重置密码确认超时时间
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -46,6 +52,7 @@ trait ConfirmsPasswords
 
     /**
      * Get the password confirmation validation rules.
+	 * 得到密码确认验证规则
      *
      * @return array
      */
@@ -58,6 +65,7 @@ trait ConfirmsPasswords
 
     /**
      * Get the password confirmation validation error messages.
+	 * 得到密码确认验证错误消息
      *
      * @return array
      */

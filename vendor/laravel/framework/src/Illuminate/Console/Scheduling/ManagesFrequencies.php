@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制台，管理频率
+ */
 
 namespace Illuminate\Console\Scheduling;
 
@@ -8,6 +11,7 @@ trait ManagesFrequencies
 {
     /**
      * The Cron expression representing the event's frequency.
+	 * 表示事件频率的Cron表达式
      *
      * @param  string  $expression
      * @return $this
@@ -21,6 +25,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run between start and end time.
+	 * 计划事件在开始时间和结束时间之间
      *
      * @param  string  $startTime
      * @param  string  $endTime
@@ -33,6 +38,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to not run between start and end time.
+	 * 计划事件安排不在开始时间和结束时间之间
      *
      * @param  string  $startTime
      * @param  string  $endTime
@@ -45,6 +51,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run between start and end time.
+	 * 计划事件在开始时间和结束时间之间
      *
      * @param  string  $startTime
      * @param  string  $endTime
@@ -73,6 +80,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run every minute.
+	 * 计划事件为每分钟运行一次
      *
      * @return $this
      */
@@ -83,6 +91,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run every five minutes.
+	 * 计划事件为每五分钟运行一次
      *
      * @return $this
      */
@@ -93,6 +102,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run every ten minutes.
+	 * 计划事件为每十分钟运行一次
      *
      * @return $this
      */
@@ -103,6 +113,8 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run every fifteen minutes.
+	 * 计划事件为每15分钟一次
+	 * 
      *
      * @return $this
      */
@@ -113,6 +125,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run every thirty minutes.
+	 * 计划事件为每30分钟进行一次
      *
      * @return $this
      */
@@ -123,6 +136,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run hourly.
+	 * 计划事件为每小时运行一次
      *
      * @return $this
      */
@@ -133,6 +147,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run hourly at a given offset in the hour.
+	 * 计划事件为按小时内给定的偏移量每小时运行一次
      *
      * @param  array|int  $offset
      * @return $this
@@ -146,6 +161,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run daily.
+	 * 计划事件为每天运行一次
      *
      * @return $this
      */
@@ -157,6 +173,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the command at a given time.
+	 * 计划命令在给定时间
      *
      * @param  string  $time
      * @return $this
@@ -168,6 +185,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run daily at a given time (10:00, 19:30, etc).
+	 * 计划事件在每天的指定时间(10:00,19:30等)
      *
      * @param  string  $time
      * @return $this
@@ -182,6 +200,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run twice daily.
+	 * 计划事件为每天运行两次
      *
      * @param  int  $first
      * @param  int  $second
@@ -197,6 +216,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on weekdays.
+	 * 计划事件只在工作日运行
      *
      * @return $this
      */
@@ -207,6 +227,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on weekends.
+	 * 计划事件只在周末进行
      *
      * @return $this
      */
@@ -217,6 +238,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Mondays.
+	 * 计划事件只在星期一进行
      *
      * @return $this
      */
@@ -227,6 +249,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Tuesdays.
+	 * 计划事件只在星期二进行
      *
      * @return $this
      */
@@ -237,6 +260,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Wednesdays.
+	 * 计划事件只在星期三进行
      *
      * @return $this
      */
@@ -247,6 +271,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Thursdays.
+	 * 计划事件只在星期四进行
      *
      * @return $this
      */
@@ -257,6 +282,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Fridays.
+	 * 计划事件只在星期五进行
      *
      * @return $this
      */
@@ -267,6 +293,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Saturdays.
+	 * 计划事件只在星期六进行
      *
      * @return $this
      */
@@ -277,6 +304,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run only on Sundays.
+	 * 计划事件只在星期天进行
      *
      * @return $this
      */
@@ -287,6 +315,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run weekly.
+	 * 计划事件为每周运行一次
      *
      * @return $this
      */
@@ -299,6 +328,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run weekly on a given day and time.
+	 * 计划事件在每周指定的日期和时间进行
      *
      * @param  int  $day
      * @param  string  $time
@@ -313,6 +343,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run monthly.
+	 * 计划事件为每月运行一次
      *
      * @return $this
      */
@@ -325,6 +356,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run monthly on a given day and time.
+	 * 计划事件在每月的特定日期和时间进行
      *
      * @param  int  $day
      * @param  string  $time
@@ -339,6 +371,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run twice monthly.
+	 * 计划事件为每月运行两次
      *
      * @param  int  $first
      * @param  int  $second
@@ -355,6 +388,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run quarterly.
+	 * 计划事件为每季度运行一次
      *
      * @return $this
      */
@@ -368,6 +402,7 @@ trait ManagesFrequencies
 
     /**
      * Schedule the event to run yearly.
+	 * 计划事件每年运行一次
      *
      * @return $this
      */
@@ -381,6 +416,7 @@ trait ManagesFrequencies
 
     /**
      * Set the days of the week the command should run on.
+	 * 设置命令应该运行的星期几
      *
      * @param  array|mixed  $days
      * @return $this
@@ -394,6 +430,7 @@ trait ManagesFrequencies
 
     /**
      * Set the timezone the date should be evaluated on.
+	 * 设置应该计算日期的时区
      *
      * @param  \DateTimeZone|string  $timezone
      * @return $this
@@ -407,6 +444,7 @@ trait ManagesFrequencies
 
     /**
      * Splice the given value into the given position of the expression.
+	 * 拼接给定值到表达式的给定位置
      *
      * @param  int  $position
      * @param  string  $value

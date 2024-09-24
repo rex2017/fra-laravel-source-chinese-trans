@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持，数组类
+ * 支持，数组
  */
 
 namespace Illuminate\Support;
@@ -69,6 +69,7 @@ class Arr
 
     /**
      * Cross join the given arrays, returning all possible permutations.
+	 * 交叉连接给定的数组，返回所有可能的排列
      *
      * @param  iterable  ...$arrays
      * @return array
@@ -96,6 +97,7 @@ class Arr
 
     /**
      * Divide an array into two arrays. One with keys and the other with values.
+	 * 将一个数组划分为两个数组。一个带有键，另一个带有值。
      *
      * @param  array  $array
      * @return array
@@ -107,6 +109,7 @@ class Arr
 
     /**
      * Flatten a multi-dimensional associative array with dots.
+	 * 用点平坦多维关联数组
      *
      * @param  iterable  $array
      * @param  string  $prepend
@@ -129,6 +132,7 @@ class Arr
 
     /**
      * Get all of the given array except for a specified array of keys.
+	 * 得到除指定键数组外的所有给定数组
      *
      * @param  array  $array
      * @param  array|string  $keys
@@ -143,6 +147,7 @@ class Arr
 
     /**
      * Determine if the given key exists in the provided array.
+	 * 确定给定的键是否存在于所提供的数组中
      *
      * @param  \ArrayAccess|array  $array
      * @param  string|int  $key
@@ -159,6 +164,7 @@ class Arr
 
     /**
      * Return the first element in an array passing a given truth test.
+	 * 返回数组中第一个通过给定真值检验的元素
      *
      * @param  iterable  $array
      * @param  callable|null  $callback
@@ -188,6 +194,7 @@ class Arr
 
     /**
      * Return the last element in an array passing a given truth test.
+	 * 返回数组中通过给定真值检验的最后一个元素
      *
      * @param  array  $array
      * @param  callable|null  $callback
@@ -205,6 +212,7 @@ class Arr
 
     /**
      * Flatten a multi-dimensional array into a single level.
+	 * 将多维数组平展为单个水平
      *
      * @param  iterable  $array
      * @param  int  $depth
@@ -235,6 +243,7 @@ class Arr
 
     /**
      * Remove one or many array items from a given array using "dot" notation.
+	 * 使用"点"符号从给定数组中删除一个或多个数组项
      *
      * @param  array  $array
      * @param  array|string  $keys
@@ -252,6 +261,7 @@ class Arr
 
         foreach ($keys as $key) {
             // if the exact key exists in the top-level, remove it
+			// 如果顶层中存在确切的键，则删除它
             if (static::exists($array, $key)) {
                 unset($array[$key]);
 
@@ -261,6 +271,7 @@ class Arr
             $parts = explode('.', $key);
 
             // clean up before each pass
+			// 每次通过前进行清理
             $array = &$original;
 
             while (count($parts) > 1) {
@@ -279,6 +290,7 @@ class Arr
 
     /**
      * Get an item from an array using "dot" notation.
+	 * 得到项从数组中使用"点"符号
      *
      * @param  \ArrayAccess|array  $array
      * @param  string|int|null  $key
@@ -316,6 +328,7 @@ class Arr
 
     /**
      * Check if an item or items exist in an array using "dot" notation.
+	 * 检查数组中是否存在一个或多个项使用"点"表示法
      *
      * @param  \ArrayAccess|array  $array
      * @param  string|array  $keys
@@ -350,6 +363,7 @@ class Arr
 
     /**
      * Determine if any of the keys exist in an array using "dot" notation.
+	 * 确定数组中是否存在任何键使用"点"表示法
      *
      * @param  \ArrayAccess|array  $array
      * @param  string|array  $keys
@@ -382,6 +396,7 @@ class Arr
 
     /**
      * Determines if an array is associative.
+	 * 确定数组是否是关联的
      *
      * An array is "associative" if it doesn't have sequential numerical keys beginning with zero.
      *
@@ -397,6 +412,7 @@ class Arr
 
     /**
      * Get a subset of the items from the given array.
+	 * 得到项的子集从给定数组中
      *
      * @param  array  $array
      * @param  array|string  $keys
@@ -409,6 +425,7 @@ class Arr
 
     /**
      * Pluck an array of values from an array.
+	 * 取出一个值数组从数组中
      *
      * @param  iterable  $array
      * @param  string|array  $value
@@ -427,6 +444,8 @@ class Arr
             // If the key is "null", we will just append the value to the array and keep
             // looping. Otherwise we will key the array using the value of the key we
             // received from the developer. Then we'll return the final array form.
+			// 如果键为"null"，我们只需将值附加到数组中并保持循环。
+			// 否则，我们将使用从开发人员那里收到的密钥值为数组设置密钥。然后我们将返回最终的数组形式。
             if (is_null($key)) {
                 $results[] = $itemValue;
             } else {
@@ -445,6 +464,7 @@ class Arr
 
     /**
      * Explode the "value" and "key" arguments passed to "pluck".
+	 * 爆炸传递给"pluck"的"value"和"key"参数
      *
      * @param  string|array  $value
      * @param  string|array|null  $key
@@ -461,6 +481,7 @@ class Arr
 
     /**
      * Push an item onto the beginning of an array.
+	 * 将一项压入数组的开头
      *
      * @param  array  $array
      * @param  mixed  $value
@@ -480,6 +501,7 @@ class Arr
 
     /**
      * Get a value from the array, and remove it.
+	 * 得到一个值从数组中，然后删除它。
      *
      * @param  array  $array
      * @param  string  $key
@@ -497,6 +519,7 @@ class Arr
 
     /**
      * Get one or a specified number of random values from an array.
+	 * 得到一个或指定数量的随机值从数组中
      *
      * @param  array  $array
      * @param  int|null  $number
@@ -537,6 +560,7 @@ class Arr
 
     /**
      * Set an array item to a given value using "dot" notation.
+	 * 使用"点"表示法将数组项设置为给定值
      *
      * If no key is given to the method, the entire array will be replaced.
      *
@@ -559,6 +583,8 @@ class Arr
             // If the key doesn't exist at this depth, we will just create an empty array
             // to hold the next value, allowing us to create the arrays to hold final
             // values at the correct depth. Then we'll keep digging into the array.
+			// 如果该键在此深度不存在，我们将创建一个空数组来保存下一个值，
+			// 从而允许我们创建数组来保存正确深度的最终值。然后我们会继续挖掘阵列。
             if (! isset($array[$key]) || ! is_array($array[$key])) {
                 $array[$key] = [];
             }
@@ -573,6 +599,7 @@ class Arr
 
     /**
      * Shuffle the given array and return the result.
+	 * 打乱给定的数组并返回结果
      *
      * @param  array  $array
      * @param  int|null  $seed
@@ -593,6 +620,7 @@ class Arr
 
     /**
      * Sort the array using the given callback or "dot" notation.
+	 * 对数组进行排序使用给定的回调或"点"符号
      *
      * @param  array  $array
      * @param  callable|string|null  $callback
@@ -605,6 +633,7 @@ class Arr
 
     /**
      * Recursively sort an array by keys and values.
+	 * 按键和值对数组递归排序
      *
      * @param  array  $array
      * @return array

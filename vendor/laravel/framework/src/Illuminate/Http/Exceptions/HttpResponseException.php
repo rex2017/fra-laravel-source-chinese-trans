@@ -20,6 +20,7 @@ class HttpResponseException extends RuntimeException
 
     /**
      * Create a new HTTP response exception instance.
+	 * 创建新的http异常响应实例
      *
      * @param  \Symfony\Component\HttpFoundation\Response  $response
      * @return void

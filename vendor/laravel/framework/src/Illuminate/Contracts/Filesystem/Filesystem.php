@@ -9,7 +9,7 @@ interface Filesystem
 {
     /**
      * The public visibility setting.
-	 * 公共设置
+	 * 公共可见设置
      *
      * @var string
      */
@@ -17,7 +17,7 @@ interface Filesystem
 
     /**
      * The private visibility setting.
-	 * 隐私设置
+	 * 私有可见设置
      *
      * @var string
      */
@@ -45,7 +45,7 @@ interface Filesystem
 
     /**
      * Get a resource to read the file.
-	 * 得到一个资源读文件
+	 * 得到读取文件的资源
      *
      * @param  string  $path
      * @return resource|null The path resource or null on failure.
@@ -56,7 +56,7 @@ interface Filesystem
 
     /**
      * Write the contents of a file.
-	 * 写拉文件内容
+	 * 写入文件的内容
      *
      * @param  string  $path
      * @param  string|resource  $contents
@@ -67,7 +67,7 @@ interface Filesystem
 
     /**
      * Write a new file using a stream.
-	 * 写一个文件用流
+	 * 写一个新文件使用流
      *
      * @param  string  $path
      * @param  resource  $resource
@@ -100,7 +100,7 @@ interface Filesystem
 
     /**
      * Prepend to a file.
-	 * 前置一个文件
+	 * 添加至文件
      *
      * @param  string  $path
      * @param  string  $data
@@ -177,7 +177,7 @@ interface Filesystem
 
     /**
      * Get all of the files from the given directory (recursive).
-	 * 得到所有的文件从指定目录
+	 * 得到所有的文件从指定目录(资源)
      *
      * @param  string|null  $directory
      * @return array
@@ -196,6 +196,7 @@ interface Filesystem
 
     /**
      * Get all (recursive) of the directories within a given directory.
+	 * 得到给定目录中的所有(递归)目录
      *
      * @param  string|null  $directory
      * @return array
@@ -213,7 +214,7 @@ interface Filesystem
 
     /**
      * Recursively delete a directory.
-	 * 删除目录递归
+	 * 递归删除目录
      *
      * @param  string  $directory
      * @return bool

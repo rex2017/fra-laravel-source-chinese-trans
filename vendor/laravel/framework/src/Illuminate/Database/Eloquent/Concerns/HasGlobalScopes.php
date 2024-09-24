@@ -1,4 +1,7 @@
 <?php
+/**
+ * 数据库，Eloquent有全局作用域
+ */
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
@@ -11,6 +14,7 @@ trait HasGlobalScopes
 {
     /**
      * Register a new global scope on the model.
+	 * 在模型上注册新的全局作用域
      *
      * @param  \Illuminate\Database\Eloquent\Scope|\Closure|string  $scope
      * @param  \Closure|null  $implementation
@@ -33,6 +37,7 @@ trait HasGlobalScopes
 
     /**
      * Determine if a model has a global scope.
+	 * 确定模型是否具有全局作用域
      *
      * @param  \Illuminate\Database\Eloquent\Scope|string  $scope
      * @return bool
@@ -44,6 +49,7 @@ trait HasGlobalScopes
 
     /**
      * Get a global scope registered with the model.
+	 * 注册一个全局作用在模型中
      *
      * @param  \Illuminate\Database\Eloquent\Scope|string  $scope
      * @return \Illuminate\Database\Eloquent\Scope|\Closure|null
@@ -61,6 +67,7 @@ trait HasGlobalScopes
 
     /**
      * Get the global scopes for this class instance.
+	 * 得到此类实例的全局作用域
      *
      * @return array
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础测试，
+ * 基础，不使用中间件
  */
 
 namespace Illuminate\Foundation\Testing;
@@ -11,6 +11,7 @@ trait WithoutMiddleware
 {
     /**
      * Prevent all middleware from being executed for this test class.
+	 * 防止为此测试类执行所有中间件
      *
      * @throws \Exception
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 广播管理类
+ * 广播管理，核心类
  */
 
 namespace Illuminate\Broadcasting;
@@ -40,7 +40,7 @@ class BroadcastManager implements FactoryContract
 
     /**
      * The registered custom driver creators.
-	 * 自下定义驱动创建者
+	 * 已注册的驱动创建者
      *
      * @var array
      */
@@ -60,7 +60,7 @@ class BroadcastManager implements FactoryContract
 
     /**
      * Register the routes for handling broadcast authentication and sockets.
-	 * 注册路由为处理广播认证和套接字
+	 * 注册处理广播认证和套接字的路由
      *
      * @param  array|null  $attributes
      * @return void
@@ -113,6 +113,7 @@ class BroadcastManager implements FactoryContract
 
     /**
      * Queue the given event for broadcast.
+	 * 排队给定事件以进行广播
      *
      * @param  mixed  $event
      * @return void
@@ -166,6 +167,7 @@ class BroadcastManager implements FactoryContract
 
     /**
      * Attempt to get the connection from the local cache.
+	 * 尝试从本地缓存获取连接
      *
      * @param  string  $name
      * @return \Illuminate\Contracts\Broadcasting\Broadcaster
@@ -177,7 +179,7 @@ class BroadcastManager implements FactoryContract
 
     /**
      * Resolve the given broadcaster.
-	 * 解析广播
+	 * 解析给定广播
      *
      * @param  string  $name
      * @return \Illuminate\Contracts\Broadcasting\Broadcaster

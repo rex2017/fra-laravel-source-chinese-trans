@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库服务提供者类
+ * 数据库服务提供者
  */
 
 namespace Illuminate\Database;
@@ -65,6 +65,8 @@ class DatabaseServiceProvider extends ServiceProvider
         // The connection factory is used to create the actual connection instances on
         // the database. We will inject the factory into the manager so that it may
         // make the connections while they are actually needed and not of before.
+		// 连接工厂用于创建实际的连接实例在数据库上。
+		// 我们将把工厂注入经理的怀抱，以便它可以在他们真正需要的时候建立联系，而不是以前。
         $this->app->singleton('db.factory', function ($app) {
             return new ConnectionFactory($app);
         });
@@ -72,6 +74,8 @@ class DatabaseServiceProvider extends ServiceProvider
         // The database manager is used to resolve various connections, since multiple
         // connections might be managed. It also implements the connection resolver
         // interface which may be used by other components requiring connections.
+		// 数据库管理器用于解析各种连接，因为多个连接可能被管理。
+		// 它还实现了连接解析器接口需要连接的其他组件可以使用。
         $this->app->singleton('db', function ($app) {
             return new DatabaseManager($app, $app['db.factory']);
         });
@@ -83,6 +87,7 @@ class DatabaseServiceProvider extends ServiceProvider
 
     /**
      * Register the Eloquent factory instance in the container.
+	 * 注册Eloquent工厂实例至容器中
      *
      * @return void
      */

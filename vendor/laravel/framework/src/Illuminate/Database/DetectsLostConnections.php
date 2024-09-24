@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库检查丢失连接类
+ * 数据库检查丢失连接
  */
 
 namespace Illuminate\Database;

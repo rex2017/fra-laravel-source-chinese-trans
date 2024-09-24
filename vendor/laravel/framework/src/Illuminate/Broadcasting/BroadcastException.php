@@ -1,6 +1,6 @@
 <?php
 /**
- * 广播异常类
+ * 广播异常，这是一个空类
  */
 
 namespace Illuminate\Broadcasting;

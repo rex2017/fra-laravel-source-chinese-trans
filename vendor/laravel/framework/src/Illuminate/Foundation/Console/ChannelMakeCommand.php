@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，通道创建命令
+ */
 
 namespace Illuminate\Foundation\Console;
 
@@ -8,6 +11,7 @@ class ChannelMakeCommand extends GeneratorCommand
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -15,6 +19,7 @@ class ChannelMakeCommand extends GeneratorCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -22,6 +27,7 @@ class ChannelMakeCommand extends GeneratorCommand
 
     /**
      * The type of class being generated.
+	 * 生成的类的类型
      *
      * @var string
      */
@@ -29,6 +35,7 @@ class ChannelMakeCommand extends GeneratorCommand
 
     /**
      * Build the class with the given name.
+	 * 构建类用给定的名称
      *
      * @param  string  $name
      * @return string
@@ -44,6 +51,7 @@ class ChannelMakeCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
+	 * 得到生成器的存根文件
      *
      * @return string
      */
@@ -54,6 +62,7 @@ class ChannelMakeCommand extends GeneratorCommand
 
     /**
      * Get the default namespace for the class.
+	 * 得到类的默认名称空间
      *
      * @param  string  $rootNamespace
      * @return string

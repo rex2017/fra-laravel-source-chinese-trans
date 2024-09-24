@@ -32,7 +32,7 @@ class RedisServiceProvider extends ServiceProvider implements DeferrableProvider
 
     /**
      * Get the services provided by the provider.
-	 * 得到服务提供者
+	 * 得到提供者的服务通过提供者
      *
      * @return array
      */

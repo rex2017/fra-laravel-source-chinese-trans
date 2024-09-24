@@ -1,6 +1,6 @@
 <?php
 /**
- * 契约，显示接口
+ * 契约，响应能力接口
  */
 
 namespace Illuminate\Contracts\Support;

@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础总线，调度任务
+ * 基础，总线调度任务
  */
 
 namespace Illuminate\Foundation\Bus;
@@ -23,6 +23,7 @@ trait DispatchesJobs
 
     /**
      * Dispatch a job to its appropriate handler in the current process.
+	 * 分派作业给当前进程中相应的处理程序
      *
      * @param  mixed  $job
      * @return mixed

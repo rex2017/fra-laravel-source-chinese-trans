@@ -61,7 +61,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Create a new Illuminate HTTP request from server variables.
-	 * 创建一个新的照亮HTTP请求从服务器变量
+	 * 创建新的照亮HTTP请求从服务器变量
      *
      * @return static
      */
@@ -221,6 +221,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the route name matches a given pattern.
+	 * 确定路由名是否与给定模式匹配
      *
      * @param  mixed  ...$patterns
      * @return bool
@@ -232,6 +233,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the current request URL and query string matches a pattern.
+	 * 确定当前请求URL和查询字符串是否与模式匹配
      *
      * @param  mixed  ...$patterns
      * @return bool
@@ -251,7 +253,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the request is the result of an AJAX call.
-	 * 确定是否请求
+	 * 确定请求是否是AJAX调用的结果
      *
      * @return bool
      */
@@ -262,6 +264,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the request is the result of an PJAX call.
+	 * 确定请求是否是PJAX调用的结果
      *
      * @return bool
      */
@@ -272,6 +275,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the request is the result of an prefetch call.
+	 * 确定请求是否是预取调用的结果
      *
      * @return bool
      */
@@ -283,6 +287,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the request is over HTTPS.
+	 * 确定请求是否通过HTTPS
      *
      * @return bool
      */
@@ -326,6 +331,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Merge new input into the current request's input array.
+	 * 合并新输入到当前请求的输入数组中
      *
      * @param  array  $input
      * @return $this
@@ -339,6 +345,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Replace the input for the current request.
+	 * 替换输入为当前请求
      *
      * @param  array  $input
      * @return $this
@@ -352,6 +359,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * This method belongs to Symfony HttpFoundation and is not usually needed when using Laravel.
+	 * 这个方法属于Symfony HttpFoundation，在使用Laravel时通常不需要。
      *
      * Instead, you may use the "input" method.
      *
@@ -544,6 +552,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Get the user making the request.
+	 * 得到发出请求的用户
      *
      * @param  string|null  $guard
      * @return mixed
@@ -555,6 +564,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Get the route handling the request.
+	 * 得到处理请求的路由
      *
      * @param  string|null  $param
      * @param  mixed  $default
@@ -573,6 +583,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Get a unique fingerprint for the request / route / IP address.
+	 * 得到请求/路由/ IP地址的唯一指纹
      *
      * @return string
      *
@@ -633,6 +644,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Get the route resolver callback.
+	 * 得到路由解析器回调
      *
      * @return \Closure
      */
@@ -645,6 +657,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Set the route resolver callback.
+	 * 设置路由解析器回调
      *
      * @param  \Closure  $callback
      * @return $this
@@ -658,6 +671,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Get all of the input and files for the request.
+	 * 得到请求的所有输入和文件
      *
      * @return array
      */
@@ -668,6 +682,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Determine if the given offset exists.
+	 * 得到确定给定的偏移量是否存在
      *
      * @param  string  $offset
      * @return bool
@@ -682,6 +697,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Get the value at the given offset.
+	 * 得到给定偏移量处的值
      *
      * @param  string  $offset
      * @return mixed
@@ -693,6 +709,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Set the value at the given offset.
+	 * 设置值在给定的偏移量
      *
      * @param  string  $offset
      * @param  mixed  $value
@@ -705,6 +722,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * Remove the value at the given offset.
+	 * 移除值在给定的偏移量
      *
      * @param  string  $offset
      * @return void

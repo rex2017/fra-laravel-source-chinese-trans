@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，重定向类
+ * 支持，门面重定向
  */
 
 namespace Illuminate\Support\Facades;

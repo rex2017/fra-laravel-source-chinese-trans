@@ -20,7 +20,7 @@ interface Application
 
     /**
      * Get the output from the last command.
-	 * 输出
+	 * 得到上一个命令的输出
      *
      * @return string
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 契约，验证接口
+ * 契约，解析时验证接口
  */
 
 namespace Illuminate\Contracts\Validation;

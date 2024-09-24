@@ -1,4 +1,7 @@
 <?php
+/**
+ * 视图，编译帮助
+ */
 
 namespace Illuminate\View\Compilers\Concerns;
 
@@ -6,6 +9,7 @@ trait CompilesHelpers
 {
     /**
      * Compile the CSRF statements into valid PHP.
+	 * 将CSRF语句编译成有效的PHP
      *
      * @return string
      */
@@ -16,6 +20,7 @@ trait CompilesHelpers
 
     /**
      * Compile the "dd" statements into valid PHP.
+	 * 编译"dd"语句成有效的PHP
      *
      * @param  string  $arguments
      * @return string
@@ -27,6 +32,7 @@ trait CompilesHelpers
 
     /**
      * Compile the "dump" statements into valid PHP.
+	 * 编译"dump"语句成有效的PHP
      *
      * @param  string  $arguments
      * @return string
@@ -38,6 +44,7 @@ trait CompilesHelpers
 
     /**
      * Compile the method statements into valid PHP.
+	 * 编译方法语句成有效的PHP
      *
      * @param  string  $method
      * @return string

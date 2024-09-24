@@ -9,7 +9,7 @@ interface Mailer
 {
     /**
      * Begin the process of mailing a mailable class instance.
-	 * 开启一个进程去发邮件
+	 * to,开启一个进程去发邮件
      *
      * @param  mixed  $users
      * @return \Illuminate\Mail\PendingMail
@@ -18,6 +18,7 @@ interface Mailer
 
     /**
      * Begin the process of mailing a mailable class instance.
+	 * bcc,开启一个进程去发邮件
      *
      * @param  mixed  $users
      * @return \Illuminate\Mail\PendingMail

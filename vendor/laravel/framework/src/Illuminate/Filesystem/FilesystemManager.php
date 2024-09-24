@@ -1,6 +1,6 @@
 <?php
 /**
- * 文件系统管理类
+ * 文件系统管理
  */
 
 namespace Illuminate\Filesystem;
@@ -43,6 +43,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * The registered custom driver creators.
+	 * 已注册自定义驱动程序创建者
      *
      * @var array
      */
@@ -101,6 +102,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * Attempt to get the disk from the local cache.
+	 * 尝试从本地缓存中获取磁盘
      *
      * @param  string  $name
      * @return \Illuminate\Contracts\Filesystem\Filesystem
@@ -112,6 +114,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * Resolve the given disk.
+	 * 解析给定的磁盘
      *
      * @param  string  $name
      * @return \Illuminate\Contracts\Filesystem\Filesystem
@@ -161,6 +164,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * Create an instance of the local driver.
+	 * 创建本地驱动程序的实例
      *
      * @param  array  $config
      * @return \Illuminate\Contracts\Filesystem\Filesystem
@@ -230,6 +234,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * Format the given S3 configuration with the default options.
+	 * 格式化给定的S3配置使用默认选项
      *
      * @param  array  $config
      * @return array
@@ -247,6 +252,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * Create a Flysystem instance with the given adapter.
+	 * 创建一个Flysystem实例使用给定的适配器
      *
      * @param  \League\Flysystem\AdapterInterface  $adapter
      * @param  array  $config
@@ -289,6 +295,7 @@ class FilesystemManager implements FactoryContract
 
     /**
      * Adapt the filesystem implementation.
+	 * 调整文件系统实现
      *
      * @param  \League\Flysystem\FilesystemInterface  $filesystem
      * @return \Illuminate\Contracts\Filesystem\Filesystem

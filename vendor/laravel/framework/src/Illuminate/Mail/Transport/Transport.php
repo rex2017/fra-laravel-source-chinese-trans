@@ -1,6 +1,6 @@
 <?php
 /**
- * 邮件，传输
+ * 邮件，传输抽象类
  */
 
 namespace Illuminate\Mail\Transport;
@@ -14,6 +14,7 @@ abstract class Transport implements Swift_Transport
 {
     /**
      * The plug-ins registered with the transport.
+	 * 使用传输注册的插件
      *
      * @var array
      */
@@ -53,6 +54,7 @@ abstract class Transport implements Swift_Transport
 
     /**
      * Register a plug-in with the transport.
+	 * 向传输注册插件
      *
      * @param  \Swift_Events_EventListener  $plugin
      * @return void
@@ -64,6 +66,7 @@ abstract class Transport implements Swift_Transport
 
     /**
      * Iterate through registered plugins and execute plugins' methods.
+	 * 遍历已注册的插件并执行插件的方法
      *
      * @param  \Swift_Mime_SimpleMessage  $message
      * @return void
@@ -81,6 +84,7 @@ abstract class Transport implements Swift_Transport
 
     /**
      * Iterate through registered plugins and execute plugins' methods.
+	 * 遍历已注册的插件并执行插件的方法
      *
      * @param  \Swift_Mime_SimpleMessage  $message
      * @return void
@@ -98,6 +102,7 @@ abstract class Transport implements Swift_Transport
 
     /**
      * Get the number of recipients.
+	 * 得到收件人的数量
      *
      * @param  \Swift_Mime_SimpleMessage  $message
      * @return int

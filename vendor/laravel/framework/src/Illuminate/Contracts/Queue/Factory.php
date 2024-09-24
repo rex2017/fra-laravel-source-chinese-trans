@@ -9,7 +9,7 @@ interface Factory
 {
     /**
      * Resolve a queue connection instance.
-	 * 解析一个队列连接实例
+	 * 解析队列连接实例
      *
      * @param  string|null  $name
      * @return \Illuminate\Contracts\Queue\Queue

@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，事件
+ * 支持，门面事件
  */
 
 namespace Illuminate\Support\Facades;
@@ -32,6 +32,7 @@ class Event extends Facade
 {
     /**
      * Replace the bound instance with a fake.
+	 * 将绑定实例替换为假实例
      *
      * @param  array|string  $eventsToFake
      * @return \Illuminate\Support\Testing\Fakes\EventFake
@@ -48,6 +49,7 @@ class Event extends Facade
 
     /**
      * Replace the bound instance with a fake during the given callable's execution.
+	 * 在给定的可调用对象执行期间，将绑定实例替换为伪实例。
      *
      * @param  callable  $callable
      * @param  array  $eventsToFake

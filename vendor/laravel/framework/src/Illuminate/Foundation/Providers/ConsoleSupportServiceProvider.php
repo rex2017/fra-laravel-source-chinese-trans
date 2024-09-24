@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础提供者，控制台服务提供者
+ * 基础，控制台服务提供者
  */
 
 namespace Illuminate\Foundation\Providers;

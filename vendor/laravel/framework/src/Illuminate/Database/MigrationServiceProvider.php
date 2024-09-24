@@ -81,6 +81,8 @@ class MigrationServiceProvider extends ServiceProvider implements DeferrableProv
         // The migrator is responsible for actually running and rollback the migration
         // files in the application. We'll pass in our database connection resolver
         // so the migrator can resolve any of these connections when it needs to.
+		// 迁移器负责实际运行的回滚应用程序中的迁移文件。
+		// 我们将传入数据库连接分析器，因此，迁移器可以在需要时解析任何这样的连接。
         $this->app->singleton('migrator', function ($app) {
             $repository = $app['migration.repository'];
 
@@ -168,6 +170,8 @@ class MigrationServiceProvider extends ServiceProvider implements DeferrableProv
             // Once we have the migration creator registered, we will create the command
             // and inject the creator. The creator is responsible for the actual file
             // creation of the migrations, and may be extended by these developers.
+			// 一旦我们注册了迁移创建者，我们将创建命令和注入创造者。
+			// 创建者负责迁移的实际文件创建，并且可以由这些开发人员进行扩展。
             $creator = $app['migration.creator'];
 
             $composer = $app['composer'];

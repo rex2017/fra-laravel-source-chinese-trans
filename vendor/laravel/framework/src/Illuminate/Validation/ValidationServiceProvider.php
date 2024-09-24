@@ -25,6 +25,7 @@ class ValidationServiceProvider extends ServiceProvider implements DeferrablePro
 
     /**
      * Register the validation factory.
+	 * 注册验证工厂
      *
      * @return void
      */
@@ -36,6 +37,8 @@ class ValidationServiceProvider extends ServiceProvider implements DeferrablePro
             // The validation presence verifier is responsible for determining the existence of
             // values in a given data collection which is typically a relational database or
             // other persistent data stores. It is used to check for "uniqueness" as well.
+			// 验证存在验证器负责确定给定数据集合中是否存在值，
+			// 该数据集合通常是关系数据库或其他持久数据存储。它也用于检查"唯一性"。
             if (isset($app['db'], $app['validation.presence'])) {
                 $validator->setPresenceVerifier($app['validation.presence']);
             }
@@ -46,6 +49,7 @@ class ValidationServiceProvider extends ServiceProvider implements DeferrablePro
 
     /**
      * Register the database presence verifier.
+	 * 注册数据库状态验证器
      *
      * @return void
      */
@@ -58,6 +62,7 @@ class ValidationServiceProvider extends ServiceProvider implements DeferrablePro
 
     /**
      * Get the services provided by the provider.
+	 * 得到提供者提供的服务
      *
      * @return array
      */

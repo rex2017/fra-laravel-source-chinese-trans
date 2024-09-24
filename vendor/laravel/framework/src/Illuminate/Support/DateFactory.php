@@ -88,6 +88,7 @@ class DateFactory
 {
     /**
      * The default class that will be used for all created dates.
+	 * 将用于所有创建日期的默认类
      *
      * @var string
      */
@@ -95,6 +96,7 @@ class DateFactory
 
     /**
      * The type (class) of dates that should be created.
+	 * 应该创建的日期的类型(类)
      *
      * @var string
      */
@@ -102,6 +104,7 @@ class DateFactory
 
     /**
      * This callable may be used to intercept date creation.
+	 * 这个可调用对象可用于拦截日期创建
      *
      * @var callable
      */
@@ -109,6 +112,7 @@ class DateFactory
 
     /**
      * The Carbon factory that should be used when creating dates.
+	 * 创建日期时应该使用的Carbon工厂
      *
      * @var object
      */
@@ -116,6 +120,7 @@ class DateFactory
 
     /**
      * Use the given handler when generating dates (class name, callable, or factory).
+	 * 在生成日期(类名、可调用对象或工厂)时使用给定的处理程序
      *
      * @param  mixed  $handler
      * @return mixed
@@ -137,6 +142,7 @@ class DateFactory
 
     /**
      * Use the default date class when generating dates.
+	 * 使用默认日期类当生成日期时
      *
      * @return void
      */
@@ -149,6 +155,7 @@ class DateFactory
 
     /**
      * Execute the given callable on each date creation.
+	 * 创建执行给定的可调用对象对每个日期
      *
      * @param  callable  $callable
      * @return void
@@ -163,6 +170,7 @@ class DateFactory
 
     /**
      * Use the given date type (class) when generating dates.
+	 * 使用给定的日期类型(类)在生成日期时
      *
      * @param  string  $dateClass
      * @return void
@@ -177,6 +185,7 @@ class DateFactory
 
     /**
      * Use the given Carbon factory when generating dates.
+	 * 使用给定的Carbon工厂在生成日期时
      *
      * @param  object  $factory
      * @return void
@@ -191,6 +200,7 @@ class DateFactory
 
     /**
      * Handle dynamic calls to generate dates.
+	 * 处理动态调用以生成日期
      *
      * @param  string  $method
      * @param  array  $parameters
@@ -203,11 +213,13 @@ class DateFactory
         $defaultClassName = static::DEFAULT_CLASS_NAME;
 
         // Using callable to generate dates...
+		// 使用callable生成日期…
         if (static::$callable) {
             return call_user_func(static::$callable, $defaultClassName::$method(...$parameters));
         }
 
         // Using Carbon factory to generate dates...
+		// 使用碳工厂生成日期…
         if (static::$factory) {
             return static::$factory->$method(...$parameters);
         }
@@ -215,20 +227,24 @@ class DateFactory
         $dateClass = static::$dateClass ?: $defaultClassName;
 
         // Check if date can be created using public class method...
+		// 检查是否可以使用公共类方法创建date…
         if (method_exists($dateClass, $method) ||
             method_exists($dateClass, 'hasMacro') && $dateClass::hasMacro($method)) {
             return $dateClass::$method(...$parameters);
         }
 
         // If that fails, create the date with the default class..
+		// 如果失败，用默认类创建日期。
         $date = $defaultClassName::$method(...$parameters);
 
         // If the configured class has an "instance" method, we'll try to pass our date into there...
+		// 如果配置的类有"instance"方法，我们将尝试将日期传递给它…
         if (method_exists($dateClass, 'instance')) {
             return $dateClass::instance($date);
         }
 
         // Otherwise, assume the configured class has a DateTime compatible constructor...
+		// 否则，假设配置的类有一个与DateTime兼容的构造函数…
         return new $dateClass($date->format('Y-m-d H:i:s.u'), $date->getTimezone());
     }
 }

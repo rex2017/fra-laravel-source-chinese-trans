@@ -1,6 +1,6 @@
 <?php
 /**
- * 翻译文件加载类
+ * 翻译文件加载
  */
 
 namespace Illuminate\Translation;
@@ -29,6 +29,7 @@ class FileLoader implements Loader
 
     /**
      * All of the registered paths to JSON translation files.
+	 * 所有已注册命名空间的数组
      *
      * @var array
      */
@@ -36,6 +37,7 @@ class FileLoader implements Loader
 
     /**
      * All of the namespace hints.
+	 * 所有名称空间提示
      *
      * @var array
      */
@@ -57,6 +59,7 @@ class FileLoader implements Loader
 
     /**
      * Load the messages for the given locale.
+	 * 加载给定区域设置的消息
      *
      * @param  string  $locale
      * @param  string  $group
@@ -78,6 +81,7 @@ class FileLoader implements Loader
 
     /**
      * Load a namespaced translation group.
+	 * 加载一个名称空间翻译组
      *
      * @param  string  $locale
      * @param  string  $group
@@ -97,6 +101,7 @@ class FileLoader implements Loader
 
     /**
      * Load a local namespaced translation group for overrides.
+	 * 为覆盖加载本地命名空间翻译组
      *
      * @param  array  $lines
      * @param  string  $locale
@@ -117,6 +122,7 @@ class FileLoader implements Loader
 
     /**
      * Load a locale from a given path.
+	 * 加载区域设置从给定路径
      *
      * @param  string  $path
      * @param  string  $locale
@@ -134,6 +140,7 @@ class FileLoader implements Loader
 
     /**
      * Load a locale from the given JSON file path.
+	 * 从给定的JSON文件路径加载区域设置
      *
      * @param  string  $locale
      * @return array
@@ -160,6 +167,7 @@ class FileLoader implements Loader
 
     /**
      * Add a new namespace to the loader.
+	 * 添加一个新的命名空间至加载器
      *
      * @param  string  $namespace
      * @param  string  $hint
@@ -172,6 +180,7 @@ class FileLoader implements Loader
 
     /**
      * Add a new JSON path to the loader.
+	 * 向加载器添加一个新的JSON路径
      *
      * @param  string  $path
      * @return void
@@ -183,6 +192,7 @@ class FileLoader implements Loader
 
     /**
      * Get an array of all the registered namespaces.
+	 * 得到所有已注册名称空间的数组
      *
      * @return array
      */

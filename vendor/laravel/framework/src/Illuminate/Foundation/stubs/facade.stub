@@ -1,6 +1,6 @@
 <?
 /**
- * 基础，这个是？
+ * 基础，动态类存根文件
  */
 
 namespace DummyNamespace;

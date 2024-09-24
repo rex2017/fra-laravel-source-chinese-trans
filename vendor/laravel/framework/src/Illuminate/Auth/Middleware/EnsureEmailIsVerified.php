@@ -1,4 +1,7 @@
 <?php
+/**
+ * 身份，确保邮件是经过验证的
+ */
 
 namespace Illuminate\Auth\Middleware;
 
@@ -10,6 +13,7 @@ class EnsureEmailIsVerified
 {
     /**
      * Handle an incoming request.
+	 * 处理传入请求
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next

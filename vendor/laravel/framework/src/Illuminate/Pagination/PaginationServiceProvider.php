@@ -11,6 +11,7 @@ class PaginationServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
+	 * 引导应用服务
      *
      * @return void
      */

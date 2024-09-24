@@ -1,6 +1,6 @@
 <?php
 /**
- * 待处理广播类
+ * 等待中广播
  */
 
 namespace Illuminate\Broadcasting;
@@ -27,7 +27,7 @@ class PendingBroadcast
 
     /**
      * Create a new pending broadcast instance.
-	 * 创建一个新的待处理广播实例
+	 * 创建新的待处理广播实例
      *
      * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @param  mixed  $event

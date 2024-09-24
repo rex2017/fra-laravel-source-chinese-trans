@@ -26,6 +26,7 @@ interface Kernel
 
     /**
      * Perform any final actions for the request lifecycle.
+	 * 执行任何最终操作为请求生命周期
      *
      * @param  \Symfony\Component\HttpFoundation\Request  $request
      * @param  \Symfony\Component\HttpFoundation\Response  $response
@@ -35,7 +36,7 @@ interface Kernel
 
     /**
      * Get the Laravel application instance.
-	 * 得到应用实例
+	 * 得到Laravel应用实例
      *
      * @return \Illuminate\Contracts\Foundation\Application
      */

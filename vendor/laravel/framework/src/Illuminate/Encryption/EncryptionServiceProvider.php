@@ -1,6 +1,6 @@
 <?php
 /**
- * 加密服务提供者类
+ * 加密服务提供者
  */
 
 namespace Illuminate\Encryption;
@@ -41,6 +41,7 @@ class EncryptionServiceProvider extends ServiceProvider
 
     /**
      * Configure Opis Closure signing for security.
+	 * 配置Opis闭包签名为安全性
      *
      * @return void
      */
@@ -73,6 +74,7 @@ class EncryptionServiceProvider extends ServiceProvider
 
     /**
      * Extract the encryption key from the given configuration.
+	 * 提取加密密钥从给定的配置中
      *
      * @param  array  $config
      * @return string

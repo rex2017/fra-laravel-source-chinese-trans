@@ -1,6 +1,6 @@
 <?php
 /**
- * 数据库查询异常类
+ * 数据库查询异常
  */
 
 namespace Illuminate\Database;

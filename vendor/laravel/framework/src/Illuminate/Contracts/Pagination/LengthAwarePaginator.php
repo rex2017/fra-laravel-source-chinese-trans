@@ -19,7 +19,7 @@ interface LengthAwarePaginator extends Paginator
 
     /**
      * Determine the total number of items in the data store.
-	 * 确定总数
+	 * 确定数据存储中的项目总数
      *
      * @return int
      */
@@ -27,7 +27,7 @@ interface LengthAwarePaginator extends Paginator
 
     /**
      * Get the page number of the last available page.
-	 * 得到上一个可用页
+	 * 得到最后可用页的页码
      *
      * @return int
      */

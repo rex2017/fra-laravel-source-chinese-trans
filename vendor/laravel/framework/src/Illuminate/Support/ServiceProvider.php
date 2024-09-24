@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持，服务提供者
+ * 支持，服务提供者抽象类
  */
 
 namespace Illuminate\Support;
@@ -37,7 +37,7 @@ abstract class ServiceProvider
 
     /**
      * Create a new service provider instance.
-	 * 创建一个新的服务提供者接口
+	 * 创建新的服务提供者接口
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return void
@@ -60,7 +60,7 @@ abstract class ServiceProvider
 
     /**
      * Merge the given configuration with the existing configuration.
-	 * 合并配置
+	 * 合并给定的配置与现有配置
      *
      * @param  string  $path
      * @param  string  $key
@@ -91,7 +91,7 @@ abstract class ServiceProvider
 
     /**
      * Register a view file namespace.
-	 * 加载视图文件
+	 * 加载视图文件命名空间
      *
      * @param  string|array  $path
      * @param  string  $namespace
@@ -160,6 +160,7 @@ abstract class ServiceProvider
 
     /**
      * Register Eloquent model factory paths.
+	 * 注册Eloquent模型工厂路径
      *
      * @param  array|string  $paths
      * @return void
@@ -175,6 +176,7 @@ abstract class ServiceProvider
 
     /**
      * Setup an after resolving listener, or fire immediately if already resolved.
+	 * 设置一个解析后的监听器，立即触发如果已经解析。
      *
      * @param  string  $name
      * @param  callable  $callback
@@ -191,6 +193,7 @@ abstract class ServiceProvider
 
     /**
      * Register paths to be published by the publish command.
+	 * 注册要发布的路径使用publish命令
      *
      * @param  array  $paths
      * @param  mixed  $groups
@@ -209,6 +212,7 @@ abstract class ServiceProvider
 
     /**
      * Ensure the publish array for the service provider is initialized.
+	 * 确保初始化了服务提供者的发布数组
      *
      * @param  string  $class
      * @return void
@@ -222,6 +226,7 @@ abstract class ServiceProvider
 
     /**
      * Add a publish group / tag to the service provider.
+	 * 添加服务提供者至发布组/标记
      *
      * @param  string  $group
      * @param  array  $paths
@@ -259,6 +264,7 @@ abstract class ServiceProvider
 
     /**
      * Get the paths for the provider or group (or both).
+	 * 得到提供程序或组(或两者)的路径
      *
      * @param  string|null  $provider
      * @param  string|null  $group
@@ -279,7 +285,7 @@ abstract class ServiceProvider
 
     /**
      * Get the paths for the provider and group.
-	 * 得到提供程序和组的路径
+	 * 得到提供者和组的路径
      *
      * @param  string  $provider
      * @param  string  $group
@@ -307,6 +313,7 @@ abstract class ServiceProvider
 
     /**
      * Get the groups available for publishing.
+	 * 得到可用于发布的组
      *
      * @return array
      */
@@ -317,6 +324,7 @@ abstract class ServiceProvider
 
     /**
      * Register the package's custom Artisan commands.
+	 * 注册包的自定义Artisan命令
      *
      * @param  array|mixed  $commands
      * @return void
@@ -332,7 +340,7 @@ abstract class ServiceProvider
 
     /**
      * Get the services provided by the provider.
-	 * 得到服务提供者
+	 * 得到提供的服务通过提供者
      *
      * @return array
      */
@@ -343,6 +351,7 @@ abstract class ServiceProvider
 
     /**
      * Get the events that trigger this service provider to register.
+	 * 得到触发此服务提供者注册的事件
      *
      * @return array
      */

@@ -18,7 +18,7 @@ interface QueueingFactory extends Factory
 
     /**
      * Remove a cookie from the queue.
-	 * 从队列中移除一个cookie
+	 * 移除一个cookie从队列中
      *
      * @param  string  $name
      * @param  string|null  $path
@@ -28,7 +28,7 @@ interface QueueingFactory extends Factory
 
     /**
      * Get the cookies which have been queued for the next request.
-	 * 得到队列cookie
+	 * 得到已为下一个请求排队的cookie
      *
      * @return array
      */

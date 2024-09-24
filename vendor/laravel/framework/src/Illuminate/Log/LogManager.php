@@ -1,6 +1,6 @@
 <?php
 /**
- * 日志管理类
+ * 日志管理
  */
 
 namespace Illuminate\Log;
@@ -71,7 +71,7 @@ class LogManager implements LoggerInterface
 
     /**
      * Create a new, on-demand aggregate logger instance.
-	 * 创建一个新的按需聚合日志记录器实例
+	 * 创建新的按需聚合日志记录器实例
      *
      * @param  array  $channels
      * @param  string|null  $channel
@@ -142,6 +142,7 @@ class LogManager implements LoggerInterface
 
     /**
      * Apply the configured taps for the logger.
+	 * 为记录器应用配置的水龙头
      *
      * @param  string  $name
      * @param  \Illuminate\Log\Logger  $logger
@@ -235,7 +236,7 @@ class LogManager implements LoggerInterface
 
     /**
      * Create a custom log driver instance.
-	 * 创建一个自定义日志驱动实例
+	 * 创建自定义日志驱动实例
      *
      * @param  array  $config
      * @return \Psr\Log\LoggerInterface

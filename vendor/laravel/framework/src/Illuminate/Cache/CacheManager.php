@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存管理类
+ * 缓存管理
  */
 
 namespace Illuminate\Cache;
@@ -28,7 +28,7 @@ class CacheManager implements FactoryContract
 
     /**
      * The array of resolved cache stores.
-	 * 缓存存储
+	 * 已解析缓存存储的数组
      *
      * @var array
      */
@@ -44,7 +44,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Create a new Cache manager instance.
-	 * 创建一个新的缓存管理实例
+	 * 创建新的缓存管理实例
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return void
@@ -56,7 +56,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Get a cache store instance by name, wrapped in a repository.
-	 * 得到一个缓存实例
+	 * 得到一个缓存实例，封装在存储。
      *
      * @param  string|null  $name
      * @return \Illuminate\Contracts\Cache\Repository
@@ -94,7 +94,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Resolve the given store.
-	 * 解析给定存储值
+	 * 解析给定存储
      *
      * @param  string  $name
      * @return \Illuminate\Contracts\Cache\Repository
@@ -136,6 +136,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Create an instance of the APC cache driver.
+	 * 创建APC缓存驱动程序的实例
      *
      * @param  array  $config
      * @return \Illuminate\Cache\Repository
@@ -261,7 +262,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Create new DynamoDb Client instance.
-	 * 创建DynamoDB客户端实例
+	 * 创建新的DynamoDB客户端实例
      *
      * @return DynamoDbClient
      */
@@ -284,6 +285,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Create a new cache repository with the given implementation.
+	 * 创建新的缓存存储库使用给定的实现
      *
      * @param  \Illuminate\Contracts\Cache\Store  $store
      * @return \Illuminate\Cache\Repository
@@ -297,6 +299,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Set the event dispatcher on the given repository instance.
+	 * 设置事件调度程序在给定的存储库实例
      *
      * @param  \Illuminate\Cache\Repository  $repository
      * @return void
@@ -314,6 +317,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Re-set the event dispatcher on all resolved cache repositories.
+	 * 重新设置事件调度程序在所有已解析的缓存存储库上
      *
      * @return void
      */
@@ -324,6 +328,7 @@ class CacheManager implements FactoryContract
 
     /**
      * Get the cache prefix.
+	 * 得到缓存前缀
      *
      * @param  array  $config
      * @return string

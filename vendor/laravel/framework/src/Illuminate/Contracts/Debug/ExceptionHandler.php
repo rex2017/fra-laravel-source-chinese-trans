@@ -11,7 +11,7 @@ interface ExceptionHandler
 {
     /**
      * Report or log an exception.
-	 * 异常报告
+	 * 报告或记录异常
      *
      * @param  \Exception  $e
      * @return void

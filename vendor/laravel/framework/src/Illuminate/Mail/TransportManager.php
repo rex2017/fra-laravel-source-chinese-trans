@@ -1,6 +1,6 @@
 <?php
 /**
- * 邮件传输管理类
+ * 邮件传输管理
  */
 
 namespace Illuminate\Mail;
@@ -24,6 +24,7 @@ class TransportManager extends Manager
 {
     /**
      * Create an instance of the SMTP Swift Transport driver.
+	 * 创建SMTP Swift传输驱动程序的实例
      *
      * @return \Swift_SmtpTransport
      */
@@ -34,6 +35,8 @@ class TransportManager extends Manager
         // The Swift SMTP transport instance will allow us to use any SMTP backend
         // for delivering mail such as Sendgrid, Amazon SES, or a custom server
         // a developer has available. We will just pass this configured host.
+		// Swift SMTP传输实例将允许我们使用任何SMTP后端来传递邮件，如Sendgrid、AmazonSES或开发人员可用的自定义服务器。
+		// 我们将只传递此配置的主机。
         $transport = new SmtpTransport($config['host'], $config['port']);
 
         if (! empty($config['encryption'])) {
@@ -43,6 +46,8 @@ class TransportManager extends Manager
         // Once we have the transport we will check for the presence of a username
         // and password. If we have it we will set the credentials on the Swift
         // transporter instance so that we'll properly authenticate delivery.
+		// 一旦我们有了传输，我们将检查用户名和密码的存在。如果我们有它，
+		// 我们将在Swifttransporter实例上设置凭据，以便正确验证交付。
         if (isset($config['username'])) {
             $transport->setUsername($config['username']);
 
@@ -54,6 +59,7 @@ class TransportManager extends Manager
 
     /**
      * Configure the additional SMTP driver options.
+	 * 配置其他SMTP驱动程序选项
      *
      * @param  \Swift_SmtpTransport  $transport
      * @param  array  $config
@@ -78,6 +84,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Sendmail Swift Transport driver.
+	 * 创建Sendmail Swift Transport驱动程序的实例
      *
      * @return \Swift_SendmailTransport
      */
@@ -88,6 +95,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Amazon SES Swift Transport driver.
+	 * 创建一个Amazon SES Swift Transport驱动程序的实例
      *
      * @return \Illuminate\Mail\Transport\SesTransport
      */
@@ -105,6 +113,7 @@ class TransportManager extends Manager
 
     /**
      * Add the SES credentials to the configuration array.
+	 * 添加SES凭据到配置阵列
      *
      * @param  array  $config
      * @return array
@@ -120,6 +129,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Mail Swift Transport driver.
+	 * 创建邮件Swift传输驱动程序的实例
      *
      * @return \Swift_SendmailTransport
      */
@@ -130,6 +140,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Mailgun Swift Transport driver.
+	 * 创建Mailgun Swift Transport驱动程序的实例
      *
      * @return \Illuminate\Mail\Transport\MailgunTransport
      */
@@ -147,6 +158,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Postmark Swift Transport driver.
+	 * 创建邮戳Swift传输驱动程序的实例
      *
      * @return \Swift_Transport
      */
@@ -161,6 +173,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Log Swift Transport driver.
+	 * 创建Log Swift Transport驱动程序的实例
      *
      * @return \Illuminate\Mail\Transport\LogTransport
      */
@@ -177,6 +190,7 @@ class TransportManager extends Manager
 
     /**
      * Create an instance of the Array Swift Transport Driver.
+	 * 创建Array Swift Transport Driver的实例
      *
      * @return \Illuminate\Mail\Transport\ArrayTransport
      */
@@ -187,6 +201,7 @@ class TransportManager extends Manager
 
     /**
      * Get a fresh Guzzle HTTP client instance.
+	 * 得到新的Guzzle HTTP客户端实例
      *
      * @param  array  $config
      * @return \GuzzleHttp\Client
@@ -200,6 +215,7 @@ class TransportManager extends Manager
 
     /**
      * Get the default mail driver name.
+	 * 得到默认的邮件驱动程序名称
      *
      * @return string
      */
@@ -210,6 +226,7 @@ class TransportManager extends Manager
 
     /**
      * Set the default mail driver name.
+	 * 设置默认的邮件驱动程序名称
      *
      * @param  string  $name
      * @return void

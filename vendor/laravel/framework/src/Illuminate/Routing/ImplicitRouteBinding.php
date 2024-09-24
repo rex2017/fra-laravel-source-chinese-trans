@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，隐式路由绑定
+ * 路由隐式路由绑定
  */
 
 namespace Illuminate\Routing;
@@ -49,7 +49,7 @@ class ImplicitRouteBinding
 
     /**
      * Return the parameter name if it exists in the given parameters.
-	 * 返回参数名
+	 * 返回参数名如果给定参数存在
      *
      * @param  string  $name
      * @param  array  $parameters

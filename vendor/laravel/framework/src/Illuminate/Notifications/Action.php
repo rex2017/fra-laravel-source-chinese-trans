@@ -9,7 +9,7 @@ class Action
 {
     /**
      * The action text.
-	 * 文本
+	 * 动作文本
      *
      * @var string
      */
@@ -25,7 +25,7 @@ class Action
 
     /**
      * Create a new action instance.
-	 * 创新新的动作实例
+	 * 创建新的动作实例
      *
      * @param  string  $text
      * @param  string  $url

@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，通知生成命令
+ */
 
 namespace Illuminate\Foundation\Console;
 
@@ -9,6 +12,7 @@ class NotificationMakeCommand extends GeneratorCommand
 {
     /**
      * The console command name.
+	 * 控制台命令名
      *
      * @var string
      */
@@ -16,6 +20,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * The console command description.
+	 * 控制台命令描述
      *
      * @var string
      */
@@ -23,6 +28,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * The type of class being generated.
+	 * 生成类的类型
      *
      * @var string
      */
@@ -30,6 +36,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * Execute the console command.
+	 * 执行控制台命令
      *
      * @return void
      */
@@ -46,6 +53,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * Write the Markdown template for the mailable.
+	 * 编写Markdown模板为邮件
      *
      * @return void
      */
@@ -62,6 +70,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * Build the class with the given name.
+	 * 构建类使用给定名称
      *
      * @param  string  $name
      * @return string
@@ -79,6 +88,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
+	 * 得到生成器的存根文件
      *
      * @return string
      */
@@ -91,6 +101,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * Get the default namespace for the class.
+	 * 得到类的默认命名空间
      *
      * @param  string  $rootNamespace
      * @return string
@@ -102,6 +113,7 @@ class NotificationMakeCommand extends GeneratorCommand
 
     /**
      * Get the console command options.
+	 * 得到控制台命令选项
      *
      * @return array
      */

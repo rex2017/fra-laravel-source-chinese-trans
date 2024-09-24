@@ -1,6 +1,6 @@
 <?php
 /**
- * 通知，通知发送人
+ * 通知发送人
  */
 
 namespace Illuminate\Notifications;
@@ -21,6 +21,7 @@ class NotificationSender
 
     /**
      * The notification manager instance.
+	 * 通知管理器实例
      *
      * @var \Illuminate\Notifications\ChannelManager
      */
@@ -28,6 +29,7 @@ class NotificationSender
 
     /**
      * The Bus dispatcher instance.
+	 * 总线调度程序实例
      *
      * @var \Illuminate\Contracts\Bus\Dispatcher
      */
@@ -35,6 +37,7 @@ class NotificationSender
 
     /**
      * The event dispatcher.
+	 * 事件调度器
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
@@ -42,6 +45,7 @@ class NotificationSender
 
     /**
      * The locale to be used when sending notifications.
+	 * 发送通知时要使用的区域设置
      *
      * @var string|null
      */
@@ -49,6 +53,7 @@ class NotificationSender
 
     /**
      * Create a new notification sender instance.
+	 * 创建新的通知发送方实例
      *
      * @param  \Illuminate\Notifications\ChannelManager  $manager
      * @param  \Illuminate\Contracts\Bus\Dispatcher  $bus
@@ -66,6 +71,7 @@ class NotificationSender
 
     /**
      * Send the given notification to the given notifiable entities.
+	 * 发送给定的通知到给定的可通知实体
      *
      * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
@@ -84,6 +90,7 @@ class NotificationSender
 
     /**
      * Send the given notification immediately.
+	 * 立即发送给定的通知
      *
      * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
@@ -115,6 +122,7 @@ class NotificationSender
 
     /**
      * Get the notifiable's preferred locale for the notification.
+	 * 得到通知的被通知对象的首选语言环境
      *
      * @param  mixed  $notifiable
      * @param  mixed  $notification
@@ -131,6 +139,7 @@ class NotificationSender
 
     /**
      * Send the given notification to the given notifiable via a channel.
+	 * 发送给定的通知给给定的通知对象通过通道。
      *
      * @param  mixed  $notifiable
      * @param  string  $id
@@ -157,6 +166,7 @@ class NotificationSender
 
     /**
      * Determines if the notification can be sent.
+	 * 确定是否可以发送通知
      *
      * @param  mixed  $notifiable
      * @param  mixed  $notification
@@ -172,6 +182,7 @@ class NotificationSender
 
     /**
      * Queue the given notification instances.
+	 * 排队给定的通知实例
      *
      * @param  mixed  $notifiables
      * @param  \Illuminate\Notifications\Notification  $notification
@@ -213,6 +224,7 @@ class NotificationSender
 
     /**
      * Format the notifiables into a Collection / array if necessary.
+	 * 格式化可通知对象为集合/数组如有必要
      *
      * @param  mixed  $notifiables
      * @return \Illuminate\Database\Eloquent\Collection|array

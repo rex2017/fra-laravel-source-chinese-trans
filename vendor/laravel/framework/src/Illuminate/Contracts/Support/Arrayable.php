@@ -9,7 +9,7 @@ interface Arrayable
 {
     /**
      * Get the instance as an array.
-	 * 实例数组接口
+	 * 得到实例数组
      *
      * @return array
      */

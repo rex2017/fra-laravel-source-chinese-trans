@@ -1,4 +1,7 @@
 <?php
+/**
+ * 基础，发出Http请求
+ */
 
 namespace Illuminate\Foundation\Testing\Concerns;
 
@@ -14,6 +17,7 @@ trait MakesHttpRequests
 {
     /**
      * Additional headers for the request.
+	 * 请求的附加标头
      *
      * @var array
      */
@@ -21,6 +25,7 @@ trait MakesHttpRequests
 
     /**
      * Additional cookies for the request.
+	 * 请求的附加cookie
      *
      * @var array
      */
@@ -28,6 +33,7 @@ trait MakesHttpRequests
 
     /**
      * Additional cookies will not be encrypted for the request.
+	 * 其他cookie将不会为请求加密
      *
      * @var array
      */
@@ -35,6 +41,7 @@ trait MakesHttpRequests
 
     /**
      * Additional server variables for the request.
+	 * 请求的其他服务器变量
      *
      * @var array
      */
@@ -42,6 +49,7 @@ trait MakesHttpRequests
 
     /**
      * Indicates whether redirects should be followed.
+	 * 指明是否应该遵循重定向
      *
      * @var bool
      */
@@ -49,6 +57,7 @@ trait MakesHttpRequests
 
     /**
      * Indicates whether cookies should be encrypted.
+	 * 指明是否会话将被加密
      *
      * @var bool
      */
@@ -56,6 +65,7 @@ trait MakesHttpRequests
 
     /**
      * Define additional headers to be sent with the request.
+	 * 定义要随请求一起发送的附加标头
      *
      * @param  array  $headers
      * @return $this
@@ -69,6 +79,7 @@ trait MakesHttpRequests
 
     /**
      * Add a header to be sent with the request.
+	 * 添加与请求一起发送的标头
      *
      * @param  string  $name
      * @param  string  $value
@@ -83,6 +94,7 @@ trait MakesHttpRequests
 
     /**
      * Flush all the configured headers.
+	 * 刷新所有配置的标头
      *
      * @return $this
      */
@@ -95,6 +107,7 @@ trait MakesHttpRequests
 
     /**
      * Define a set of server variables to be sent with the requests.
+	 * 定义一组要随请求一起发送的服务器变量
      *
      * @param  array  $server
      * @return $this
@@ -108,6 +121,7 @@ trait MakesHttpRequests
 
     /**
      * Disable middleware for the test.
+	 * 禁用测试的中间件
      *
      * @param  string|array|null  $middleware
      * @return $this
@@ -135,6 +149,7 @@ trait MakesHttpRequests
 
     /**
      * Enable the given middleware for the test.
+	 * 为测试启用给定的中间件
      *
      * @param  string|array|null  $middleware
      * @return $this
@@ -156,6 +171,7 @@ trait MakesHttpRequests
 
     /**
      * Define additional cookies to be sent with the request.
+	 * 定义要随请求一起发送的其他cookie
      *
      * @param  array  $cookies
      * @return $this
@@ -169,6 +185,7 @@ trait MakesHttpRequests
 
     /**
      * Add a cookie to be sent with the request.
+	 * 添加要随请求一起发送的cookie
      *
      * @param  string  $name
      * @param  string  $value
@@ -183,6 +200,7 @@ trait MakesHttpRequests
 
     /**
      * Define additional cookies will not be encrypted before sending with the request.
+	 * 定义在发送请求之前不会加密的附加cookie
      *
      * @param  array  $cookies
      * @return $this
@@ -196,6 +214,7 @@ trait MakesHttpRequests
 
     /**
      * Add a cookie will not be encrypted before sending with the request.
+	 * 添加cookie在发送请求之前不会被加密
      *
      * @param  string  $name
      * @param  string  $value
@@ -210,6 +229,7 @@ trait MakesHttpRequests
 
     /**
      * Automatically follow any redirects returned from the response.
+	 * 自动遵循从响应返回的任何重定向
      *
      * @return $this
      */
@@ -222,6 +242,7 @@ trait MakesHttpRequests
 
     /**
      * Disable automatic encryption of cookie values.
+	 * 禁用cookie值的自动加密功能
      *
      * @return $this
      */
@@ -234,6 +255,7 @@ trait MakesHttpRequests
 
     /**
      * Set the referer header and previous URL session value in order to simulate a previous request.
+	 * 设置引用头和以前的URL会话值，以模拟以前的请求。
      *
      * @param  string  $url
      * @return $this
@@ -247,6 +269,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a GET request.
+	 * 访问给定的URI使用GET请求
      *
      * @param  string  $uri
      * @param  array  $headers
@@ -262,6 +285,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a GET request, expecting a JSON response.
+	 * 访问给定的URI使用GET请求，期望得到JSON响应。
      *
      * @param  string  $uri
      * @param  array  $headers
@@ -274,6 +298,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a POST request.
+	 * 访问给定的URI使用POST请求
      *
      * @param  string  $uri
      * @param  array  $data
@@ -290,6 +315,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a POST request, expecting a JSON response.
+	 * 访问给定的URI使用POST请求，期望得到JSON响应。
      *
      * @param  string  $uri
      * @param  array  $data
@@ -303,6 +329,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a PUT request.
+	 * 访问给定的URI使用PUT请求
      *
      * @param  string  $uri
      * @param  array  $data
@@ -319,6 +346,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a PUT request, expecting a JSON response.
+	 * 访问给定的URI使用PUT请求，期望得到JSON响应。
      *
      * @param  string  $uri
      * @param  array  $data
@@ -332,6 +360,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a PATCH request.
+	 * 访问给定的URI使用PATCH请求
      *
      * @param  string  $uri
      * @param  array  $data
@@ -348,6 +377,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a PATCH request, expecting a JSON response.
+	 * 访问给定的URI使用PATCH请求，期望得到JSON响应。
      *
      * @param  string  $uri
      * @param  array  $data
@@ -361,6 +391,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a DELETE request.
+	 * 访问给定的URI使用DELETE请求
      *
      * @param  string  $uri
      * @param  array  $data
@@ -377,6 +408,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a DELETE request, expecting a JSON response.
+	 * 访问给定的URI使用DELETE请求，期望得到JSON响应。
      *
      * @param  string  $uri
      * @param  array  $data
@@ -390,6 +422,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a OPTIONS request.
+	 * 访问给定的URI使用OPTIONS请求
      *
      * @param  string  $uri
      * @param  array  $data
@@ -406,6 +439,7 @@ trait MakesHttpRequests
 
     /**
      * Visit the given URI with a OPTIONS request, expecting a JSON response.
+	 * 访问给定的URI使用OPTIONS请求，期望得到JSON响应。
      *
      * @param  string  $uri
      * @param  array  $data
@@ -419,6 +453,7 @@ trait MakesHttpRequests
 
     /**
      * Call the given URI with a JSON request.
+	 * 调用给定的URI用JSON请求
      *
      * @param  string  $method
      * @param  string  $uri
@@ -445,6 +480,7 @@ trait MakesHttpRequests
 
     /**
      * Call the given URI and return the Response.
+	 * 调用给定的URI并返回响应
      *
      * @param  string  $method
      * @param  string  $uri
@@ -481,6 +517,7 @@ trait MakesHttpRequests
 
     /**
      * Turn the given URI into a fully qualified URL.
+	 * 转换给定的URI为完全限定的URL
      *
      * @param  string  $uri
      * @return string
@@ -496,6 +533,7 @@ trait MakesHttpRequests
 
     /**
      * Transform headers array to array of $_SERVER vars with HTTP_* format.
+	 * 转换headers数组为HTTP_*格式的$_SERVER变量数组
      *
      * @param  array  $headers
      * @return array
@@ -511,6 +549,7 @@ trait MakesHttpRequests
 
     /**
      * Format the header name for the server array.
+	 * 格式化服务器数组的标头名称
      *
      * @param  string  $name
      * @return string
@@ -526,6 +565,7 @@ trait MakesHttpRequests
 
     /**
      * Extract the file uploads from the given data array.
+	 * 提取文件上传从给定的数据数组中
      *
      * @param  array  $data
      * @return array
@@ -553,6 +593,7 @@ trait MakesHttpRequests
 
     /**
      * If enabled, encrypt cookie values for request.
+	 * 如果启用，为请求加密cookie值。
      *
      * @return array
      */
@@ -569,6 +610,7 @@ trait MakesHttpRequests
 
     /**
      * Follow a redirect chain until a non-redirect is received.
+	 * 遵循重定向链，直到接收到非重定向。
      *
      * @param  \Illuminate\Http\Response  $response
      * @return \Illuminate\Http\Response|\Illuminate\Foundation\Testing\TestResponse
@@ -586,6 +628,7 @@ trait MakesHttpRequests
 
     /**
      * Create the test response instance from the given response.
+	 * 创建测试响应实例根据给定的响应
      *
      * @param  \Illuminate\Http\Response  $response
      * @return \Illuminate\Foundation\Testing\TestResponse

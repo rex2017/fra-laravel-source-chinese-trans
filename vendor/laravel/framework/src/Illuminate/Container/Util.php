@@ -12,6 +12,7 @@ class Util
 {
     /**
      * If the given value is not an array and not null, wrap it in one.
+	 * 如果给定的值不是数组也不为空，则将其封装在一个数组中
      *
      * From Arr::wrap() in Illuminate\Support.
      *
@@ -29,6 +30,7 @@ class Util
 
     /**
      * Return the default value of the given value.
+	 * 返回给定值的默认值
      *
      * From global value() helper in Illuminate\Support.
      *
@@ -42,6 +44,7 @@ class Util
 
     /**
      * Get the class name of the given parameter's type, if possible.
+	 * 得到给定参数类型的类名
      *
      * From Reflector::getParameterClassName() in Illuminate\Support.
      *

@@ -1,6 +1,6 @@
 <?php
 /**
- * 验证异常类
+ * 验证异常
  */
 
 namespace Illuminate\Validation;
@@ -21,6 +21,7 @@ class ValidationException extends Exception
 
     /**
      * The recommended response to send to the client.
+	 * 建议发送给客户端的响应
      *
      * @var \Symfony\Component\HttpFoundation\Response|null
      */
@@ -28,6 +29,7 @@ class ValidationException extends Exception
 
     /**
      * The status code to use for the response.
+	 * 用于响应的状态码
      *
      * @var int
      */
@@ -35,6 +37,7 @@ class ValidationException extends Exception
 
     /**
      * The name of the error bag.
+	 * 错误包的名称
      *
      * @var string
      */
@@ -42,6 +45,7 @@ class ValidationException extends Exception
 
     /**
      * The path the client should be redirected to.
+	 * 客户端应该重定向到的路径
      *
      * @var string
      */
@@ -49,6 +53,7 @@ class ValidationException extends Exception
 
     /**
      * Create a new exception instance.
+	 * 创建新的异常实例
      *
      * @param  \Illuminate\Contracts\Validation\Validator  $validator
      * @param  \Symfony\Component\HttpFoundation\Response|null  $response
@@ -66,6 +71,7 @@ class ValidationException extends Exception
 
     /**
      * Create a new validation exception from a plain array of messages.
+	 * 从普通消息数组创建新的验证异常
      *
      * @param  array  $messages
      * @return static
@@ -83,6 +89,7 @@ class ValidationException extends Exception
 
     /**
      * Get all of the validation error messages.
+	 * 得到所有验证错误消息
      *
      * @return array
      */
@@ -93,6 +100,7 @@ class ValidationException extends Exception
 
     /**
      * Set the HTTP status code to be used for the response.
+	 * 设置用于响应的HTTP状态码
      *
      * @param  int  $status
      * @return $this
@@ -106,6 +114,7 @@ class ValidationException extends Exception
 
     /**
      * Set the error bag on the exception.
+	 * 设置错误包在异常上
      *
      * @param  string  $errorBag
      * @return $this
@@ -119,6 +128,7 @@ class ValidationException extends Exception
 
     /**
      * Set the URL to redirect to on a validation error.
+	 * 设置验证错误时要重定向到的URL
      *
      * @param  string  $url
      * @return $this
@@ -132,6 +142,7 @@ class ValidationException extends Exception
 
     /**
      * Get the underlying response instance.
+	 * 得到底层响应实例
      *
      * @return \Symfony\Component\HttpFoundation\Response|null
      */

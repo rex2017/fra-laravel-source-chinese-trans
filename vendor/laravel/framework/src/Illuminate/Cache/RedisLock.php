@@ -1,6 +1,6 @@
 <?php
 /**
- * 缓存Redis锁类
+ * Redis锁
  */
 
 namespace Illuminate\Cache;
@@ -9,7 +9,7 @@ class RedisLock extends Lock
 {
     /**
      * The Redis factory implementation.
-	 * Redis工厂接口
+	 * Redis工厂实现
      *
      * @var \Illuminate\Redis\Connections\Connection
      */
@@ -17,7 +17,7 @@ class RedisLock extends Lock
 
     /**
      * Create a new lock instance.
-	 * 创建一个新的锁实例
+	 * 创建新的锁实例
      *
      * @param  \Illuminate\Redis\Connections\Connection  $redis
      * @param  string  $name
@@ -60,6 +60,7 @@ class RedisLock extends Lock
 
     /**
      * Releases this lock in disregard of ownership.
+	 * 释放此锁，而不考虑所有权
      *
      * @return void
      */
@@ -70,6 +71,7 @@ class RedisLock extends Lock
 
     /**
      * Returns the owner value written into the driver for this lock.
+	 * 返回写入此锁的驱动程序的所有者值
      *
      * @return string
      */

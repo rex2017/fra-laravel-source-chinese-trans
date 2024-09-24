@@ -1,6 +1,6 @@
 <?php
 /**
- * 哈希，加密类
+ * 哈希加密
  */
 
 namespace Illuminate\Hashing;

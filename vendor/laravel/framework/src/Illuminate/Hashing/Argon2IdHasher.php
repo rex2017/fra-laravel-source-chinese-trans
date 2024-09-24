@@ -1,6 +1,6 @@
 <?php
 /**
- * 哈希，散列类
+ * 哈希散列
  */
 
 namespace Illuminate\Hashing;
@@ -35,7 +35,7 @@ class Argon2IdHasher extends ArgonHasher
 
     /**
      * Get the algorithm that should be used for hashing.
-	 * 获取用于散列的算法
+	 * 得到用于散列的算法
      *
      * @return int
      */

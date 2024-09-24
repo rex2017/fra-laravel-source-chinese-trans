@@ -1,6 +1,6 @@
 <?php
 /**
- * 事件呼叫队列侦听者类
+ * 事件呼叫队列监听者
  */
 
 namespace Illuminate\Events;
@@ -32,6 +32,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * The data to be passed to the listener.
+	 * 数据要传递给侦听器的
      *
      * @var array
      */
@@ -39,6 +40,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * The number of times the job may be attempted.
+	 * 可能尝试该作业的次数
      *
      * @var int
      */
@@ -46,6 +48,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * The number of seconds to wait before retrying the job.
+	 * 秒数重试作业之前等待的
      *
      * @var int
      */
@@ -53,6 +56,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * The timestamp indicating when the job should timeout.
+	 * 指明作业何时应该超时的时间戳
      *
      * @var int
      */
@@ -60,7 +64,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * The number of seconds the job can run before timing out.
-	 * 超时
+	 * 可以运行的秒数作业在超时之前
      *
      * @var int
      */
@@ -68,7 +72,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * Create a new job instance.
-	 * 创建一个新任务实例
+	 * 创建新的任务实例
      *
      * @param  string  $class
      * @param  string  $method
@@ -102,6 +106,7 @@ class CallQueuedListener implements ShouldQueue
 
     /**
      * Set the job instance of the given class if necessary.
+	 * 设置给定类的作业实例如果需要。
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @param  object  $instance

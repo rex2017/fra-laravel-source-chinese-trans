@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础提供者，工具服务提供者
+ * 基础，工具服务提供者
  */
 
 namespace Illuminate\Foundation\Providers;
@@ -74,6 +74,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 {
     /**
      * The commands to be registered.
+	 * 需要注册的命令
      *
      * @var array
      */
@@ -116,6 +117,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * The commands to be registered.
+	 * 需要注册的命令
      *
      * @var array
      */
@@ -259,6 +261,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册配置缓存命令
      *
      * @return void
      */
@@ -271,6 +274,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册配置清除命令
      *
      * @return void
      */
@@ -283,6 +287,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册控制台生成命令
      *
      * @return void
      */
@@ -295,6 +300,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册控制器生成命令
      *
      * @return void
      */
@@ -307,6 +313,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册数据库擦除命令
      *
      * @return void
      */
@@ -319,6 +326,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册事件生成命令
      *
      * @return void
      */
@@ -331,6 +339,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册事件
      *
      * @return void
      */
@@ -343,6 +352,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册异常生成命令
      *
      * @return void
      */
@@ -355,6 +365,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册工厂生成命令
      *
      * @return void
      */
@@ -367,6 +378,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册下发命令
      *
      * @return void
      */
@@ -379,6 +391,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册环境命令
      *
      * @return void
      */
@@ -391,6 +404,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册事件缓存命令
      *
      * @return void
      */
@@ -403,6 +417,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册事件清理命令
      *
      * @return void
      */
@@ -415,6 +430,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册事件列表命令
      *
      * @return void
      */
@@ -427,6 +443,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册业务生成命令
      *
      * @return void
      */
@@ -439,6 +456,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册密钥生成命令
      *
      * @return void
      */
@@ -451,6 +469,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册监听生成命令
      *
      * @return void
      */
@@ -463,6 +482,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册邮箱生成命令
      *
      * @return void
      */
@@ -475,6 +495,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册中间件生成命令
      *
      * @return void
      */
@@ -487,6 +508,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册模型生成命令
      *
      * @return void
      */
@@ -499,6 +521,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册通知生成命令
      *
      * @return void
      */
@@ -511,6 +534,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册通知表命令
      *
      * @return void
      */
@@ -523,6 +547,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册寄存器优化命令
      *
      * @return void
      */
@@ -535,6 +560,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册观察者命令
      *
      * @return void
      */
@@ -547,6 +573,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册寄存器优化清除命令
      *
      * @return void
      */
@@ -559,6 +586,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册包发现命令
      *
      * @return void
      */
@@ -571,6 +599,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册策略制定命令
      *
      * @return void
      */
@@ -583,6 +612,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册寄存器预置命令
      *
      * @return void
      */
@@ -595,6 +625,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册提供者生成命令
      *
      * @return void
      */
@@ -607,6 +638,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列失败命令
      *
      * @return void
      */
@@ -619,6 +651,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列忘记命令
      *
      * @return void
      */
@@ -631,6 +664,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列清除命令
      *
      * @return void
      */
@@ -643,6 +677,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列监听命令
      *
      * @return void
      */
@@ -655,6 +690,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列重启命令
      *
      * @return void
      */
@@ -667,6 +703,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列重试命令
      *
      * @return void
      */
@@ -679,6 +716,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列工作命令
      *
      * @return void
      */
@@ -691,6 +729,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列失败表命令
      *
      * @return void
      */
@@ -703,6 +742,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册队列表命令
      *
      * @return void
      */
@@ -715,6 +755,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册请求生成命令
      *
      * @return void
      */
@@ -727,6 +768,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册资源命令
      *
      * @return void
      */
@@ -739,6 +781,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册规则创建命令
      *
      * @return void
      */
@@ -751,6 +794,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册播种机生成命令
      *
      * @return void
      */
@@ -763,6 +807,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册会话表命令
      *
      * @return void
      */
@@ -775,6 +820,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册存储链路命令
      *
      * @return void
      */
@@ -787,6 +833,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册路由缓存命令
      *
      * @return void
      */
@@ -799,6 +846,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册路由清除命令
      *
      * @return void
      */
@@ -811,6 +859,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册路由列表命令
      *
      * @return void
      */
@@ -823,6 +872,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册播种命令
      *
      * @return void
      */
@@ -835,6 +885,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册调度完成命令
      *
      * @return void
      */
@@ -845,6 +896,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册调度运行命令
      *
      * @return void
      */
@@ -855,6 +907,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册服务命令
      *
      * @return void
      */
@@ -867,6 +920,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册测试生成命令
      *
      * @return void
      */
@@ -879,6 +933,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册上传命令
      *
      * @return void
      */
@@ -891,6 +946,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册厂商发布命令
      *
      * @return void
      */
@@ -903,6 +959,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册视图缓存命令
      *
      * @return void
      */
@@ -915,6 +972,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Register the command.
+	 * 注册视图清除命令
      *
      * @return void
      */
@@ -927,6 +985,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
 
     /**
      * Get the services provided by the provider.
+	 * 得到提供者提供的服务
      *
      * @return array
      */

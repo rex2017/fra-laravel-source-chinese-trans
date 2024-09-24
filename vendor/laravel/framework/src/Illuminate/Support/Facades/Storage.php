@@ -1,6 +1,6 @@
 <?php
 /**
- * 支持门面，存储类
+ * 支持，门面存储
  */
 
 namespace Illuminate\Support\Facades;
@@ -40,6 +40,7 @@ class Storage extends Facade
 {
     /**
      * Replace the given disk with a local testing disk.
+	 * 将给定磁盘替换为本地测试磁盘
      *
      * @param  string|null  $disk
      * @param  array  $config
@@ -62,6 +63,7 @@ class Storage extends Facade
 
     /**
      * Replace the given disk with a persistent local testing disk.
+	 * 将给定磁盘替换为持久的本地测试磁盘
      *
      * @param  string|null  $disk
      * @param  array  $config

@@ -17,7 +17,7 @@ interface QueueableCollection
 
     /**
      * Get the identifiers for all of the entities.
-	 * 得到队列的实体ID
+	 * 得到队列的实体标识符
      *
      * @return array
      */
@@ -25,7 +25,7 @@ interface QueueableCollection
 
     /**
      * Get the relationships of the entities being queued.
-	 * 得到正在队列的实本关系
+	 * 得到正在排队的实体关系
      *
      * @return array
      */
@@ -33,7 +33,7 @@ interface QueueableCollection
 
     /**
      * Get the connection of the entities being queued.
-	 * 得到正在队列的实体连接
+	 * 得到正在排队的实体连接
      *
      * @return string|null
      */

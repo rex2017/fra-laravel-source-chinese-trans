@@ -1,6 +1,6 @@
 <?php
 /**
- * 配置资源库类
+ * 配置资源库
  */
 
 namespace Illuminate\Config;
@@ -21,7 +21,7 @@ class Repository implements ArrayAccess, ConfigContract
 
     /**
      * Create a new configuration repository.
-	 * 创建一个新的配置资源库
+	 * 创建新的配置资源库
      *
      * @param  array  $items
      * @return void
@@ -33,6 +33,7 @@ class Repository implements ArrayAccess, ConfigContract
 
     /**
      * Determine if the given configuration value exists.
+	 * 确定给定的配置值是否存在
      *
      * @param  string  $key
      * @return bool
@@ -44,7 +45,7 @@ class Repository implements ArrayAccess, ConfigContract
 
     /**
      * Get the specified configuration value.
-	 * 获取指定配置值
+	 * 得到指定配置值
      *
      * @param  array|string  $key
      * @param  mixed  $default
@@ -100,6 +101,7 @@ class Repository implements ArrayAccess, ConfigContract
 
     /**
      * Prepend a value onto an array configuration value.
+	 * 在数组配置值前添加一个值
      *
      * @param  string  $key
      * @param  mixed  $value
