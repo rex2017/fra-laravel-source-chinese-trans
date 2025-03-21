@@ -1,4 +1,7 @@
 <?php
+/**
+ * 注册控制器
+ */
 
 namespace App\Http\Controllers\Auth;
 

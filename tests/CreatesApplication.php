@@ -8,6 +8,7 @@ trait CreatesApplication
 {
     /**
      * Creates the application.
+	 * 创建应用
      *
      * @return \Illuminate\Foundation\Application
      */

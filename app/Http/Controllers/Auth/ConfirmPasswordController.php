@@ -1,4 +1,7 @@
 <?php
+/**
+ * 确认密码控制器
+ */
 
 namespace App\Http\Controllers\Auth;
 

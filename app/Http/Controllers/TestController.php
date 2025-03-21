@@ -1,6 +1,6 @@
 <?php
 /**
- * 测试控制器
+ * 测试控制器，自己加可以删除！
  */
 
 namespace App\Http\Controllers;
