@@ -11,6 +11,7 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
+	 * 注册任何应用程序服务
      *
      * @return void
      */
@@ -21,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
+	 * 引导任何应用程序服务
      *
      * @return void
      */

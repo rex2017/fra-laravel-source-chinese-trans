@@ -12,6 +12,7 @@ class Handler extends ExceptionHandler
 {
     /**
      * A list of the exception types that are not reported.
+	 * 没有报告的异常类型列表
      *
      * @var array
      */
@@ -21,6 +22,7 @@ class Handler extends ExceptionHandler
 
     /**
      * A list of the inputs that are never flashed for validation exceptions.
+	 * 一个从未出现过验证异常的输入列表
      *
      * @var array
      */

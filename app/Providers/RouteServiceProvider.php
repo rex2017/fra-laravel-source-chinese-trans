@@ -43,6 +43,7 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Define the routes for the application.
+	 * 定义路由为应用程序
      *
      * @return void
      */
