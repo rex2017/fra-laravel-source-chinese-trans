@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Mail Driver
+    | Mail Driver   邮件驱动
     |--------------------------------------------------------------------------
     |
     | Laravel supports both SMTP and PHP's "mail" function as drivers for the
@@ -20,7 +20,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTP Host Address
+    | SMTP Host Address     SMTP主机地址
     |--------------------------------------------------------------------------
     |
     | Here you may provide the host address of the SMTP server used by your
@@ -33,7 +33,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTP Host Port
+    | SMTP Host Port    SMTP主机端口
     |--------------------------------------------------------------------------
     |
     | This is the SMTP port used by your application to deliver e-mails to
@@ -46,7 +46,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Global "From" Address
+    | Global "From" Address     全局来源地址
     |--------------------------------------------------------------------------
     |
     | You may wish for all e-mails sent by your application to be sent from

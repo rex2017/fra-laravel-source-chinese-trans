@@ -32,7 +32,7 @@ trait ManagesEvents
 
     /**
      * Register multiple view composers via an array.
-	 * 通过一个数组注册多个视图composers
+	 * 注册多个视图composers通过数组
      *
      * @param  array  $composers
      * @return array

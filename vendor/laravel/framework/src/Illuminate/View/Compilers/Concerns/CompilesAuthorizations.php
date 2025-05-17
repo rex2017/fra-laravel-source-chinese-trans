@@ -21,7 +21,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the cannot statements into valid PHP.
-	 * 编译cannot语句成有效的PHP
+	 * 编译cannot语句为有效的PHP
      *
      * @param  string  $expression
      * @return string
@@ -33,7 +33,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the canany statements into valid PHP.
-	 * 编译canany语句成有效的PHP
+	 * 编译canany语句为有效的PHP
      *
      * @param  string  $expression
      * @return string
@@ -45,7 +45,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the else-can statements into valid PHP.
-	 * 编译else-can语句成有效的PHP
+	 * 编译else-can语句为有效的PHP
      *
      * @param  string  $expression
      * @return string
@@ -57,7 +57,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the else-cannot statements into valid PHP.
-	 * 编译else-cannot语句成有效的PHP
+	 * 编译else-cannot语句为有效的PHP
      *
      * @param  string  $expression
      * @return string
@@ -69,7 +69,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the else-canany statements into valid PHP.
-	 * 编译else-canany语句成有效的PHP
+	 * 编译else-canany语句为有效的PHP
      *
      * @param  string  $expression
      * @return string
@@ -92,7 +92,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the end-cannot statements into valid PHP.
-	 * 编译end-cannot语句成有效的PHP
+	 * 编译end-cannot语句为有效的PHP
      *
      * @return string
      */
@@ -103,7 +103,7 @@ trait CompilesAuthorizations
 
     /**
      * Compile the end-canany statements into valid PHP.
-	 * 编译end-canany语句成有效的PHP
+	 * 编译end-canany语句为有效的PHP
      *
      * @return string
      */

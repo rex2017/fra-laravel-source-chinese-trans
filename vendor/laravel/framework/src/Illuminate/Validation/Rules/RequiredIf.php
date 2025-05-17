@@ -1,6 +1,6 @@
 <?php
 /**
- * 验证，如果需要
+ * 验证，是否必须
  */
 
 namespace Illuminate\Validation\Rules;

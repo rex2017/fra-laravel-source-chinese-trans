@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由待处理资源注册
+ * 路由等待资源注册
  */
 
 namespace Illuminate\Routing;

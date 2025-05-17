@@ -6,7 +6,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Cache Store
+    | Default Cache Store   缓存存储默认
     |--------------------------------------------------------------------------
     |
     | This option controls the default cache connection that gets used while
@@ -22,7 +22,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Cache Stores
+    | Cache Stores      缓存存储
     |--------------------------------------------------------------------------
     |
     | Here you may define all of the cache "stores" for your application as
@@ -89,7 +89,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Cache Key Prefix
+    | Cache Key Prefix      缓存主键前缀
     |--------------------------------------------------------------------------
     |
     | When utilizing a RAM based store such as APC or Memcached, there might

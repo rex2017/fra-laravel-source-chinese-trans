@@ -6,7 +6,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Session Driver
+    | Default Session driver    Session驱动服务
     |--------------------------------------------------------------------------
     |
     | This option controls the default session "driver" that will be used on
@@ -22,7 +22,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Lifetime
+    | Session Lifetime  Session过期时间
     |--------------------------------------------------------------------------
     |
     | Here you may specify the number of minutes that you wish the session
@@ -37,7 +37,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Encryption
+    | Session Encryption    Session加密
     |--------------------------------------------------------------------------
     |
     | This option allows you to easily specify that all of your session data
@@ -50,7 +50,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session File Location
+    | Session File Location     Session文件本地
     |--------------------------------------------------------------------------
     |
     | When using the native session driver, we need a location where session
@@ -63,7 +63,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Database Connection
+    | Session Database Connection   Session数据库连接
     |--------------------------------------------------------------------------
     |
     | When using the "database" or "redis" session drivers, you may specify a
@@ -76,7 +76,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Database Table
+    | Session Database Table    Session数据库表
     |--------------------------------------------------------------------------
     |
     | When using the "database" session driver, you may specify the table we
@@ -89,7 +89,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cache Store
+    | Session Cache Store       Session缓存存储
     |--------------------------------------------------------------------------
     |
     | When using the "apc", "memcached", or "dynamodb" session drivers you may

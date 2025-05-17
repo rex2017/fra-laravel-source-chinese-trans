@@ -54,7 +54,7 @@ class MiddlewareNameResolver
 
     /**
      * Parse the middleware group and format it for usage.
-	 * 解析中间件组并对其进行格式化以供使用
+	 * 解析中间件组并格式化它的使用
      *
      * @param  string  $name
      * @param  array  $map

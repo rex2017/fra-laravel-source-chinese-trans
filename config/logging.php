@@ -8,7 +8,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Log Channel
+    | Default Log Channel   日志频道默认
     |--------------------------------------------------------------------------
     |
     | This option defines the default log channel that gets used when writing
@@ -21,7 +21,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Log Channels
+    | Log Channels      日志频道
     |--------------------------------------------------------------------------
     |
     | Here you may configure the log channels for your application. Out of

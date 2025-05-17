@@ -14,6 +14,7 @@ class DummyClass extends Controller
 {
     /**
      * Display a listing of the resource.
+	 * 显示资源列表
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @return \Illuminate\Http\Response
@@ -25,6 +26,7 @@ class DummyClass extends Controller
 
     /**
      * Store a newly created resource in storage.
+	 * 存储最近创建资源至存储中
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
@@ -37,6 +39,7 @@ class DummyClass extends Controller
 
     /**
      * Display the specified resource.
+	 * 显示指定资源
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @param  \DummyFullModelClass  $DummyModelVariable
@@ -49,6 +52,7 @@ class DummyClass extends Controller
 
     /**
      * Update the specified resource in storage.
+	 * 更新指定资源至存储中
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
@@ -62,6 +66,7 @@ class DummyClass extends Controller
 
     /**
      * Remove the specified resource from storage.
+	 * 移除指定资源从存储中
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @param  \DummyFullModelClass  $DummyModelVariable

@@ -25,7 +25,7 @@ class Bus extends Facade
 {
     /**
      * Replace the bound instance with a fake.
-	 * 将绑定实例替换为假实例
+	 * 替换绑定实例为假实例
      *
      * @param  array|string  $jobsToFake
      * @return \Illuminate\Support\Testing\Fakes\BusFake

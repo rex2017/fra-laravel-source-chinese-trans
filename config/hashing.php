@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Hash Driver
+    | Default Hash Driver   哈希驱动默认
     |--------------------------------------------------------------------------
     |
     | This option controls the default hash driver that will be used to hash
@@ -19,7 +19,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Bcrypt Options
+    | Bcrypt Options    加密选项
     |--------------------------------------------------------------------------
     |
     | Here you may specify the configuration options that should be used when
@@ -34,7 +34,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Argon Options
+    | Argon Options     Argon选项
     |--------------------------------------------------------------------------
     |
     | Here you may specify the configuration options that should be used when

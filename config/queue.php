@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Queue Connection Name
+    | Default Queue Connection Name     队列连接默认名
     |--------------------------------------------------------------------------
     |
     | Laravel's queue API supports an assortment of back-ends via a single
@@ -17,7 +17,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Queue Connections
+    | Queue Connections     队列连接
     |--------------------------------------------------------------------------
     |
     | Here you may configure the connection information for each server that
@@ -70,7 +70,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Failed Queue Jobs
+    | Failed Queue Jobs     失败队列任务
     |--------------------------------------------------------------------------
     |
     | These options configure the behavior of failed queue job logging so you

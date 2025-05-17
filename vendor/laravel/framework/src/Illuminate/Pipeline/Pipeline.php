@@ -25,7 +25,7 @@ class Pipeline implements PipelineContract
 
     /**
      * The object being passed through the pipeline.
-	 * 对象正在通过管道传递
+	 * 通过管道的对象
      *
      * @var mixed
      */

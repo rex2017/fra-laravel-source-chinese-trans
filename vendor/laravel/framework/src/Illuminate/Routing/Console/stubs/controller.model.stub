@@ -24,6 +24,7 @@ class DummyClass extends Controller
 
     /**
      * Show the form for creating a new resource.
+	 * 显示创建指定资源的表单
      *
      * @return \Illuminate\Http\Response
      */
@@ -34,6 +35,7 @@ class DummyClass extends Controller
 
     /**
      * Store a newly created resource in storage.
+	 * 存储最近创建资源至存储中
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -45,6 +47,7 @@ class DummyClass extends Controller
 
     /**
      * Display the specified resource.
+	 * 显示指定资源
      *
      * @param  \DummyFullModelClass  $DummyModelVariable
      * @return \Illuminate\Http\Response
@@ -56,6 +59,7 @@ class DummyClass extends Controller
 
     /**
      * Show the form for editing the specified resource.
+	 * 显示编辑指定资源的表单
      *
      * @param  \DummyFullModelClass  $DummyModelVariable
      * @return \Illuminate\Http\Response
@@ -67,6 +71,7 @@ class DummyClass extends Controller
 
     /**
      * Update the specified resource in storage.
+	 * 更新指定资源至存储中
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \DummyFullModelClass  $DummyModelVariable
@@ -79,6 +84,7 @@ class DummyClass extends Controller
 
     /**
      * Remove the specified resource from storage.
+	 * 移除指定资源从存储中
      *
      * @param  \DummyFullModelClass  $DummyModelVariable
      * @return \Illuminate\Http\Response

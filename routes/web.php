@@ -19,4 +19,6 @@ Route::get('/', function () {
 });
 
 //自定义添加
+Route::get('/index', 'IndexController@index');
 Route::get('/test', 'TestController@test');
+Route::get('/test/{func}', 'TestController@func');

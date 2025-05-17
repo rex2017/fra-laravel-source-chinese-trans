@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Defaults
+    | Authentication Defaults   认证默认
     |--------------------------------------------------------------------------
     |
     | This option controls the default authentication "guard" and password
@@ -20,7 +20,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Guards
+    | Authentication Guards     身份验证警卫
     |--------------------------------------------------------------------------
     |
     | Next, you may define every authentication guard for your application.
@@ -50,7 +50,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | User Providers
+    | User Providers    用户提供者
     |--------------------------------------------------------------------------
     |
     | All authentication drivers have a user provider. This defines how the
@@ -79,7 +79,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Resetting Passwords
+    | Resetting Passwords   重置密码
     |--------------------------------------------------------------------------
     |
     | You may specify multiple password reset configurations if you have more
@@ -103,7 +103,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Password Confirmation Timeout
+    | Password Confirmation Timeout   密码确认超时时间  
     |--------------------------------------------------------------------------
     |
     | Here you may define the amount of seconds before a password confirmation

@@ -23,6 +23,7 @@ class DummyClass extends Controller
 
     /**
      * Store a newly created resource in storage.
+	 * 存储新创建的资源至存储里
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -34,6 +35,7 @@ class DummyClass extends Controller
 
     /**
      * Display the specified resource.
+	 * 显示指定资源
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -45,6 +47,7 @@ class DummyClass extends Controller
 
     /**
      * Update the specified resource in storage.
+	 * 更新指定资源至存储
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -57,6 +60,7 @@ class DummyClass extends Controller
 
     /**
      * Remove the specified resource from storage.
+	 * 移除指定资源从存储中
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

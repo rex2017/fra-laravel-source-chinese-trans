@@ -84,7 +84,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Fallback Locale	
+    | Application Fallback Locale	应用程序回退区域
     |--------------------------------------------------------------------------
     |
     | The fallback locale determines the locale to use when the current one
@@ -97,7 +97,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Faker Locale
+    | Faker Locale  faker语言环境
     |--------------------------------------------------------------------------
     |
     | This locale will be used by the Faker PHP library when generating fake

@@ -6,7 +6,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Database Connection Name
+    | Default Database Connection Name  数据库连接默认
     |--------------------------------------------------------------------------
     |
     | Here you may specify which of the database connections below you wish
@@ -19,7 +19,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Database Connections
+    | Database Connections      数据库连接
     |--------------------------------------------------------------------------
     |
     | Here are each of the database connections setup for your application.
@@ -95,7 +95,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Migration Repository Table
+    | Migration Repository Table    迁移存储库表
     |--------------------------------------------------------------------------
     |
     | This table keeps track of all the migrations that have already run for
@@ -108,7 +108,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Redis Databases
+    | Redis Databases       Redis数据库
     |--------------------------------------------------------------------------
     |
     | Redis is an open source, fast, and advanced key-value store that also

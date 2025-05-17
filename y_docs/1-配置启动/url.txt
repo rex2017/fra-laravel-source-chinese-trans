@@ -1,4 +1,0 @@
-
-http://localhost:9021/
-
-github: https://github.com/rex2017/fra-laravel-source-chinese-trans

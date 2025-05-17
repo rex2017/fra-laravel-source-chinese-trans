@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | View Storage Paths
+    | View Storage Paths    视图存储路径
     |--------------------------------------------------------------------------
     |
     | Most templating systems load templates from disk. Here you may specify
@@ -19,7 +19,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Compiled View Path
+    | Compiled View Path    视图编译路径
     |--------------------------------------------------------------------------
     |
     | This option determines where all the compiled Blade templates will be

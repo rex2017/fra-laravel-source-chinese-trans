@@ -11,6 +11,7 @@ class CreateSessionsTable extends Migration
 {
     /**
      * Run the migrations.
+	 * 运行迁移
      *
      * @return void
      */
@@ -28,6 +29,8 @@ class CreateSessionsTable extends Migration
 
     /**
      * Reverse the migrations.
+	 * 反转迁移
+	 * 
      *
      * @return void
      */

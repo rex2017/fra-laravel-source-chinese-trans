@@ -19,7 +19,7 @@ abstract class Controller
 
     /**
      * Register middleware on the controller.
-	 * 注册中间件在控制器上
+	 * 注册中间件至控制器上
      *
      * @param  \Closure|array|string  $middleware
      * @param  array  $options
@@ -39,7 +39,7 @@ abstract class Controller
 
     /**
      * Get the middleware assigned to the controller.
-	 * 得到分配给控制器的中间件
+	 * 将中间件分配给控制器
      *
      * @return array
      */
@@ -50,7 +50,7 @@ abstract class Controller
 
     /**
      * Execute an action on the controller.
-	 * 执行控制器的一个动作
+	 * 执行控制器上的一个动作
      *
      * @param  string  $method
      * @param  array  $parameters
