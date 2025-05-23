@@ -5,7 +5,7 @@ define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
-| Register The Auto Loader
+| Register The Auto Loader 		注册自动加载程序
 |--------------------------------------------------------------------------
 |
 | Composer provides a convenient, automatically generated class loader
@@ -21,7 +21,7 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
-| Run The Artisan Application
+| Run The Artisan Application 	运行Artisan应用程序
 |--------------------------------------------------------------------------
 |
 | When we run the console application, the current CLI command will be
@@ -39,7 +39,7 @@ $status = $kernel->handle(
 
 /*
 |--------------------------------------------------------------------------
-| Shutdown The Application
+| Shutdown The Application 		关闭应用程序
 |--------------------------------------------------------------------------
 |
 | Once Artisan has finished running, we will fire off the shutdown events
