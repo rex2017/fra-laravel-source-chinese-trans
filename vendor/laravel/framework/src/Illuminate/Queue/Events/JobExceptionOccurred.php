@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，作业异常出现
+ * 队列，事件，作业异常出现
  */
 
 namespace Illuminate\Queue\Events;

@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，执行停止
+ * 队列，事件，执行停止
  */
 
 namespace Illuminate\Queue\Events;

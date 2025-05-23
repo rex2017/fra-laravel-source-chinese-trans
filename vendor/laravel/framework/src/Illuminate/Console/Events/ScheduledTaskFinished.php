@@ -7,7 +7,7 @@ namespace Illuminate\Console\Events;
 
 use Illuminate\Console\Scheduling\Event;
 
-class ScheduledTaskFinished
+class  
 {
     /**
      * The scheduled event that ran.

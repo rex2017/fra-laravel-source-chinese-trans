@@ -13,7 +13,7 @@ class ResetPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Controller
+    | Password Reset Controller     密码重置控制器
     |--------------------------------------------------------------------------
     |
     | This controller is responsible for handling password reset requests

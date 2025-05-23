@@ -1,11 +1,11 @@
 <?php
 /**
- * 队列，作业处理中
+ * 队列，事件，作业处理中
  */
 
 namespace Illuminate\Queue\Events;
 
-class JobProcessing
+class  
 {
     /**
      * The connection name.

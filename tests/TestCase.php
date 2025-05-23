@@ -1,4 +1,7 @@
 <?php
+/**
+ * 测试
+ */
 
 namespace Tests;
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * 事件服务提供者
+ * App，服务提供者，事件服务提供者
  */
 
 namespace App\Providers;

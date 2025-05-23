@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，压缩管理
+ * 队列，压缩，管理
  */
 
 namespace Illuminate\Queue\Capsule;

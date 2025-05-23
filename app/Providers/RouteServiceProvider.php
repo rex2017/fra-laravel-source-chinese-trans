@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由服务提供者
+ * App，服务提供者，路由服务提供者
  */
 
 namespace App\Providers;

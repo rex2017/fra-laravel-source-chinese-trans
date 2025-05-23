@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，控制台中间件生成命令
+ * 路由，控制台，中间件生成命令
  */
 
 namespace Illuminate\Routing\Console;

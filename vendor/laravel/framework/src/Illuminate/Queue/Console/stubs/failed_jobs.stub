@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，存根文件
+ * 队列，需要改注释
  */
 
 use Illuminate\Database\Migrations\Migration;
@@ -11,6 +11,7 @@ class Create{{tableClassName}}Table extends Migration
 {
     /**
      * Run the migrations.
+     * 运行迁移
      *
      * @return void
      */
@@ -28,6 +29,7 @@ class Create{{tableClassName}}Table extends Migration
 
     /**
      * Reverse the migrations.
+     * 回转迁移
      *
      * @return void
      */

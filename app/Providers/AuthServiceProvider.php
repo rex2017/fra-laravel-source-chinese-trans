@@ -1,6 +1,6 @@
 <?php
 /**
- * 授权服务提供者
+ * App，服务提供者，授权服务提供者
  */
 
 namespace App\Providers;
@@ -22,6 +22,7 @@ class AuthServiceProvider extends ServiceProvider
 
     /**
      * Register any authentication / authorization services.
+     * 注册任何身份验证/授权服务
      *
      * @return void
      */

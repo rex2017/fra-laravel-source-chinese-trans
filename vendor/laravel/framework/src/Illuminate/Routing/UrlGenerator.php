@@ -39,7 +39,7 @@ class UrlGenerator implements UrlGeneratorContract
 
     /**
      * The asset root URL.
-	 * 资产根URL
+	 * 资源根URL
      *
      * @var string
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，存根文件
+ * 路由，自己改注释
  */
 
 namespace DummyNamespace;

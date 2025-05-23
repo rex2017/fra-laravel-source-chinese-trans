@@ -6,7 +6,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Database Connection Name  数据库连接默认
+    | Default Database Connection Name  默认数据库连接名
     |--------------------------------------------------------------------------
     |
     | Here you may specify which of the database connections below you wish

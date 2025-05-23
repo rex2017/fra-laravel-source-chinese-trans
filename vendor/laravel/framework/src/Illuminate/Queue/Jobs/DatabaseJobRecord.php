@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，数据库作业记录
+ * 队列，作业，数据库作业记录
  */
 
 namespace Illuminate\Queue\Jobs;

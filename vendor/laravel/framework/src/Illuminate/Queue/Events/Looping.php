@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，循环
+ * 队列，事件，循环
  */
 
 namespace Illuminate\Queue\Events;

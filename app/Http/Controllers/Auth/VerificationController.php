@@ -13,7 +13,7 @@ class VerificationController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Email Verification Controller
+    | Email Verification Controller     Email验证控制器
     |--------------------------------------------------------------------------
     |
     | This controller is responsible for handling email verification for any
@@ -33,6 +33,7 @@ class VerificationController extends Controller
 
     /**
      * Create a new controller instance.
+     * 控制新的控制器实例
      *
      * @return void
      */

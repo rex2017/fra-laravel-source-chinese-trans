@@ -1,6 +1,6 @@
 <?php
 /**
- * Kernel控制台内核
+ * App，控制台，Kernel内核
  */
 
 namespace App\Console;

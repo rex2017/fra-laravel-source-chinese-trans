@@ -1,6 +1,6 @@
 <?php
 /**
- * 重定向验证
+ * App，Http，中间件，重定向验证
  */
 
 namespace App\Http\Middleware;
@@ -13,6 +13,7 @@ class RedirectIfAuthenticated
 {
     /**
      * Handle an incoming request.
+     * 处理传入请求
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next

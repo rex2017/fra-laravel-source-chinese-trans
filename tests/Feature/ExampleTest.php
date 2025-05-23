@@ -1,4 +1,7 @@
 <?php
+/**
+ * 测试示例
+ */
 
 namespace Tests\Feature;
 

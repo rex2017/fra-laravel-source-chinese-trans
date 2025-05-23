@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，DynamoDB失败任务提供者
+ * 队列，失败，DynamoDB失败任务提供者
  */
 
 namespace Illuminate\Queue\Failed;

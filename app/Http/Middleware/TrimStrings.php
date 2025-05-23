@@ -1,6 +1,6 @@
 <?php
 /**
- * 修整字符串
+ * App，Http，修整字符串
  */
 
 namespace App\Http\Middleware;
@@ -11,6 +11,7 @@ class TrimStrings extends Middleware
 {
     /**
      * The names of the attributes that should not be trimmed.
+     * 不应修整的属性的名称
      *
      * @var array
      */

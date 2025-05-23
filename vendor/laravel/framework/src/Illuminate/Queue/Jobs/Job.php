@@ -103,7 +103,7 @@ abstract class Job
 
     /**
      * Delete the job from the queue.
-	 * 删除作业从队列
+	 * 从队列中删除作业
      *
      * @return void
      */

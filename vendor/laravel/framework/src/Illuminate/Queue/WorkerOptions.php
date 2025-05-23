@@ -9,7 +9,7 @@ class WorkerOptions
 {
     /**
      * The number of seconds before a released job will be available.
-	 * 在释放的作业可用之前的秒数
+	 * 一个即将释放的作业的秒数
      *
      * @var int
      */

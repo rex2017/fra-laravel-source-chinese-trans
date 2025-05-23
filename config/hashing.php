@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Hash Driver   哈希驱动默认
+    | Default Hash Driver   默认哈希驱动
     |--------------------------------------------------------------------------
     |
     | This option controls the default hash driver that will be used to hash

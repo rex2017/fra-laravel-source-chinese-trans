@@ -62,7 +62,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | E-Mail Encryption Protocol
+    | E-Mail Encryption Protocol    邮件加密协议
     |--------------------------------------------------------------------------
     |
     | Here you may specify the encryption protocol that should be used when
@@ -75,7 +75,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTP Server Username
+    | SMTP Server Username  SMTP服务用户名
     |--------------------------------------------------------------------------
     |
     | If your SMTP server requires a username for authentication, you should
@@ -90,7 +90,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Sendmail System Path
+    | Sendmail System Path  Sendmail系统路径
     |--------------------------------------------------------------------------
     |
     | When using the "sendmail" driver to send e-mails, we will need to know
@@ -103,7 +103,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Markdown Mail Settings
+    | Markdown Mail Settings    Markdown邮件设置
     |--------------------------------------------------------------------------
     |
     | If you are using Markdown based email rendering, you may configure your
@@ -122,7 +122,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Log Channel
+    | Log Channel   日志通道
     |--------------------------------------------------------------------------
     |
     | If you are using the "log" driver, you may specify the logging channel

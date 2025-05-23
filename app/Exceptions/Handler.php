@@ -1,6 +1,6 @@
 <?php
 /**
- * 异常处理
+ * App，异常，处理者
  */
 
 namespace App\Exceptions;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Kernel内核
+ * App，Http，Kernel内核
  */
 
 namespace App\Http;

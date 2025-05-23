@@ -11,7 +11,7 @@ class RouteGroup
 {
     /**
      * Merge route groups into a new array.
-	 * 合并路由组
+	 * 合并路由组为新的数组
      *
      * @param  array  $new
      * @param  array  $old
@@ -36,7 +36,7 @@ class RouteGroup
 
     /**
      * Format the namespace for the new group attributes.
-	 * 格式化命名空间为新组属性
+	 * 格式化名称空间为新组属性
      *
      * @param  array  $new
      * @param  array  $old

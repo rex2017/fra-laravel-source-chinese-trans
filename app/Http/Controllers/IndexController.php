@@ -15,7 +15,10 @@ class IndexController extends BaseController
 {
     
 	public function index() {
-		echo '这是框架的默认index界面，欢迎你！<br/>9021!<br/>v6.20.44！';
+		echo 'Laravel Version: 6.20.44<br/>';
+		echo 'PHP Version: 7.2<br/>';
+		echo 'Start Date: 2022-05-14<br/>';
+		echo 'Date: 2019-09-04';
 	}
 	
 }

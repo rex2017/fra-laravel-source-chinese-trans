@@ -13,7 +13,7 @@ class ConfirmPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Confirm Password Controller
+    | Confirm Password Controller   确认密码控制器
     |--------------------------------------------------------------------------
     |
     | This controller is responsible for handling password confirmations and
@@ -33,6 +33,7 @@ class ConfirmPasswordController extends Controller
 
     /**
      * Create a new controller instance.
+     * 创建新的控制器实例
      *
      * @return void
      */

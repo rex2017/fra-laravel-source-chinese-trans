@@ -38,6 +38,7 @@ class RouteServiceProvider extends ServiceProvider
         if ($this->routesAreCached()) {
             $this->loadCachedRoutes();
         } else {
+            // 真正的加载路由
             $this->loadRoutes();
 
             $this->app->booted(function () {
@@ -92,6 +93,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function loadRoutes()
     {
+        // map方法实际在app/Providers/RouteServiceProvider.php里
         if (method_exists($this, 'map')) {
             $this->app->call([$this, 'map']);
         }

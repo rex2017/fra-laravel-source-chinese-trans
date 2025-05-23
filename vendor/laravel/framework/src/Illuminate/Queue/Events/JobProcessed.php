@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，作业处理
+ * 队列，事件，作业处理
  */
 
 namespace Illuminate\Queue\Events;

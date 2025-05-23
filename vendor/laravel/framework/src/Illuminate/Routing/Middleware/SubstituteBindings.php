@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，中间件替代绑定
+ * 路由，中间件，替代绑定
  */
 
 namespace Illuminate\Routing\Middleware;

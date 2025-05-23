@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Defaults   认证默认
+    | Authentication Defaults   默认身份验证
     |--------------------------------------------------------------------------
     |
     | This option controls the default authentication "guard" and password
@@ -20,7 +20,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Guards     身份验证警卫
+    | Authentication Guards     身份验证守卫
     |--------------------------------------------------------------------------
     |
     | Next, you may define every authentication guard for your application.

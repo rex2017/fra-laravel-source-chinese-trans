@@ -1,6 +1,6 @@
 <?php
 /**
- * 控制台命令生成抽象类
+ * 控制台，命令生成器抽象类
  */
 
 namespace Illuminate\Console;

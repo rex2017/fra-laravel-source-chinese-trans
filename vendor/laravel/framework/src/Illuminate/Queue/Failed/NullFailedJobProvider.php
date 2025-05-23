@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，空失败作业提供者
+ * 队列，失败，空失败作业提供者
  */
 
 namespace Illuminate\Queue\Failed;

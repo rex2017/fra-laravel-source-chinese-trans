@@ -1,6 +1,6 @@
 <?php
 /**
- * 路由，匹配方案验证器
+ * 路由，匹配，方案验证器
  */
 
 namespace Illuminate\Routing\Matching;

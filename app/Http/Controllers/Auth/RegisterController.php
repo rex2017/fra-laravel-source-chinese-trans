@@ -16,7 +16,7 @@ class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Register Controller
+    | Register Controller   注册控制器
     |--------------------------------------------------------------------------
     |
     | This controller handles the registration of new users as well as their
@@ -36,6 +36,7 @@ class RegisterController extends Controller
 
     /**
      * Create a new controller instance.
+     * 创建新的控制器实例
      *
      * @return void
      */

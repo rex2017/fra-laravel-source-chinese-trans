@@ -1,6 +1,6 @@
 <?php
 /**
- * 队列，失败表命令
+ * 队列，控制台，失败的表命令
  */
 
 namespace Illuminate\Queue\Console;
